@@ -1,0 +1,887 @@
+text	abbr1	abbr2	abbr3
+5	V		
+10	X		
+50	L		
+100	C		
+500	D		
+1000	K	M	
+about	A	C	CA
+absent	A	ABS	
+absolute	A	ABS	
+acceleration	A		
+accepted	A		
+account	AC		
+ace	A		
+acre	A		
+acres	A		
+acting	A		
+active	A		
+adjective	A		
+adult	A		
+advance	A		
+advanced	A		
+advantage	AD		
+after death	PM		
+after noon	PM		
+afternoon	A		
+against	CON	V	VS
+air-conditioned	AC		
+air-conditioning	AC		
+Alabama	AL	ALA	
+Alaska	AK		
+Albania	AL		
+Alberta	AB		
+Alcoholics Anonymous	AA		
+Algeria	DZ		
+alias	AKA		
+all right	OK		
+alternating current	AC		
+aluminium	AL		
+amateur	A	AM	
+ambassador	HE		
+America	A	AM	US
+American	A	AM	US
+American ship	USS		
+ampere	AMP		
+amplifier	AMP		
+Angola	AN		
+anonymous	A		
+answer	A	ANS	
+anti-aircraft	AA		
+antimony	SB		
+apppeal for help	SOS		
+April	APR		
+Arab	AR		
+are	A		
+area	A		
+Argentina	RA		
+argon	AR		
+Arizona	AZE		
+Arkansas	AR	ARK	
+arsenic	AS		
+artist	RA		
+associate	A		
+astatine	AT		
+August	AUG		
+Auntie	BBC		
+Australia	A	AUS	
+Australian	A		
+Austria	A		
+Automobile Association	AA		
+avenue	AV	AVE	
+Azerbaijan	AZE		
+bachelor	B		
+Bachelor of Arts	BA		
+Bachelor of Medicine	MB		
+Bachelor of Science	BSC		
+bad smell	BO		
+Bahamas	BS		
+Bahrain	BRN		
+Bangladesh	BD		
+Barbados	BDS		
+barrel	B		
+barium	BA		
+Baron	B		
+barrels	B		
+Basque separatists	ETA		
+bass	B		
+before noon	AM		
+Belarus	BY		
+Belgium	B		
+Belize	BH		
+Benin	DY		
+beryllium	BE		
+billion	B		
+bishop	B		
+bismuth	BI		
+black	B		
+black and white	BW		
+blood pressure	BP		
+body odour	BO		
+Bolivia	BOL		
+book	B		
+books	NT	OT	
+born	B		
+boron	B		
+Botswana	RB		
+bowled	B		
+box	TV		
+Brazil	BR		
+breadth	B		
+bridge	BR		
+Britain	B	BR	
+British	B	BR	
+British Airways	BA		
+British Telecom	BT		
+bromine	BR		
+brother	BRO		
+brown	BR		
+Brunei	BRU		
+Bulgaria	BG		
+Burkina Faso	BF		
+Burundi	RU		
+cadmium	CD		
+caesium	CS		
+calcium	CA		
+California	CA	CAL	
+calorie	CAL		
+Cambodia	K		
+Canada	CDN		
+cape	C		
+capital	CAP		
+carbon	C		
+carbon copies	CC		
+carbon copy	CC		
+care of	CO		
+carriage return	CR		
+carried forward	CF		
+cash machine	ATM		
+Catholic	C		
+caught	C		
+caught by	C		
+cent	C		
+centilitre	CL		
+centimetres	CM		
+Central African Republic	RCA		
+Central America	CA		
+central heating	CH		
+cents	C		
+century	C		
+Chad	TCH		
+Channel Islands	CI		
+chapter	C	CH	
+Chartered Accountant	CA		
+check	CH		
+child	CH		
+children	CH		
+Chile	RCH		
+chlorine	CL		
+chromium	CR		
+church	CE	CH	
+Church of England	CE		
+Civil Service	CS		
+close	CLO		
+clubs	C		
+cobalt	CO		
+cocaine	C		
+cold	C		
+Colombia	CO		
+colonel	COL		
+Colorado	CO	COL	
+column	COL		
+Commanding Officer	CO		
+compact disc	CD		
+Companion of Honour	CH		
+company	CO		
+compare	CF		
+computer	PC		
+Connecticut	CT		
+Conservative	C	CON	
+copper	CU		
+Costa Rica	CR		
+county	CO		
+court	CT		
+credit note	CN		
+credt	CR		
+Cricket Club	CC		
+Croatia	HR		
+Cuba	C		
+cubic centimetre	CC		
+curium	CM		
+current	AC	DC	I
+curriculum vitae	CV		
+Cyprus	CY		
+Czech Republic	CZ		
+date	D		
+daughter	D		
+day	D		
+dead	D		
+December	DEC		
+decibel	DB		
+decibels	DB		
+decoration	VC		
+Delaware	DE	DEL	
+Democrat	D		
+Democratic	D		
+Denmark	DK		
+density	D		
+Detective Inspector	DI		
+detectives	CID		
+diameter	D		
+diamonds	D		
+dictionary	OED		
+died	D		
+dinner jacket	DJ		
+direct current	DC		
+direct debit	DD		
+Director-General	DG		
+disc	CD		
+disc jockey	DJ		
+District Attorney	DA		
+doctor	DR	GP	MD/MO
+Doctor of Divinity	DD		
+Doctor of Medicine	MD		
+Doctor of Philosophy	PHD		
+Dominca	WD		
+drive	DR		
+dry	TT		
+duke	D		
+Earl	E		
+East	E		
+Eastern	E		
+Ecstasy	E		
+Ecuador	EC		
+edition	ED		
+editor	ED		
+effects	FX		
+Egypt	ET		
+El Salvador	ES		
+electronic	E		
+emergency room	ER		
+energy	E		
+England	ENG		
+English	E		
+English	ENG		
+epistle	EP		
+escape	ESC		
+escape key	ESC		
+established	EST		
+Estonia	EST		
+Ethiopia	ETH		
+Europe	EUR		
+European	E	EUR	
+European Community	EC		
+European Union	EU		
+explosive	HE	TNT	
+extra large	XL		
+extrasensory perception	ESP		
+extraterrestrial	ET		
+Fahrenheit	F		
+Faroe Islands	FO		
+father	FR		
+February	FEB		
+feet	FT		
+fellow	F		
+female	F		
+feminine	F		
+fifty	L		
+figure	FIG		
+Fiji	FJI		
+Financial Times	FT		
+fine	AOK	F	OK
+Finland	FIN		
+first-class	A1		
+five	V		
+Florida	FA	FL	FLA
+fluorine	F		
+following	F		
+foot	FT		
+Football Association	FA		
+football club	FC		
+for example	EG		
+force	F		
+forte	F		
+fortissimo	FF		
+franc	F		
+France	F	FR	
+francs	F		
+free	FOC		
+French	FR		
+frequency	F		
+frequently	FR		
+Friday	FRI		
+furlong	F		
+furlongs	F		
+Gabon	G		
+gallium	GA		
+game	RL	RU	
+General Electric	GE		
+General Practitioner	GP		
+genetically modified	GM		
+George	GEO		
+Georgia	GA	GE	
+German	G	GER	
+germanium	GE		
+Germany	D	GER	
+Ghana	GH		
+gigabyte	GB		
+good	G		
+graduate	BA	BSC	
+gram	G	GM	
+grams	G	GM	
+Grand Prix	GP		
+gravity	G		
+great	GT		
+Great Britain	GB		
+Greece	GR		
+Greek	GK	GR	
+Grenada	WG		
+grey	GR		
+Guinea	RG		
+gunners	RA		
+gym	PE	PT	
+Haiti	RH		
+hard	H		
+Hawaii	HI		
+headquarters	HQ		
+hearts	H		
+height	HT		
+helium	HE		
+Her Majesty	HM		
+heroin	H		
+High Explosive	HE		
+high-speed train	HST		
+hire purchase	HP		
+His Excellency	HE		
+His Majesty	HM		
+Honduras	HN		
+Hong Kong	HK		
+honour	CBE	MBE	OBE
+horsepower	HP		
+hospital	H		
+hospital department	ENT		
+hot	H		
+hour	H	HR	
+house	HO		
+House of Parliament	HP		
+human resources	HR		
+hundredweight	CWT		
+Hungary	H		
+hydrogen	H		
+Iceland	IS		
+Idaho	ID	IDA	
+identification	ID		
+identity	ID		
+Illinois	IL	ILL	
+in charge	IC		
+in the afternoon	PM		
+in the morning	AM		
+inch	IN		
+inches	IN	INS	
+including	INC		
+inclusive	INC		
+incorporated	INC		
+independent	I	IND	
+India	IND		
+Indiana	IN	IND	
+indium	IN		
+Indonesia	RI		
+infinitive	INF		
+information systems	IS		
+Information Technology	IT		
+infrared	IR		
+intelligence quotient	IQ		
+international	I		
+iodine	I		
+Iowa	IA		
+Iran	IR		
+Ireland	IR		
+iridium	IR		
+Irish	IR		
+iron	FE		
+island	I		
+Israel	IL		
+it	SA		
+Italian	IT		
+Italy	I		
+Ivory Coast	CI		
+jack	AB	J	
+jam makers	WI		
+Jamaica	JA		
+James	JAS		
+January	JAN		
+Japan	J		
+Judge	J		
+July	JUL		
+June	JUN		
+junior	JR	JUN	
+Justice of the Peace	JP		
+Kansas	KS		
+Kentucky	KEN	KY	
+kilobyte	K	KB	
+kilobytes	K	KB	
+kilogram	KG		
+kilograms	KG		
+kilometre	K		
+kilometres	K		
+king	K	R	
+kiss	X		
+knight	K	KT	N
+Knight of the Garter	KG		
+knock out	KO		
+knockout	KO		
+krypton	KR		
+Kuala Lumpur	KL		
+Labour	LAB		
+lake	L		
+lane	LA		
+Laos	LAO		
+large	L		
+Latin	L		
+Latvia	LV		
+lead	PB		
+learner	L		
+Lebanon	RL		
+left	L		
+length	L		
+Lesotho	LS		
+letter	EP		
+Liberal	L	LIB	
+Liberia	LB		
+Libya	LAR		
+Liechtenstein	FL		
+limited	LTD		
+line	L		
+lines	LL		
+literary	LIT		
+literature	LIT		
+lithium	LI		
+Lithuania	LT		
+long wave	LW		
+Los Angeles	LA		
+loud	F		
+Louisiana	LA		
+lower case	LC		
+luncheon voucher	LV		
+Luxembourg	L		
+Macedonia	MK		
+Madagascar	RM		
+magnesium	MG		
+maiden	M		
+Maine	ME		
+Malawi	MW		
+Malaysia	MAL		
+male	M		
+Malta	M		
+Man	IOM		
+Managing Director	MD		
+manganese	MN		
+Manitoba	MB		
+manuscript	MS		
+manuscripts	MSS		
+March	MAR		
+married	M		
+Maryland	MD		
+masculine	M		
+mass	M		
+Massachusetts	MA		
+Master of Arts	MA		
+master of ceremonies	MC		
+Master of Science	MSC		
+Mauritania	RIM		
+Mauritius	MS		
+Medical Officer	MO		
+medium	M	MED	
+megabyte	MB		
+Member of Parliament	MP		
+men	OR		
+mercury	HG		
+metre	M		
+metres	M		
+Mexico	MEX		
+Michigan	MI		
+Middle East	ME		
+middle-of-the-road	MOR		
+mile	M		
+miles	M		
+Military Cross	MC		
+Military Police	MP		
+millimetre	MM		
+millimetres	MM		
+million	M		
+millions	M		
+millisecond	MS		
+Minnesota	MN		
+minute	M		
+minutes	M		
+Mississippi	MS		
+Missouri	MO		
+modus operandi	MO		
+Moldova	MD		
+molybdenum	MO		
+Monaco	MC		
+Monday	MON		
+Mongolia	MGL		
+Montana	MT		
+month	M		
+months	M		
+Morocco	MA		
+Motorway	M		
+Mozambique	MOC		
+Myanmar	MYA		
+name	N		
+namely	SC	VIZ	
+Namibia	NAM		
+National Front	NF		
+National Insurance	NI		
+National Theatre	NT		
+National Trust	NT		
+navy	N		
+near	NR		
+Nebraska	NE		
+Nebraska	NEB		
+neon	NE		
+Nepal	NEP		
+Netherlands	NL		
+Netherlands Antilles	NA		
+Nevada	NEV	NV	
+new	N		
+New Brunswick	NB		
+New Hampshire	NH		
+New Jersey	NJ		
+New Mexico	NM		
+New Testament	NT		
+New York	NY		
+New Zealand	NZ		
+Newfoundland	NF		
+News channel	CNN		
+newspaperman	ED		
+newspaperwoman	ED		
+Nicaragua	NIC		
+nickel	NI		
+Niger	RN		
+Nigeria	NGR		
+niobium	NB		
+nitrogen	N		
+no good	NG		
+no trumps	NT		
+no-ball	NB		
+noon	M	N	
+North	N		
+North America	NA		
+North Carolina	NC		
+North Dakota	ND		
+north-east	NE		
+north-eastern	NE		
+Northern	N		
+Northern Island	NI		
+north-west	NW		
+north-western	NW		
+Norway	N		
+not applicable	NA		
+not available	NA		
+not out	NO		
+note	N	NB	
+nothing at all	FA		
+noun	N		
+November	NOV		
+number	N	NO	
+numbers	NOS		
+observation	OBS		
+occupational therapy	OT		
+October	OCT		
+odds	SP		
+Ohio	O	OH	
+oil company	BP		
+Oklahoma	OK		
+old	O		
+old boy	OB		
+old rail operator	BR		
+Old Testament	OT		
+one	I		
+one hundred	C		
+one thousand	K	M	
+Open University	OU		
+operating system	OS		
+opus	OP		
+ordinary	O		
+Ordnance Survey	OS		
+Oregon	OR		
+osmium	OS		
+ounce	OZ		
+out of bounds	OB		
+outside broadcast	OB		
+outsize	OS		
+overdose	OD		
+overdraft	OD		
+overdrawn	OD		
+over-the-top	OTT		
+Oxford University	OU		
+oxygen	O		
+page	P		
+pages	PP		
+Pakistan	PK		
+palladium	PD		
+Panama	PA		
+Papua New Guinea	PNG		
+Paraguay	PY		
+Parental Guidance	PG		
+parking	P		
+part	PT		
+pawn	P		
+peacekeepers	UN		
+pence	D	P	
+Pennsylvania	PA		
+penny	D	P	
+pensioner	OAP		
+per annum	PA		
+per cent	PC		
+per week	PW		
+personal assistant	PA		
+personal computer	PC		
+Peru	PE		
+Philippines	RP		
+phosphorus	P		
+physical education	PE		
+physical training	PT		
+pianissimo	PP		
+piano	P		
+pint	PT		
+pints	PT		
+platinum	PT		
+plutonium	PU		
+point	PT		
+Poland	PL		
+Police Constable	PC		
+policeman	DI	PC	
+policewoman	DI	PC	WPC
+political correctness	PC		
+politically correct	PC		
+Portugal	P		
+post mortem	PM		
+Post Office	PO		
+Postal Order	PO		
+postcard	PC		
+postscript	PS		
+potassium	K		
+pound	L	LB	
+power	P		
+pressure	P		
+priest	P		
+Prime Minister	PM		
+prince	P	PR	
+Private Investigator	PI		
+proportional representation	PR		
+public address	PA		
+public relations	PR		
+pyjamas	PJS		
+Qatar	Q		
+quality assurance	QA		
+the Queen	ER		
+queen	Q	QU	R
+Queen Elizabeth	ER		
+Queen Victoria	VR		
+question	Q		
+quiet	P		
+races	TT		
+radium	RA		
+radon	RN		
+recipe	R	REC	
+record	EP	LP	
+religious education	RE		
+religious instruction	RI		
+resistance	R		
+resume	CV		
+reverend	REV		
+rhenium	RE		
+Rhode Island	RI		
+rhodium	RH		
+right	R	RT	
+right-hand	RH		
+riot gas	CS		
+river	R		
+road	RD		
+Roller	RR		
+Rolls Royce	RR		
+Roman Catholic	RC		
+Romania	RO		
+rook	R		
+room	RM		
+Royal Academician	RA		
+Royal Academy	RA		
+Royal Artillery	RA		
+Royal Engineers	RE		
+Royal Marines	RM		
+Royal Navy	RN		
+rubidium	RB		
+Rugby League	RL		
+Rugby Union	RU		
+run	R		
+runs	R		
+Russia	RUS		
+ruthenium	RU		
+sailor	AB		
+saint	S	ST	
+good man	ST		
+saints	SS		
+sandwich	BLT		
+sappers	RE		
+Saturday	SAT		
+Saudi Arabia	SA		
+scandium	SC		
+school	SCH		
+science	SCI		
+science fiction	SF		
+second	S		
+seconds	S		
+secretary	SEC		
+secretary	PA		
+see	V		
+selenium	SE		
+self-catering	SC		
+self-contained	SC		
+Senegal	SN		
+senior	SEN	SR	
+senior service	RN		
+September	SEP		
+sex appeal	SA		
+Seychelles	SY		
+shilling	S		
+ship	SS		
+short wave	SW		
+Sierra Leone	WAL		
+silicon	SI		
+silver	AG		
+Singapore	SGP		
+sixth sense	ESP		
+Slovakia	SK		
+Slovenia	SLO		
+small	S		
+small volume	CC	CL	ML
+society	S	SOC	
+sodium	NA		
+Somalia	SO		
+son	S		
+sons	S		
+South	S		
+South Africa	SA	ZA	
+South Carolina	SC		
+South Dakota	SD		
+south-east	SE		
+south-eastern	SE		
+Southern	S		
+south-west	SW		
+south-western	SW		
+spades	S		
+Spain	E		
+special	S	SP	
+spelling	SP		
+spies	CIA		
+square	S	SQ	
+Sri Lanka	CL		
+St Lucia	WL		
+standard	STD		
+starting price	SP		
+station	STA		
+steamship	SS		
+stiff examination	PM		
+stone	ST		
+stopping aid	ABS		
+street	ST		
+strontium	SR		
+Sudan	SUD		
+suitable for everyone	U		
+sulphur	S		
+sun	S		
+Sunday	SUN		
+Swaziland	SD		
+Sweden	S		
+Switzerland	CH		
+Syria	SYR		
+Taiwan	RC		
+take	R	REC	
+tantalum	TA		
+tar	AB		
+tax	VAT		
+teetotal	TT		
+teetotaller	TT		
+Telecoms company	BT		
+televison	TV		
+tellurium	TE		
+temperature	T		
+ten	X		
+Tennessee	TN		
+terrace	TER		
+Territorial Army	TA		
+Texas	TX		
+Thailand	T		
+thallium	TL		
+that is	IE		
+The Province	NI		
+Thursday	THU		
+time	T		
+tin	SN		
+titanium	TI		
+Togo	TG		
+toilet	WC		
+ton	T		
+tons	T		
+too much	OTT		
+Tourist Trophy	TT		
+transvestite	TV		
+Trinidad and Tobago	TT		
+Tuesday	TUE		
+tungsten	W		
+Tunisia	TN		
+Turkey	TR		
+Ukraine	UA		
+ultraviolet	UV		
+united	U		
+United Arab Emirates	UAE		
+United Kingdom	UK		
+United Nations	UN		
+United States	US		
+universal	U		
+university	U		
+unserviceable	US		
+uranium	U		
+Uruguay	ROU		
+US soldier	GI		
+Utah	UT		
+vanadium	V		
+variable	X	Y	Z
+Vatican City	V		
+velocity	V		
+Venezuela	YV		
+Vermont	VT		
+versus	V	VS	
+very	V		
+very large	OS		
+very loud	FF		
+very quiet	PP		
+Victoria Cross	VC		
+Vietnam	VN		
+Virginia	VA		
+virual reality	VR		
+Volkswagen	VW		
+volt	V		
+volume	V		
+volunteers	TA		
+vote	X		
+walkover	WO		
+Washington	WA		
+week	W	WK	
+weight	W		
+West	W		
+West Indies	WI		
+West Virginia	WV	WVA	
+Western	W		
+Western Australia	WA		
+Western Samoa	WS		
+wicket	W		
+wide	W		
+width	W		
+wife	W		
+William	WM		
+Wisconsin	WI	WIS	
+with	W		
+women	W		
+women's	W		
+Women's Institute	WI		
+word processor	WP		
+work	OP		
+wrong mark	X		
+Wyoming	WY		
+xenon	XE		
+yard	Y	YD	
+yards	YDS		
+year	Y	YR	
+years	YRS		
+Yemen	YAR		
+your	YR		
+yours	YRS		
+Yugoslavia	YU		
+Zambia	Z		
+Zimbabwe	ZW		
+zinc	ZN		
+zirconium	ZR

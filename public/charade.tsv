@@ -1,0 +1,68 @@
+text	other	direction	direction2	type
+above		Before	Down	Standard
+accompanying	accompanies	Either	Either	Standard
+added to		Either	Either	Standard
+adjacent to		Either	Either	Standard
+adjoining	adjoins	Either	Either	Standard
+after		After	Either	Standard
+against		Either	Either	Standard
+ahead of		Before	Either	Standard
+alongside		Either	Across	Standard
+and		Before	Either	Standard
+backing	backs	After	Across	Standard
+bearing	bears	After	Down	Standard
+before		Before	Either	Standard
+behind		After	Either	Standard
+below		After	Down	Standard
+beneath		After	Down	Standard
+beside		Either	Across	Standard
+beyond		After	Either	Standard
+bolstered by		Before	Down	Standard
+bolstering	bolsters	After	Down	Standard
+bordering	borders	Either	Either	Standard
+borne by		Before	Down	Standard
+by	joined by	Either	Either	Standard
+capped by		After	Down	Standard
+capping	caps	Before	Down	Standard
+close on		After	Either	Advanced
+close to	close by	Either	Either	Standard
+covered with	covered by	After	Down	Standard
+covering	covers	Before	Down	Standard
+crowned by		After	Down	Standard
+crowning	crowns	Before	Down	Standard
+followed by		Before	Either	Standard
+following	follows	After	Either	Standard
+fronting	fronts/in front of	Before	Across	Standard
+given		Before	Either	Standard
+headed by		After	Either	Standard
+heading	heads	Before	Either	Standard
+held up by		Before	Down	Standard
+heralded by		After	Either	Standard
+heralding	heralds	Before	Either	Standard
+holding up	holds up	After	Down	Standard
+inferior to		After	Down	Standard
+introducing	introduces	Before	Either	Standard
+leading	leads	Before	Either	Standard
+led by		After	Either	Standard
+near		Either	Either	Standard
+neighbouring		Either	Across	Standard
+next to		Either	Either	Standard
+on		Either	Either	Standard
+over		Before	Down	Standard
+past		After	Either	Standard
+plus		Before	Either	Standard
+preceding	precedes	Before	Either	Standard
+prior to		Before	Either	Standard
+superior to		Before	Down	Standard
+supported by		After	Down	Standard
+supporting	supports	After	Down	Standard
+to		Either	Either	Standard
+topped with	topped by	After	Down	Standard
+topping	tops	Before	Down	Standard
+under	underneath	After	Down	Standard
+underpinned by		Before	Down	Standard
+underpinning	underpins	After	Down	Standard
+upon	on top of	Before	Down	Standard
+ushered in by		After	Either	Standard
+ushering in	ushers in	Before	Either	Standard
+with	together with	Either	Either	Standard

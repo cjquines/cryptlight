@@ -1,0 +1,144 @@
+text	other	direction	type
+about	right about	Either	Standard
+arising	arises	Down only	Standard
+around	all around	Either	Standard
+ascending	ascends	Down only	Standard
+back	backwards/backward	Either	Standard
+back to front		Either	Standard
+backing	backs/backed	Either	Standard
+backsliding		Either	Standard
+backtracking	backtracks	Either	Standard
+boomerangs		Either	Standard
+boosted		Down only	Standard
+brought about		Either	Standard
+brought up		Down only	Standard
+capsizing	capsizes/capsized	Down only	Standard
+cast up		Down only	Standard
+climbing	climbs	Down only	Standard
+cocked	cocked up	Down only	Standard
+coming back	comes back	Either	Standard
+coming up	comes up	Down only	Standard
+converse	conversely	Either	Advanced
+counter		Either	Advanced
+doubling	doubles	Either	Advanced
+ebbing	ebbs	Either	Standard
+elevated		Down only	Standard
+erected		Down only	Standard
+falling back		Either	Standard
+fixed up		Down only	Standard
+flipping	flips/flipped	Either	Standard
+from below		Down only	Standard
+from the back	from back	Either	Standard
+from the bottom		Down only	Standard
+from the east		Across only	Standard
+from the right		Across only	Standard
+from the south		Down only	Standard
+going back	goes back	Either	Standard
+going north	goes north	Down only	Standard
+going round	goes round	Either	Standard
+going up	goes up	Down only	Standard
+going west	goes west	Across only	Standard
+hauled up		Down only	Standard
+head over heels		Down only	Standard
+headlong		Down only	Advanced
+held back		Either	Standard
+held up		Down only	Standard
+hoisted		Down only	Standard
+in recess		Either	Advanced
+in retrospect		Either	Standard
+in return	in turn	Either	Advanced
+in reverse		Either	Standard
+inverted		Either	Standard
+keeling over	keels over	Down only	Standard
+kept back		Either	Standard
+knocked back		Either	Standard
+lifted		Down only	Standard
+lifting	lifts	Down only	Advanced
+looking back		Either	Standard
+looking up		Down only	Standard
+lying about	lies about	Either	Standard
+lying around	lies around	Either	Standard
+making a comeback		Either	Standard
+mounting	mounts/mounted	Down only	Standard
+northbound	northward	Down only	Standard
+on head	on its head	Down only	Standard
+on reflection		Either	Advanced
+on the up		Down only	Standard
+over		Either	Standard
+overthrown		Either	Standard
+overturned		Either	Standard
+propped up		Down only	Standard
+put back		Either	Standard
+put up		Down only	Standard
+raised		Down only	Standard
+rampant		Down only	Advanced
+rearing	rears	Down only	Standard
+rebuffed		Either	Advanced
+recalled		Either	Advanced
+receding		Either	Standard
+recoiling	recoils	Either	Advanced
+recurrent		Either	Advanced
+redirected		Either	Advanced
+reflecting	reflects/reflected	Either	Advanced
+reflex		Either	Advanced
+regressing	regressive	Either	Standard
+repelled		Either	Advanced
+repulsed		Either	Advanced
+retiring	retires	Either	Standard
+retorted		Either	Advanced
+retreating	retreats	Either	Standard
+retrograde		Either	Advanced
+retrogressing	retrogressive	Either	Advanced
+retrospective		Either	Advanced
+returning	returns	Either	Standard
+reverse of		Either	Standard
+reversing	reverses/reversed	Either	Standard
+reverting	reverts/reverted	Either	Advanced
+revolutionary		Either	Standard
+rising	rises	Down only	Standard
+rocketing	rockets	Down only	Standard
+roll of		Either	Advanced
+rolling	rolls	Either	Advanced
+rotating	rotates/rotated	Either	Standard
+round		Either	Standard
+rounded	rounds/rounding	Either	Advanced
+sent back		Either	Standard
+sent up		Down only	Standard
+served up		Down only	Standard
+set back		Either	Standard
+set up		Down only	Standard
+shown up		Down only	Standard
+shrinking	shrinks	Either	Advanced
+skied		Down only	Advanced
+soaring		Down only	Advanced
+somersaulting	somersaults	Down only	Standard
+spinning	spins/spun	Either	Standard
+standing	stands/stands up	Down only	Standard
+stuck up		Down only	Standard
+taken aback		Either	Standard
+taken up		Down only	Standard
+tipping	tips/tipped	Down only	Standard
+topsy-turvy		Down only	Standard
+towering	towers	Down only	Advanced
+tripping	trips	Down only	Advanced
+turning	turns/turned	Either	Standard
+turning over	turns over/turned over	Either	Standard
+turning up	turns up	Down only	Standard
+turnover of	turnover in	Either	Standard
+twirls		Either	Advanced
+twisting	twists/twisted	Either	Standard
+up	upwards	Down only	Standard
+upended		Down only	Standard
+uplifted		Down only	Standard
+upright		Down only	Standard
+uprising		Down only	Advanced
+upset		Down only	Standard
+upside down		Down only	Standard
+upturn in		Down only	Standard
+upwardly mobile		Down only	Standard
+used up		Down only	Standard
+vice versa		Either	Advanced
+westbound	westward/westwards	Across only	Standard
+wheeling	wheels	Either	Standard
+withdrawing	withdraws/withdrawn	Either	Standard
+written up		Down only	Standard

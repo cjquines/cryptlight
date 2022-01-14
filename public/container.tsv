@@ -1,0 +1,441 @@
+text	other	variety 	type
+aboard		Insertion	Standard
+about		Containment	Standard
+absorbed by		Insertion	Standard
+absorbing	absorbs	Containment	Standard
+accepted by		Insertion	Standard
+accepting	accepts	Containment	Standard
+accommodated by		Insertion	Standard
+accommodating	accommodates	Containment	Standard
+admitted by		Insertion	Standard
+admitting	admits	Containment	Standard
+adopted by		Insertion	Standard
+adopting	adopts	Containment	Standard
+ambient		Insertion	Advanced
+amid	amidst	Insertion	Standard
+among		Insertion	Standard
+apprehended by		Insertion	Standard
+apprehending	apprehends	Containment	Standard
+around		Containment	Standard
+arrested by		Insertion	Standard
+arresting	arrests	Containment	Standard
+assuming	assumes/assumed by	Containment	Advanced
+assuming	assumes/assumed by	Insertion	Advanced
+bagged by		Insertion	Standard
+bagging	bags	Containment	Standard
+bailing	bails	Containment	Advanced
+bathed in		Insertion	Standard
+bathing	bathes	Containment	Standard
+bearing	bears	Containment	Standard
+bedded		Insertion	Advanced
+bedded in		Insertion	Standard
+bedding	beds	Containment	Advanced
+beset by	beset with	Insertion	Standard
+besetting	besets	Containment	Standard
+besieged by		Insertion	Standard
+besieging	besieges	Containment	Standard
+biting	bites	Containment	Standard
+bitten by		Insertion	Standard
+blankets		Containment	Standard
+boarded by		Containment	Standard
+boarding	boards	Insertion	Standard
+bones		Containment	Advanced
+bored by		Containment	Standard
+boring	bores	Insertion	Standard
+borne by		Insertion	Standard
+bottled by		Insertion	Standard
+bottling	bottles	Containment	Standard
+bounded by		Insertion	Standard
+bounding	bounds	Containment	Standard
+boxed by		Insertion	Standard
+boxing	boxes	Containment	Standard
+bracketed by		Insertion	Standard
+bracketing	brackets	Containment	Standard
+breaking	breaks	Insertion	Advanced
+broken by		Containment	Advanced
+bunged by		Containment	Standard
+bunging	bungs	Insertion	Standard
+buried in		Insertion	Standard
+burying	buries	Containment	Standard
+canned by		Insertion	Standard
+cans		Containment	Standard
+captured by		Insertion	Standard
+capturing	captures	Containment	Standard
+carried by		Insertion	Standard
+carrying	carries	Containment	Standard
+cased by		Insertion	Standard
+casing	cases	Containment	Standard
+catching	catches	Containment	Standard
+caught by	caught in	Insertion	Standard
+chaps		Insertion	Advanced
+charged with		Containment	Standard
+charging	charges	Insertion	Standard
+checked by		Insertion	Standard
+checking	checks	Containment	Standard
+choked by		Insertion	Standard
+choking	chokes	Containment	Standard
+circled by		Insertion	Standard
+circling	circles	Containment	Standard
+circumvented by		Insertion	Standard
+circumventing	circumvents	Containment	Standard
+clasped by		Insertion	Standard
+clasping	clasps	Containment	Standard
+clenched in		Insertion	Standard
+clenching	clenches	Containment	Standard
+clings to	clinging to	Containment	Standard
+clipped by		Insertion	Standard
+clipping	clips	Containment	Standard
+closed by		Insertion	Standard
+closing in	closes in	Containment	Standard
+clothed by	clothed in	Insertion	Standard
+clothing	clothes	Containment	Standard
+clutched by		Insertion	Standard
+clutching	clutches	Containment	Standard
+collared by		Insertion	Standard
+collaring	collars	Containment	Standard
+compasses		Containment	Advanced
+comprehended by		Insertion	Advanced
+comprehending	comprehends	Containment	Advanced
+compressed in		Insertion	Standard
+compressing	compresses	Containment	Standard
+comprised by		Insertion	Standard
+comprising	comprises	Containment	Advanced
+confined in		Insertion	Standard
+confining	confines	Containment	Standard
+conserved by		Insertion	Standard
+conserving	conserves	Containment	Standard
+constrained by		Insertion	Standard
+constraining	constrains	Containment	Standard
+consumed by		Insertion	Standard
+consuming	consumes	Containment	Standard
+contained by	contained in	Insertion	Standard
+containing	contains	Containment	Standard
+covered by	covered in	Insertion	Standard
+covering	covers	Containment	Standard
+cracked by		Containment	Advanced
+cracking	cracks	Insertion	Advanced
+cramped by		Insertion	Standard
+cramping	cramps	Containment	Standard
+crashed by	gatecrashed by	Containment	Standard
+crashes	gatecrashes	Insertion	Advanced
+cribbed by		Insertion	Advanced
+cribbing	cribs	Containment	Advanced
+crossed by		Insertion	Advanced
+crossing	crosses	Containment	Advanced
+crowding	crowds	Containment	Advanced
+crushed by		Insertion	Standard
+crushing	crushes	Containment	Standard
+cuddled by		Insertion	Standard
+cuddling	cuddles	Containment	Standard
+cups		Containment	Advanced
+curbed by		Insertion	Standard
+curbing	curbs	Containment	Standard
+cutting	cuts	Insertion	Standard
+detained by		Insertion	Standard
+detaining	detains	Containment	Standard
+devoured by		Insertion	Standard
+devouring	devours	Containment	Standard
+digested by		Insertion	Standard
+digesting	digests	Containment	Standard
+divided by		Containment	Standard
+dividing	divides	Insertion	Standard
+dons		Insertion	Standard
+drawing in	draws in	Containment	Standard
+drawn in by		Insertion	Standard
+drilled by		Containment	Standard
+drilling	drills	Insertion	Standard
+drinking	drinks	Containment	Standard
+drunk		Insertion	Standard
+eaten by		Insertion	Standard
+eating	eats	Containment	Standard
+edged by		Insertion	Standard
+edging	edges	Containment	Standard
+embedded in		Insertion	Standard
+embedding	embeds	Containment	Advanced
+embodied by		Insertion	Standard
+embodying	embodies	Containment	Standard
+embraced by		Insertion	Standard
+embracing	embraces	Containment	Standard
+encapsulated by		Insertion	Standard
+encapsulating	encapsulates	Containment	Standard
+encircled by		Insertion	Standard
+encircling	encircles	Containment	Standard
+enclosed by	enclosed in	Insertion	Standard
+enclosing	encloses	Containment	Standard
+encompassed by		Insertion	Standard
+encompassing	encompasses	Containment	Standard
+enfolded by	enfolded in	Insertion	Standard
+enfolding	enfolds	Containment	Standard
+engaged in		Insertion	Standard
+engulfed by		Insertion	Standard
+engulfing	engulfs	Containment	Standard
+ensnared in		Insertion	Standard
+ensnaring	ensnares	Containment	Standard
+entered by		Containment	Standard
+entering	enters	Insertion	Standard
+entertained by		Insertion	Standard
+entertaining	entertains	Containment	Standard
+enthralled by		Insertion	Standard
+enthralling	enthralls	Containment	Standard
+enveloped by		Insertion	Standard
+enveloping	envelops	Containment	Standard
+environs		Containment	Advanced
+externally		Containment	Standard
+extra		Containment	Advanced
+fed to		Insertion	Standard
+fenced by		Insertion	Standard
+fencing	fences	Containment	Standard
+filled with	filled by	Containment	Standard
+filling	fills	Insertion	Standard
+flanked by		Insertion	Standard
+flanking	flanks	Containment	Standard
+folded in		Insertion	Advanced
+folding	folds	Containment	Advanced
+found in		Insertion	Standard
+framed by		Insertion	Standard
+framing	frames	Containment	Standard
+getting around	getting about	Containment	Standard
+getting hold of	gets hold of	Containment	Standard
+getting into	gets into	Insertion	Standard
+gobbled by		Insertion	Standard
+gobbling	gobbles	Containment	Standard
+going around	going about	Containment	Standard
+going into	goes into	Insertion	Standard
+grabbed by		Insertion	Standard
+grabbing	grabs	Containment	Standard
+grasped by		Insertion	Standard
+grasping	grasps	Containment	Standard
+griping	gripes	Containment	Advanced
+gripped by		Insertion	Standard
+gripping	grips	Containment	Standard
+guarded by		Insertion	Standard
+guarding	guards	Containment	Standard
+gulped by		Insertion	Standard
+gulping	gulps	Containment	Standard
+harboured by		Insertion	Standard
+harbouring	harbours	Containment	Standard
+hedged by		Insertion	Standard
+hedging	hedges	Containment	Advanced
+held by	held in	Insertion	Standard
+hemming	hems	Containment	Standard
+hidden by	hiding in	Insertion	Standard
+hiding	hides	Containment	Standard
+holding	holds	Containment	Standard
+hosted by		Insertion	Standard
+hosting	hosts	Containment	Standard
+housed in		Insertion	Standard
+housing	houses	Containment	Standard
+hugged by		Insertion	Standard
+hugging	hugs	Containment	Standard
+implicated by		Insertion	Advanced
+implicating	implicates	Containment	Advanced
+imprisoned in		Insertion	Standard
+imprisoning	imprisons	Containment	Standard
+in	inside	Insertion	Standard
+included in		Insertion	Standard
+including	includes	Containment	Standard
+incorporated in		Insertion	Standard
+incorporating	incorporates	Containment	Standard
+infiltrated by		Containment	Standard
+infiltrating	infiltrates	Insertion	Standard
+inhabited by		Containment	Standard
+inhabiting	inhabits	Insertion	Standard
+inhibited by		Insertion	Standard
+inhibiting	inhibits	Containment	Standard
+injected with		Containment	Standard
+Inspired by	inspiring/inspires	Insertion	Standard
+inspired with	inspired by	Containment	Advanced
+inspiring	inspires	Containment	Advanced
+installed in		Insertion	Standard
+installing	installs	Containment	Standard
+interred in		Insertion	Standard
+interrupted by		Containment	Standard
+interrupting	interrupts	Insertion	Standard
+intervening		Insertion	Standard
+introduced by	introduced to	Insertion	Standard
+introducing	introduces	Containment	Standard
+invested with		Insertion	Standard
+investing	invests	Containment	Advanced
+involved in		Insertion	Standard
+involving	involves	Containment	Standard
+jammed by		Insertion	Advanced
+jammed with		Containment	Standard
+jamming	jams	Containment	Advanced
+jamming	jams	Insertion	Standard
+keeping	keeps	Containment	Standard
+kept by	kept in	Insertion	Standard
+lagging	lags	Containment	Advanced
+lapping	laps	Containment	Advanced
+limited by		Insertion	Standard
+limiting	limits	Containment	Standard
+lined with		Containment	Standard
+lining	lines	Insertion	Standard
+lips		Containment	Advanced
+listing	lists	Containment	Advanced
+listed		Insertion	Advanced
+locked by		Insertion	Advanced
+locking	locks	Containment	Advanced
+nabbed by		Insertion	Standard
+nabbing	nabs	Containment	Standard
+nailed by		Insertion	Standard
+nailing	nails	Containment	Standard
+netted by		Insertion	Standard
+netting	nets	Containment	Standard
+nicked by		Insertion	Standard
+nicking	nicks	Containment	Standard
+nipped by		Insertion	Standard
+nipping	nips	Containment	Standard
+nobbled by		Insertion	Standard
+nobbling	nobbles	Containment	Standard
+nursed by		Insertion	Standard
+nursing	nurses	Containment	Standard
+occupied by		Containment	Standard
+occupying	occupies	Insertion	Standard
+outside		Containment	Standard
+overwhelmed by		Insertion	Standard
+overwhelming	overwhelms	Containment	Standard
+packed with		Insertion	Standard
+packing	packs	Containment	Standard
+parted by		Containment	Standard
+parting	parts	Insertion	Standard
+patrolled by		Insertion	Standard
+patrolling	patrols	Containment	Standard
+penetrated by		Containment	Standard
+penetrating	penetrates	Insertion	Standard
+penned by		Insertion	Standard
+penning	pens	Containment	Standard
+perambulating	perambulates	Containment	Advanced
+picked up by		Insertion	Standard
+picking up		Containment	Standard
+pierced by		Containment	Standard
+piercing	pierces	Insertion	Standard
+pinched by		Insertion	Standard
+pinching	pinches	Containment	Standard
+pinned in		Insertion	Standard
+pinning	pins	Containment	Advanced
+plugged by		Containment	Standard
+plugging	plugs	Insertion	Standard
+pocketed by		Insertion	Standard
+pocketing	pockets	Containment	Standard
+popped by		Insertion	Advanced
+popping	pops	Containment	Advanced
+possessed by		Insertion	Standard
+possessing	possesses	Containment	Standard
+pounded by		Insertion	Advanced
+pounding	pounds	Containment	Advanced
+pressed by		Insertion	Standard
+pressing	presses	Containment	Standard
+prisons		Containment	Advanced
+probed by		Containment	Standard
+probing	probes	Insertion	Standard
+protected by		Insertion	Standard
+protecting	protects	Containment	Standard
+pulled by		Insertion	Advanced
+pulling	pulls	Containment	Advanced
+pursed by		Insertion	Advanced
+pursing	purses	Containment	Standard
+put about	put round	Containment	Standard
+put in	put into	Insertion	Standard
+received by		Insertion	Standard
+receiving	receives	Containment	Standard
+repressed by		Insertion	Standard
+repressing	represses	Containment	Standard
+restrained by		Insertion	Standard
+restraining	restrains	Containment	Standard
+restricted by		Insertion	Standard
+restricting	restricts	Containment	Standard
+retained by		Insertion	Standard
+retaining	retains	Containment	Standard
+ringing	rings	Containment	Standard
+round		Containment	Standard
+rounded by		Insertion	Standard
+rounding	rounds	Containment	Standard
+sandwiched by		Insertion	Standard
+sandwiches		Containment	Standard
+screened by		Insertion	Standard
+screening	screens	Containment	Standard
+sealed by		Insertion	Advanced
+sealing	seals	Containment	Advanced
+secured by		Insertion	Standard
+securing	secures	Containment	Standard
+seized by		Insertion	Standard
+seizing	seizes	Containment	Standard
+set about		Containment	Standard
+set in		Insertion	Standard
+shared by		Containment	Advanced
+sharing	shares	Insertion	Advanced
+sheltered by		Insertion	Standard
+sheltering	shelters	Containment	Standard
+shrouded by		Insertion	Standard
+shrouding	shrouds	Containment	Standard
+skirted by		Insertion	Standard
+skirting	skirts	Containment	Standard
+slipped into		Insertion	Standard
+smothered by		Insertion	Standard
+smothering	smothers	Containment	Standard
+smuggled by		Insertion	Advanced
+smuggling	smuggles	Containment	Advanced
+snared by		Insertion	Standard
+snaring	snares	Containment	Standard
+snuggling	snuggles	Containment	Standard
+splitting	splits	Insertion	Standard
+spread by		Containment	Advanced
+spreading	spreads	Insertion	Advanced
+squashed by		Insertion	Standard
+squashing	squashes	Containment	Standard
+squeezed by		Insertion	Standard
+squeezing	squeezes	Containment	Standard
+stalled by		Insertion	Advanced
+stalling	stalls	Containment	Advanced
+sticking	sticks	Insertion	Advanced
+stifled by		Insertion	Standard
+stifling	stifles	Containment	Standard
+stopped by		Containment	Advanced
+stopping	stops	Insertion	Advanced
+stowed in		Insertion	Standard
+stowing	stows	Containment	Standard
+straining	strains	Containment	Advanced
+stuck with		Containment	Advanced
+stuffed with		Containment	Standard
+stuffing	stuffs	Insertion	Standard
+sucked by		Insertion	Advanced
+sucking	sucks	Containment	Advanced
+suppressed by		Insertion	Standard
+suppressing	suppresses	Containment	Standard
+surrounded by		Insertion	Standard
+surrounding	surrounds	Containment	Standard
+swallowed by		Insertion	Standard
+swallowing	swallows	Containment	Standard
+tackled by		Insertion	Standard
+tackling	tackles	Containment	Standard
+taken by		Insertion	Standard
+taking	takes	Containment	Standard
+taking in	takes in	Containment	Standard
+tapped by		Containment	Advanced
+tapping	taps	Insertion	Advanced
+throttled by		Insertion	Standard
+throttling	throttles	Containment	Standard
+thrown in	thrown into	Insertion	Standard
+transfixed by		Containment	Standard
+transfixing	transfixes	Insertion	Standard
+trapped in		Insertion	Standard
+trapping	traps	Containment	Standard
+trousers		Containment	Standard
+tucked into		Insertion	Standard
+undoing	undoes	Insertion	Advanced
+undone by		Containment	Advanced
+vices		Containment	Advanced
+wearing	wears	Insertion	Standard
+wedged in	wedges	Insertion	Standard
+wedged with		Containment	Standard
+wedges		Containment	Advanced
+welcomed by		Insertion	Standard
+welcoming	welcomes	Containment	Standard
+wimples		Containment	Advanced
+winding	winds	Containment	Advanced
+within		Insertion	Standard
+worn by		Containment	Standard
+wound by		Insertion	Advanced
+wrapped in		Insertion	Standard
+wrapping	wraps	Containment	Standard
+wreathed in		Insertion	Standard
