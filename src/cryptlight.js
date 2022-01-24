@@ -17,6 +17,7 @@ const FILES = [
  * @param file file where row is from
  * @param row the actual row data
  * @returns string for label
+ * TODO: refactor to separate: text: type, notes
  */
 const getLabel = (file, row) => {
   switch (file) {
@@ -33,7 +34,7 @@ const getLabel = (file, row) => {
       if (row.variety === "Insertion") {
         return `Content (X in Y): X ${row.text} Y`;
       } else {
-        return `Container (Y in x): X ${row.text} Y`;
+        return `Container (Y in X): X ${row.text} Y`;
       }
     case "deletion":
       if (row.variety === "Expulsion") {
@@ -91,15 +92,21 @@ const matchify = (text) => {
     .split(/[' -]/)
     .map((token) => {
       if (token.includes("/")) {
+        // e.g. self/first person
+        // TODO: refactor to do separate matches
         return `(${token.split("/").join("|")})`;
       } else if (token.match(/^\(.*\)$/)) {
+        // e.g. brush (off)
         return `${token.substring(1, -1)}?`;
       } else if (token.includes("(")) {
+        // e.g. brush(es)
         const groups = token.match(/^(.*)\(.*\)$/);
         return `~${groups[1]}~`;
       } else if (token === "...") {
+        // e.g. with ... in
         return "*";
       } else {
+        // match inflections
         return `~${token}~`;
       }
     })
@@ -107,7 +114,8 @@ const matchify = (text) => {
 };
 
 /**
- * helper
+ * check clue for a single instance of text
+ * TODO: refactor with matchify
  */
 const processText = (clue, key, row, text) => {
   const [match] = clue.match(matchify(text)).json({ offset: true });
@@ -120,7 +128,7 @@ const processText = (clue, key, row, text) => {
 };
 
 /**
- * helper
+ * do these ranges overlap?
  */
 const overlapRange = (range, range_) => {
   return (
@@ -129,6 +137,9 @@ const overlapRange = (range, range_) => {
   );
 };
 
+/**
+ * take smallest range containing both inputs
+ */
 const mergeRange = (range, range_) => {
   const end = range.start + range.length;
   const end_ = range_.start + range_.length;
@@ -152,6 +163,7 @@ export const getRanges = (data, clueText) => {
       const match = processText(clue, key, row, row.text);
       if (match) result.push(match);
       if (!row.other) continue;
+      // TODO: refactor to do separate matches
       row.other.split("/").forEach((text) => {
         const match = processText(clue, key, row, text);
         if (match) result.push(match);
@@ -159,7 +171,7 @@ export const getRanges = (data, clueText) => {
     }
   }
 
-  // merge result
+  // merge results for overlapping ranges
   const result_ = result.reduce((acc, { range, label }) => {
     const exist = acc.find((that) => overlapRange(range, that.range));
     if (exist) {
@@ -171,16 +183,15 @@ export const getRanges = (data, clueText) => {
     return acc;
   }, []);
 
-  // if clue starts with number (e.g. 5.) filter out those
-  // if clue ends with enum (e.g. (2, 4)) filter out those
-  // for overlapping ranges, take the larger one
-  return result_.filter(({ range, label }) => {
+  return result_.filter(({ range }) => {
     if (range.start === 0 && clueText.match(/^\d+\..*$/)) {
+      // if clue starts with number (e.g. 5.) filter out matches
       return false;
     } else if (
       clueText.length - (range.start + range.length) <= 1 &&
       clueText.match(/^.*\(.*\)$/)
     ) {
+      // if clue ends with enum (e.g. (2, 4)) filter out those
       return false;
     } else {
       return true;
