@@ -1,38 +1,53 @@
 {
   "name": "cryptlight",
-  "homepage": ".",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "compromise": "^13.11.4",
-    "mark.js": "^8.11.1",
-    "nanoid": "^3.1.32",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "react-tooltip": "^4.2.21",
-    "sass": "^1.48.0"
+  "description": "A cryptic crossword clue solving aid",
+  "keywords": [
+    "puzzles"
+  ],
+  "homepage": "https://github.com/cjquines/cryptlight#readme",
+  "bugs": {
+    "url": "https://github.com/cjquines/cryptlight/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjquines/cryptlight.git"
+  },
+  "license": "MIT",
+  "author": "CJ Quines <cj@cjquines.com>",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "!src/**/*.test.ts"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "build:tsc": "tsc --build tsconfig.build.json",
+    "format": "prettier --write .",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc --build tsconfig.json"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+  "dependencies": {
+    "compromise": "^14.14.5",
+    "cromulence": "^0.5.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.0.15",
+    "@vitest/eslint-plugin": "^1.6.4",
+    "csv-parse": "^6.1.0",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.0",
+    "vitest": "^4.0.16"
   }
 }

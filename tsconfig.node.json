@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["*.js", "scripts/**/*.ts", "src/**/*.test.ts"],
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+
+    "module": "nodenext",
+    "rootDir": ".",
+
+    "noEmit": true,
+    "outDir": "dist",
+
+    "checkJs": true,
+
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+
+    "lib": ["esnext"],
+    "target": "esnext",
+
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo"
+  }
+}
