@@ -154,11 +154,11 @@ class IndicatorNode {
       if (!type) {
         throw new Error(`unknown abbr: ${scores[i]!}`);
       }
-      const startDigit = i++;
+      const startDigit = ++i;
       while (i < scores.length && DIGIT.test(scores[i]!)) {
         i++;
       }
-      const score = parseInt(scores.slice(startDigit, i++), 10);
+      const score = parseInt(scores.slice(startDigit, i), 10);
       this.scores.set(type, score);
     }
   }
@@ -199,7 +199,7 @@ class IndicatorNode {
   }
 }
 
-export class Indicators {
+export class IndicatorMatcher {
   children: Map<string, IndicatorNode>;
 
   constructor() {

@@ -2,10 +2,11 @@ import * as csv from "csv-parse";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import * as url from "node:url";
-import { Indicators, IndicatorType } from "../src/indicators.js";
+import { IndicatorMatcher, IndicatorType } from "../src/indicators.js";
 import { lemmatize } from "../src/nlp.js";
 
 const dataDir = url.fileURLToPath(new URL("./data", import.meta.url));
+const outputDir = url.fileURLToPath(new URL("../src/data", import.meta.url));
 
 async function* parseCSV<T>(fileName: string): AsyncGenerator<T> {
   const stream = fs
@@ -120,14 +121,14 @@ async function main() {
     collator.compare(a.lemmas.join(" "), b.lemmas.join(" ")),
   );
 
-  const indicators = new Indicators();
+  const indicators = new IndicatorMatcher();
 
   for (const { lemmas, type, score } of indicatorData) {
     indicators.insert(lemmas, type, score);
   }
 
   await fs.promises.writeFile(
-    path.join(dataDir, "..", "indicators.txt"),
+    path.join(outputDir, "indicators.txt"),
     indicators.dump().join("\n"),
     "utf-8",
   );

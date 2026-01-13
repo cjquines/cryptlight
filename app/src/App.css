@@ -1,0 +1,15 @@
+#root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  height: 100%;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
