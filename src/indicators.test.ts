@@ -9,7 +9,7 @@ describe("Indicators", () => {
   test("parse and match", async () => {
     const start = Date.now();
     const data = await fs.readFile(
-      url.fileURLToPath(new URL("../scripts/indicators.txt", import.meta.url)),
+      url.fileURLToPath(new URL("./data/indicators.txt", import.meta.url)),
       "utf-8",
     );
     indicators.parse(data.split("\n"));
