@@ -42,3 +42,37 @@ export function anagrams(word: string): Set<string> {
 
   return anagrams;
 }
+
+/**
+ * All occurrences of sub as a subsequence of word, returned as indices of
+ * their characters.
+ */
+export function* subsequences(
+  word: string,
+  sub: string,
+): Generator<Set<number>> {
+  if (sub.length === 0) return;
+
+  function* recurse(
+    i: number,
+    j: number,
+    indices: number[] = [],
+  ): Generator<Set<number>> {
+    if (j === sub.length) {
+      yield new Set(indices);
+      return;
+    }
+
+    if (i === word.length) {
+      return;
+    }
+
+    if (word[i] === sub[j]) {
+      yield* recurse(i + 1, j + 1, [...indices, i]);
+    }
+
+    yield* recurse(i + 1, j, indices);
+  }
+
+  yield* recurse(0, 0);
+}
