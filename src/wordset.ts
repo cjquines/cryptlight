@@ -5,7 +5,7 @@ import { anagrams, interval, subsequences } from "./util.js";
 
 /** A string of "words" and how they were produced. */
 class WordDerivation {
-  #words: string[] | undefined;
+  private _words: string[] | undefined;
 
   /**
    * The string itself. An array of uppercase-letter-only slugs, interpreted
@@ -16,7 +16,7 @@ class WordDerivation {
    * maintain an array to preserve spacing when needed.
    */
   get words(): string[] {
-    return this.#words ?? [this.description.replaceAll(/[^A-Z]/g, "")];
+    return this._words ?? [this.description.replaceAll(/[^A-Z]/g, "")];
   }
 
   /**
@@ -44,7 +44,7 @@ class WordDerivation {
     description: string;
     parents: WordDerivation[];
   }) {
-    this.#words = words;
+    this._words = words;
     this.description = description;
     this.parents = parents;
   }
@@ -56,20 +56,23 @@ class WordDerivation {
     return (this.#joined ??= this.words.join(""));
   }
 
-  /** The string of letters to use when rendering this in a description. */
+  /**
+   * The string of letters to use when rendering this in a wordplay
+   * description.
+   */
   toString(): string {
-    return this.#words ? this.#words.join("") : this.description;
+    return this._words ? this._words.join("") : this.description;
   }
 
   /**
    * Transform the uppercase letters of this.toString(), leaving the lowercase
    * letters intact.
    */
-  mapString(fn: (letter: string, index: number) => string): string {
+  mapString(fn: (letter: string, index: number) => string[]): string {
     const mapped = [];
     let index = 0;
     for (const letter of this.toString()) {
-      mapped.push(/[A-Z]/.exec(letter) ? fn(letter, index++) : letter);
+      mapped.push(...(/[A-Z]/.exec(letter) ? fn(letter, index++) : [letter]));
     }
     return mapped.join("");
   }
@@ -150,7 +153,7 @@ export class Wordset implements Iterable<WordDerivation> {
   anagram(): Wordset {
     return new Wordset(
       Iter.flatMap(this, (item) => {
-        return Iter.map(anagrams(item.words.join("")), (anagram) => {
+        return Iter.map(anagrams(item.joined), (anagram) => {
           return new WordDerivation({
             description: `${anagram}*`,
             parents: [item],
@@ -168,11 +171,11 @@ export class Wordset implements Iterable<WordDerivation> {
    */
   concat(other: Wordset): Wordset {
     return new Wordset(
-      Iter.map(Iter.product(this, other), ([a, b]) => {
+      Iter.map(Iter.product(this, other), ([left, right]) => {
         return new WordDerivation({
-          words: [...a.words, ...b.words],
-          description: `${a}+${b}`,
-          parents: [a, b],
+          words: [...left.words, ...right.words],
+          description: `${left}+${right}`,
+          parents: [left, right],
         });
       }),
     );
@@ -186,23 +189,21 @@ export class Wordset implements Iterable<WordDerivation> {
    */
   delete(other: Wordset): Wordset {
     return new Wordset(
-      Iter.flatMap(Iter.product(this, other), function* ([a, b]) {
-        if (a.joined.length <= b.joined.length) {
+      Iter.flatMap(Iter.product(this, other), function* ([whole, part]) {
+        if (whole.joined.length <= part.joined.length) {
           return;
         }
 
-        for (const indices of subsequences(a.joined, b.joined)) {
-          const description = a.mapString((letter, i) =>
-            [
-              indices.has(i) && !indices.has(i - 1) ? "(-" : "",
-              indices.has(i) ? letter.toLowerCase() : letter,
-              indices.has(i) && !indices.has(i + 1) ? ")" : "",
-            ].join(""),
-          );
+        for (const indices of subsequences(whole.joined, part.joined)) {
+          const description = whole.mapString((letter, i) => [
+            indices.has(i) && !indices.has(i - 1) ? "(-" : "",
+            indices.has(i) ? letter.toLowerCase() : letter,
+            indices.has(i) && !indices.has(i + 1) ? ")" : "",
+          ]);
 
           yield new WordDerivation({
             description,
-            parents: [a, b],
+            parents: [whole, part],
           });
         }
       }),
@@ -217,19 +218,26 @@ export class Wordset implements Iterable<WordDerivation> {
    */
   deleteAll(other: Wordset): Wordset {
     return new Wordset(
-      Iter.flatMap(Iter.product(this, other), function* ([a, b]) {
-        const whole = a.joined;
-        const part = b.joined;
-
-        const splits = whole.split(part);
+      Iter.flatMap(Iter.product(this, other), function* ([whole, part]) {
+        const splits = whole.joined.split(part.joined);
         if (splits.length === 1) {
           return;
         }
 
+        const indices = new Set(
+          splits.slice(0, -1).reduce<number[]>((acc, split) => {
+            const base = (acc.at(-1) ?? -1) + 1 + split.length;
+            return [...acc, ...interval(base, base + part.joined.length - 1)];
+          }, []),
+        );
+
         yield new WordDerivation({
-          words: [splits.join("")],
-          description: splits.join(`(-${part.toLowerCase()})`),
-          parents: [a, b],
+          description: whole.mapString((letter, i) => [
+            indices.has(i) && !indices.has(i - 1) ? "(-" : "",
+            indices.has(i) ? letter.toLowerCase() : letter,
+            indices.has(i) && !indices.has(i + 1) ? ")" : "",
+          ]),
+          parents: [whole, part],
         });
       }),
     );
@@ -241,17 +249,14 @@ export class Wordset implements Iterable<WordDerivation> {
   ends(): Wordset {
     return new Wordset(
       Iter.flatMap(this, function* (item) {
-        const word = item.words.join("");
-
-        for (const start of interval(1, word.length - 2)) {
-          for (const end of interval(start + 1, word.length - 1)) {
-            const prefix = word.slice(0, start);
-            const middle = word.slice(start, end);
-            const suffix = word.slice(end);
-
+        for (const start of interval(1, item.joined.length - 2)) {
+          for (const end of interval(start + 1, item.joined.length - 1)) {
             yield new WordDerivation({
-              words: [`${prefix}${suffix}`],
-              description: `${prefix}(-${middle.toLowerCase()})${suffix}`,
+              description: item.mapString((letter, i) => [
+                i === start ? "(-" : "",
+                start <= i && i < end ? letter.toLowerCase() : letter,
+                i === end - 1 ? ")" : "",
+              ]),
               parents: [item],
             });
           }
@@ -275,18 +280,14 @@ export class Wordset implements Iterable<WordDerivation> {
    */
   insert(other: Wordset): Wordset {
     return new Wordset(
-      Iter.flatMap(Iter.product(this, other), function* ([a, b]) {
-        const container = a.words.join("");
-        const content = b.words.join("");
-
-        for (const i of interval(1, container.length - 1)) {
-          const prefix = container.slice(0, i);
-          const suffix = container.slice(i);
-
+      Iter.flatMap(Iter.product(this, other), function* ([container, content]) {
+        for (const i of interval(1, container.joined.length - 1)) {
           yield new WordDerivation({
-            words: [`${prefix}${content}${suffix}`],
-            description: `${prefix}(${content})${suffix}`,
-            parents: [a, b],
+            description: container.mapString((letter, j) => [
+              j === i ? `(${content})` : "",
+              letter,
+            ]),
+            parents: [container, content],
           });
         }
       }),
@@ -301,12 +302,12 @@ export class Wordset implements Iterable<WordDerivation> {
   prefix(): Wordset {
     return new Wordset(
       Iter.flatMap(this, function* (item) {
-        const word = item.words.join("");
-        for (const i of interval(1, word.length - 1)) {
-          const prefix = word.slice(0, -i);
+        for (const i of interval(item.joined.length - 1, 1, -1)) {
           yield new WordDerivation({
-            words: [prefix],
-            description: `${prefix}_`,
+            description: item.mapString((letter, j) => [
+              j === i ? "_" : "",
+              j < i ? letter : "",
+            ]),
             parents: [item],
           });
         }
@@ -361,10 +362,9 @@ export class Wordset implements Iterable<WordDerivation> {
   reverse(): Wordset {
     return new Wordset(
       Iter.map(this, (item) => {
-        const reversed = Array.from(item.words.join("")).reverse().join("");
+        const reversed = Array.from(item.joined);
         return new WordDerivation({
-          words: [reversed],
-          description: `${reversed}<`,
+          description: `${item.mapString(() => [reversed.pop()!])}<`,
           parents: [item],
         });
       }),
@@ -459,12 +459,12 @@ export class Wordset implements Iterable<WordDerivation> {
   suffix(): Wordset {
     return new Wordset(
       Iter.flatMap(this, function* (item) {
-        const word = item.words.join("");
-        for (const i of interval(1, word.length - 1)) {
-          const suffix = word.slice(i);
+        for (const i of interval(1, item.joined.length - 1)) {
           yield new WordDerivation({
-            words: [suffix],
-            description: `_${suffix}`,
+            description: item.mapString((letter, j) => [
+              j === i ? `_` : "",
+              j >= i ? letter : "",
+            ]),
             parents: [item],
           });
         }
@@ -485,18 +485,15 @@ export class Wordset implements Iterable<WordDerivation> {
     const map = new Map<string, WordDerivation>();
 
     for (const item of other) {
-      const word = item.words.join("");
-      if (!map.has(word)) {
-        map.set(word, item);
+      if (!map.has(item.joined)) {
+        map.set(item.joined, item);
       }
     }
 
     return new Wordset(
       Iter.flatMap(this, function* (item) {
-        const word = item.words.join("");
-
-        if (map.has(word)) {
-          const other = map.get(word)!;
+        if (map.has(item.joined)) {
+          const other = map.get(item.joined)!;
           yield new WordDerivation({
             words: item.words,
             description: `${item.description} = ${other.description}`,
@@ -515,7 +512,7 @@ export class Wordset implements Iterable<WordDerivation> {
   match(regex: RegExp): Wordset {
     return new Wordset(
       Iter.flatMap(this, function* (item) {
-        if (regex.test(item.words.join(""))) {
+        if (regex.test(item.joined)) {
           yield item;
         }
       }),
@@ -530,7 +527,7 @@ export class Wordset implements Iterable<WordDerivation> {
   wordlike(): Wordset {
     return new Wordset(
       Iter.flatMap(this, function* (item) {
-        if (Wordset.cromulence.cromulence(item.words.join("")) >= 0) {
+        if (Wordset.cromulence.cromulence(item.joined) >= 0) {
           yield item;
         }
       }),

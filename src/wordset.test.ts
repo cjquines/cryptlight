@@ -71,6 +71,14 @@ describe("wordset", () => {
         description: "(-a)B(-a)C(-a)",
       }),
     ]);
+    expect(
+      Array.from(Wordset.literal("caadaabr").deleteAll(Wordset.literal("aa"))),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["CDBR"],
+        description: "C(-aa)D(-aa)BR",
+      }),
+    ]);
 
     expect(
       Array.from(Wordset.literal("abc").deleteAll(Wordset.literal("ac"))),
@@ -276,69 +284,21 @@ describe("wordset", () => {
     );
   });
 
-  test.skip("combined operations", () => {
+  test("combined operations", () => {
     const definition = Wordset.literal("attend");
     const tadConfused = Wordset.literal("tad").anagram();
     const returningProfit = Wordset.literal("net").reverse();
     const wordplay = tadConfused.insert(returningProfit);
     const results = Array.from(definition.intersect(wordplay).match(/.{6}/));
 
-    expect(results).toMatchInlineSnapshot(`
-      [
-        {
-          "description": "literal "attend" = AT(TEN)D",
-          "parents": [
-            {
-              "description": "literal "attend"",
-              "parents": [],
-              "words": [
-                "ATTEND",
-              ],
-            },
-            {
-              "description": "AT(TEN)D",
-              "parents": [
-                {
-                  "description": "ATD*",
-                  "parents": [
-                    {
-                      "description": "literal "tad"",
-                      "parents": [],
-                      "words": [
-                        "TAD",
-                      ],
-                    },
-                  ],
-                  "words": [
-                    "ATD",
-                  ],
-                },
-                {
-                  "description": "TEN<",
-                  "parents": [
-                    {
-                      "description": "literal "net"",
-                      "parents": [],
-                      "words": [
-                        "NET",
-                      ],
-                    },
-                  ],
-                  "words": [
-                    "TEN",
-                  ],
-                },
-              ],
-              "words": [
-                "ATTEND",
-              ],
-            },
-          ],
-          "words": [
-            "ATTEND",
-          ],
-        },
-      ]
-    `);
+    expect(results).toEqual([
+      expect.objectContaining({
+        words: ["ATTEND"],
+      }),
+    ]);
+
+    expect(results[0]!.description).toMatchInlineSnapshot(
+      `"literal "attend" = AT(TEN<)D*"`,
+    );
   });
 });
