@@ -10,6 +10,20 @@
 
 .app {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  gap: 1em;
   overflow: hidden;
+  padding: 0.5em;
+}
+
+.header {
+  display: flex;
+  gap: 0.5em;
+
+  h1 {
+    color: var(--yellow-fg);
+    font-size: 1.5em;
+    margin: 0;
+  }
 }

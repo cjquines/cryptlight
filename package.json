@@ -16,6 +16,12 @@
   "license": "MIT",
   "author": "CJ Quines <cj@cjquines.com>",
   "type": "module",
+  "imports": {
+    "#download": {
+      "node": "./src/download.node.ts",
+      "default": "./src/download.ts"
+    }
+  },
   "exports": {
     ".": "./dist/index.js"
   },
@@ -24,9 +30,11 @@
   "files": [
     "dist/**/*",
     "src/**/*",
-    "!src/**/*.test.ts"
+    "!src/**/*.test.ts",
+    "!src/data/indicators.txt"
   ],
   "scripts": {
+    "build:data": "tsx scripts/build-data.ts",
     "build:tsc": "tsc --build tsconfig.build.json",
     "format": "prettier --write .",
     "lint": "eslint",

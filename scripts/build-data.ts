@@ -6,7 +6,10 @@ import { IndicatorMatcher, IndicatorType } from "../src/indicators.js";
 import { lemmatize } from "../src/nlp.js";
 
 const dataDir = url.fileURLToPath(new URL("./data", import.meta.url));
-const outputDir = url.fileURLToPath(new URL("../src/data", import.meta.url));
+const srcOutputDir = url.fileURLToPath(new URL("../src/data", import.meta.url));
+const distOutputDir = url.fileURLToPath(
+  new URL("../dist/data", import.meta.url),
+);
 
 async function* parseCSV<T>(fileName: string): AsyncGenerator<T> {
   const stream = fs
@@ -49,7 +52,7 @@ async function main() {
   for await (const record of parseTSV<{ text: string; type: string }>(
     path.join("manual", "anagram.tsv"),
   )) {
-    const lemmas = lemmatize(record.text);
+    const lemmas = lemmatize(record.text).map((l) => l.lemma);
     const type = IndicatorType.Anagram;
     const score = record.type === "Standard" ? 50 : 20;
     indicatorData.push({ lemmas, type, score });
@@ -60,7 +63,7 @@ async function main() {
     variety: string;
     type: string;
   }>(path.join("manual", "container.tsv"))) {
-    const lemmas = lemmatize(record.text);
+    const lemmas = lemmatize(record.text).map((l) => l.lemma);
     const type =
       record.variety === "Insertion"
         ? IndicatorType.Insertion
@@ -71,7 +74,7 @@ async function main() {
     indicatorData.push({ lemmas, type, score });
     for (const other of record.other.split("/")) {
       if (!other) continue;
-      const otherLemmas = lemmatize(other);
+      const otherLemmas = lemmatize(other).map((l) => l.lemma);
       if (otherLemmas.every((l, i) => l === lemmas[i])) {
         continue;
       }
@@ -96,7 +99,7 @@ async function main() {
     clue_rowids: string;
   }>("georgeho-indicators.csv")) {
     indicatorData.push({
-      lemmas: lemmatize(indicator),
+      lemmas: lemmatize(indicator).map((l) => l.lemma),
       type: wordplay,
       score: Array.from(clue_rowids.matchAll(/,/g)).length + 1,
     });
@@ -113,7 +116,11 @@ async function main() {
     for (const line of lines) {
       const phrase = line.replaceAll("_", " ");
       if (!phrase) continue;
-      indicatorData.push({ lemmas: lemmatize(phrase), type, score: 20 });
+      indicatorData.push({
+        lemmas: lemmatize(phrase).map((l) => l.lemma),
+        type,
+        score: 20,
+      });
     }
   }
 
@@ -127,11 +134,14 @@ async function main() {
     indicators.insert(lemmas, type, score);
   }
 
-  await fs.promises.writeFile(
-    path.join(outputDir, "indicators.txt"),
-    indicators.dump().join("\n"),
-    "utf-8",
-  );
+  for (const dir of [srcOutputDir, distOutputDir]) {
+    await fs.promises.mkdir(dir, { recursive: true });
+    await fs.promises.writeFile(
+      path.join(dir, "indicators.txt"),
+      indicators.dump().join("\n"),
+      "utf-8",
+    );
+  }
 }
 
 await main();

@@ -1,4 +1,4 @@
-import type { Cromulence } from "cromulence";
+import { Cromulence } from "cromulence";
 import { slugify } from "cromulence";
 import { datamuse } from "./datamuse.js";
 import * as Iter from "./iterable.js";
@@ -79,6 +79,10 @@ class WordDerivation {
   }
 }
 
+export type WordsetData = {
+  wordlist: Record<string, number>;
+};
+
 /**
  * A set of "words". Wordsets are an abstraction for doing transformations over
  * multiple possibilities at once, which we can intersect and filter as needed.
@@ -93,7 +97,6 @@ class WordDerivation {
  * const results = definition.intersect(wordplay).match(/.{6}/);
  */
 export class Wordset implements Iterable<WordDerivation> {
-  // TODO: inject this
   static cromulence: Cromulence;
 
   private seen: WordDerivation[] = [];
@@ -105,6 +108,10 @@ export class Wordset implements Iterable<WordDerivation> {
     } else {
       this.iter = items[Symbol.iterator]();
     }
+  }
+
+  static load(data: WordsetData): void {
+    Wordset.cromulence = new Cromulence(data.wordlist);
   }
 
   [Symbol.iterator](): Iterator<WordDerivation> {

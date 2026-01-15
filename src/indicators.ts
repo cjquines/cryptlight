@@ -112,6 +112,13 @@ for (const [type, abbr] of Object.entries(indicatorAbbr)) {
   abbrIndicator[abbr] = type as IndicatorType;
 }
 
+export type IndicatorMatch = {
+  start: number;
+  end: number;
+  type: IndicatorType;
+  score: number;
+};
+
 const DIGIT = /[0-9]/;
 
 class IndicatorNode {
@@ -180,12 +187,7 @@ class IndicatorNode {
     lemmas: string[],
     start: number,
     end: number,
-  ): Generator<{
-    start: number;
-    end: number;
-    type: IndicatorType;
-    score: number;
-  }> {
+  ): Generator<IndicatorMatch> {
     for (const [type, score] of this.scores) {
       yield { start, end, type, score };
     }
@@ -244,12 +246,7 @@ export class IndicatorMatcher {
     this.children.get(first)!.insert(rest, type, score);
   }
 
-  *match(lemmas: string[]): Generator<{
-    start: number;
-    end: number;
-    type: IndicatorType;
-    score: number;
-  }> {
+  *match(lemmas: string[]): Generator<IndicatorMatch> {
     for (let start = 0; start < lemmas.length; start++) {
       const child = this.children.get(lemmas[start]!);
       if (!child) {

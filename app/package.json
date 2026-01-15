@@ -13,6 +13,7 @@
     "vite": "npm:rolldown-vite@7.2.5"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.16",
     "cryptlight": "file:..",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
