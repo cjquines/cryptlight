@@ -2,6 +2,7 @@ import { Cromulence } from "cromulence";
 import { describe, expect, test } from "vitest";
 import * as Iter from "./iterable.js";
 import { Wordset } from "./wordset.js";
+import { runAPITests } from "./testUtil.js";
 
 describe("wordset", () => {
   Wordset.cromulence = new Cromulence({
@@ -284,10 +285,10 @@ describe("wordset", () => {
     );
   });
 
-  test("combined operations", () => {
-    const definition = Wordset.literal("attend");
+  test.runIf(runAPITests)("combined operations", async () => {
+    const definition = await Wordset.synonym("Escort");
     const tadConfused = Wordset.literal("tad").anagram();
-    const returningProfit = Wordset.literal("net").reverse();
+    const returningProfit = (await Wordset.synonym("profit")).reverse();
     const wordplay = tadConfused.insert(returningProfit);
     const results = Array.from(definition.intersect(wordplay).match(/.{6}/));
 
@@ -298,7 +299,7 @@ describe("wordset", () => {
     ]);
 
     expect(results[0]!.description).toMatchInlineSnapshot(
-      `"literal "attend" = AT(TEN<)D*"`,
+      `"synonym of "Escort" = AT(TEN<)D*"`,
     );
   });
 });

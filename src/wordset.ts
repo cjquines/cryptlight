@@ -1,5 +1,6 @@
 import type { Cromulence } from "cromulence";
 import { slugify } from "cromulence";
+import { datamuse } from "./datamuse.js";
 import * as Iter from "./iterable.js";
 import { anagrams, interval, subsequences } from "./util.js";
 
@@ -85,9 +86,9 @@ class WordDerivation {
  * For example, the solution to the cryptic clue "Escort is tad confused about
  * returning profit (6)" can be found by:
  *
- * const definition = Wordset.synonym("Escort");
+ * const definition = await Wordset.synonym("Escort");
  * const tadConfused = Wordset.literal("tad").anagram();
- * const returningProfit = Wordset.synonym("profit").reverse();
+ * const returningProfit = await Wordset.synonym("profit").reverse();
  * const wordplay = tadConfused.insert(returningProfit);
  * const results = definition.intersect(wordplay).match(/.{6}/);
  */
@@ -137,9 +138,17 @@ export class Wordset implements Iterable<WordDerivation> {
     ]);
   }
 
-  static synonym(words: string): Wordset {
-    // TODO: implement for real
-    return Wordset.literal(words);
+  static async synonym(words: string): Promise<Wordset> {
+    const results = await datamuse({ meansLike: words, maxResults: 1000 });
+    return new Wordset(
+      results.map((result) => {
+        return new WordDerivation({
+          words: [slugify(result.word).toUpperCase()],
+          description: `synonym of "${words}"`,
+          parents: [],
+        });
+      }),
+    );
   }
 
   // cryptic-y transformations:
@@ -268,9 +277,28 @@ export class Wordset implements Iterable<WordDerivation> {
   /**
    * A homophone of this: "THIS".
    */
-  homophone(): Wordset {
-    // TODO: implement for real
-    return new Wordset(this);
+  async homophone(): Promise<Wordset> {
+    const promises = await Promise.all(
+      Array.from(this).map(async (item) => {
+        const phrase = item.words.join(" ");
+        return {
+          item,
+          phrase,
+          results: await datamuse({ soundsLike: phrase }),
+        };
+      }),
+    );
+    return new Wordset(
+      Iter.flatMap(promises, ({ item, phrase, results }) =>
+        results.map((result) => {
+          const { word: homophone } = result;
+          return new WordDerivation({
+            description: `${homophone.toUpperCase()} "${phrase}"`,
+            parents: [item],
+          });
+        }),
+      ),
+    );
   }
 
   /**
