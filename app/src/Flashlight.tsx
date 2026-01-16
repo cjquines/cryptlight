@@ -71,9 +71,11 @@ function FlashlightOutput() {
             <FlashlightToken
               key={j}
               text={token.text}
-              matches={output[i].filter(
-                (match) => match.start === j && match.end === j,
-              )}
+              matches={
+                output[i]?.filter(
+                  (match) => match.start === j && match.end === j,
+                ) ?? []
+              }
             />
           ))}
         </div>
@@ -88,20 +90,22 @@ export function Flashlight() {
   const sendMatcherInput = useStore((state) => state.sendMatcherInput);
 
   return (
-    <div>
-      <textarea
-        value={matcherInput}
-        onChange={(e) => {
-          setMatcherInput(e.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          sendMatcherInput();
-        }}
-      >
-        light
-      </button>
+    <div className="flashlight">
+      <div className="flashlight-input">
+        <textarea
+          value={matcherInput}
+          onChange={(e) => {
+            setMatcherInput(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            sendMatcherInput();
+          }}
+        >
+          light
+        </button>
+      </div>
       <FlashlightOutput />
     </div>
   );

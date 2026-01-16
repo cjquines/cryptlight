@@ -1,0 +1,26 @@
+.flashlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.flashlight-input {
+  display: flex;
+  gap: 0.5em;
+
+  textarea {
+    flex-grow: 1;
+    min-height: 5em;
+  }
+}
+
+.flashlight-token.has-tooltip {
+  background-color: var(--yellow-subtle);
+}
+
+.flashlight-tooltip {
+  background-color: #fff;
+  border: 1px solid var(--yellow-border);
+  border-radius: 4px;
+  padding: 0.5em;
+}

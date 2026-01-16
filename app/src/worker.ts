@@ -61,7 +61,7 @@ self.addEventListener("message", ({ data }: { data: WorkerInput }) => {
   }
 
   inputID = data.inputID;
-  outputGenerators = data.lemmas.map((lemmas) => matcher!.match(lemmas));
+  outputGenerators = data.lemmas.map((line) => matcher!.match(line));
 
   const sendChunk = () => {
     if (inputID === null || outputGenerators === null) return;
@@ -74,12 +74,12 @@ self.addEventListener("message", ({ data }: { data: WorkerInput }) => {
       for (let i = 0; i < outputGenerators.length; i++) {
         const iter = outputGenerators[i];
         if (iter === null) continue;
-        const link = iter.next();
-        if (link.done) {
+        const indicator = iter.next();
+        if (indicator.done) {
           outputGenerators[i] = null;
           break;
         }
-        chunk[i].push(link.value);
+        chunk[i].push(indicator.value);
       }
     }
 

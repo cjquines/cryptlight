@@ -29,7 +29,8 @@ type State = {
 const stateCreator: StateCreator<State> = (set, get) => ({
   matcherInputID: null,
   lastMatcherInputID: -1,
-  matcherInput: "",
+  matcherInput:
+    "36. Firm deal closer rejects hot sushi accompaniment\n8. Announcer Hall initially emulates Dr. Demento",
 
   lemmatizedMatcherInput: [],
   matcherOutputInputID: -1,
