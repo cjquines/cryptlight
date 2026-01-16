@@ -1,0 +1,4958 @@
+10 X 100
+100 C 100
+1000 K 50 M 100
+5 V 100
+50 L 100
+500 D 50
+a AN 6 AR 1 AT 2 DO 1 GR 1 HE 1 IN 6 NO 2 ON 1 ONE 17 PER 18
+abandon CAR 1 RAT 1
+abandoned PED 1
+abdicate GO 1 IGN 3
+abide LIE 1
+abigail ABI 1
+able CAN 2 ENT 1 FIT 2
+aboard IN 1 ON 3 SS 1
+abominable FUL 1
+aborigine IVE 1
+about A 50 C 50 CA 107 IS 2 OF 5 ON 94 RE 533
+above ON 4
+abridge CUT 1
+abroad OUT 7
+absence OFF 1
+absent A 50 ABS 50
+absolute A 50 ABS 50
+abstain DRY 1
+abstainer TT 3
+abstemious DRY 1
+absurd MAD 1
+abuse MUD 1 ULT 1
+academic BA 2 DON 28 MA 3 OUS 1
+academician RA 3
+academy RA 1
+acceleration A 50
+acceptable IN 1 OK 8 ON 11
+accepted A 50 HAD 1 IN 4
+accessory BAG 1
+accident ASH 2 HAP 1
+acclaim UR 1
+accommodation INN 2 PAD 1
+accompanying AND 3
+accomplish DID 3
+accordingly SO 12
+account AC 116 ACC 4
+accountant ACA 1 CA 8 CAS 1
+ace A 50 ANA 1 FAB 1 NE 1 ONE 3 PRO 1
+ache DIE 1 YEN 1
+achieve GET 7 WIN 1 DID 1 WON 1
+acknowledge OWN 1
+acquaintance KEN 1
+acquire GET 4 WIN 2 GOT 5 HAS 1
+acre A 100
+act A 50 ACT 1 BE 1 DO 11 ED 1 LAW 1 DID 1 ON 4
+action ED 1 WAR 2
+activate ON 1
+active A 50 ON 4
+activity GO 1
+actor HA 1 HAM 5
+ad SUM 1
+adage SAW 1
+add SUM 2 TOT 3 ON 1
+addendum PS 2
+addict NUT 1
+addition SUM 3
+additional ODD 1 AND 1 TOO 1
+address URL 1
+adequate OK 4
+adhesive GUM 1
+adian CAN 1
+adjective A 50
+adjust SET 1
+administer RAN 1
+admiration AWE 2
+admire EYE 1
+admirer FAN 6
+admit OWN 3 IN 2
+adorn ON 6
+adult A 50 AGE 1 INA 1 UP 1
+adulterate CUT 1
+advance A 50 PRE 1 SUB 1
+advanced A 50 IA 2
+advantage AD 50 IN 1 USE 1 VAN 1
+adversary FOE 1
+advert AD 4
+advertise AD 1 PR 4
+advertisement AD 7 ADS 1
+advice TIP 14
+advise RM 1
+advocate ER 1 FOR 1 PRO 1
+aeroplane JET 1
+aerosol CAN 1
+affair DO 2
+affect FOR 1
+affected HIT 1
+affirmative AY 1 YES 4
+aficionado FAN 3
+after ALA 1 EXT 1
+afternoon A 50 PM 7
+afterthought PS 7
+again BIS 4 RE 12 TAN 1 TUT 1
+against CON 75 V 50 VS 51 ON 8 TO 4
+age AGE 3 EON 2 ERA 14
+aged AE 1 OLD 2
+agent FED 3 REP 41 SPY 27 TEC 1 CIA 17 MEN 1
+aggregate ORE 1
+agitation ADO 1
+agree FIT 2 NOD 4 AY 2 AYE 1 OK 6 SET 2 YES 7
+agreement ACT 2 AY 1 AYE 1 NOD 2 OK 7 YEA 3 YES 11
+ahead ON 4 UP 16
+aide PA 1
+ail ILL 5
+ailment ILL 1
+aim END 15 TRY 2
+air GAS 1 SKY 2
+aircraft ANE 1 JET 3 MIG 1
+airline BA 1 KLM 2
+airliner JET 1
+airman AC 1 RAF 5
+aisle ROW 1
+al AL 1
+alabama AL 54 ALA 51
+alan AL 3
+alas AY 3 OCH 1
+alaska AK 51
+albania AL 50
+albeit IF 1
+albert AL 1
+alberta AB 50
+album CD 2 EP 1 LP 4
+alchemi ME 1
+alcohol ALE 2 GIN 4 RUM 4
+alcoholic DRY 1 SOT 2
+alcove BAY 1
+alert FLY 2
+alfred AL 1
+alfresco OUT 1
+algeria DZ 50
+alias AKA 53
+alibi AKA 1
+alien ET 45
+alight IN 1
+all SUM 2
+allegation MUD 1
+alley CUT 1
+allow LET 120 OK 2 HAS 1
+allure IT 1 SA 1 WIN 1
+ally PAL 1
+almighty GOD 1
+almost LY 1
+alongside AT 1 BY 8
+alpha A 50
+also AND 56 TOO 42
+alter GE 1
+altercation ROW 1
+alternative OR 40 ORS 1
+although BUT 1 THO 2
+aluminium AL 57
+always AY 50 AYE 2 EER 9 ER 13
+amateur A 50 AM 51 HAM 6 LAY 11 PRO 1
+ambassador HE 61
+ambition AIM 2
+america A 50 AM 55 US 154 USA 19
+american A 50 AM 76 US 393 ANA 1
+amiss UP 1
+among IN 9
+amount SUM 4
+ampere AMP 50
+amphibian EFT 1
+amplifier AMP 51 MIC 1
+amusement FUN 6
+amusing FUN 1
+an AN 29 GET 1
+anaemic WAN 1
+anaesthetic GAS 1
+ancient OLD 19
+and AND 5 ET 2
+anecdote ANA 3
+angel KER 2
+anger IRE 47
+anglican CE 2
+angola AN 50
+angry HOT 2 MAD 4 RED 1 VEX 1
+angus GUS 1
+animal APE 2 ASS 11 BSE 1 CAT 6 DOG 1 GNU 1 HOG 3 OX 3 PIG 4 RAM 2 RAT 4 SOW 2 YAK 1 ZOO 1
+animated HOT 2
+annex ADD 1
+annoy BUG 1 IRK 2 ITE 1
+annual PA 1
+anonymous A 50 AN 2
+another AN 1 IAN 1 NEW 1
+answer A 50 ANS 62
+antagonist FOE 2
+antelope GNU 3
+anti-aircraft AA 50
+antimony SB 50
+antiquated OLD 1
+antique OLD 10
+any ARY 1
+anything OWT 3
+apartment APT 3 LAT 1
+apothecary AP 1
+appalling BAD 1
+apparatus RIG 3
+apparent AP 3
+appeal ASK 1 BEG 1 IT 20 SA 2 SUE 3 WIT 1
+appear BE 1 ON 8
+appearance AIR 1 HUE 1
+appendage ARM 1
+appendix PS 1
+appetizer APP 1
+applaud ER 1
+apple COX 1
+application USE 9
+apply ASK 1 USE 3
+appoint SET 1
+appreciate DIG 2
+appreciated TA 1
+appreciation EAR 1
+apprentice CUB 1 NER 1 LL 2
+approach WAY 2 ON 1
+appropriate APT 6 BAG 2 DUE 1 FIT 10 NET 1
+approval NOD 1 OK 12 OLE 1 YES 1
+approve IOK 1 OK 4 APP 1 OKS 2 FOR 1 PRO 1
+april APR 50
+apt FIT 1
+arab AR 65
+arabia AR 1
+arabian AR 4
+arabic AR 2
+arbiter REF 1
+arch BOW 1 COY 1 SLY 2
+archdeacon VEN 10
+ardent HOT 1
+area A 50 ANA 1 ION 1 ITA 1 AA 1
+argentina RA 51
+argon AR 51
+argue ROW 2
+arguman ROW 1
+argument FF 1 PAT 1 ROW 35 TO 1
+arid DRY 1
+aristo NOB 1 OFF 1
+aristocrat NOB 6
+arizona AZE 50 AZ 4
+arkansas AR 56 ARK 50
+arm GUN 3 RAF 1
+army TA 9
+around CA 16 RE 1 RUN 1
+arouse UP 1
+arrange SET 11 ARR 2 PUT 1 RAN 1
+arrest COP 1 END 1 NAB 4
+arrival ARR 3
+arrive ARR 8 GOT 1 IN 1
+arse RR 1
+arsenic AS 54
+artful SLY 1
+arthur ART 2
+article A 50 AN 150 IT 1 TEH 1 THE 137 ANA 1
+artifice CON 1
+artificial ART 1
+artillery RA 1
+artilleryman RA 1
+artist RA 269 AN 1 IST 1 TRA 1 TER 2 RAS 1
+artless ART 1
+artwork OIL 1
+ary RAM 1
+as AS 4 COS 1 EG 3 FOR 1 QUA 10 SO 2
+ashamed RED 1
+ask SEE 1 TE 1
+asleep OUT 1
+aspect HUE 1
+aspiration AIM 1
+assam TEA 1 TES 1
+assault ABH 1 DO 1
+assemble MET 3
+assert PUT 1
+assignation ATE 1
+assignment JOB 1
+assist AID 2
+assistance AID 9
+assistant PA 5
+associate A 50 LLY 1 MIX 1
+assume DON 1
+astatine AT 50
+at AT 17 IN 2 ON 2 TO 1
+athletic FIT 1
+atmosphere AIR 17 AT 1
+atop ON 9 UP 1
+ator SEN 1
+attach PIN 1 TIE 1 ON 1
+attack FIT 11 HIT 4 MUG 1
+attemp TRY 1
+attempt BID 6 GO 27 POP 1 RY 3 SHY 4 TRY 90
+attend GO 2 AT 11 IN 3
+attendant MAN 2 TER 1
+attention EAR 50
+attitude AIR 7
+attorney DA 5
+attraction SA 1
+attractive FIT 1 HOT 1
+auberge PUB 1
+auburn RED 1
+auction LE 1
+audience EAR 2
+audiovisual AV 1
+auditor EAR 4
+august AUG 51
+auntie BBC 53
+aussie ROO 1
+australia A 50 AUS 60 OZ 18
+australian A 50 AUS 4 OZ 9
+austria A 50 AUS 1 INA 1
+author ME 3 PAN 1 PEN 8 POE 3
+authorisation OK 2
+authorise LET 3
+authority ACE 1 SAY 1
+auto CAR 5
+automaton BOT 1
+automobile CAR 5
+available ON 6 OUT 6 REE 1
+avarice ED 1
+avenue AV 51 AVE 52
+average AV 1 AVE 1 OK 1 PAR 29
+avian OWL 1
+avoid ON 1
+awake UP 2
+award CBE 1 CUP 3 DSO 1 MBE 8 OBE 8 OM 1 POT 1 UR 1
+aware ENT 1
+awareness KEN 1
+away FRO 1 OFF 14 OUT 17
+awesome RAD 2
+awful BAD 7 LE 1
+ax CUT 1
+axe CUT 1 HEW 1
+axis X 50 Y 50 Z 50 GYZ 1 XY 8 YX 1
+azerbaijan AZE 50
+baby CUB 7 SIS 1 TOT 3 WEE 2
+bacardi RUM 1
+bachelor B 50 AB 1 ABA 1 BA 5
+back AFT 2 AGO 4 BET 2 END 1 FRO 3 HID 1 ID 1 TO 1 AVA 1 FOR 2 ME 1
+backchat LIP 2
+bad ILL 56 OFF 11 ONG 1
+baddie CUR 1
+badger NAG 3
+baffled GOT 1
+bag ACK 1 ER 1 NET 1 SAC 11 SAG 1 WIN 1
+bahamas BS 51
+bahrain BRN 50
+bake HOT 1
+baked DRY 1
+baker VEN 1
+ball ORB 5 ED 1
+ballad LAY 4
+balmoral HAT 1
+baloney ROT 2
+ban BAR 8 RAP 1 OUT 4
+banana MAD 7
+band REM 5 RIM 1 SET 2
+bang HIT 1
+banger CAR 2
+bangladesh BD 50
+bank BAR 2 BK 1 ER 1 ROW 6
+banker DEE 2 EXE 1 PO 1
+banter RAG 2 WIT 1
+bar BAN 23 BUT 4 INN 8 PH 1 PUB 10 ROD 17
+barb DIG 1
+barbados BDS 50
+barbarian HUN 6
+bare RAW 1
+bargain GO 1
+barium BA 50
+bark BAY 1 YAP 1 MAD 2
+barney IN 1
+baron B 50
+baronet BT 4
+barrack BOO 2
+barrel B 100 TUN 17 VAT 1
+barricade DAM 1
+barrier DAM 14
+barrister LE 1 QC 2 BAR 1
+barrow HOW 1
+base BED 9 HQ 1 LOW 12
+bash GO 1 HIT 2 RAM 1
+bashful COY 2 SHY 3
+basin PAN 1 POT 1 TUB 1
+bass B 50 LOW 1
+bastard GIT 1
+bat HIT 1 MAD 1 IN 43 SIN 1
+bath SPA 8 TUB 12 UNI 1
+bathroom LOO 4
+batter LAM 1 RAM 1
+battered HIT 3
+battle ON 1 VIE 1 WAR 9
+bay RSE 1
+be BE 2 ENS 1 MAN 2
+beaker MUG 1
+beam RAY 16
+bean VIM 1
+bear LUG 1 OOH 1 AIR 9 HAS 1 DIG 2 OFF 1
+beard AWN 1
+beast GNU 1 OX 1 PIG 1
+beat CAP 2 CAT 1 HIT 1 LAM 6 TAN 28
+beaten HIT 1
+beatnik CAT 1
+beatty NED 1
+beautifu WOO 1
+because AS 6 COS 2 FOR 2
+become GOT 5 GET 4 GO 3
+becoming FIT 1
+bed COT 80 HAY 1 KIP 1 LAY 1 PIT 1
+bedpan POT 1
+bedroom BR 2
+bedtime TEN 1
+bee B 50
+beeb BBC 1
+beef OX 11
+beer ALE 115 JAR 1 LE 2
+befog FOG 1
+before AGO 2 BY 1 ERE 86 LRE 1 OR 2 PRE 35 TO 3
+beg ASK 1
+begin ED 1
+beginner LL 1
+begrudge ENT 1
+behead EME 1
+behind AFT 11 ASS 7 BUM 4 END 1
+behold LO 20 SEE 2
+belarus BY 50
+belgium B 50
+belize BH 50 BZ 1
+bell TOM 1
+belly GUT 2 MAW 1 POT 3 TUM 6 UM 1
+belong GO 1
+beloved ING 1 PET 1
+belt LAM 1
+bench PEW 2
+bend S 50 U 50 Z 50 ARC 2 BOW 5 US 1
+benedictine DOM 1
+benefit AID 5 PAY 2 USE 3 FOR 1
+benin DY 50
+beret CAP 1
+berth BED 1
+beryllium BE 50
+beside AT 1 BY 1 ON 2 TO 4
+besides TOO 2
+besmirch MAR 1
+bespectacle OO 1
+best ACE 2 TOP 38
+bet BET 1 LAY 6
+betray RAT 2
+beverage TEA 2
+bewail ED 1
+beyond OFF 1
+bible NT 1
+bid VIE 1
+biddy HEN 2
+big AT 1 FAT 5 OS 1
+bigwig NOB 1 VIP 1
+bill AC 38 ACC 1 ACT 1 AD 28 TAB 22 ADS 1
+billion B 50
+bin BIN 1
+bind TIE 1
+binge JAG 1
+birch TAN 1
+bird EMU 13 HEN 9 JAY 4 KEA 1 OWL 25 PEN 1 PIE 2 TIT 43
+birdcall COO 1
+birthmark ES 1
+bishop B 50 AB 5 ARR 4 RR 14 SEE 1 BB 5
+bishopric ELY 1
+bismuth BI 50
+bit JOT 1 TAD 5
+bite EAT 1 NIP 1 ICY 1 RAW 1
+bitter ALE 8 RAW 2
+bizarre RUM 1
+blab YAK 2
+black B 50 AB 2 BL 1 JET 12 TAR 2
+blackguard CAD 3
+blade AXE 1 OAR 3
+blame RAP 6
+blank GAP 1
+blather GAS 1 YAK 1
+blazer SUN 1
+bleat MAA 1
+blemish MAR 1
+blend MIX 1
+blight ILL 1 MAR 2
+blighter CAD 2
+blimey COR 2 MY 1
+blob O 50
+bloc EU 1
+block BAR 6 DAM 6 GAG 1 NUT 1
+blockage JAM 1
+blockbuster BIG 1
+blockhead ASS 1
+bloke AHE 1 AL 1 AP 2 BOD 4 CAT 1 ER 1 GUY 2 HE 3 MAN 19 NT 1 OIK 1 SAM 1 TED 1 MEN 18
+blood KIN 3
+bloodshot RED 1
+bloodstain RED 1
+bloodsucker BUG 1
+bloody RAW 1 RED 21
+bloom OUT 6
+blossom MAY 1 OUT 1
+blow HIT 2 RAP 4
+blower FAN 1
+blubber CRY 3 FAT 2
+blue CON 1 IGO 1 LOW 7 OWN 1 SAD 11 SKY 11
+bluff CON 1 ON 1
+blunder ERR 9 GLE 1 PS 1
+blush RED 8
+bluth ME 1
+board SS 1
+boat ARK 13 CAT 3 HOY 1 SS 2 SUB 3 TUB 2 TUG 3 UNK 1
+boatman AB 2 ME 2 TAR 1
+bobby COP 2
+bod MEN 1
+bodyguard SS 1
+bog LOO 1
+boiling HOT 2
+boldness LIP 1
+bolivia BOL 50
+bolognese BOL 1
+bolshevik RED 1
+bolt UN 1 RAN 2
+bomb ARM 1 EGG 1 HIT 1
+bond TIE 6
+bone OS 2 RIB 9
+bonus JAM 1
+boob ERR 2 TIT 2
+book B 50 NT 81 OT 80 AB 2 EL 4 GET 1 JOB 1 LOG 1 ORB 1 SHE 2 TO 1 BB 13 ENT 2 LIT 7
+boomer ROO 1
+boor OIK 1
+boot ICK 1
+booze ALE 5 GIN 3 RUM 5 UM 1 ON 1
+boozer BAR 8 INN 2 PUB 4 SOT 5
+bordeaux VIN 1
+border BED 1 END 2 HEM 28 LIP 3 RIM 21
+borderline HEM 1
+boring DRY 11
+boris PM 1
+born B 50 NE 3 NEE 15
+borne SAT 1
+boron B 50
+boss CEO 2 ED 1 GUV 1 NOI 1 TER 1
+bother ADO 3 DO 1 NAG 1 ATE 1
+botswana RB 50
+bottl JAP 1
+bottle CAN 1 JAR 1
+bottom AIL 1 ASS 5 BED 8 BUM 5 END 3
+bouncer ROO 3
+bound END 1 HEM 1 HOP 7 LIP 1 RIM 1
+boundary END 1 RIM 1
+bounder CAD 7 ROO 2
+bovine COW 5 GNU 1 OX 1 YAK 1
+bow ARC 4 NOD 1
+bowl B 50 CUP 1 PAN 1 POT 1
+bowler HAT 6
+box TV 52 AR 1 ATE 1 BIN 1 EST 1 HIT 2 IN 1 TIN 1
+boxer ALI 18 PUG 1
+boy AL 5 BEN 5 CUB 1 DAN 1 ED 5 HE 2 IAN 2 KEN 3 KIT 1 LAD 102 LEO 1 LES 1 NED 1 ON 1 RAY 3 REG 3 ROB 2 RON 1 SAM 2 SEB 1 SID 1 SO 1 SON 110 STU 1 TED 3 TIM 6 TOM 5
+boycott BAN 4
+boyfriend BF 1 MEN 1
+brace TWO 2
+brag COW 1 OW 1 ED 1
+brain WIT 1
+braless BRA 1
+branch ARM 5 LEG 1 LOG 1
+brat IMP 1
+brave CE 1
+bravo B 50
+brawl ROW 2
+brazil BR 53 NUT 1
+bread BAP 4 COB 1 NAN 6 RYE 2
+breadth B 50
+break GAP 1 AND 1 DUP 1
+breakfast EGG 1
+breast TIT 1
+breath AIR 1
+breathe IS 1
+breeze AIR 4
+brew CHA 1 TEA 2
+bribe SOP 4
+bridge BR 51 RUN 1
+brief WEE 1 YER 1
+bright LIT 4
+brighten LIT 2
+brilliant ACE 10 DEF 1 FAB 1
+bring GOT 1 LED 1
+brink LIP 1
+britain B 50 BR 55 GB 1 UK 7
+british B 50 BR 93 GB 2 POM 1 UK 14
+broadcast AIR 37 SOW 10 ON 3
+broadcaster BBC 1 ITV 1 SKY 14 TV 1
+bromine BR 50
+bronze TAN 22
+brooch PIN 3
+brood SIT 2 SAT 2
+brother BRO 60 BR 18 FR 1 LOR 1
+brouhaha DIN 1
+browbeat COW 1
+brown BR 51 DUN 4 TAN 57
+brownie ELF 2
+brownish TAN 1
+brunei BRU 50
+brush RUB 1
+brussels EU 6
+brutal RAW 1
+brute APE 2 PIG 2
+bucket AIL 1
+bud PAL 2
+buddhist ZEN 1
+buddy ION 1 PAL 6
+buff FAN 1 NUT 1 TAN 1
+buffet HIT 1
+buffoon NIT 1
+bug ANT 5 FLU 1 FLY 1 MIC 1 TAP 1
+build HUT 3 UP 1
+bulgaria BG 50
+bulk FAT 1
+bulky FAT 1
+bull OX 2
+bullock OX 1
+bullshit BS 2
+bully COW 6
+bum ASS 2
+bump HIT 1
+bumper BIG 1
+bumpkin OAF 1
+bun NOT 1
+bunch LOT 2
+bundle WAD 3
+bunk BED 2 COT 1 ROT 1
+burden TAX 2
+burglar CAT 1
+burglary IN 2
+burgundy RED 1
+burn EAR 1 FRY 1 HOT 3 RED 2 KEN 1
+burp GAS 1
+burrow DEN 1 ABE 1
+burst POP 1 RIP 1
+burundi RU 50
+bury HID 1
+busby HAT 2
+business ADO 1 BIZ 4 CO 34 JOB 1
+bust ENT 1
+busy AT 2 COP 1
+but BAR 2 BUT 1 THO 2
+butt END 3 RAM 2 TUN 1
+butter PAT 5 RAM 4
+buttock ASS 1
+buy GOT 2 GET 3
+buzz HUM 3 UP 1
+buzzer BEE 4 FLY 1
+by X 50 AT 9 BY 3 IN 2 OF 5 ON 1 PER 5 VIA 4
+bygone BY 1
+c ENT 1 HUE 1 ID 1 IN 1 RED 1 TAN 1
+cabin POD 1
+cacophony DIN 1
+cad RAT 2
+cadmium CD 50
+caesium CS 50
+cage PEN 3
+cake BUN 14 NUT 1
+calcium CA 52
+calculation SUM 3
+california CA 66 CAL 66
+caliph ALI 1
+call ASK 1 CRY 14 DUB 7 HO 1 MEW 1 RIN 1 TEL 1
+calorie CAL 50
+cambodia K 50
+cameron PM 1
+camouflage HID 1
+campaign WAR 2 RAN 1
+camper RV 1
+campus UNI 1
+can BUM 1 JUG 1 LOO 3 MAY 2 TIN 113
+canada CDN 50
+canadian CAN 3
+canal CUT 2
+cancel NIX 1 CUT 1 OFF 9
+canine CUR 1 DOG 1 PUP 1
+cannabis POT 8
+canoe AK 1
+canon LAW 1
+canonise ST 2
+cap HAT 2 LID 9 OP 1 TAM 3 TIP 1 TOP 1
+capacity HAT 1 VOL 1
+cape C 50 AC 1
+capital CAP 51 AI 2 LO 1 SLO 1
+capless CAP 1
+capone AL 8
+captivate GET 1
+captive POW 1
+capture BAG 1 COP 1 GET 1 NET 3 WON 1
+car INI 1 RR 1 TOP 1
+carat CT 1
+carbon C 50
+card ACE 4 ID 1 SIM 1 WIT 2 ROT 1
+cardinal ONE 1 RED 9 TEN 2 TWO 1
+career FLY 1 RUN 2
+carefree GAY 1
+careless LAX 3
+caress PET 1 RUB 1
+carol ING 1
+carp ISH 1 KOI 3
+carpathian ME 1
+carpenter PPY 1
+carpet MAT 6 RAP 1 RUG 1
+carpeting RUG 1
+carriage CAB 3 CAR 2 GIG 1
+carrier ASS 1 BAG 1
+carry LUG 4
+carton BOX 1
+carve HEW 1 CUT 1
+case BOX 7 ENT 1 POD 2 CA 3
+cash OOF 1 SH 1 TIN 3
+cask TUB 1 TUN 6
+casserole POT 1
+cast DIE 1 LOB 1 SHY 5
+castle AC 1
+cat MOG 4 PET 2 TOM 29
+catcall BOO 1
+catch C 50 BAG 2 COP 4 GET 3 NAB 3 NET 22 CT 7 GOT 4 IC 2 ISC 1
+catcher NET 1
+cathedral ELY 5
+catholic C 50 AC 1 ARC 2 RC 5
+cattle OX 2
+cautious SHY 1
+cavalier SS 1
+cave DEN 6
+caviar ROE 5
+ceiling CAP 1
+celebration DO 4
+celebrity ACE 1 VIP 2
+cell OVA 1
+censor GAG 1
+censorship BAN 2
+censure RAP 1
+cent C 100 CC 1
+centilitre CL 51
+centimetre CM 50
+centre HUB 3 NUB 1
+century C 100 AC 2 TON 8
+ceramic POT 1
+cereal LI 1 RYE 1 TEF 1
+ceremony DO 1
+cerium CE 1
+certain URE 1 AY 3 AYE 5 OK 1 YES 36
+cessation HO 1
+chad TCH 50
+chafe RUB 1
+chain CH 7 ROW 1
+chairman MAO 5
+challenge VIE 2
+champ EAT 1
+champagne POP 1
+champion ACE 8 CH 2 ERO 2 NOI 1
+championship TLE 1
+chance BET 6 HAP 1
+chancellor CE 1
+chaney LON 3
+channel RUT 3
+chant OM 1
+chap ALF 1 BEN 2 BOD 2 DAN 2 ED 2 GUY 7 HE 13 LES 1 MAN 86 NED 1 RAY 1 REG 1 RON 1 SAM 1 SID 1 TED 1 TIM 4 EN 1 MEN 54
+chapeau HAT 2
+chaplain CH 1
+chapter C 50 CH 58 ACH 1
+char TEA 1
+character AIR 4 ELF 1 ESS 1 MAN 1 MU 1 PHI 1 RHO 1
+charge CT 1 DUE 1 FEE 24 IC 1 ION 1 RAM 1 RAP 9 SUE 1 TAX 6
+charged RAN 6
+charisma IT 1
+charity AID 7
+charles CAR 1 RAY 1
+charlie C 50 OAF 1
+charming IC 1
+chart CH 1 MAP 5
+chary HY 1
+chase WOO 1
+chat GAB 1 GAS 3 RAP 1 YAK 1
+chatter GAB 4 GAS 3 YAK 1 YAP 2
+cheap LOW 4
+cheat COG 1 CON 13 DO 12 DID 5 HAD 2 HAS 1
+check CH 76 CK 1 DAM 4 DIT 1 TAB 1 VET 20 ED 1
+cheek LIP 12
+cheer AH 1 CRY 1 HIP 1 OLE 2 RAH 6 TA 57
+cheerful UP 9
+cheerio BYE 1
+cheese OKA 1
+cherish PET 1
+cherry RED 7
+chest ARK 5 BIN 1 RAX 1
+chew BIT 1 AWS 1
+chic IN 5
+chicago CHI 4
+chicken HEN 29
+chief AGA 1 CH 8 TOP 3
+child CH 153 ACH 1 BOY 3 IMP 1 KID 24 LAD 1 SON 30 TAD 1 TOT 25
+childless SON 1 SP 1
+chile RCH 50
+chill ICE 4
+chimney ACK 1 LUM 5
+china FT 1 PAL 3
+chinese CH 3 HAN 9
+chip LOB 1
+chlorine CL 54
+chocolate BAR 1
+choice BET 1
+choir CH 1
+choose OPT 9
+chop AXE 2 CUT 1 HEW 2 LOP 1
+chopper AX 3 AXE 3
+chosen IN 1
+chow DOG 1
+christmas NOW 1
+christopher KIT 3
+chromium CR 52
+chuck BIN 1
+chum PAL 8 ALS 1
+church CE 218 CH 258 ACE 1 ACH 3 RC 1
+churchill PM 1
+churchman REV 3
+churl CAD 1
+cigarette FAG 2
+circle AO 1 MYO 1 ORB 1 OO 3 OS 1
+circuit LAP 16
+circular AD 1
+circulate AIR 1
+citation CIT 1
+citizen CIT 1
+city ANY 1 EC 16 ELY 3 LA 29 NY 12 ON 1 RIO 7 UR 1 WEN 2
+clairvoyance ESP 1
+clamour CRY 2 DIN 7 ROW 1
+clap PAT 1 VD 1
+claptrap ROT 2
+claret RED 4
+clash JAR 3
+class CL 1 ILK 3 SET 7
+clatter DIN 1
+clay MUD 1
+clean MOP 7 RUB 1 DID 1
+cleaner MOP 4 VAC 1
+cleanser MOP 1
+clear NET 9 RID 10
+cleavage CUT 1 RIP 1
+clegg ICK 1
+clergyman EST 1 REV 13 RR 2
+cleric REV 8 VEN 2
+clever APT 1 FLY 1 SLY 2
+cleverness WIT 1
+climax END 2 TOP 1
+climber IVY 2
+clinch PUN 1
+clinic SAN 3
+clip LOP 1 PIN 2 RAP 1
+clique SET 4
+cloak APE 1
+clobber LAM 1
+clock SEE 2
+close CLO 50 BY 3 END 24 HOT 1 ER 1
+closed TO 2
+closet LOO 1
+closing END 1
+clot ASS 2
+cloth RAG 4 REP 2 KIT 3
+clothed SS 1
+clothes RIG 2
+clown ASS 1
+club C 50 BAT 34 ER 1
+clubhouse CH 2
+clue INT 1 KEY 2 TIP 7
+clumsy HAM 1
+co-ordinate X 50 Y 50 Z 50
+coach BUS 22 CAR 6 NS 2
+coaster MAT 1
+coat FUR 7 IN 1 MAC 8
+cobalt CO 51
+cobb TY 1
+cobbler ROT 3
+cocaine C 50
+cock HE 1
+cockney BOW 1
+code PIN 2
+coffin BOX 1
+coif DO 1
+coin AS 1 BIT 4
+cold C 50 AC 6 ICY 4 RAW 2
+collar NAB 4
+collection LOT 1 MOB 1 SET 5
+college MIT 4 OLY 1 UNI 16
+colliery IT 1 PIT 1
+collision HIT 1 IT 1
+colombia CO 52
+colonel COL 62
+colonist ANT 6
+color RED 1
+colorado CO 53 COL 50
+colossal PIC 1
+colour DYE 3 HUE 4 INK 1 RED 16 TAN 2
+coloured RED 3
+colourful RED 4
+column COL 51 ROW 1
+combat WAR 3
+comedian WAG 5 WIT 9
+comic WAG 3 WIT 7
+command LED 2
+commander AGA 4 CIC 1 CO 8 COM 1 GEN 1 OC 4
+comment PS 1
+commercial AD 74 ADS 9
+commie RED 2
+commission CUT 1 FEE 1
+commissioner COM 1
+committee COM 3
+commotion ADO 10 DIN 3 IR 2 ROW 1 USS 1
+commune COM 1
+communist COM 1 RED 51
+community EU 1
+companion ACH 1 CH 15 PAL 3 PET 1
+company CO 311 COS 2 ACO 2 COY 1 PLC 1 REW 1 SET 2
+compare CF 50
+compartment BAY 1 POD 2
+compassion ITY 1 RUE 1
+compensation SOP 1
+compere MC 1
+compete RUN 1 VIE 12 RAN 1
+competition BEE 2 CUP 11
+compiler ME 6 WE 1
+complain NAG 1
+complaint FLU 5 IBS 1 ILL 1
+complete ALL 24 DO 11 END 5 ONE 1 SUM 1 UP 7 DID 2 OUT 1
+completion END 3
+complimentary REE 1
+compose SET 1
+composition ODE 2
+compost ROT 1
+comprise OF 1
+compute IT 4
+computer PC 50 MAC 11 IT 6
+comrade PAL 3
+con DO 2 KID 1
+conceal HID 17 ID 1 LS 1
+conceit EGO 2
+concer DUE 1
+concern IN 1 RE 2
+concerning ION 1 IN 1 OF 1 ON 11 RE 67
+concert GIG 2 ROM 1
+concession SOP 5
+conclude END 4
+conclusion END 12
+condemn RAP 1
+condition FLU 1 IF 8 ME 1
+conditional IF 1
+conduct RUN 1 LED 1 RAN 2
+confidante PAL 1
+confidence EGO 1
+confine DAM 1 PEN 4
+conflict ASH 1 JAR 4 WAR 60
+confuse FOG 1
+confusion PI 2 PIE 2
+congress IT 1 SEX 7
+conjunction AND 1 OR 1
+connecticut CT 50
+connection ING 1 TIE 4
+connive LY 1
+consent NOD 1
+consequence END 3
+consequent AND 1 SO 6
+conservationist NT 2
+conservative C 50 CON 71 AC 3 RY 1
+conserve JAM 1
+consider ARD 1 ATE 1 SEE 4
+considerable BIG 1 FAR 1 WAY 1
+constant AC 1 CON 1 PI 7 ER 1
+constituent TS 1
+construct DO 1
+consult ASK 1 SEE 1 SAW 2
+consume EAT 5 USE 1 ATE 42
+consumption TB 2
+contain HAD 1 HAS 1
+container BAG 1 BIN 1 CAN 14 CUP 2 JAR 1 PAN 2 POT 10 SAC 1 TIN 24 TUB 3 URN 3 VAT 4
+contemporary AD 1
+contend VIE 5
+contest BEE 1 CUP 1 VIE 7 WAR 2 ES 1
+continue WAS 1 IS 1
+continuous ON 1
+contraceptive CAP 2
+contract CUT 1 IN 1 SE 1 GOT 1
+contralto AC 1
+contribution AID 1
+control RUN 3
+controlled IRE 1 RAN 6
+convenience WC 1
+convenient FIT 1 PAT 2
+conveyance CAR 1
+convict CON 3 LAG 13
+convulsion FIT 1 TIC 1
+cook DO 22 FRY 16 RIG 5 ON 2
+cooked DID 1
+cooker AGA 5 HOB 2 PAN 1 VE 1 VEN 1
+cool ACE 2 FAN 19 HEP 2 HIP 10 ICE 6 IN 26 AN 1
+coop PEN 1
+cop DI 1 NAB 1 DIS 1
+copier APE 1
+copper CU 168 DI 3 PC 4 CID 1 PCS 1
+copy APE 31
+copycat APE 1
+corbynite RED 1
+cord TIE 1
+corn EAR 5
+corner HOG 1
+cornwall SW 1
+corporation GUT 4 POT 1 TUM 12
+corpse ODY 1
+corpulent FAT 2
+corral PEN 2
+corrode EAT 1
+corroded ATE 2
+corrosion ROT 1
+corrupt MAR 1 ROT 15 UL 1
+corruption ROT 8
+cost CE 1 FEE 1
+costume RIG 1
+cosy NUG 1
+cot BED 1
+couch BED 2 DED 1 LIE 1
+could CAN 1 IS 1 MAY 2
+councillor CR 11
+counsel BAR 1
+count ADD 4 TOT 2
+counter BAR 8 OIL 1
+country BUK 1 EL 1 ERU 1 IA 3 OGB 1 RY 1 UK 9 US 3 USA 2
+countryman IAN 1
+county CO 55
+couple AIR 1 DUO 7 II 4 PR 1 TIE 3 TWO 13
+courier UPS 2
+course ATH 1 LAP 1 RUN 1 WAY 5
+court CT 182 SEE 1 SUE 1 WOO 36 CTS 1
+cousin KIN 2
+coutury IOR 1
+cove BAY 1
+cover CAP 9 FUR 1 LID 35 RUG 1 TOP 2 HAT 1 MAT 1 ON 10
+covered HID 1
+cow AWE 1 MOO 1
+coy SHY 4
+crack ACE 4 AI 1 GAG 3 GAP 1 GO 2 TRY 1
+cracked MAD 1
+cracker MAD 4
+crackpot MAD 1
+craft ART 24
+crafty FLY 3
+crap ROT 1
+crash RAM 2
+crate BOX 1
+crave YEN 1
+craze FAD 8
+crazed MAD 2
+crazy ILD 1 MAD 27
+cream TOP 2
+creature DOG 1 ST 1
+credential ID 4
+credit BUY 1 CR 58
+creditor CR 1
+credt CR 50
+creek BAY 1
+creep RAT 1
+crew MAN 11 MEN 12
+crib BED 1 KEY 1
+cricketer BAT 8
+crime CON 1 RAP 1 SIN 16
+criminal BAD 1 CON 28 LAG 4 ING 1
+crimson RED 8
+critical KEY 3
+criticise DIS 6 PAN 37 RAP 11
+criticism DIG 1 RAP 1
+criticize PAN 1 RAG 1 RAP 2
+croatia HR 50
+crockery POT 1
+crone CH 1 HAG 3
+crook ARC 1 BOW 1 CON 2 ILL 2 WRY 1
+crooner AL 1
+crop CUT 1 LOP 1 MAW 1
+cross X 50 AX 2 CUT 2 MAD 1 MIX 2 TAU 1 TOX 1 ZO 1 US 1
+crossworder WE 1
+crowd ESS 1 JAM 6 LOT 5 MOB 12 SET 1
+crown CAP 2 CR 1 HAT 1 TAJ 1 TIP 3 TOP 2
+crucial KEY 9
+cruciverbalist WE 1
+crude OIL 2 RAW 6
+crumb BIT 1
+crumble ROT 2 OLD 1
+crummy BUM 1
+crush JAM 1
+crustacean RAB 1
+cry EK 1 MEW 1 OWL 1 SOB 7
+cuba C 50
+cube DIE 5 OXO 1
+cubicle BOX 1
+cuckoo MAD 2
+cuddle HUG 1
+cue Q 50
+cuff BOX 1 RAP 1
+cult ECT 1
+cultivate WOO 1
+culture ART 1
+cunning ART 8 FLY 2 OXY 1 SLY 9
+cup MUG 2 BRA 6
+cupboard ARK 1
+cuppa CHA 1 TEA 2
+cur DOG 1
+cure FIX 1
+curious ODD 2 RUM 6
+curium CM 50
+currency YEN 2
+current AC 57 DC 50 I 50 AIR 2 DEE 2 FAL 1 IN 11 JET 1 NEW 3 TAY 1 NOW 24
+curse BAN 1
+curve J 20 ESS 1
+custom USE 3 WAY 2
+cut AXE 13 HEW 24 LOP 22 MOW 8 RIP 3 SAW 4
+cyclop ME 4
+cyprus CY 53
+d DEE 1 PE 1
+dad PA 53 POP 13 PAS 2
+daddy HER 1
+daily DT 1 FT 1
+dairymaid DEY 1
+daisy COW 1
+dam MA 1 VER 1
+damage ARM 1 MAR 34 URE 1
+damaged CUT 1 HIT 1
+damaging BAD 1
+dame DBE 3
+damn BAH 1
+damp WET 2
+dance BOP 6 HOP 15 JIG 3 PAS 1 TAP 1
+dandy ACE 1 FOP 2
+daniel DAN 2
+danish DAN 1
+danson TED 1
+dark DIM 6 DUN 1
+darken TAN 1
+darkish DIM 1
+darling PET 8
+dash BIT 3 EN 1 NIP 1 RUN 2 ZIP 1 RAN 7
+data GEN 4
+date D 50 AD 2 AGE 4 ERA 1 SEE 7
+dated OUT 3 SAW 1
+daughter D 50 AD 4 ORD 1 DD 2
+dawn EOS 1
+day D 50 AD 10 FRI 7 ID 1 MON 25 SAT 10 SUN 2 TUE 3 WED 3 AGE 1
+de AN 1
+dead D 50 EX 1
+deal BUY 1
+dear HEN 1 PET 2
+death END 23
+debatable OT 1
+debate RAP 1 ED 1
+debt IOU 1
+debtor DR 1
+decade TEN 4
+decapitation NED 1
+decay ROT 7 OLD 1
+decease DIE 1
+deceit ART 1 LIE 4
+deceive CON 2 LIE 1 HAD 2
+december DEC 53
+deception CON 2 LIE 5
+decibel DB 100
+decided FAR 2
+declaim TS 1
+declare SAY 1
+decline AG 1 AGE 2 DIE 2 DIP 3 EBB 1 IDE 1 ROT 2 SAG 10
+decommission EX 1
+decorate ICE 1
+decoration VC 50
+dee D 50
+deed ACT 10
+deep LOW 5 SEA 2
+deer DOE 2 ELK 4 ROE 3
+deface MAR 1
+defence ON 1
+deficit GAP 1
+definite THE 1 ELY 1 LY 1 YES 1
+defraud CON 2
+degenerate AGE 1 ROT 1
+degree BA 13 BSC 1 MA 11 MAS 1
+deity GOD 7 PAN 1
+deject SAD 1
+delaware DE 57 DEL 51
+delay ADO 1 LAG 9
+delegate DEL 1 REP 2
+delibe LEO 1
+delicacy ACT 1
+delight JOY 3 LE 1
+delighted UP 1
+deliver RID 8
+delta D 50
+deluge RET 1 SOG 1
+demand ASK 4 TAX 2 USE 1
+demeanour AIR 1
+demise END 2
+democrat D 50 AD 2
+democratic D 50 DEM 1
+demolish EAT 1
+demon IMP 4
+den EST 1 PIT 1
+denial NAY 2 NO 10
+denmark DK 52
+denounce MUD 1
+density D 50
+dent PIT 1
+denture SET 1
+denunciation BAN 1
+depart DIE 2 GO 3 NG 1 OFF 1
+department AED 1 ARM 1 PED 1
+deplorable SAD 1
+deploy USE 1
+deposit LAY 1 PUT 2 SAT 1
+deprecate NS 1
+depress SAD 1
+depressed LOW 6 SAD 3
+depression COL 7 DIP 2 LOW 2 PIT 8 RUT 1 SAG 1
+deputise IN 1
+deputy DEP 2 IN 1 SUB 1
+deranged MAD 2
+derby HAT 1
+derek DEL 2
+descendant SON 1
+desert DRY 3 RAT 10
+deserter RAT 6
+deserve DUE 2
+deserving FIT 1
+design AIM 1 ART 1 END 1 NT 1
+desirable DES 1
+desire YEN 5
+desktop PC 1
+desmond DES 2
+desolate EAK 1
+despicable BUM 1 LOW 1
+despondent SAD 1
+dessert ICE 3 PIE 2 PUD 11
+destination TO 1
+destiny LOT 7
+destroy END 2 ZAP 1
+detach IX 1 CUT 1
+detain PEN 1
+detainee POW 1
+detective CID 82 DET 3 DI 18 DS 3 EYE 1 PI 2 TEC 4 DIS 3
+deteriorate EAR 1
+determine SET 1
+determined OUT 4 SET 11
+detonator CAP 1
+detrimental ILL 1
+deviation YAW 1
+devil IMP 7
+devious SLY 4
+devoted PI 1
+devotee FAN 3 ERS 1
+devour EAT 4 ATE 3
+devout PI 3
+diameter D 50
+diamond D 50 GEM 1 ICE 32 DD 1
+diana DI 4
+diane DI 2
+diary LOG 13
+dicken BOZ 2
+dicky ILL 4 OFF 4
+dictator KIM 1
+dictionary OED 57
+die D 50 END 3 GO 3 OB 6
+diet CAL 1
+difficult ILL 3
+difficulty ADO 5 ILL 1 NET 1 RUB 4
+diffident SHY 2
+dig JAB 2 VE 1 TIT 1
+digest EAT 1 ATE 1
+digger ER 1
+digit TOE 1
+dignitary VIP 2
+dim WAN 1
+diminished CUT 2
+diminutive WEE 1
+dimwit ASS 1
+dine EAT 7 SUP 2 ATE 15
+diner ER 1
+dingy DUN 3
+dinner ALS 1
+dinosaur REX 1
+diocese SEE 9
+dip SAG 4 UNK 1 ED 1
+diplomat CD 1
+dipso SOT 1
+dipstick NIT 1
+direct AIM 2 RUN 1 DUE 1
+directed LED 2 RAN 2
+direction EST 1 NE 1 UP 1 WAY 1 ES 1 EN 1 SE 1
+directive LAW 1
+director DIR 2 DD 1
+dirt MUD 3
+disagree JAR 1
+disagreement ROW 2
+disallow BAN 7
+disappear ING 1 IT 1
+disapproval BOO 1
+disc CD 50 OO 1
+discard BIN 1
+discharge ARC 1 DO 1 PUS 3
+disciple SON 4
+disclose AIR 1
+discontinue OFF 1
+discover SEE 2 UND 1
+discuss ON 1
+disease BUG 1 FLU 1 ILL 1 POX 2 TB 6
+diseased ILL 1
+disgust UGH 1
+dish ATE 1 CUP 1 OOD 1 PAN 2 PIE 8
+dishearten MP 1
+dishonesty LIE 2
+dismiss AXE 1 OUT 15
+disorder MAD 1
+display AIR 8 HOW 1
+dispute IFF 1 ROW 16
+disqualification BAN 1
+disreputable LOW 1
+disrespected ED 1
+distance AMM 1 ICE 1 KM 1 RE 1
+distant AY 1 FAR 16 ICY 1 YON 1
+distract MAD 1
+distress IRK 1 WOE 1
+distribute LOT 1 SOW 1
+disturbance OT 1 ROW 1
+ditch AHA 1 EA 1 HA 2
+divine ADD 1 DD 1
+divinity GOD 1 RE 1
+division ARM 2 CUT 1 DIV 1
+divorcee EX 9
+do ACT 2 CON 7 DO 2 AT 1
+doc DR 1
+dock CUT 2 LOP 2
+doctor DR 193 GP 72 ADR 1 AGP 1 AMB 6 AMD 1 AMO 1 DOC 3 MB 94 MD 11 MO 53 RIG 10 VET 4 DRS 1 MBS 3 MOS 5
+document ID 2
+documentation ID 1
+dodge CUT 1
+dodgy RUM 2
+dog CUR 45 GI 1 LAB 6 POM 1 PUG 16 PUP 6 TAG 1
+doll KEN 1
+domesticate PET 1
+dominant IN 1
+dominca WD 50
+don PUT 1
+done UP 1
+donkey ASS 21
+doorkeeper ERS 1
+dope ASS 8 GEN 12 LE 1 NIT 1 POT 3
+dorothy DOT 7
+dot PIP 1
+double TWO 1 ENT 1 IS 1
+doubt IF 1
+douse WET 1
+down EAT 2 LOW 9 NAP 1 SAD 5 ATE 2
+downcast SAD 1
+downfall END 1
+doze NAP 2
+drag LUG 2 TOW 5 TUG 1
+drain SAP 3
+dram TOT 6
+drama NO 2 NOH 4
+draw TIE 11 TOW 1 ART 1
+dread AWE 3
+dreadful IRE 1
+dreary DRY 1
+drench WET 1
+dress FIG 1 RIG 5 TOG 1 ISH 1 PAD 2
+drill PE 4 NS 1
+drink ALE 54 BIB 1 CHA 5 GER 1 GIN 31 JAR 2 KIR 1 LAP 16 LE 1 NIP 4 NOG 3 OT 1 POP 2 RUM 32 RUN 1 SEA 1 SIP 20 SUP 79 TEA 23 TOT 8 UM 1 UP 2
+drinker SOT 1
+drip IV 3
+drive DR 57 ADV 1 ER 1 GO 2 RAM 6 RAN 3
+drivel ROT 3
+driver DR 1 RAC 5
+drone BEE 1 HUM 5
+droop SAG 7
+drop AXE 1 DIE 1 DIP 2 SAG 7 POO 1
+dropping POO 1
+drug ER 1 LSD 1 POT 9 EE 6 ES 9
+drummer MO 1
+drumstick LEG 1
+drunk CUT 1 LIT 19 NOT 1 SOT 21
+drunkard SOT 11
+drunke LIT 1
+dry TT 68 ATT 3 AIR 5 RID 1 SEC 21 TED 1 WRY 1
+duck O 50 ID 1 NIL 2 ORO 1 OO 7
+dud BUM 2
+dude BUD 1 CAT 3 MAN 3
+duke D 50 AD 4 DD 1
+dull DIM 3 DRY 5 DUN 1 MAT 12
+dumb DIM 1
+dummy ASS 1
+dump BIN 2 LE 1 POO 1 STY 1 TIP 5 ED 1
+duo EX 1 TWO 1
+dupe CON 1
+durham DUR 1
+during AS 1 AT 1 FOR 1 IN 43 ON 1
+dust ASH 2
+dutch DU 1
+duty TAX 3 VAT 3
+dwell PAD 1
+dye HUE 1
+e BE 1 MIN 1 PUR 1 TRE 1
+each ALL 1 EA 67 PER 15
+eagle LEM 1
+ear LUG 2
+earl E 50
+earlier AGO 4 ERE 1 OLD 1
+early OLD 3
+earn WIN 3 WON 1
+earnings PAY 2
+earth DEN 2 MUD 2 SOD 1
+east E 50 ONE 1 TOE 1
+eastbound TOE 1
+eastern E 50
+eat FED 1 HAD 3 SUP 2 AS 1 HAS 2
+ebony JET 1
+eccentric CAM 3 FEY 1 NUT 3 ODD 3 OON 1 RUM 2
+eccentricity TIC 1
+echo E 50
+economy CUT 1
+ecstasy E 50
+ecuador EC 51
+edge HEM 13 LIP 15 RIM 22 TIP 1
+edict LAW 1
+edit SUB 2 ED 1
+edition ED 58
+editor ED 171 SUB 2 EDS 1
+edmund NED 1
+educated ED 1
+education ED 14
+edward ED 11 NED 4 TED 15
+edwin ED 1
+effect FX 50 DO 3 DID 1
+effort TRY 7
+eg SAY 2
+egg NIT 10 ROE 16 OVA 12
+ego I 50 ME 3
+egypt ET 50
+eisenhower IKE 3
+elated UP 1
+elder BIG 1
+elderly OLD 6
+elect IN 67
+electronic E 50
+element TIN 6
+elevate UP 3 AN 1
+eleven II 1 XI 6
+elf HOB 1
+eliminate RID 2
+eliot TS 2
+elizabeth BET 2 ER 2 LIZ 3
+elsewhere OFF 2 OUT 2
+embankment DAM 2
+embargo BAN 10
+embarrassed ED 2 RED 33
+embed SET 1
+embody IS 1
+embrace HUG 4 PM 1
+emcee MC 1
+eminence TOR 1
+eminent BIG 1
+emma M 20
+emmet ANT 1
+emolument PAY 1
+emperor EMP 2
+employ USE 10
+employee MAN 1 MEN 4
+employment OB 1 USE 14
+empty DRY 1 TIP 1
+enclose PEN 2 ENC 3
+enclosure ENC 2 ER 1 PEN 14 RUN 1 STY 6 PS 1
+encore BIS 2
+encounter HAD 1 MET 34
+encourage EGG 1 FED 1
+end AIM 9 DIE 9 TIP 2 SY 1
+endeavour TRY 3
+endorse CK 1 OK 2
+endorsement OK 4 OKS 1
+enemy FOE 16
+energy E 50 CHI 1 GO 18 PEP 4 VIM 1 ZIP 2
+engagement GIG 1
+engine JET 1
+engineer ENG 5 RE 34
+england ENG 56
+english E 50 ENG 64 AN 1 ANE 1 INE 2 ISE 2 ME 1 TOE 2
+englishman POM 1
+enjoy DIG 4 DUG 1 HAD 2 HAS 3
+enjoyable FUN 2
+enjoyment FUN 4
+enough DUE 1
+enquire ASK 2 PRY 1
+enrage HOT 1 RED 1
+enter LOG 1 IN 2
+enterprise ACT 1
+entertain FUN 1
+entertainment FUN 1
+enthusiasm ON 1
+enthusiast FAN 15 NUT 5
+enthusiastic HOT 1 MAD 1
+entire ALL 9 ETE 1
+entrance TE 1
+environmental ECO 2
+envisage SEE 2
+epic BIG 2
+epistle EP 50
+epitaph RIP 2
+epithet TAG 2
+equal PAR 2 AS 4 IS 1
+equality PAR 1
+equine ASS 2 BAY 1 NAG 1
+equip RIG 1
+equipment KIT 12 RIG 12
+er UM 2
+era AGE 5
+ere ERE 1
+erect UP 4
+erican AM 1
+erode ATE 1
+erratic OFF 1
+error BUG 4 SIN 10 IPS 1
+erstwhile EX 1
+es EE 2
+escape ESC 51 LAM 1
+escaped CON 1
+escort ER 1 TE 1 LED 3
+especially ESP 3
+espy SEE 1
+essay TRY 12
+essence NUB 2
+essential EY 1 KEY 6
+establish SET 1
+established EST 60 SET 2
+establishment INN 1
+estate EST 1
+estimate EST 3
+estonia EST 50
+estuary EST 1
+etc ETC 1 KIT 1
+ethiopia ETH 50
+europe EUR 52 EU 3
+european E 50 EUR 55 AE 2 EEK 1 EU 2 INE 1 ISE 1 ITE 1 EE 3
+evasive COY 3
+even EN 2 ENE 1 PAR 2 YET 2
+evening PM 1
+event MP 1
+ever AY 3 EER 2 ER 1
+evergreen FIR 1
+every ALL 14
+everybody ALL 24
+everyman ME 5
+everyone ALL 161
+everything ALL 83
+evil BAD 6 ILL 6 SIN 14
+evoke ALA 1
+ex X 50
+exam SAT 1 SE 1
+examine CON 1 EYE 2 VET 2
+example EG 3 EX 1
+exasperation IRE 1
+excavation DIG 7
+excel OUT 1
+excellent ACE 15 AI 18 DEF 2 FAB 3 RAD 2 TOP 1
+except BAR 5 BUT 1
+excess OTT 1
+excessive OTT 13 TOO 11
+excite HOT 3
+excited HOT 3 ON 1 UP 13
+excitement ON 1
+exclude BAN 4 BAR 11 OUT 1
+exclusive OWN 1
+excrement POO 1
+exercise ELD 1 PE 85 PLY 1 PT 10 RUN 1 USE 12 NS 2
+exhaust SAP 1 ED 1 ENT 1 OUT 4 RED 1
+exile OUT 1
+exist ARE 1 BE 9 IS 9
+existing IS 1
+exit DIE 1
+expect BET 1
+expected AL 1 DUE 26
+expense STS 1
+experience SEE 1 HAS 3
+experienced HAD 7 LED 1 MET 1 OLD 1
+experiment TRY 1
+expert ACE 74 DAB 5 GUN 1 PRO 41
+expire DIE 2
+explanation KEY 1
+exploit ACT 2 USE 7
+explosive HE 57 TNT 62
+expose AIR 1 OUT 2
+exposed OUT 3 RAW 1
+express AIR 2 SAY 4
+expression AIR 2
+extension ARM 1 EXT 2
+extensive BIG 1
+external EXT 1
+extinguish OUT 1
+extra ED 1 EXT 2
+extraordinary ACE 1
+extraterrestrial ET 56
+extravagant OTT 3
+extreme FAR 1 OTT 1 TIP 1 SO 4 TOO 6
+extremist NUT 1 RAD 1 ZI 1
+extremity END 2 TOE 1
+eye ORB 1
+f AND 1 AT 1 EPT 1 NE 1
+fable LIE 1
+fabrication LIE 2
+fabulous ACE 1 DEF 1
+face IAL 2 MOW 1 MUG 8 PAN 3
+facility LOO 3 ART 1 WC 1
+fact GEN 2 TA 1
+factor X 50
+factory LL 1
+faculty EAR 1
+fade DIE 2
+fag CIG 1
+fahrenheit F 50
+fail DIE 6 DUD 1 ECT 1 IS 1
+failure DUD 5 ER 1
+faint DIM 2 WAN 1
+fair OK 13 SO 1
+fairy ELF 3 FAY 1
+fake ACT 1 COD 3 RIG 2
+fall TIP 1
+false COD 1
+falsehood LIE 3
+falsify RIG 3
+familiar OLD 5
+family KIN 114
+fan NUT 7
+fanatic NUT 6
+fanatical MAD 1
+fancy DUG 1 AMY 1 COO 1 DIG 3 MY 1
+fantastic ACE 1
+farah MO 1
+farcical MIC 1
+fare DO 4
+farewell AVE 1 BYE 2 RA 1 TA 1
+farm ILL 1
+farmer MEN 1
+farrow MIA 1
+farther YON 1
+fashion FAD 4 HEW 1 IM 1 LD 1 TON 22 WAY 1
+fashionable FLY 1 HIP 6 HOT 5 IN 123 NOW 2
+fasten PIN 2 TIE 3
+fastener PIN 3 TIE 3
+fat OUT 1 RD 1
+fate LOT 8
+father FR 87 DA 4 DAD 12 DY 1 GOD 2 PA 99 POP 16 SIR 1 PAS 1
+fault SIN 1
+favour ESS 1 IN 11 PET 5 FOR 9 PRO 7
+favourite IN 1 ING 1 PET 58 TOP 1
+fear AWE 1
+feasible ON 4
+feast DO 1 EAT 2 EID 1 SUP 2 ATE 1
+feat ACT 1
+feature HAD 1 HAS 1
+february FEB 50
+fee DUE 1
+feed ATE 5 MAN 1 EAT 1
+feel BE 1 AIR 4 MAT 1
+feign ACT 1
+feline AT 2 CAT 16
+fellow F 50 AF 3 AL 1 ALE 1 BEN 3 BOD 3 CO 6 DAN 1 DON 32 ED 2 ENT 1 GUY 7 HAP 1 HE 10 IAN 2 JIM 1 JOE 1 JON 1 KEN 2 LAD 2 LE 1 LES 1 MAN 80 RAY 1 REG 1 ROY 1 SIR 1 TED 2 TOM 1 EN 2 FF 7 MEN 32
+felon CON 3
+femal DI 1
+female F 50 AF 4 ADA 2 AL 1 ANN 2 AVA 1 COW 2 DEB 1 DI 3 DOE 2 EN 1 ENA 1 EVE 1 EWE 1 GAL 3 HEN 17 HER 19 IF 1 OFF 1 PEG 1 SAL 1 SHE 26 SOW 4 SUE 2 UNA 1 VI 2 FF 10
+feminine F 50
+ferret PRY 1
+ferry RO 1
+festival EID 1
+fetch ING 1
+fetish OBI 1
+fi PEE 1
+fib LIE 2
+fibre TOW 1
+fiction LIE 6
+fiddle CON 5 ER 1 RIG 4 TOY 1
+fido DOG 1
+field LEA 17 LEY 2 REA 1
+fiend NUT 1
+fiery HOT 2
+fifth V 50
+fifty L 100 LL 3
+fight BOX 12 OUT 1 ROW 6 TO 4 VIE 3 WAR 39 ON 1
+fighter ALI 3 ER 1 MIG 2
+figurative FIG 1
+figure FIG 50 ONE 12 SIX 2 TEN 34 SUM 1
+fiji FJI 50
+file ROW 2
+fill IN 1
+film AET 1 ET 65 KES 1 PIC 23 RAN 1 UP 2 VID 1
+final END 8 NET 2
+finale END 12
+find TE 1
+fine AOK 51 F 50 OK 106 AF 8 ACE 1 AI 3 TOF 1 FF 3
+finest TOP 3
+finish DIE 2 END 44 UP 1
+finished DID 2 OFF 1 OUT 3 UP 21
+finland FIN 50
+fiona FI 1
+fire AXE 1 CAN 1 LIT 8
+firearm GUN 1
+firm ACO 2 CO 104 PRU 1 SET 7
+first I 50 IST 49 ONE 1 ST 7 TOP 10
+fish AKE 1 BEL 1 BY 1 CE 1 COD 45 DAB 5 EAM 1 EEL 37 ELL 1 FRY 2 GAR 14 ID 1 IDE 29 RAY 22 TAI 1 UNA 1 YAR 1
+fit APT 2 FIT 1 GO 2 RIG 1 SIT 1
+fitting APT 9 DUE 2
+five V 100
+fix DO 3 GUM 1 IL 1 JAM 1 PIN 8 PUT 1 RIG 10 SET 4 TIE 1
+fixed SET 12
+fixture TIE 1
+fizz PEP 1
+flag IRE 1 PIN 2 RAG 1 SAG 3
+flagstick PIN 1
+flaming IN 1 LIT 1 RED 2
+flap TAB 7
+flash MO 6
+flat PAD 10
+flatfish DAB 1
+flatpack DIY 1
+flee RAN 7 GO 1
+fleece CON 3
+flerovium FL 1
+flesh EAT 1
+fleshy FAT 1
+flier BAT 1 TIT 3 RAF 3
+flight LAM 1
+flimsy AL 1
+fling LOB 1 SHY 5
+flipper FIN 1
+float FLY 1
+flock LOT 1
+flog TAN 2
+floor BED 2 FL 2 KO 3
+flop SAG 1 SIT 1
+florid RED 2
+florida FA 51 FL 56 FLA 52
+flourish FL 1
+flow RAN 2
+flower CAM 1 EXE 1 MUM 1 PO 2 UP 1 URE 3
+flowering OUT 3
+flowing ON 1
+fluid FL 1 INK 2
+fluorine F 50
+flush RED 5
+flutter BET 2
+fly RAN 1 ERS 1 JET 1 KED 2 RUN 1
+flyer TIT 1 RAF 2
+fob TAB 1
+fodder HAY 2
+fold PEN 2 PLY 2
+folio FF 2
+folk MEN 3
+follow F 50 DOG 15 TAG 1 FF 5 ON 1
+follower MAN 1
+food BUN 1 EAL 1 EGG 2 ET 1 HOW 1 KAI 1 PAP 1 PIE 7 RUB 1
+fool ASS 72 CON 2 DIV 1 FOX 1 GIT 3 MUG 6 NIT 27 NUT 3 SAP 6 TIT 6 HAD 2 HAS 1
+foolish MAD 1
+foot FT 107 PAW 2 PAY 2
+footballer FA 3
+footnote PS 2
+footpath WAY 1
+for AT 2 FOR 5 OF 1 ON 1 PER 6 PRO 145 TO 10
+forage HAY 1
+forbid BAN 5
+forbidden OUT 2
+force F 50 MET 1 RAF 1 RAM 3 MY 1
+forefront VAN 1
+foremost TOP 1
+forever AY 2
+forge RIG 1
+formality ICE 1
+former EX 148 OLD 18 AGO 1 NCE 1
+fort FT 2
+forte F 50
+fortissimo FF 50
+fortune LOT 9
+forty XL 2
+forward ERT 1 ON 6 TO 1
+foul BAD 1 ILL 1
+foundation BED 1
+four IV 34
+foursome IV 1
+fourth IV 1
+fowl EN 1 HEN 3
+fox TOD 1
+foxtrot F 50
+foxy LY 1
+fraca ROW 1
+fragment BIT 3 END 1 ORT 1
+frame SET 1
+franc F 100
+france F 50 FR 51
+frantic MAD 3
+fraud CON 8
+fraudster CON 1
+freak FAN 2 NUT 1
+free FOC 50 RID 38
+freeze ICE 4
+freezing RAW 1
+french FR 74 AF 1 LE 1 NON 1
+frenchwoman MME 2
+frenzied MAD 1
+frequency F 50
+frequent FR 50 OFT 19
+fresh NEW 15 RAW 1
+friday FRI 53 FR 2
+friend AMI 1 ATE 1 BUD 8 PAL 117 ALS 1
+friendly ER 1
+frighten COW 2
+frightening RY 1
+frilly ACY 1
+fringe HEM 2
+frivolity FUN 1
+frolic FUN 1 RIG 1
+from BY 1 EX 5 OF 10 OFF 2
+front BOW 4 VAN 2
+frost ICE 2
+frostiness ICE 1
+frozen ICY 1
+fruit FIG 4 GE 1 HAW 1 HIP 4 LO 1 NUT 2
+fruitcake NUT 1
+ft US 1
+fuel GAS 8 OIL 7
+fulfil MET 2
+full ALL 4 ED 1 UP 1
+fume GAS 1
+function ACT 2 DO 6 GO 3 TAN 3 USE 3 ON 8 DOS 1
+fund POT 3 AID 1
+fungus EN 1
+funky HIP 1
+funny ILL 1 ODD 2 RUM 5
+furious HOT 2 MAD 6
+furlong F 100
+furnish FIT 1
+furniture BED 3
+furrow RUT 3
+further NEW 1 ON 2 TOO 1
+furthermore AND 2 TOO 1
+fury IRE 4
+fuss ADO 26 DO 4 ROW 1
+futon BED 1
+g HAS 1 THE 1
+gabon G 50 ING 3
+gaff ME 1
+gag VE 1 ES 1
+gain WIN 2 WON 1
+gallery TE 1
+gallium GA 51
+gallivant GAD 1
+gallon ING 1
+galloped RAN 2
+gamble BET 17 LAY 1 TER 1
+game RL 50 RU 69 GO 13 IT 1 LO 1 LOO 4 NAP 1 NIM 2 SPY 1 SS 1 TAG 3 TIE 2 TIG 1 FUN 1 PE 4 SET 1
+gang LOT 1 MOB 3 SET 3
+gangster AL 3
+garden ERY 1 HOE 2 KEW 4
+gardner AVA 1
+garland LEI 6
+garment BRA 2 ESS 1 TOG 2
+gas AIR 2 HE 1
+gather NET 1 IN 1 MET 2 DO 2
+gazetteer AZ 1
+gear KIT 5 RIG 11
+gee G 50 AG 1
+gel SET 2
+gemma BUD 1
+gene DNA 2
+general GEN 1 LEE 5
+generation AGE 4
+generous BIG 1
+genius ACE 1
+gent MAN 3 SIR 4 LOO 2 MEN 2
+gentile GOY 3
+gentleman SIR 19 RS 1
+geordie NE 4
+geordieland NE 1
+george GEO 51
+georgia GA 74 GE 53
+germ RIA 1
+german G 50 GER 64 AG 2 ING 1 OS 1 GG 1
+germanium GE 50
+germany D 50 GER 55 ER 1
+gershwin IRA 2
+gesture NOD 1
+get COP 1 DIG 1 GO 2 SEE 4 WIN 3 HAS 4 HAD 1
+getup RIG 1
+ghana GH 50
+giant BIG 3 GOG 1
+gibe DIG 1
+gift ART 1 SOP 3
+gigabyte GB 50
+gilbert WS 1
+gine AGO 5 OFF 2
+ginger PEP 2 RED 4
+girl ADA 8 AMY 2 ANN 31 ASS 3 AVA 3 BET 1 DEE 2 DI 32 DOT 1 ELE 1 ELL 1 ENA 6 EVA 3 EVE 10 FAY 1 GAL 50 HEN 1 HER 3 IDA 3 IVY 2 JO 4 JOY 2 KAY 2 MAE 1 MAY 1 MS 1 NAN 2 NY 1 PAM 4 PAT 2 SAL 9 SHE 2 SUE 7 TIT 1 UNA 9 VAL 3 VI 2 VIV 1
+girth AT 1
+give SAG 2
+glance KS 1
+glass UTE 1 OO 4
+gleam RAY 1
+glib PAT 2
+glimpse SEE 1
+globe ORB 4
+gloom FOG 2
+gloomy DIM 3 LOW 1 SAD 3 SE 1
+glossy EEK 1 MAG 4
+glow LIT 1 RED 3
+glutton HOG 2 PIG 4
+go DIE 2 GO 1 PEE 5 PEP 7 TRY 24 LD 1 NG 1 OFF 2 ON 3 EFT 1 RAN 1
+goal AIM 4 END 23 NET 7
+goat KID 1
+gob IT 1
+gobble ATE 2
+goblin ELF 1 ORC 1
+god JAH 1 PAN 12 RA 6 US 1
+goddess ATE 1
+gogglebox SET 1
+gold AU 80 HOR 1 OR 160 SOR 1
+golden AU 6 OR 13 TAN 1
+golf G 50
+golfer ELS 1
+goliath ME 2
+gong MBE 5 OBE 3 OM 1
+good G 50 CAP 24 ED 1 TOP 6 AG 15 ASG 1 BON 2 CE 1 DOG 1 MAG 1 NOG 1 OK 3 PI 20 GG 7
+goof ERR 1
+gorge ATE 1 EAT 1 PIG 1
+gorilla APE 1
+gosh AH 1 COR 4 MY 5 OH 1
+gossip ANA 3 GAB 3 GAS 1 YAK 3
+gourmand PIG 1
+govern LED 1 RUN 1
+government ING 4
+governor HE 1
+gp DR 1
+grab BAG 1
+gracious COR 1 MY 2
+graduate BA 116 BSC 50 MA 29 MB 1 BAS 8
+grain GR 2 ICE 1
+gram G 100 GM 100
+gramme GR 1
+gran NAN 2
+grand BIG 2
+grandma NA 1 NAN 12
+grandmother NAN 2
+grandparent NAN 1
+grannie NAN 1
+granny NAN 15
+grant LET 5 YES 1
+grasp SAW 1
+grass HAY 13 OAT 3 POT 5 RAT 5 SOD 2
+grassland LEA 1 LEY 2
+grate JAR 3 RUB 2
+gratis REE 1
+gratuity TIP 2
+gravity G 50
+gravy JUS 7
+grease OIL 4
+great GT 53 ACE 9 BIG 13 FAB 9 GR 3 MIC 1 ALI 1 FAR 1
+greece GR 54
+greed SIN 1
+greek GK 55 GR 90
+green ECO 23 EP 1 NEW 1 RAW 8 VE 1
+greet CRY 1 MET 1 AVE 6 HEY 1 HI 73 YO 4
+grenada WG 50
+grey GR 54 ASH 2 DIM 1
+groove RUT 4
+groovy FAB 1 HOT 1
+gross FAT 2 GR 5 ICK 1 UGH 1
+grot TAT 1
+grotty BAD 1 ILL 1
+ground BOG 1 OIL 1 REC 1 SOD 1
+group CH 1 LOT 22 REM 1 SET 85
+groupie FAN 1
+growth YST 1
+guacamole DIP 1
+guardian US 2
+guerrilla CHE 1
+guess BET 2
+guest OR 1
+guevara CHE 2
+guided LED 15
+guinea RG 50
+gulp SUP 1
+gun ARM 5 GAT 6 REV 1 ROD 1
+gunk GOO 1
+gunman RA 2
+gunner RA 54
+guy CAT 3 HE 2 LAD 3 MAN 31 RAG 1 RIB 1 TIM 1 HES 1 MEN 25
+gym PE 77 PT 52
+gymnastics PE 1
+gypsy ROM 2
+h UGE 1 YB 1
+habit POT 1 RUT 1 TIC 1 USE 2 WAY 3
+hack CAB 2 CUT 2 NAG 2
+hackney CAB 2
+hail AVE 3 ICE 1
+hair FUR 6 MOP 1
+haircut DO 1
+hairdresser ER 1
+hairpiece RUG 2 WIG 3
+hairstyle BUN 3 DO 4 UNS 1
+haiti RH 50
+half ME 1
+halved DIT 1
+hammer RAM 1
+hand FIN 2 MAN 2 PAW 7 MEN 2 RL 1
+handle LUG 1 USE 1
+handsome FAT 1
+hansom CAB 2
+happen BE 6 ON 4 IS 4
+happiness JOY 3
+happy LY 1 GAY 1 UP 24
+hard H 50 AH 1 ISH 8 SH 1 SET 5 NOT 2
+hardback HB 1
+harden SET 4
+hardwood ASH 2
+hare RUN 1
+harm ILL 1 MAR 2
+harmful BUG 1
+harry DOG 2 HAL 2 NAG 7
+harsh RAW 1
+harvest MOW 1
+haste HIE 1
+hasten RUN 1 RAN 2
+hat CAP 9 ER 1 FEZ 1 LID 11
+hatred IUM 1
+hattersley ROY 1
+haulier ER 1
+haunt DEN 4
+have ATE 14 GOT 1 HAD 2 HAS 1 OWN 37 EAT 1
+hawaii HI 52
+hawking ING 1
+hawser TIE 1
+hazel NUT 1
+he HE 8 IL 1 MAN 1
+head NOB 6 NUT 27 RUN 1 TOP 6 UT 1 VAN 1 LED 1 IC 1
+headgear CAP 3 HAT 6
+headland CAP 1 ZE 1
+headless AT 1 IRD 1
+headliner TAR 1
+headlouse NIT 1
+headpiece HAT 1
+headquarters HQ 50
+headwear CAP 3 HAT 4
+healthy AI 1 ALE 1 FIT 8
+hear TRY 10 EAR 3
+hearse CAR 1
+heart H 50
+heartless AN 1 SIN 1 REL 1 SHE 1
+heated HOT 4
+heater SUN 1
+heath TED 1
+heathen AN 1
+heave LUG 1
+heaven SKY 7
+heavenward UP 1
+heavyweight TON 11
+heckle BOO 1
+hectare HA 2
+heed EAR 1
+heel CAD 3
+hefty FAT 1
+height HT 56 SUM 1
+heighten UP 2
+heir SON 1
+helium HE 56
+hell DIS 10 PIT 1
+hello HI 4
+helmet HAT 1
+helmsman COX 1
+help AID 55 SOS 4
+helper AID 2
+hem RIM 1
+hence SO 2
+henry HAL 7 OH 1
+her DIS 1 HER 2
+here IN 1 UK 3
+heroin H 50 ISH 1
+hesitate ER 2 ERS 1 UM 2 UMS 1
+hesitation ER 67 ERM 1 UM 21 ERS 1
+hey OI 1 YO 1
+hidden RET 1
+hide FUR 3 TAN 1
+hideaway DEN 1
+hideout DEN 4
+high OFF 2 UP 11 TOP 2
+hill TOR 30
+himself ONE 1
+hindrance BAR 1 DAM 1 LET 2
+hint BIT 1 CUE 2 TIP 10 UE 1
+hip IN 7
+hipster CAT 3
+hire LET 9
+his HIS 1
+hiss BOO 1
+historic OLD 1
+hit BAT 3 GET 1 LAM 7 PAT 1 PIP 1 RAM 7 RAP 8 TAN 3 TAP 4
+hitch RUB 1 WED 1
+hitherto YET 1
+hoax BAM 2 COD 4 CON 5 KID 2
+hobo BUM 1
+hock HAM 1
+hoist UP 1
+hold HAD 5 OWN 1 PIN 2 VON 1 HAS 1
+holdall BAG 1
+holder PAN 1
+hole DEN 1 GAP 2 PIT 6 OO 1
+holiday HOL 1 OFF 1 VAC 2
+hollow CUP 1 DIP 1 PAN 1
+holy PI 9
+home AIN 2 ATH 1 DEN 1 HO 1 IN 248 PAD 6
+homosexual GAY 1
+honduras HN 50
+honey MEL 5
+honorific DAN 1
+honour CBE 50 MBE 54 OBE 57 J 20 Q 20 K 20 A 20 CH 1 OM 2
+honourable HON 1
+honsh IN 1
+hook BY 1
+hooligan OB 1 OUT 1 TED 1
+hoop OO 1
+hopeless BAD 1
+horrific ORY 1
+horse AGG 1 BAY 4 COB 6 EH 1 GG 6 NAG 33
+horsepower HP 50
+horticulturalist NER 1
+horton TIM 1
+hoskin ME 2
+hospital H 50 AH 4 ATH 1 SAN 15 HH 1
+host DJ 1 MC 6
+hostelry BAR 1 INN 3
+hostile FOE 1 ILL 4
+hostility WAR 9 ICE 2
+hot H 50 AH 2 HIP 2 IN 19 ISH 2
+hotel H 50 INN 12 HH 2
+hotplate HOB 1
+hotshot ACE 1
+hound DOG 3 NAG 2
+hour H 50 HR 61
+house HO 160 AHO 2 INN 1 RA 1 IS 1
+hovel STY 2
+however BUT 9 THO 4 YET 1
+howl BAY 1 CRY 1
+huge BIG 2 OS 5
+hull POD 1
+hullabaloo DIN 1
+human MAN 3
+humble LOW 2
+humorist WAG 1 WIT 1
+humour WIT 7
+humourless DRY 3 PO 1
+hundred C 50 AC 2 TON 6
+hundredweight CWT 50
+hungary H 50
+hunger YEN 2
+hunk MEN 1
+hurry RAN 13 AR 1 HIE 4 NIP 1 RUN 6
+hurt AIL 3 CUT 1 ILL 1 MAR 12
+hurtful BAD 1 ILL 1
+husband AH 1 ISH 3 MAN 2 MYH 1 HH 1 MEN 1
+hush SH 2
+hydrogen H 50
+hymn AIR 1
+hype PR 1
+i ER 1 IM 1 ON 1 ONE 2 USE 1
+iceland IS 52
+idaho ID 50 IDA 50
+idea LAN 1 ON 1
+ideal AI 1
+identification ID 61
+identify IDS 1 ID 1 PEG 2 TAG 4
+identity ID 68
+ideology ISM 1
+idiosyncrasy TIC 4
+idiot ASS 34 MUG 2 NIT 15 OAF 1 ON 1 SAP 2 TIT 3
+idiotic MAD 1
+idol ERO 1 GOD 2
+if IF 2 RAF 1
+ignite LIT 4
+ignoramu ASS 1
+ignore CUT 2
+ill AIL 1 ILL 1 OFF 1
+illinois IL 50 ILL 50
+illness BUG 3 FLU 1 ME 2 MS 1 TB 1
+illuminated LIT 13 ON 1
+illustration PIC 2
+image PIC 14
+imitate APE 1 DO 1
+imitator APE 1
+immaculate AN 1
+immature RAW 1
+immediate NOW 5
+immorality SIN 1
+immortal GOD 1
+imp ELF 2
+impassion HET 1
+impediment OG 1
+impersonate DO 1
+impertinence LIP 2
+implement DO 1
+implore BEG 1
+important BIG 4 KEY 18
+impose PUT 1
+impression AIR 2
+impressionist APE 1 OIR 1
+improved ER 1
+in AS 1 AT 4 EN 1 HEP 1 HIP 12 HOT 1 IN 76 LAR 1 LIT 1 OF 1
+inaccurate OFF 2 OUT 3
+inadequate LOW 1
+inch IN 102 INS 51
+incision CUT 1
+incite PUT 1
+incline APT 4 ENT 1
+include INC 54 IN 1 HAS 1
+inclusive INC 50
+income PAY 2
+incompetent AD 1
+incorporate INC 54
+incorrect ILL 1 OFF 1 ONG 1
+increase UP 7 WAX 2 UPS 1
+increased UP 5
+incur RAN 1
+indeed I 20 AY 8 LA 1 NAY 3 YEA 3 YES 6
+independent I 50 IND 53 ANI 1
+india IND 51 I 50 IN 1 INI 1 OFI 1
+indian IND 2
+indiana IN 51 IND 50
+indispose ILL 1
+indisposition AIL 1
+indistinct DIM 1
+indium IN 51
+individual MAN 1 NE 1 ONE 66 OWN 4 DO 1
+indonesia RI 51
+inducement SOP 3
+indulge PET 2
+inexperience RAW 9
+infant KID 1 TOT 8
+infection BUG 1
+infer UCE 1
+inferior INF 1 SUB 1
+infinitive INF 50
+inflame HOT 2 RED 3
+inflammation STY 1
+inflexible SET 1
+influence SAY 2 LED 1
+info GEN 24
+informal INF 1
+informant RAT 5
+information GEN 73
+informer RAT 7
+infrared IR 50
+infuriate DEN 1
+infuriated MAD 1
+infusion TEA 1
+ingenuity WIT 1
+injection JAB 2
+injure MAR 1
+injured CUT 1
+injury ARS 1 ILL 2
+ink INK 1 TAT 1
+inlet BAY 1
+inmate LAG 1
+inn BAR 1 PUB 1
+inning BAT 1
+innocent AMB 1
+innovative NEW 1
+inquire ASK 4
+insane MAD 1
+insect ANT 36 BEE 10 BUG 3 FLY 15
+inside IN 7
+insidious FLY 1
+insignificant WEE 1
+insolence LIP 3
+inspect VET 1
+inspector DI 3
+instant MO 10 SEC 3 NOW 1
+instinct ID 2
+instinctive GUT 1
+instrument SAW 1 SAX 1
+insult DIG 1 DIS 6
+intelligence CIA 1 IQ 6 WIT 13
+intend AIM 3
+intended FOR 2 NT 2
+intensified UP 1
+intensify FAN 1
+intention AIM 3 END 3
+intercourse EX 1 SEX 1
+interdiction BAN 1
+interior INT 3
+interlude GAP 1
+intermittent OFF 2
+international I 50 INT 7
+interrupt CUT 1
+interval GAP 1
+intestine GUT 1
+intimate PAL 1 TIC 1
+intimidate COW 6
+into IN 3 RE 1
+intravenous IV 1
+invalid ILL 1
+invent LIE 1
+invention LIE 2 ES 1
+invest PUT 1
+investigate SUS 1
+investigation CH 1
+investigator DI 3 PI 1 TEC 2
+invoice INV 1
+involved IN 1
+iodine I 50
+iowa IA 58
+iran IR 53
+irate MAD 1
+ireland IR 57 IRE 1 IRL 1
+iridium IR 50
+irish IR 122
+irishman PAT 8
+iron FE 96 PIG 1
+ironic DRY 1
+irrational PI 5
+irritate IRK 1 RUB 1
+irritation FAG 1 RUB 1
+is A 50 AM 1 ARE 1 BE 4 IS 88 EX 2 WAS 1
+isaiah IS 1
+island I 50 AIT 7 ANI 1 CAY 2 COS 4 INI 1 IS 41 ISL 1 KEY 5 MAN 17 ONI 1
+isle IOW 1 MAN 2 IS 4
+israel IL 51
+israeli JEW 1
+issue SON 18 OUT 1
+it SA 54 IT 31 SEX 5 ZA 1
+italian IT 108 AST 1
+italy I 50 IT 2
+item BIT 1 IT 1 ONE 1
+ithout WO 1
+ivy UDO 1
+j SO 1
+jab DIG 1
+jack AB 54 J 50 TAR 5
+jackdaw KA 1
+jacuzzi SPA 1
+jail AGE 1 CAN 5 JUG 1
+jailbird CON 14
+jamaica JA 50
+james JAS 50 JIM 2
+jan JAN 1
+january JAN 51 AN 1
+japan J 50
+jar ATE 1 URN 1
+jardiniere POT 1
+jay J 50
+jeer BOO 1
+jelled SET 1
+jelly GEL 3 KY 3
+jenny ASS 2
+jerk BOB 1 JIG 1 JOG 1 TIC 38 TUG 1 PE 1
+jerry PO 2
+jest COD 1
+jester WIT 3
+jewel GEM 2
+jewellery GEM 1
+job SK 1
+jockey VIE 1
+joe GI 2 MAN 1
+joey ROO 1
+jog RUN 2
+john CAN 3 LAV 1 LOO 15
+johnso MR 1
+johnson AMY 1
+join SEW 1 TIE 2
+joined AND 1 MET 1 ONE 1 WED 2
+joiner AND 6
+joint AJ 1 CO 2 CUT 1 HAM 2 HIP 28 JAY 1
+joke ACK 1 GAG 22 KID 3 ONE 2 PUN 21 WIT 1
+joker WAG 5 WIT 4
+jokey COD 1
+jolly FUN 1 RM 1
+jolson AL 1
+jones TOM 1
+joseph JO 3 JOE 1
+josh KID 1 RAG 1 RIB 1
+journal ARY 1 LOG 3 MAG 2
+journalist ED 88 SUB 1
+journey GO 14 HOP 1
+journo ED 2
+joy FUN 2
+joyful FUN 1
+judas RAT 1
+judge J 50 IJ 1 REF 32 TRY 5
+juice PEP 1 SAP 5
+juliet J 50
+julius ME 7
+july JUL 50 JY 1
+jumble MIX 1
+jump HOP 3
+jumper ROO 9 TOP 3
+junction T 50
+june JUN 50
+junior JR 52 JUN 50 SON 1 SUB 1
+junk BIN 1 TAT 3
+just AIR 1 BUT 1 NLY 1
+juvenile KID 2 LAD 1
+k TAL 1
+kansas KS 54
+kay K 50
+keen CRY 8 HOT 2 SOB 1
+keep HOG 1 OWN 2 HAS 1 HAD 5
+kelly NED 1
+kenneth KEN 2
+kent SE 2
+kentucky KEN 50 KY 51
+kerfuffle DO 1
+kettle POT 1
+key ALT 13 DEL 2 ESC 15 TAB 1
+keycode PIN 1
+kick TOE 1 FUN 1
+kid COD 1 CON 1 LAD 4 RAG 7 RIB 4 SON 5 TAD 1 TOT 4
+kill DO 1 END 1 ICE 3 TOP 2
+killer YER 1
+kilo K 50
+kilobyte K 100 KB 100 AK 1
+kilogram KG 100
+kilometre K 100 KM 1
+kind ILK 3 SET 1
+kindle LIT 2
+king K 50 R 50 AK 7 AR 7 LOO 1 REX 15 TR 1 TOK 1 KK 1 RR 2
+kingsley BEN 1
+kiss X 100 AX 2 LIP 1 PET 1
+kisser GOB 1
+kit TOG 1
+kitchenware POT 1
+kitty CAT 7 MOG 1 POT 4
+knack ART 1
+knave CAD 2 RAT 2
+knife ER 1
+knight K 50 KT 55 N 50 AK 1 AN 2 SIR 9
+knock HIT 2 PAN 1 RAP 5 TAP 3
+knockout KO 55
+knot BUR 1
+know KEN 4
+knowing FLY 4 SLY 2
+knowledge GEN 4 KEN 11
+known OUT 4
+kroner KR 1
+krypton KR 50
+l EST 1 HE 1
+label DUB 1 TAB 5 TAG 16
+laboratory LAB 3
+labour LAB 56
+lace NET 1 TAT 3
+lackey MAN 1
+lacking NO 1
+lad AL 1 BOY 14 NED 1 RON 1 SON 20 TED 1
+ladder RUN 2
+lady LAV 1 LOO 2 ANN 1 DI 2 EVE 1 HER 2 KAY 1 KO 1 MAN 1 SHE 2
+lair DEN 10
+lake L 50 AL 7 LAR 1 LL 4
+lambast RAP 1
+lament CRY 2
+land GET 1 WIN 1 LIT 4 WON 1
+landlord ER 1 RD 1 ERS 1
+lane LA 51 WAY 1
+language GO 1 GUE 1
+languish ROT 1
+lao LAO 50
+lapse ERR 1 GO 1 SIN 3
+lard FAT 2
+large L 50 AL 17 BIG 15 FAT 5 LG 1
+lash CAT 1
+lass GAL 12 GEL 1
+last END 13
+late EX 5 ON 2 HOT 1 IN 3 NEW 6
+latin L 50 AL 2 LA 1
+latvia LV 51
+laugh HA 5 HO 1 HOS 1
+laughter HA 1
+launch LOB 1
+laurel BAY 1
+lavatory CAN 1 LOO 3 WC 1
+law ACT 9 JUS 1 LEX 3
+lawbreaker CON 1
+lawman DA 1 FED 1
+lawrence TE 1
+lawyer ADA 2 DA 23 BAR 12 DAS 1
+lay SET 1 BED 1 BET 2 PUT 1
+layer BED 1 HEN 5 TIT 1
+lead PB 67 VAN 3 RAN 3
+leader PM 3 VAN 2
+leading IST 1 TOP 9 UP 15
+leaf BAY 1
+league AL 2
+leak EEP 1 PEE 4 AN 1
+lean IST 1 LIE 1 TIP 3
+leap HOP 1
+learn CON 2 SEE 2 GOT 1
+learner L 50 AL 12 LL 3
+learnt GOT 1 SAW 1
+lease LET 5
+leash TIE 1
+least MIN 1
+leather ELK 1 TAN 1
+leave AW 1 GO 48 IGO 2 COS 1 TEA 13 OFF 6
+lebanon RL 50
+lecturer AL 1 DON 6
+left L 50 AL 1 IL 8 ISL 1 LL 1 RED 3
+leftie RED 2
+leftist RED 3
+lefty RED 1
+leg GAM 1 ON 11 PIN 24
+legend KEY 1
+legislation ACT 1 LAW 7
+legislator MP 4
+legless LIT 1
+leisure FUN 1
+length L 50 AL 1 ATL 1
+leonard LEN 2
+lesotho LS 50
+lesson RI 1
+letter EP 50 DEE 1 EN 1 ETA 1 MU 3 RHO 1 TAU 2 TEE 2
+lettuce COS 9
+level PAR 5
+lever BAR 1
+leviticus LEV 1
+levy TAX 5
+lewis CS 1
+liable APT 1
+liberal L 50 LIB 59 AL 11 LAX 1 LL 5
+liberia LB 50
+librarian LIB 2
+libya LAR 50 LY 1
+licence LET 1
+lick LAP 1
+lid CAP 4 TOP 3
+lie FIB 8 SIT 3 IS 1
+liechtenstein FL 50
+lieutenant LT 14
+life BIO 2 GO 1 VIM 1
+lifesaver ARK 1
+lift UP 5 UPS 1
+light ALE 1 DAY 2 LED 7 LUX 1 RAY 7 UV 3 IN 1 ON 2
+lighter SUN 2
+like ALA 1 AS 181 AST 1 DIG 15 EG 1 ISH 1 SO 1 DUG 1 IN 1
+likely ON 1
+likewise SO 2 TOO 1
+lily LIS 1
+lima L 50
+limb ARM 7 LEG 3
+limit CAP 6 END 1
+limited LTD 50
+limo CAR 2
+lincoln ABE 22
+line L 50 LL 80 AL 7 ARY 1 ARC 5 IL 1 LEY 6 ROW 17 RY 18 BR 1 ODE 2
+lingerie BRA 1 IES 1
+link TIE 3
+lion LEO 5 RO 1 VIP 2
+lip RIM 7
+liquid INK 1
+liquor GIN 4 RUM 7
+lisp TH 1
+list TIP 1
+listener EAR 24
+literal LIT 1
+literary LIT 51
+literature LIT 58
+lithium LI 56
+lithuania LT 51
+litre AL 4
+little BIT 4 LET 1 LOW 1 TAD 13 WEE 51
+live AM 2 ARE 14 BE 113 IBE 3 ON 1 WAS 2 IS 55
+lively GAY 1 PRY 1
+livingstone KEN 3
+load LOT 1
+loaf COB 1
+loan SUB 3
+loath ATE 1
+local BAR 4 INN 10 PUB 12
+locate SIT 1 SAT 1 SET 1
+lock BAR 3
+locker KEY 1
+loco MAD 1
+lodge INN 1
+loft LOB 2 SKY 1
+lol ICE 1
+london EC 1
+long AL 1 BIG 1 DIE 2 YEN 3 OPE 1
+loo LAV 1
+look ALO 1 AIR 14 EYE 4 ILO 1 LA 1 LO 91 RAY 1 SEA 1 SEE 6 SPY 4 YED 1 EKS 1
+looker EYE 2
+loony MAD 1
+loose LAX 2
+lord EER 1 GOD 1 LD 4 LUD 1
+lot SET 1
+lottery BET 1
+lou LOU 1
+loud F 100 AF 1
+lough AL 1
+louisiana LA 55 ALA 1
+lounge LIE 1 SAT 1
+lousy BAD 2 BUM 1
+lout NED 1 OAF 2 YOB 1
+love O 52 DIG 1 IO 9 INO 1 NIL 5 OO 16
+lovely FAB 1
+lovemake IT 1 SEX 1
+lover FAN 5 MAN 1 NUT 1
+low MOO 31 SAD 1
+lowdown GEN 1
+lower COW 1 DIP 4 MOO 1
+lowland FEN 1
+lubricant OIL 2
+lubricate OIL 1
+luck LOT 2
+lug EAR 3 TOW 1
+luggage BAG 1
+lughole EAR 1
+luminary SUN 1
+lump BIT 1
+lunatic MAD 1 NUT 1
+lunch EAT 2
+lunchtime ONE 1
+luvvie HAM 1
+luxembourg L 50 ORL 1
+lyric ODE 1
+m AC 1 AW 1 HA 1
+mac BUD 1
+macedonia MK 50
+machine CAR 1
+machinery RIG 1
+madagascar RM 50
+madame MME 3
+madcap ANY 1
+maestro ACE 2
+mafia MOB 1
+mafioso DON 1
+magazine MAD 1 MAG 9 OK 1 RAG 1
+maggot BOT 1
+magic THE 1
+magician CH 1
+magistrate JP 1
+magnesium MG 50
+maid DEY 1
+maiden M 50 ISM 1
+main SEA 25
+maine ME 66
+major BIG 3
+majority AGE 1
+make DID 1 HAD 1 DO 25 IDO 1 ES 1
+maker GOD 1
+malawi MW 50
+malaysia MAL 50
+male M 50 AHE 2 AM 4 AL 2 GUY 1 HE 81 HIM 2 LAD 1 MAN 11 MR 1 RAM 8 RON 1 SAM 1 TOM 7 MEN 11
+malice ILL 1
+malign PAN 1
+malta M 50
+mammal ASS 1 BAT 1 CAT 1
+man IOM 50 OR 106 AL 2 ALE 1 BEN 2 BOB 1 DAN 1 ED 1 GUY 2 HE 78 IAN 9 KEN 1 LE 1 LEN 1 LES 2 MR 1 NED 3 RAY 2 REG 2 RON 6 SAM 2 SIR 1 TED 4 TH 1 TIM 2 TOM 2
+manage DO 1 GET 1 RAN 1 RUN 15 USE 1 ES 1
+managed DID 4 LED 2 RAN 110 RUN 3
+manager MGR 1
+manganese MN 50
+manhandle PAW 1
+manipulate RIG 1
+manitoba MB 50
+mankind MEN 1
+manner AIR 6 EN 1 LE 1 WAY 3
+mansion ILE 1
+mantra OM 4 OMS 1
+manure POO 1
+manuscript MS 65 MSS 51
+many LOT 2
+map AZ 1
+mapmaker OS 2
+march MAR 52
+margaret MEG 3 PEG 3
+margin END 1 HEM 1 RIM 3
+marijuana EED 1 POT 3
+marine SEA 6 RM 5
+mariner AB 2 TAR 3
+mark AR 1 DOM 1 DOT 4 MK 2 TAG 4
+marker PEN 1
+market ELL 1 AD 1 PR 2
+marriage ON 1
+marry M 50 AM 1 ISM 1 ONE 1 SM 1 WED 13
+marsh BOG 1
+marshal NEY 1
+marshland BOG 1 FEN 3
+marsupial ROO 4
+marvellous ACE 1 FAB 1 IC 1
+marvin LEE 1
+marxist CHE 1 RED 2
+maryland MD 50
+mascot PET 1
+masculine M 50
+mash PAP 1
+mass M 50 LOT 1 SEA 1 WAD 1
+massachusetts MA 54
+massage RUB 17 TZU 1
+massive BIG 1
+master AMA 1 ACE 5 MA 4 PRO 2 MAS 1 MM 1
+masterpiece GEM 1
+mat RUG 1 TAT 1
+match AL 1 FIT 5 GO 3 IN 1 TIE 10 TIN 1 MET 1
+mate BRO 1 MAN 1 PAL 12
+matelot ABS 1
+material RAG 1 REP 10
+matter PUS 12
+mature AGE 30 OLD 8 UP 2
+maturity AGE 8
+maureen MO 4
+mauritania RIM 50
+mauritius MS 50
+may CAN 14 PM 1
+maybe EG 2
+mbli GA 1
+mccluskey LEN 1
+mckellen IAN 1
+me ME 10 MI 1
+meadow LEA 32
+meagre LOW 1
+meal ER 2 TEA 8
+mean LOW 6 PAR 6 WAY 6
+measure CC 1 ELL 3 EM 1 EN 5
+meat AME 1 CUT 1 HAM 25
+mechanics RAC 1
+medal DSM 2 MBE 4 OBE 1 VC 1
+medallion PIN 1
+medic ADR 1 DOC 8 DR 18 GP 2 MB 5 MD 1 MO 2 OS 1
+medicine ILL 1 MED 2
+mediocre OK 1
+mediocrity PAP 1
+meditation ZEN 1
+medium M 50 MED 50 AM 1
+meet FIT 1 SEE 3 AGM 5 AT 1 MET 1 SAT 2
+megabyte MB 51
+melancholy SAD 1
+melody AIR 3 ONG 1
+member ARM 31 LEG 43 MP 14 PIN 1 RIB 1 RM 1 TOE 1
+memorisation TE 1
+memorise CON 1
+memory RAM 2 ROM 2
+menagerie ZOO 1
+mend SEW 1
+mercury HG 51
+merriment FUN 1
+mesh NET 6 WEB 1
+mess STY 1
+message FAX 3 SMS 1
+messenger ALD 1
+metal ORE 2 TIN 44
+metallic TIN 1
+methamphetamine ICE 2
+method ART 1 HOW 1 WAY 17
+metre M 100
+mexico MEX 50
+michigan MI 53
+microphone MIC 5
+middle TUM 1
+midweek WED 2
+might CAN 1 MAY 7
+mike M 50 MIC 4
+mildew ROT 1
+mile M 100
+milk USE 3
+milliband ED 2
+millilitre ML 1
+millimetre MM 100
+million M 50
+millions M 50 MM 1
+millisecond MS 50
+mimic APE 4 DO 1
+mine DIG 3 MY 1 PIT 53 TAP 1
+miner NUM 2
+mineral ERY 1 ORE 9
+mini CAR 1 LOW 1
+miniature TOY 1
+minimal WEE 1
+minimum MIN 1
+minister MIN 5 MP 1 REV 19
+minnesota MN 50
+minor WEE 2
+mint NEW 1
+minute M 100 AM 3 MIN 3 MO 4 WEE 4 MM 1
+mire MUD 1
+mirror APE 1
+mirthful GAY 1
+misbehave BAD 1
+mischief IMP 1
+miscreant CUR 1 ERS 1
+misdeed SIN 1
+miser GE 1
+miserable SAD 3
+misery WOE 1
+misfortune ENT 1 ILL 2
+misguided ERR 1
+misinform LIE 2
+misinformation LIE 1
+misjudgment OR 1
+misrepresent LIE 1
+miss DY 1 GAL 5
+missing ED 1
+mississippi MS 50
+missouri MO 52
+mist FOG 3 OG 1
+mistake ERR 7 OR 1 SIN 1 OUT 1
+mister MAN 1
+mistreat MAN 1
+mistress AM 1
+mitre HAT 1
+moan CRY 1
+mob LE 1
+mock APE 1 COD 1 RAG 1 WRY 2
+model SIT 18 TOY 5
+modelled SAT 1
+moderation HO 1
+modern AD 1 IN 3 NEW 15
+modest COY 4 LOW 1 SHY 3
+modish IN 2
+mog CAT 1
+moggie CAT 3
+moggy CAT 6
+moisten DEW 1
+moisture DEW 3
+moldova MD 50
+mole SPY 8
+molybdenum MO 50
+mom MA 27
+moment MO 6 SEC 1
+momma MA 1
+monaco MC 50
+monarch AER 1 ER 35
+monday MON 51
+money ASH 2 ASS 1 BIT 1 FAT 1 FEE 1 OOF 2 PAY 1 SUM 1 TIC 1 TIN 39 YEN 7
+moneybag NOB 1
+mongolia MGL 50
+mongrel CUR 2
+monk DOM 3
+monkey APE 11 IMP 3
+monster BIG 2 GRE 1 ORC 6
+montana MT 50
+month M 100 AM 1 AMO 1 APR 2 AUG 12 DEC 7 ER 1 FEB 2 JAN 4 MAR 2 MAY 9 MO 3 NOV 3 OCT 8 MM 1 MOS 1
+moo LOW 3
+mood AIR 2
+moon IO 4
+moonshine ROT 1
+moose ELK 1
+morale EGO 1
+morass FEN 1
+more ETC 1
+moreover AND 2 TOO 1
+morning AM 66 AMS 1
+morocco MA 50
+morsel BIT 3
+mother AMA 2 DAM 31 MA 148 MAM 2 MOM 8 MUM 15 UM 1 MAS 2
+motherless MA 1
+motion ING 1 POO 2
+motive SON 1
+motor CAR 11
+motorist ER 1 RAC 3
+motorway M 50 AM 2 MI 15 YM 1
+mould DIE 1 ROT 1
+mount ALP 1 SET 1 ME 1
+mountain ALP 27 BEN 11 MT 2 TOR 1
+mounted UP 1
+mouselike SHY 1
+mouth GOB 1 MAW 1
+mouthful BIT 1
+move ACT 2 GO 11 GOT 1
+movement IRA 1 TIC 4
+movie ET 3 PIC 11
+moving ARE 1
+mozambique MOC 50
+much BIG 1 FAR 1 LOT 1 WAY 1
+muck GOO 1 MUD 2
+mudd ME 1
+mug ASS 4 CUP 2 ROB 6
+mullet ISH 1
+multitude LOT 1
+mum MA 46 MUM 1 SH 13 MAS 1
+mummy TUT 1
+munch EAT 1 ATE 2
+murder HIT 2 OFF 1
+murmur COO 2 HUM 1
+murmuring HUM 1
+muscle AB 4 ABS 10 LAT 1 PEC 11 RAL 2
+museum VA 2
+mushroom CEP 11
+music AIR 2 POP 3 RAG 1 RAP 3 SKA 3
+musical MUS 1
+musicality EAR 1
+muslim ALI 3
+mutt CUR 5 DOG 1
+my COR 23 MY 3
+myanmar MYA 50
+myrna LOY 1
+myself ME 5
+myth LIE 2
+n CA 1 EN 1
+nab COP 1
+naked ON 1 RAW 2
+name N 50 AN 9 DUB 10 ID 2 IPA 1 NON 1 TAG 3 TED 1 TLE 1 NN 6
+nameless LY 1
+namely SC 52 VIZ 53 IE 5
+namibia NAM 50
+nasty BAD 2
+nation AN 1 UK 1 USA 1
+national AN 1 ATN 1 SN 1
+nationalist AN 1 NAT 2
+native SON 4
+naughty BAD 6
+navigator LOT 1
+navy N 50 RN 9
+nazi SS 1
+nazis SS 1
+near NR 53 AT 1 BY 9 TO 2
+neat AX 1 COW 1 OX 7 TLE 1
+nebraska NE 53 NEB 50
+nebulous DIM 1
+neck COL 1
+neckwear TIE 8
+needle BUG 1 IRK 1
+needlefish GAR 2
+negative NEG 1 NO 5 NOT 3
+neither NOR 4
+neo ME 1
+neon NE 53
+nepal NEP 50
+nerve LIP 1
+nervous SHY 3
+nest BED 1
+net BAG 1
+netherlands NL 52
+network LAN 6 NET 1 RY 1 WEB 2
+nevada NEV 50 NV 50
+never ER 3 NO 8 NOT 4
+nevertheless BUT 1 THO 1 YET 2
+new N 50 AN 49 HOT 1 INN 1 RAW 2 THE 1
+newfoundland NF 50
+news GEN 1 NN 2
+newsman ED 2
+newspaper FT 20 RAG 30 SUN 7
+newspaperman ED 51
+newspaperwoman ED 50
+next ANT 1
+nibble BIT 1
+nicaragua NIC 50
+nice OK 1
+niche BAY 1
+nick CAN 1 CUT 2 NAB 2 ROB 2
+nickel NI 52
+niger RN 50
+nigeria NGR 50
+nightclub BAR 1
+nil O 50
+nimble EFT 1
+nine IX 6 XI 1
+ninety XC 2
+niobium NB 50
+nip BIT 2
+nitrogen N 50
+nitwit TIT 1
+no NAY 15 NIX 2 NO 9
+nobody ONE 1
+noise DIN 18 HUM 1 ROW 5
+noisy OUD 1
+nonetheless BUT 1 YET 1
+nonsense BS 2 COD 1 ROT 17
+noon M 50 N 50 ATN 1
+nope NO 1
+norm PAR 11
+normal PAR 11
+north N 50 AN 1 INN 1 UP 1
+northeast NE 10
+northeastern NE 3
+northern N 50 AN 5
+northwest NW 1
+norway N 50 ORN 1
+nose PRY 3
+nosh EAT 2
+not ARY 2 NAY 1 NO 1 NON 1 NOR 2 NOT 2 PAS 1 UN 2
+notch V 50
+note N 50 NB 53 ADO 1 AN 1 DMI 1 DO 5 DOH 1 ER 1 FA 5 IN 2 INB 1 LA 15 LAH 1 ME 6 MI 29 PEN 1 PS 5 RE 25 SO 6 TE 33 TI 21 TON 1 UT 1 CC 1 DE 1 EC 1 FAE 1 MIS 1 NN 4 NS 1
+notebook PAD 2
+nothing O 50 AO 1 ANO 1 ATO 1 FA 8 ISO 1 NIL 34 NIX 5 ZIP 2
+notice AD 96 ADS 7 PY 1 SEE 28 SPY 5 SAW 9
+notion DEA 2
+noun N 50
+nourished FED 1
+novel KIM 1 NEW 25 SHE 3
+november NOV 50 N 50
+now AD 2
+nowadays AD 5
+nuclear N 1
+nudge JOG 1
+nuisance IMP 1
+number N 50 NO 126 NOS 59 AN 2 GAS 1 ONE 5 REG 1 SIX 4 TEN 34 TWO 3
+nurse AIA 1 EN 11 RGN 1 SEN 1 ENS 1
+nut AN 1
+nutmeg ME 2
+nuts MAD 6
+o AN 1 IG 1
+obama ACK 1
+obese FAT 5
+object AIM 6 END 12 ING 1 IT 2 NG 1 OBJ 1
+objection BUT 9 OB 1 OBS 1
+objective END 11
+obligation IOU 1 TIE 4
+obscure DIM 2 FOG 2 HID 1
+observation OBS 50
+observe SEE 5
+observed EEN 1 SAW 11
+observer EYE 1
+obsession BUG 1
+obsessive NUT 1
+obstacle BAR 5 LET 5
+obstruct BAR 1
+obstruction DAM 1 LET 7
+obtain BAG 1 GET 7 WIN 1 GOT 6 HAD 1
+occasion DO 1
+occasional ODD 4
+occupy IN 14
+occur IS 1
+ocean SEA 6
+october OCT 52
+odd SP 50 RUM 33
+odour BO 1 HUM 1
+of OF 3
+off BAD 1 OFF 1 OUT 7
+offence SIN 14
+offend ERR 1 SIN 1
+offense SIN 1
+offensive TET 5 WAR 1
+offer BID 14
+office DEN 12 LOO 1
+officer CO 6 COL 16 COM 1 COP 6 DI 2 DS 1 GEN 1 LT 14 NCO 5 OC 2 OFF 1 OR 1
+official REF 12 UMP 1
+offspring SON 3
+ogle EYE 1
+ohio O 50 OH 50
+oil FAT 1 TAR 1
+ointment ENT 1 RUB 2
+ok YES 3
+okay YES 3
+oklahoma OK 52
+old O 50 ANO 1 EX 149 INO 3 OR 1
+omit SET 1
+on AT 3 LEG 3 LIT 2 OF 1 ON 28 RE 194 UP 1
+once ERE 1 EX 12 PH 1
+one I 105 A 50 AI 1 ACE 66 AN 75 ANY 1 ASI 3 ATI 2 EG 1 HEA 1 IAN 1 IFI 1 INI 4 ISA 1 IT 1 ITI 1 ME 3 NOI 2 ONI 4 ONE 5 ORI 2 TI 1 UN 7 UNE 1 YOU 1 IS 1 II 2 UNS 1
+oneself EGO 2
+only ALL 1 BUT 9 ONE 2
+ooh COR 1
+oomph IT 1 SA 1
+oops OH 1
+ooze MUD 1
+open KEY 2 DOW 1 GAP 7 MAW 1 PIT 1 RIP 1
+operate DO 1 GO 1 MAN 1 RAN 4 ON 9
+operation ACT 3 OP 12 SE 1 USE 1 OPS 9
+operative SPY 1
+operator OP 2
+opinion BET 3 EYE 1 SAY 1
+opponent FOE 1
+opportunist ERS 1
+opportunity OPS 1
+opposing CON 6
+optic EYE 1
+optimistic UP 1
+opus OP 51
+or OR 12
+orbison ROY 1
+order BID 2 LAW 4 OBE 5 OM 9
+orderly LY 1
+ordinary O 50
+oregon OR 58
+organ EAR 26 ERA 1 EYE 2 FIN 1 FT 1
+organisation UN 1
+organise RUN 3 RAN 17
+organized RAN 1
+original NEW 3 UR 1
+orphan IE 1
+oscar O 50
+osmium OS 50
+others ETC 1
+otherwise OR 17
+ouch OW 2
+ounce OZ 52
+our OUR 1
+ourselves US 2
+out EX 1 LET 1 OFF 9 PUT 1 SET 1
+outbuild HUT 1
+outburst ST 1
+outcome END 1
+outcry DIN 1
+outdo CAP 2
+outfit KIT 16 RIG 13 SET 1 UP 2 UPS 1
+outlaw BAN 20 BAR 1
+outrage IRE 1
+outrageous MAD 1 OTT 2
+outsize OS 57
+outstanding ACE 4 DUE 9 EF 1 OS 3
+oven AGA 4 ILN 1
+over ISO 1 ON 10 UP 5
+overact HAM 1
+overall NET 2
+overawe COW 1
+overdine OTT 1
+overdose OD 57
+overdraft OD 53
+overdraw OD 54
+overhaul DO 1
+overhead UP 1
+overheated HOT 1
+overlook ONA 1
+overly TOO 5
+overmuch TOO 1
+oversee RAN 2
+oversize FAT 1 OS 1
+overtake LAP 2
+overweight DY 1 FAT 11
+owe DUE 4
+owing DUE 2
+own VE 1 HAD 6 HAS 9
+ox YAK 1
+oxford UP 2
+oxte BIG 1
+oxygen O 50 AIR 2
+oz IA 1
+p AN 1 ENU 1 IN 1
+pack BOX 1 RAM 1 HAS 1
+package BOX 1
+pad MAT 1
+paddle OAR 2 ROW 1
+paddy PET 1
+page P 50 PP 58 AP 4
+pain AIL 1 OW 1
+paint ART 28 OIL 13
+painter IST 1 RA 13
+painting ART 19 RT 1
+pair DUO 3 OO 1 PR 29 TWO 4
+pakistan PK 50
+pal BUD 2
+pale WAN 15
+palid WAN 1
+palladium PD 50
+pallid WAN 1
+palm ITA 1
+pamper FED 1
+pan POT 1 RAP 1 WOK 4
+panama PA 51
+pandemonium DIN 1
+panhandle BEG 1
+panny PED 1
+pants BAD 1
+papa P 50
+paper AFT 1 FT 15 RAG 9 SUN 5 ID 54
+paperback PB 1
+paraguay PY 50
+paramilitary IRA 1 SA 1
+paramour VE 1
+parasite NIT 1
+parch DRY 1
+pardon EH 2
+parent DAD 4 HER 1 MA 17 MUM 5 PA 2 POP 2
+park P 50 REC 1
+parked PUT 1
+parkland REC 1
+parliamentarian AMP 1 MO 1 MP 5
+parrot APE 2
+part PT 64 BIT 15 GO 1
+particle ION 3
+particular OWN 3
+partner PAL 2 EW 1 NS 1 SES 1
+party DO 294 DOS 5 ADO 11 ANC 2 CON 4 DUP 1 LAB 6 LIG 1 LL 1 SET 1
+pasquale DON 1
+pass COL 27 DIE 9 GO 11 ID 1 RAN 1
+passable OK 4
+passage PT 2 WAY 4
+passion IRE 7
+passionate HOT 3 MAD 1
+passport ID 6
+past AGO 20 BY 7 EX 2 OLD 1 PA 2
+pastry BUN 1 PIE 11
+pasture LEY 1
+pastureland LEA 1
+pasty PIE 2 WAN 2
+patent PAT 1
+path WAY 2
+pathetic SAD 2
+patienc HOP 1
+patrick PAT 1
+patsy SAP 1
+paul ME 1
+pause GAP 1 ER 1
+pawn P 50 MAN 1
+pay MET 6 PD 1 PRO 1 FEE 2
+payment FEE 11 SUB 2
+peacekeeper UN 72
+peak ALP 1 BEN 1 CAP 2 PIN 1 TOP 2 TOR 6
+peccadillo SIN 1
+peck BIT 1
+pecker HEN 1
+peculiar ODD 2 OWN 1 RUM 2
+pee P 50
+peeler COP 1
+peeve IRK 1
+peg PIN 5 TEE 10
+pellet BB 2
+pelvi HIP 1
+pen J 20 BIC 1 INK 1 STY 11
+pence D 50 P 50
+penitentiary CAN 1
+pennsylvania PA 61
+penny D 50 P 50 PP 1
+pensioner OAP 52
+per A 50
+perception KEN 1
+perch SIT 2 SAT 3
+perfect ACE 1 AI 6
+perform ACT 9 DO 17 DID 9 ON 59
+performance ACT 25 GIG 7
+performer ACT 1
+perhaps EG 5 SAY 7
+period AGE 9 DOT 1 EON 2 ERA 17 EVE 1 PER 1 YS 1
+periodic ODD 1
+periodical MAG 8
+perish DIE 3
+permanent AY 1
+permissible OK 2
+permission LET 1 OK 1
+permit LET 28 OK 2 OKS 1
+persevere TRY 1
+person CAR 1 KIN 2 MEN 116 OLK 1 BOD 10 ING 1 MAN 14 ONE 10 PER 3
+personal OWN 12
+personality EGO 1
+personnel HR 4
+peru PE 52
+peruke WIG 1
+pest BUG 1 FLY 1
+pet CAT 22 DOG 8 PUP 1
+peter DIE 1 ST 1
+petition ASK 2 BE 1 BEG 4 SUE 6 ING 1
+petrol GAS 1 OIL 1
+petty LY 1
+pharaoh TUT 1
+phenomenal FAB 1
+phib ME 2
+philby KIM 1
+philippine RP 50
+philistine ME 1
+philosopher TO 1
+philosophy ZEN 1
+phone ILE 1 TEL 4
+phosphorus P 50
+photo PIC 15 URE 1 PIX 1
+photograph PIC 1 HOT 1
+photographer PAP 1
+physician DOC 4 DR 3
+physicist ON 1
+pi SP 1
+pianissimo PP 50
+piano P 50
+picard LUC 1
+picaroon ME 1
+picture PIC 4 SEE 1 ART 15 PIX 1
+pie PIE 1
+piece BIT 14 GUN 5 MAN 5 TAD 1 MEN 5
+pig HAM 2 HOG 11 OAR 1 RAT 1 SOW 13 OWS 1
+pigpen STY 7
+pike GED 1
+pile NAP 4
+pilfer HOT 1
+pill TAB 1 EE 1
+pilot ACE 2 FLY 3 PO 1 RAF 1
+pin LEG 4
+pinch NIP 2 ROB 1
+pint PT 111 APT 2
+pious PI 2
+pipe FLU 1 HOT 4
+piper PAN 1
+piss ALE 1 EE 1 PEE 1
+pistol GAT 3
+pit BED 2 DEN 3
+pitch KEY 1 LOB 4 SHY 1 TAR 18
+pitcher EWR 1 JUG 1
+pity SIN 1
+pixie ELF 5
+place LAY 10 ON 1 PL 41 PUT 47 SET 15 SIT 1 SAT 4
+plague DOG 1
+plan AIM 5 IGN 1 MAP 13
+plane JET 15 MIG 1
+plant ET 1 HOP 1 IVY 2 OW 1 PEA 1 PUT 1 RUE 1 SET 2 SOW 2 SPY 2
+platinum PT 51
+play ACT 2 DO 1 FUN 1 TOY 11 AS 1 IN 1 ON 22
+player MAN 2 AST 1 EAM 1 EN 1 MEN 2
+playground REC 4
+playth TOY 2
+playwright FRY 1
+plea AL 1
+plead BEG 2
+pleasure FUN 4
+pledge BET 1
+plonk PUT 4
+plot BED 22 MAP 1 WEB 1
+plug AD 13 TAP 1 ADS 3
+plump FAT 2
+plunder AGE 1 ROB 2
+plus AND 5
+plutonium PU 50
+pocket BAG 1 NET 1
+poem IF 7 ODE 36 ONG 1
+poet DEN 1 RD 1
+poetry ODE 3
+poin ME 1
+point PT 62 N 50 E 50 S 50 W 50 AIM 3 DOT 8 END 3 NIB 1 NUB 3 PIN 2 RAS 1 TIP 1 EN 1 ES 1 SE 1 SW 1
+pointer TIP 1
+pointless ES 1
+poison MAR 1
+poisonous IC 1
+poke DIG 2 JAB 1
+poland PL 55 PO 1
+pole N 50 S 50 BAR 4 CUE 1 ROD 10 NS 15 NN 2 SN 2
+police CID 21 MET 6
+policeman DI 55 PC 54 COP 20 DS 1 DIS 1 MET 1
+policewoman DI 50 PC 50 WPC 50 DS 1
+polish RUB 27
+politician AMP 9 CON 6 LIB 5 MP 151 POL 1 RY 1 MPS 7
+poll CUT 1
+polonium PO 1
+polyamorous BI 1
+pong HUM 1
+pooch DOG 1 PUP 1
+poodle DOG 1
+poor BAD 10 BUM 3 ILL 28 OFF 2 AIL 1 LLI 1 MAL 1
+pop DAD 4 NIP 1 PA 5
+pope LEO 3
+popular BIG 1 HOT 9 IN 375 POP 1
+porcino CEP 1
+pore CON 1
+pork HAM 1 PIG 1
+porker HOG 1 PIG 1
+porky FAT 3 LIE 3
+port PT 1 RIO 21 USB 1
+porter ALE 4
+portion BIT 2 CUT 1
+portrait URE 1
+portugal P 50
+pose SIT 8 SAT 16
+posh U 50 AU 1
+position FIT 1 JOB 1 LAY 2 LIE 6 PUT 4 SET 1 SIT 3 SAT 4
+positive YES 1
+possess OWN 1 HAD 3 HAS 7
+possible ON 1 EG 1 SAY 2
+post AIL 1 END 1 JOB 3 ND 1
+postcard PC 51
+poster AD 12 ADS 1
+posterior BUM 1
+postgraduate MA 1
+postman PAT 2
+postponement ICE 1
+postscript PS 50
+pot JAR 3 PAN 6 PO 1 SH 1 URN 4
+potassium K 50
+potato ALU 1 PUD 1
+potty ANE 1 MAD 2 PO 4
+pouch BAG 1 SAC 2
+poultry HEN 2
+pound L 50 LB 65 AL 4 PEN 6 RAM 2
+pour TIP 2
+powder ASH 1
+power P 50 CE 1 VIS 1 WAY 1
+practice USE 7
+practise DO 3 PLY 1
+prankster IMP 1 WAG 1
+prat GIT 1
+prayer AVE 2
+preceding ERE 1
+predator CAT 1 OWL 1
+predicament JAM 4
+preferred PET 4
+premier TOP 1
+premium TOP 1
+prepare ARM 3 DO 3 SET 1
+prepared DID 1 DY 1 SET 9 UP 2
+prescribe SET 1
+present AD 2 AT 2 IN 5 NOW 15 OW 1 PR 1
+presentation ING 1
+preserve ATE 1 CAN 20 JAM 9 TIN 1
+president ABE 3 CEO 1 IKE 3 ON 1
+press BEG 1 HUG 1 JAM 1 SIT 2
+pressed SAT 1
+pressing ING 1
+pressman ED 3
+pressure P 50
+presumption LIP 1
+pretence ACT 4
+pretend ACT 3 COD 1 HAM 1
+prevail BE 1 WIN 1 WON 1
+prevent BAN 1 BAR 3
+previous EX 8 OLD 2 AGO 2 ERE 1
+price FEE 3 GE 1 PR 2
+pride EGO 1
+priest P 50 DD 1 ELI 36 FR 1 PR 8 REV 8
+priestess IO 1
+primary IC 1
+primate APE 27
+prime TOP 1
+primitive OLD 1 UR 1
+prince P 50 PR 56 HAL 7 RAS 2 DI 1
+princess BEA 1 DI 11 IDA 1
+principal TOP 3
+principle TAO 1
+prison AGE 1 AIL 1 CAN 23 JUG 4 PEN 7
+prisoner CON 68 LAG 7 POW 8
+private GI 5 OWN 19 PT 1 PTE 4 GIS 1
+privy LOO 1
+prize CUP 6 POT 12
+pro ACE 2 FOR 17
+problem HIT 1 ILL 2 NAG 2 RUB 3 SUM 48 UMS 1
+procedure OP 1
+proceed GO 4 ON 1
+process WAY 1
+procession ROW 1
+procure BAG 1
+produce DO 2 LAY 1 TE 1
+produced DID 2
+prof DON 2
+professional PRO 29
+professor DON 3
+profit NET 3 WIN 1
+profundity TH 1
+program APP 10
+programme APP 4 OW 1
+progress GO 5 RAN 1
+prohibit BAN 9 ANS 1
+prohibition BAN 20 BAR 1
+project JUT 9
+prominence TOR 2
+promise IOU 1
+promote UP 2
+promotion AD 16 PR 1 ADS 2
+prompt CUE 7
+prone APT 1
+pronounce SAY 1
+proper APT 1 DUE 2 FIT 1
+prophet ELI 1
+proposal BID 1
+prosecute SUE 1
+prosecutor DA 2
+protection BIB 1 MAC 1
+protein EGG 1
+protest IN 1
+protrude JUT 1
+provide DO 2 IF 137 SO 3
+province NI 1
+provoke IRK 1
+prowler CAT 1
+prune LOP 1
+pseudonym AS 1
+pub AR 1 BAR 72 INN 66 PH 9
+public OUT 11
+publication AFT 1 MAG 15
+publicise AIR 5
+publicist PR 1
+publicity AD 35 ADS 2 AIR 3 PR 12
+publicize AIR 1
+publish AIR 1 OUT 14 RAN 5
+publisher ED 1
+puce RED 1
+puff AD 3
+pull AXE 1 LUG 2 TOW 7 TUG 6
+punch AWL 1 BOX 1 HIT 5 LAM 1
+punishment RAP 1 ROD 1
+punt BET 5
+pup DOG 1
+pupil AL 1
+puppet EMU 1
+pur HUM 1
+purchase BUY 12 GET 1
+puree PAP 1
+purge RID 3
+purpose AIM 1 END 8 USE 3
+purr HUM 1
+pursue DOG 1 WOO 1
+purulence PUS 1
+push ERT 1
+puss CAT 1
+pussy CAT 3
+put LAY 3 POP 1 SET 13
+putrescence ROT 1
+puzzle FOX 2
+pyjamas PJS 50
+qatar Q 50
+qualification CSE 1 PHD 1
+qualified FIT 3
+qualifier IF 1
+quality AIR 1 ING 1
+quantity ICS 1 SUM 4
+quarrel ROW 11
+quarrelling ROW 1
+quarry PIT 1
+quart QU 1
+quarter EN 1 EE 1 NE 1 NN 1
+quartet IV 2 OUR 1
+queasy ILL 1
+quebec Q 50 AQ 1 QUE 1
+queen Q 50 QU 81 R 50 AR 3 CAT 3 ER 158 HM 1
+query ASK 1
+question Q 50 ASK 11 HOW 4 QU 44 WHO 2 WHY 4
+queue CUE 1 INE 1 ROW 2
+quiche ART 1
+quick ER 1
+quiet P 50 AP 5 ASH 6 ALM 1 MUM 3 SH 137 USP 1 USH 1
+quirk TIC 3
+quit DIE 1 END 1
+quite ALL 6 SO 5
+quiz ASK 1
+quoit OO 1
+quotation TAG 1
+r HE 1
+rabbit GAS 1 JAW 1 YAK 1
+rabble MOB 2
+race TT 68 EAT 1 FLY 3 RUN 8 RAN 4
+racket CON 1 DIN 15
+radiation UV 2
+radical RED 7
+radioactive HOT 1
+radium RA 51
+radius AR 1
+radon RN 50
+rag TAT 1
+rage FAD 1 IRE 14
+raging HOT 1
+rail BAR 2
+railroad RR 3
+railway ARY 2 RY 53
+rain TER 1 WET 3
+raincoat MAC 4
+rainwear MAC 1
+rainy WET 1
+raise UP 29 IUP 1 UPS 2
+rake CAD 1 NS 1
+ram TUP 5
+ramble GAD 1
+rancid OFF 1
+range AGA 4 KEN 2 RUN 2
+rank ROW 1
+ransack TS 1
+rapture JOY 1
+rare RED 4
+rascal CAD 1 IMP 18
+rat CAD 3 RAT 1
+rate MPH 1 TAR 1
+rather YES 1
+raw ESH 1 RED 1
+raymond RAY 1
+reaction TIC 1
+read CON 1 ON 1
+ready APT 1 FIT 2 ON 2 SET 16
+reagan RON 2
+real SO 7
+realise SEE 1
+realistic RAW 1
+rear ASS 1 END 1
+reason END 1 WHY 2 WIT 1
+reasonable NE 1
+rebel REB 1 UP 1
+rebuke RAP 5
+recall IF 1
+receive GET 2
+received GOT 6 HAD 1 RE 1
+recent NEW 2
+receptacle BAG 1 BIN 2 CAN 1 POT 1 URN 1
+recess BAY 2 OOK 1
+recipe R 50 REC 50 AR 3
+reckon ADD 2 SUM 2
+recline LIE 2
+recognise SEE 1 SAW 1
+recommend TIP 1
+record EP 117 LP 71 ACD 3 ALP 4 ACT 1 CD 10 DIS 1 ISC 1 LOG 55 EPS 7 LPS 3
+recover ER 1
+recreational FUN 1
+recruit GI 1
+red CHE 1 RED 1 RY 1
+reduce CUT 3
+reduced CUT 2
+reduction CUT 2
+reef CAY 1 KEY 1
+referee REF 1
+reference SEE 1
+refined ICE 1
+refinement SH 1
+reform NEW 2
+refusal NAY 3 NO 29
+regard EYE 1 OF 1 ON 9 RE 30
+regenerate NEW 1
+regiment RA 1 RE 1
+register LOG 6
+regress IS 1
+regret RUE 55 TY 1
+regular SET 1 OFT 7
+regulate SET 1
+regulation LAW 4
+reject BIN 1
+rejected OUT 2
+rejection NO 1
+relation SIS 2 SON 1 IT 4 KIN 8 SEX 2
+relationship IO 1 TIE 7
+relative BRO 5 DAD 1 KIN 14 MA 1 NAN 9 ON 1 PA 2 RAN 1 REL 2 SIB 1 SIS 20 SON 15
+relax LIE 1 SIT 2 SAT 4
+released OUT 5
+relief AID 3
+religious PI 6
+relish DIP 1
+remain BE 4 LIE 4 ASH 30 IS 1
+remainder END 1
+reminder CUE 1 JOG 1
+remote FAR 7 OUT 4
+remove DE 1
+removed FAR 1 OFF 2
+render SET 1
+renegade RAT 3
+rent GAP 1 LET 10 ORN 1 RIP 5
+rental LET 1
+repair FIX 2
+repeat DO 1
+repeated BIS 2 CHE 1
+replace SUB 1
+replacement SUB 2
+report CRY 1 POP 1 SAY 1
+reporter ED 1
+repose SAT 1
+reprehensible ILL 1
+represent BE 1 IS 2
+representative MP 9 REP 5
+reprimand RAP 1 WIG 1
+reptile ASP 2
+republican AR 10 REP 2
+reputation TE 1
+request ASK 20 BEG 1
+research DIG 1 RES 5
+resemble AS 1
+reservation BUT 1
+reserve ICE 18 RES 5 SUB 3 TA 2
+reserved COY 3 HY 1 SHY 4
+reservist TA 1
+residence EST 1 RES 3
+resin LAC 3
+resistance R 50
+resolution RES 1
+resolve END 1
+resort SPA 19
+respect RE 4
+response TIC 1
+responsibility UTY 1
+rest LIE 2 SIT 6 SAT 8
+restaurant IT 1
+restrain PIN 1 DRY 1
+restraint TIE 3
+restriction BAN 1 BAR 1 CAP 1 GAG 1
+result END 2
+resume CV 50
+retire BED 1 EX 3 RET 2 COY 1 SHY 4
+retiree OAP 1
+retreat DEN 20
+return PAY 1 AT 1 VE 1 BUS 1
+rev AX 1 HUP 1 LAY 1 ME 1 MOB 1 OTT 1 SLY 1 TO 1 UNI 1 VAN 1 VO 1 YES 1
+reveal AIR 1 OUT 12
+revenue TAX 1
+reverence AWE 1
+reverend REV 50
+revise REV 1
+revolt UP 2
+revolution REV 1
+revolutionary CHE 45 MAO 1 RED 25
+revolver GAT 1
+reward FEE 1 PAY 1
+rhenium RE 50
+rhodium RH 50
+rhubarb ROT 4
+rib RAG 1
+rice TIM 3
+rich FAT 3
+ride ON 11 UP 3
+rider PS 5
+ridicule RAG 1
+ridiculous TOO 1
+rifle ROB 1
+rift GAP 1
+right R 50 RT 100 AR 7 FIT 1 ITR 2 OK 17 PER 1 TOR 1 YES 4 RR 6 RTS 1
+rigid SET 2
+rim LIP 3
+ring AO 2 AL 1 PEN 1 OO 9 OS 2
+rise IS 1 ITS 1 UP 3
+risen UP 1
+risk BET 9 BLE 1
+ritardando RIT 1
+ritua ERA 1
+rival FOE 3 VIE 7
+river R 50 APO 2 AR 5 CAM 18 DEE 52 DON 2 EA 4 EES 1 EXE 24 FAL 7 INE 1 LEE 1 PO 27 RIO 1 TAY 9 URE 18 USK 3 WYE 1 RR 2
+road RD 97 ARD 3 AI 2 AVE 1 MI 2 ST 8 UTE 1 WAY 3 RDS 1
+roadway ST 1
+roam GAD 1
+roast PAN 1 HOT 1
+rob DO 1
+robe OWN 1
+robert BOB 2 ROB 1
+rock GEM 1 GIB 2 ORE 5 TOR 9 ICE 5
+rod BAR 3 CUE 3 GUN 2
+rodent RAT 27 SE 1
+rogue CAD 9 CUR 2 EEL 1 IMP 5 OR 1 RAT 3
+roll BUN 8 SUB 2 WAD 1
+roller RR 50 DIE 1
+romance ION 1 LIE 2 WOO 1
+romania RO 53
+romeo R 50
+ronald RON 3
+rook R 50 CON 1
+rookie CUB 2
+room RM 64 ARM 1 ALL 1 DEN 1 LAB 1
+rope GUY 2 LE 1
+rose AXL 1 DUP 1 RED 2
+rot EAT 1 OFF 1
+rotten BAD 9 ILL 1 OFF 25
+rotter CAD 2 CUR 1 RAT 1
+rough ILL 1 RAW 2 CA 9 ISH 1
+round AO 1 LAP 2 OO 1
+route ST 1 WAY 4
+routine ACT 4 RUT 17
+row DIN 13 IER 1 INE 1 OAR 7
+rower OAR 3
+royal AR 2 ER 13 HM 1
+royalty ER 2
+rubber ULE 2
+rubbish AGE 1 BS 1 ROT 49 TAT 42 TOR 1 UNK 1
+rubidium RB 50
+ruby RED 7
+ruddy RED 9
+rude RAW 1
+rug MAT 8 WIG 5
+rugby RU 5
+ruin MAR 4 ROT 1
+rule IM 1 LAW 13 RAJ 1 LED 1 RR 2 IN 1
+rulebook PIE 1
+ruler AGA 1 ER 9
+rum ODD 13 TOT 1
+run R 100 LED 1 AR 3 FLY 3 GO 10 IGO 1 IR 2 ISR 1 OP 1 TOR 1 NG 1 ON 31
+runner DEE 1 MAT 1 SKI 14
+rupee RS 1
+rush FLY 1 RIP 1 RAN 5
+russia RUS 50
+rust ROT 1
+rusty RED 1
+ruthenium RU 50
+s AND 1 ESS 1 IN 1 MY 1 ON 1
+sack AXE 3 BAG 8 BED 10 ROB 1 OUT 1
+sacred OLY 1
+sail JIB 2 ED 1
+sailor AB 155 ABS 8 LE 1 OS 3 PO 1 TAR 90 MEN 1 RM 1 RN 16 VY 2
+saint S 50 ST 100 SS 57 AS 1
+salary PAY 3
+salesman REP 46
+salesperson REP 11
+sally GAG 1
+saloon BAR 1 CAR 2
+salt AB 2 TAR 3 WIT 1
+saltwork PAN 1
+salty INE 1
+same DO 1
+sample SIP 1 TRY 8 ATE 1
+samuel SAM 1
+sanatorium SAN 1
+sanctimonious API 1 PI 11
+sanction LET 1 OK 7 OKS 1
+sanctuary DEN 3
+sandbank BAR 2
+sandwich BLT 51 SUB 3 ES 1
+sapper RE 52
+sarah SAL 8
+sash OBI 1
+satellite IO 1 OON 1
+satire UP 1
+satisfactory OK 8
+satisfied DID 1 MET 21 OK 1
+saturated WET 1
+saturday SAT 50
+sauce DIP 1 HP 3 LIP 3 SOY 6
+sausage MI 1
+save BAR 10 BUT 7
+say AS 1 EG 200 SAW 4 UM 1
+scam CON 16
+scamp IMP 2
+scamper RAN 1
+scan CON 1 EYE 1
+scandal MUD 1
+scandium SC 50
+scanner CAT 1
+scar PIT 1
+scarf BOA 2
+scarface AL 1
+scarlet RED 8
+scatter DOT 1 SOW 1
+scene ACT 1
+scenery SET 2
+schedule SET 2 ON 1
+schem ART 1
+scholar AMA 1 BA 3 DON 1 MA 3 BAS 1
+school SCH 115 ED 2 GAM 3 POD 9 NS 2
+schutzstaffel SS 1
+science SCI 53 SC 2
+scoff EAT 1 ATE 6
+scold NAG 2
+scorched DRY 1
+score CUT 3 TEN 1 TRY 2
+scot IAN 3 MAC 2 RAB 1
+scotsman IAN 18 MAC 7 RAB 2 ROY 1 TAM 1
+scoundrel CAD 12 CAN 1 CUR 16 DOG 2 RAT 8
+scrap BIN 3 BIT 3 BOX 1 CAN 1 END 3 JOT 1 RAG 6 ROW 1
+scratch NIL 1
+screen VET 2
+screw LAY 1 ROB 1
+scribble ING 1
+script MS 1
+scripture OT 1
+scrounge BUM 1
+scrutinise VET 1
+scud RUN 1
+scuttle HOD 1
+sea MED 32 RED 1
+seabird MEW 1
+seafood COD 1 LAM 1
+seaman AB 7 OS 6 TAR 4
+search DIG 1
+season AGE 4
+seat BUM 1 PEW 3 SIT 2
+seawards OUT 1
+sec MO 1
+second S 50 AMO 1 AS 12 IMS 1 MO 90 RE 1 SEC 6
+secondary SUB 1
+seconds S 50 MOS 2 SS 1
+secondstringer SUB 1
+secret SLY 2
+secretary SEC 52 PA 71
+secretive SLY 2
+sectarian OT 1
+section ARM 1 BIT 2
+secure BAG 1 BAR 1 GET 2 PIN 6 TIE 5 WIN 8
+secured GOT 1
+see V 50 C 50 GE 1 ELY 10 EYE 3 GET 1 IC 7 ILO 2 LO 89 POT 1 SPY 6
+seed EGG 1 NUT 2 PEA 4 PIP 6
+seedcase POD 1
+seedy CD 1 ILL 2
+seek TRY 1
+seem WAS 1
+seethe HOT 1
+segment BIT 2
+seize GET 1
+seizure FIT 1
+selenium SE 50
+self I 50 EGO 1
+semi DE 1
+senator SEN 5
+send IT 1
+senegal SN 50
+senile LD 1
+senior SEN 50 SR 59 OAP 1 OLD 2
+seniority AGE 3
+sensation WOW 2
+senseless OUT 1
+sensible MAD 1
+sensitive RAW 2
+sensitivity EAR 2
+sentiment GOO 4
+sentimentality GOO 3
+separate RED 1
+september SEP 51
+sergeant NCO 1
+serial SER 1
+series RUN 9 SER 7 SR 1
+serious BAD 1 BIG 1 SAD 1
+sermon SER 1
+serpent BOA 1
+servant AN 1 MAN 10 MEN 1
+serve ACE 1 ON 1
+server TER 4
+service RAF 13 RN 2 USE 5
+serviceman GI 2 GIS 1
+sestet SIX 1
+set DUO 1 GEL 20 LAY 7 LOT 1 ON 1 PUT 7 SET 1 TV 3 TVS 1
+settee FA 1
+setter DOG 3 FED 1 GEL 4 IO 1 JAM 1 ME 36 MY 1 RED 1 SUN 2 US 2 WE 1
+settle PAY 1 SIT 1
+settled AIR 1 LIT 11 SAT 6
+seven VII 1
+sever CUT 1
+sex IT 48 VI 1
+sexy FIT 1 HOT 9 IC 1
+seychelles SY 52
+shack HUT 1 UT 1
+shade HUE 3 RED 3 TAN 2
+shadow DOG 1
+shaft ROD 1
+shake BLE 1 DT 1
+sham COD 1
+shame SIN 1
+shanty HUT 1
+shape HEW 1
+share CUT 2 END 1
+sharpness WIT 1
+she MA 1 SHE 1
+shed BIN 1 HUT 6
+sheep EWE 6 NAG 1 RAM 37 TEG 3 TUP 9 WE 1
+sheepish SHY 1
+shell POD 1 SUB 1
+shelter DEN 1 HUT 2 LEE 45 HID 1
+shelved OFF 1
+shepherd LED 1
+sherrin NED 1
+shilling S 50
+shindig DO 1
+shining ON 1
+ship SS 138 ASS 1 ARK 11 ER 1 SUB 1
+shirt TEE 3 TOP 1
+shock AL 1 JAR 3
+shocker BOO 2
+shocking BAD 1
+shoot BAG 1 BUD 4 POP 1 ZAP 1 BID 1 GO 14 HIT 2 LOB 2 NIP 1 PIC 3 POT 1 TRY 6
+shop OP 1 RAT 2
+short ARA 1 CUT 1 FAT 1 LOW 3 SHY 2 TOT 1
+shortstop SS 1
+shot PIX 1
+shout CRY 10
+show ACT 1 AIR 13 GIG 1 RUN 1 ON 3 LED 1
+shred CUT 1
+shrew NAG 2
+shrewd FLY 1
+shriek CRY 1
+shrink ACT 1
+shrub BOX 1
+shy COY 8 LOB 2
+sibling BRO 5 SIB 2 SIS 10
+sibyl ER 1
+sick ILL 62 OFF 2
+sicken ILL 1
+sickness BUG 1 FLU 1 MAL 2
+sickroom SAN 1
+side MS 1 RL 1
+sidekick PA 1 PAL 1
+sidney SID 1
+sierra S 50
+siesta NAP 1
+sigh AH 1
+sight SEE 1 SPY 2
+sign CUE 2 INK 1 LEO 6
+signal CUE 4 NOD 3
+significant BIG 1
+silence ET 1 GAG 7 MUM 1 SH 7
+silencer GAG 1
+silent ET 1 MUM 7 SH 1 UTE 1
+silicon SI 50
+silly ASS 2 WET 1
+silver AG 133
+simian APE 1
+simple DIM 2 VE 1 NLY 1
+simplified ER 1
+simplistic PAT 1
+sin ERR 14 VY 1
+since AGO 4 AS 24
+singapore SGP 50
+singer RAT 2 TIT 3
+single ITI 1 NE 1 ONE 42 RUN 1 II 1
+singular AS 1 ODD 1 ONE 1
+sink DIP 4 EBB 1 POT 2 SAG 4
+siren TER 1
+sister NUN 29 SIS 6 SR 8 UNS 1
+sit LIE 1 SIT 1
+situate SET 1
+six AD 1 VI 46
+sixth AVI 1 VI 1
+skate RAY 1
+skilful SLY 1
+skill ART 75 HOW 1
+skin EEL 1 FUR 1
+skip BIN 2 HOP 2
+skipper ROO 1
+skirt RIM 2
+sky AIR 1 LOB 1
+skyward UP 1
+slander MUD 7
+slap PAT 1 HIT 1
+slash CUT 2
+slate PAN 3 RAP 1
+sleep KIP 5 NAP 19 ZZ 1 ING 1
+sleuth PI 1 TEC 2
+slice CUT 3
+slime GOO 3
+slip ERR 7 NOD 1 SIN 2
+slipper EEL 1
+slipshod LAX 1
+slob PIG 4
+slop GOO 1
+sloppy LAX 1
+slormgorm ME 1
+sloth AI 6
+slough BOG 1 FEN 1
+slovakia SK 51
+slovenia SLO 50
+slow DIM 2 RIT 1
+sludge GOO 1
+sly FLY 1
+smack TAN 2
+small S 50 AS 11 INS 1 ISS 1 SM 1 WEE 32 SS 6
+smart APT 1 FLY 3 RAF 1 URN 1
+smash FAB 1
+smell BO 6 HUM 11
+smoke CIG 2 FAG 1 FOG 1
+smooth RUB 1
+smuggle RAN 12
+snack EAT 2
+snake ASP 20 BOA 14 DER 1
+snap PIC 2
+snapshot PIC 2
+snare NET 1
+snazzy ACE 1
+sneak RAT 1
+sneaky SLY 2
+snifter TOT 1
+snitch RAT 3
+snooze NAP 2
+snoring ZZ 2
+snub CUT 2
+snug BAR 1
+so AS 6 SIC 4
+soak RET 3
+soaked WET 1
+soaking WET 1
+sob CRY 5
+sober TT 2
+socialist FTY 1 RED 28
+socialite DEB 2
+society S 50 SOC 51 AS 1
+sock HIT 1
+socko POW 1
+sod OT 1
+soda POP 2
+sodium NA 54
+soft P 50 AP 1 LAX 1
+soften RET 1
+software APP 8
+soggy WET 2
+soil MAR 1 MUD 1
+soldier AGI 3 ANT 26 GI 86 MAN 11 RE 51 EN 2 GIS 6 MEN 71 ON 1 OR 32 RA 6 SAS 3 TA 1
+sole ONE 2
+solidify SET 1
+solitary ONE 1
+solution ANS 1 SOL 1
+solve DO 2
+solver YE 2 YOU 12
+somalia SO 51
+some ANY 26
+somebody ONE 8
+someone MAN 1
+something IT 2
+somewhat ISH 2
+somme WAR 1
+son S 100 AS 1 BOY 2 LAD 3 SS 6
+song AIR 30 IR 1 LAY 14 ODE 1
+songbird TIT 7
+soon MO 1
+soppy WET 1
+soprano SS 1
+sorbet ICE 1
+sore RAW 1 RED 2
+sorrowful AL 1
+sorry SAD 2
+sort ILK 3
+soul KA 3
+sound HUM 2 SE 1
+soup PHO 1
+sour OFF 2
+souse SOT 1
+south S 50 AS 2 ISS 1 ORS 1 STH 3
+southeast SE 16
+southeastern SE 2
+southern S 50 AS 1 ISS 1
+southwest SW 1
+sovereign ER 8 HM 1 XES 1
+sovereignty RAJ 1
+soviet RED 3
+sow ELT 1
+sozzled LIT 1
+space EM 7 EN 12 GAP 5 SKY 1
+spade S 50 HOE 1
+spain E 50 ES 1 INE 1 SP 2
+spanish SP 3
+spar BOX 2
+spark ARC 1 LIT 1
+spasm TIC 2
+speak SAY 5 ING 1
+spearhead LED 1
+special S 50 SP 73 AS 1 OWN 1 PET 1
+specialist ERT 1 PRO 1
+speciality BAG 1
+species SP 1
+spectacle OO 3
+speculate BET 2 USE 1
+speculation BET 5
+sped RAN 1
+speed ACE 1 ATE 1 MPH 16 REV 1
+spell SP 53 HEX 1
+sphere ORB 2
+spicy HOT 3
+spike NIB 1 PIN 2 TIP 1
+spin MAE 1 PR 9 URN 1
+spinner TOP 11
+spirit ELF 3 FAY 1 GIN 21 GO 3 GOD 1 IMP 2 KA 5 PEP 1 RUM 18
+spit ROW 1 GOB 2
+split AXE 1 CUT 1 GO 2 HEW 1 RIP 6
+spoil MAR 22 OFF 2
+sponge BUM 1 MOP 1 SOP 1
+spook CIA 2
+sport FUN 2 MO 1 PE 5 RU 11 RUN 1
+sportsman PRO 1
+spot AD 2 BIT 1 DOT 10 EYE 1 PIP 2 SEE 9 SPY 3 ZIT 7 ADS 1
+spotted SAW 12
+sprawl LIE 1
+spray JET 1
+spread RAN 1 SOW 1
+spring APR 1 HOP 7 MAY 4 SPA 15
+springtime MAY 7
+sprint RAN 3
+sprite IMP 2
+spruce FIR 1
+spy CIA 83 LES 1 BUG 1 SEE 3
+square S 50 SQ 50 AS 1
+squash JAM 3
+squat LOW 1 SAT 1
+squawk CAW 1
+squeal YIP 1
+squeeze HUG 2
+squeezer BOA 1
+squirt JET 1
+st ST 2
+stableman LAD 1
+staff BAR 4 MAN 35 MEN 15 MON 1 ROD 38
+stage LAG 1 LEG 30 SET 2
+stain DYE 1
+stake BET 4 VIE 1
+stale OFF 1 OLD 2
+stalin JOE 1
+stall PEN 1
+stallion TUD 1
+stamp DIE 4
+stand LIE 1 PUT 1 UP 2
+standard STD 52 IC 1 PAR 56 SET 1
+stanza SE 1
+staple PIN 1
+star ACE 4 SUN 26 TOP 1 GO 1 LEO 2
+start ENT 1 GO 1 ND 1 OFF 4
+starter CUB 1
+state AIR 1 CAL 1 NY 6 SAY 19 US 4
+statesman PM 1
+station STA 54 ST 1
+statute ACT 1 LAW 1
+staunch DAM 2
+stay BE 2
+steal ROB 6 BOA 5
+steamer SS 2 STR 2
+steamship SS 58
+steamy HOT 2
+steep RET 2
+steer CON 4 OX 12
+step PAS 3
+stern AFT 1
+stew DO 1
+stick BAR 4 BAT 4 CUE 1 GEL 2 GUM 9 JAM 3 PEG 1 PUT 1 RAM 1 ROD 23
+stickiness GOO 1
+sticky GOO 1
+stiff CON 1 SAD 1
+stifle LAS 1
+stigma AIN 1
+still AY 1 BUT 6 ERT 1 ET 1 PIC 2 YET 35
+sting CON 2
+stinger BEE 1
+stink BO 1 HUM 2 OFF 1
+stinker CAD 1
+stir ADO 3
+stitch SEW 5
+stock OLD 1 SET 1
+stocking BAS 1
+stoked FED 1
+stolen HOT 12
+stomach GUT 2 TUM 11
+stone ST 101 AST 2 ATE 1 GEM 8 JET 5 PIT 2
+stoop BOW 1
+stop BAN 2 BAR 3 DAM 4 DIE 9 END 19 HO 4 HOA 1 IST 1 TE 1
+store OP 1 SE 1
+storey OOR 1
+story ANA 3 ES 1 BIO 1 FIB 3 GEN 1 LE 1 LIE 54 TLE 1
+stout ALE 1 FAT 2
+stove AGA 3
+straight STR 1
+strain AIR 1 TRY 1
+strange NEW 3 ODD 9 RUM 30 LY 1
+strap TAB 1 FIT 1
+stray ERR 17
+streak RUN 1
+stream JET 4
+street ST 290 AST 5 RD 2 WAY 7 STS 1
+stretch TAX 1 RAN 1
+strict SET 1
+strife WAR 2
+strike BAT 4 BOX 2 HEW 1 HIT 9 IT 1 LAM 1 OUT 1 RAM 7 RAP 3 TAP 1
+striker BAT 1
+striking OUT 5
+string ROW 2 TIE 1
+strip ROB 1
+strive VIE 1
+stroke AT 1 HIT 1 PAT 1 PET 2 TIC 1
+strong FIT 1 HOT 1
+strongman OX 1
+strontium SR 50
+struggle VIE 31 WAR 3
+stud ING 1
+student AL 3 ED 1 PIL 1 UNI 1 LL 5 NUS 6
+studio DEN 1
+study CON 65 DEN 91 DO 2 EYE 1
+stuff AL 1 JAM 3 KIT 1 PAD 4 RAM 22
+stumped ST 4
+stun KO 2
+stunner KO 2
+stupid AFT 1 DIM 11
+sturmabteilung SA 1
+sty PEN 1
+style ART 1 DUB 1 LAN 1 TON 1 WAY 4 ALA 1
+stylish FLY 1 HIP 1 IN 11
+sub BUN 1 END 1
+subdue COW 2
+subdued LOW 1
+subject PIC 1
+submit BOW 1
+subscription FEE 1
+subsequent ER 1 SO 2
+substantial FAT 1 UGE 1
+substantive SB 1
+substitute IN 2
+subtle DRY 1
+succeed WIN 6 WON 1
+success AGO 1 GO 4 HIT 22 UP 1 WIN 16
+successful OK 1
+succour AID 1
+such SO 6
+sucker MUG 1
+sudan SUD 50
+suffer AIL 3 DIE 1 LET 1 ILL 6 HAS 1
+suffice DO 3
+suggestion DEA 1 INT 1 TIP 8
+suit FIT 9
+suitable APT 13 FIT 12 OK 2
+suitcase BAG 1
+sulk PET 3
+sulphur S 50
+sum ADD 1
+summer AUG 1
+summertime BST 1
+summery HOT 1
+summit CAP 1 TOP 1
+sun S 50 RA 1 SOL 8 SUN 1
+sunbathe TAN 1
+sunbeam RAY 1
+sunburn TAN 2 RED 1
+sunday SUN 51
+sunlight RAY 2
+sup ATE 1
+super ACE 1 BIG 1 FAB 1
+superb ACE 3
+superhero AN 1
+superior AU 3 TOP 2
+superpower US 3
+supervise RAN 1
+supplement ADD 4 MAG 1
+supply FED 3 KIT 1
+support AID 23 BRA 19 GUY 1 LEG 8 PRO 1 RIB 1 TEE 23
+supporter BRA 26 CUP 1 FAN 20 LEG 4 TEE 3
+supporting FOR 40 PRO 22
+suppress BAN 3
+supreme TOP 1
+sure YES 1
+surf SEA 1
+surgeon BS 1 CHB 1 VET 4
+surgery OP 18
+surprise EH 1
+surrender BOW 1
+surreptitious FLY 2
+susan SUE 1
+suspect RUM 1
+suspicion SUS 2
+suspicious RUM 1 SUS 1
+swallow EAT 7 ATE 6
+swamp BOG 3 FEN 2
+swan COB 2 PEN 4
+sway WAG 1
+swaziland SD 50
+swear EFF 2 VOW 2
+sweaty HOT 2 WET 1
+sweden S 50
+swedish SW 1
+sweep PAN 1
+sweet GUM 1 MEL 1 PUD 8 ES 1
+sweetener SOP 1
+sweetheart HON 1 JO 2
+swell GE 1 NOB 1 WAX 1
+swim DIP 9
+swimmer COD 3 EEL 6 RAY 2
+swindle CON 12 DO 6
+swindler CON 1
+swine HOG 5 PIG 4 RAT 1 SOD 1
+switzerland CH 59
+sword EE 1
+sympathy ITY 1
+syria SYR 50
+syrup WIG 1
+system PA 1 WAY 1
+t DOG 1 GOD 1 IM 1 MIT 1 OO 1
+tablet ILL 1 ES 2
+tabloid RAG 7 SUN 5
+taboo BAN 1 NO 1
+tack PIN 2
+tackle KIT 4 RIG 2
+tag ID 3
+tail CUE 1 DOG 2 END 2 NS 1
+tailor CUT 1
+taiwan RC 50
+take R 50 REC 50 DO 1 EAT 1 GET 1 NAB 1 ROB 3 WIN 1 ATE 3 GOT 2 ON 2 HAD 1 LED 1
+tale LIE 4 RY 1
+talent ART 1
+talk GAB 6 GAS 4 JAW 2 RAP 7 YAK 1 YAP 1
+tall IG 1
+tally ADD 1 SUM 1
+tame PET 2
+tan SUN 1
+tangle MAT 3
+tango T 50
+tank VAT 5
+tantalum TA 50
+tantrum GEE 1 PET 1
+tap HC 1 RAP 1
+taproom BAR 1
+tar AB 51
+tardy ATE 1
+target AIM 4 END 3
+tart PIE 3
+task JOB 1 UTY 1
+taste BIT 1 INT 1 OUR 1 TRY 4
+tasteless ISH 1
+tattoo INK 2
+taunt DIG 3
+tavern BAR 3 INN 13 PUB 3
+tax VAT 81 TRY 1
+taxi CAB 46
+tea CHA 100
+teach CON 1
+teacher DON 17 SIR 32 NUT 1
+team DUO 1 II 1 MEN 3 XI 13
+tear RIP 7 RAN 1
+tearful SAD 1
+tease EN 1 KID 2 RAG 4 RIB 7
+teaspoon TSP 2
+tech IT 1
+technique ART 3 WAY 1
+technology IT 4
+teddy ED 1
+tedious DRY 1
+tee T 50 ME 1 TT 2
+teenager TED 1
+teepee TP 1
+teetotal TT 53 DRY 1
+teetotaller TT 59 ATT 1
+tel BOX 1
+telepathy ESP 1
+telephone TEL 4
+teletubby PO 1
+televise AIR 1 ON 1
+television SET 2
+televison TV 50
+tell RAT 1
+tellurium TE 50
+temperate TT 1
+temperature T 50 AT 1
+temple WAT 4
+temptress EVE 3
+ten X 100 IO 9 TEN 2
+tend RED 1
+tender BID 6
+tennessee TN 52
+tense AT 3
+tent TOP 1
+tenth X 50
+term END 1
+termination END 2
+terminus END 2
+terrace TER 53 ROW 2
+terrible BAD 3 BUM 1 TOO 1
+terrific ACE 2 RAD 1
+territory TER 2
+terror AWE 1 IMP 1
+terrorist ETA 1 IS 1
+test AL 1 MOT 7 OUT 1 RAL 1 TRY 26
+testament NT 2 OT 1
+texas TX 51
+text SMS 3
+thailand T 50
+thain TIN 1
+thallium TL 50
+thank TA 79 ATA 1
+thankyou TA 1
+that HOW 1 IE 1 QUE 1 YON 21
+the AT 1 BAN 1 HET 1 IN 2 LE 1 LI 1 RAN 1 THE 24 YE 1
+theatre NT 2 REP 25
+them EM 2
+themselves WI 1
+then AND 4 SO 9
+theodore TED 1
+theologian ADD 2 DD 9
+theory ISM 2
+therefore GO 1 ISO 1 SO 21
+thespian TOR 1
+thick DIM 2 FAT 3
+thickness PLY 1
+thing IT 1
+think DEA 1 ENT 1
+third REE 1
+thirst YEN 1
+thirsty DRY 3
+thomas TOM 2
+thor GOD 1
+thorough ALL 1 UP 1
+thoroughfare RD 1 ST 3
+those YON 1
+though BUT 5 IF 4 THO 2
+thousand M 50 AK 1 IM 1
+thrash TAN 2
+thread RE 1
+three III 1 TRI 1
+threesome RIO 1
+throb HUM 2
+throne LAV 1
+through BY 5 IN 1 PER 13 VIA 17
+throw BIN 1 LOB 7 SHY 4
+thug YOB 1
+thursday THU 50 TH 8
+thus SIC 16 SO 93
+tick MO 3
+ticket TAG 1
+tide SEA 1
+tidy DO 2
+tie BOW 1
+tiger CAT 1
+till HOE 1 TO 1
+tilt TIP 1
+timber ASH 2 FIR 3 LOG 1
+time T 50 X 50 AT 18 AGE 108 DAY 9 EON 4 ERA 62 INT 2 MIN 3 NOT 1 ONT 1 OUR 1 ABY 1 BY 26 INX 1 TT 10 UBY 1
+timer OCK 1
+timid COY 5 SHY 4
+timothy TIM 2
+tin SN 57 CAN 30
+tinker TOY 1
+tint HUE 1
+tiny ABY 1 WEE 16
+tip END 10
+tipple GIN 1 JAR 1
+tippler SOT 1
+tired ARY 1 OLD 2
+titanium TI 51
+titian RED 1
+title MR 1 MRS 1 MS 1 SIR 4
+to APT 1 AT 1 TO 32
+toasty HOT 1
+tod FOX 1
+today AD 1 NOW 1
+toddler TOT 5
+toff NOB 5
+together AND 1
+togetherness TY 1
+togo TG 50
+toilet WC 54 BOG 3 CAN 2 LAT 1 LAV 3 LOO 14 PAN 4 GS 1
+tom CAT 7 PRO 1
+tomcat GIB 1
+tomfoolery FUN 1
+ton T 100 C 50 AT 1
+too AND 2
+tool AWL 5 BIT 1 HOE 6 SAW 2
+tooth COG 3
+top ACE 3 AI 4 BRA 1 CAP 26 EST 1 ID 1 LID 22 TIP 1 UP 3 ZZ 1 ON 1
+topless ARS 1 EEN 2 EVY 1 EX 1 OR 1
+topper HAT 1
+topple TIP 1
+torment BUG 1 RAG 1
+torrid HOT 1
+torso ODY 1
+torture GYP 1
+tory CON 39
+tosh ROT 2
+toss LOB 1
+tot ADD 5 NIP 2 SUM 3
+total ADD 3 ALL 6 SUM 14
+touch BIT 1 PAT 1 TAG 2
+touched MET 2
+touching ON 11 RE 12
+tough FF 1
+toupee RUG 2
+tournament CUP 1
+toward AT 4
+towards AT 4 TO 2
+toy TOP 2
+track DOG 6 RUN 1 RUT 8 RY 5
+trade PLY 1
+trademark TM 2
+tradename TN 1
+traditional OLD 2
+traffic JAM 1
+tragic SAD 1
+trail DOG 1 LAG 1
+trailer AD 7
+train AIM 2 PE 18 PT 6 BR 1 ELS 1 RY 1
+traitor AT 1 RAI 1 RAT 10
+trajectory ARC 1
+tramp ANT 1 BUM 5 ME 2 UM 1
+transgression SIN 9
+translate TR 1
+translator TR 1
+transmit AIR 1
+transport BUS 7 CAR 4 ISS 1 JOY 2 RUN 1 VAN 1
+transvestite TV 50
+trap ESH 1 GIN 7 NET 17 PIN 1
+trash AGE 1 BIN 2 PAP 1
+travel AGO 1 GO 38 IGO 1 PLY 1 OUT 1
+traveller REP 15
+treasure GEM 2
+tree AN 2 ASH 18 BAY 6 BO 1 BOX 2 ELM 9 FIG 1 FIR 24 MAY 3 OAK 3 TI 1 YEW 6
+trembling ER 1
+tremor TIC 1
+trendy HEP 2 HIP 12 HOT 2 IN 84 NOW 1 ON 1
+trial TRY 1
+tribe DAN 1 GAD 1
+tribute ODE 1
+trick ART 1 CON 35 FOX 1 GE 1 HAD 2
+trickery ART 1
+trickster CON 1
+tricky SLY 3
+trifle JOT 1 TOY 1
+trim CUT 1 LOP 1 MOW 1 HEM 1
+trimmed CUT 1
+triumph WIN 8
+troops MEN 6 OR 3 RA 2 RE 3
+trophy CUP 28 POT 8
+trouble ADO 32 AIL 77 DOG 2 EAT 1 GYP 3 ILL 3 IRK 1 JAM 1 NAG 3
+troublemaker ATE 1 ELF 1 IMP 13
+truck RIG 2 UP 1 VAN 7
+true SO 1 YEA 1
+trump CAP 2
+trunk LOG 1
+trustee TR 3
+try BID 1 DIB 1 GO 40 SHY 1
+tubby FAT 3
+tuber YAM 1
+tuesday TUE 52
+tug TOW 2
+tune AIR 17
+tungsten W 50
+tunisia TN 51
+turd POO 1
+turf SOD 7
+turkey TR 68 ASS 1 DUD 1 NIT 1 TOM 1
+turn U 50 ACT 1 GO 37 IGO 1 TRY 1 GOS 1
+turncoat RAT 2
+turned IT 1 OFF 1
+turnover TO 1
+turtle IN 1
+tutor DON 1
+tux DJ 1
+tuxedo DJ 1
+tv SET 1
+twenty ORE 1
+twerp ASS 1 GIT 1
+twice BI 1 BIS 5 TO 1
+twig GET 1
+twist YAW 1
+twisted WRY 1
+twit ASS 5 NIT 2
+twitch TIC 18
+two AIR 1 BI 2 DOG 1 II 14
+twopence PP 1
+tyke TOT 1
+tyneside NE 10
+type ILK 2
+typical EU 1
+tyrant POT 1
+ukraine UA 50
+ulster NI 3
+ultimate END 2 NET 1
+ultraviolet UV 51
+umpire REF 5
+umpteenth NTH 1
+unacceptable OFF 1 OUT 4
+unaccustom NEW 2
+unaltered RAW 1
+unashamed OUT 1
+unattach OFF 1
+unavailable OUT 1
+unbalanced MAD 1
+uncertainty IF 6
+unclear DIM 1
+unclothed UDE 1
+unconscious ID 1 OUT 4
+unconvincing PAT 1
+uncooked RAW 6
+under SUB 3
+undergarment BRA 4
+undergo IN 1
+undersized WEE 1
+understand DIG 3 GET 3 SEE 14 KEN 4
+understood GOT 9 SAW 6
+undertake DO 2 JOB 1
+underwear BAR 1 BRA 8
+underworld DIS 4
+undesirable BAD 1
+undilute RAW 1
+undistinguish WET 1
+undocumented ID 1
+undress RAW 1
+unea WAG 1
+unelect OUT 1
+uneven ODD 1
+unfamiliar NEW 1
+unfashionable OUT 29
+unfinished NE 1
+unfortunate ILL 2 SAD 1
+ungulate ELK 1
+unhappy SAD 18 UM 1
+unhealthy ILL 1
+uni UP 2
+uniform U 50 AU 2 INU 1 KIT 1 RIG 1
+uninspiring DRY 1
+unintelligent DIM 2
+uninteresting DRY 4
+union NUM 1 NUS 1 TU 1
+unique ONE 1
+unit AMP 1 ONE 17
+unite TIE 1
+united U 50 ONE 6 UTD 3 WED 2
+unity ONE 1
+universal U 50 AU 2 ALL 1
+university U 50 AU 3 INU 2 MIT 5 UNI 18 UP 5
+unknown X 50 Y 50 Z 50 AY 1 SY 1 XY 1
+unlit ARK 1
+unpaid DUE 1
+unpolished RAW 1
+unpopular OUT 4
+unprofessional LAY 1
+unrefined RAW 2
+unsatisfactory OFF 1
+unseasoned RAW 1
+unserviceable US 51
+unsophisticated VE 1
+unstylish OUT 1
+until TO 3
+untruth LIE 6
+unused NEW 1
+unusual ODD 6 RUM 13 LY 1
+unwanted OUT 1
+unwelcome BAD 1
+unwell ILL 19
+up UP 3
+uppermost TOP 1
+upriver RIO 1
+uproar DIN 5
+upset ADO 1 AIL 1 ATE 1 IF 1 MEP 1 SAD 1
+upward AN 1
+uranium U 50
+urban ITY 1
+urchin IMP 2
+urge EGG 12 YEN 2 ID 1
+uruguay ROU 50
+us FT 2 MAN 1 US 3 WE 1
+use DO 1 BY 1 ON 1 VIA 1
+used OLD 1
+useless BUM 2 DUD 3 US 4
+usher LED 1
+usual PAR 8
+utah UT 51
+utilise USE 1
+utility USE 1
+utter AIR 1 SAY 2 ALL 1 SO 1
+uzbekistan UZ 1
+vaccination JAB 1
+vagrant BUM 5
+valerie VAL 1
+valet MAN 3 MEN 1
+valley RIA 1
+value USE 3
+valve TAP 1
+vanadium V 50
+vanity EGO 1
+vapour GAS 1
+variable X 100 Y 100 Z 100 AZ 1
+vase URN 15
+vast BIG 1
+vat TUB 1
+vegetable PEA 10
+veggie PEA 1
+vehement HOT 1
+vehicle BUS 17 CAB 5 CAR 151 GIG 1 VAN 48 NS 1
+velocity V 50 ORV 1
+venezuela YV 50
+venture BET 2
+veracious FUL 1
+verge RIM 1
+vermin RAT 6
+vermont VT 50
+vermouth IT 5
+verse INV 1 ODE 2 VV 1
+versifier POE 1
+versus V 50 VS 50
+very V 50 AV 12 SV 1 SO 87 TOO 2
+veryone ALL 1
+vessel ARK 10 CAN 19 CUP 3 EIN 1 JAR 2 JUG 2 PAN 8 POT 15 SS 4 SUB 2 TIN 1 TUN 1 URN 28 VAT 6
+vestment ALB 1
+veteran OAP 1 OLD 4
+veto BAN 2 BAR 1 NIX 1
+vi SIX 1
+via BY 5
+vibration HUM 1
+vicar REV 14 VIC 2
+vice SIN 5
+victor V 50 TOV 1 WIN 1
+victoria VIC 2
+victory AV 2 WIN 36
+vietnam VN 50
+view EYE 1 SEE 9
+viewer EYE 2
+vigil EVE 1
+vigorous FIT 1
+vigour GO 1 PEP 2
+vil NO 1
+vilification MUD 1
+villain CAD 1 DOG 1 GUE 1
+villainy SIN 1
+vince AMI 1
+vineyard CRU 3
+vintage CRU 2 OLD 1
+viol GU 1
+violent HOT 1
+violet VI 1
+virgin NEW 1
+virginia VA 74
+virtuoso ERT 1
+virus BUG 3 FLU 2 HIV 2
+visible YON 1
+visit DO 2 SEE 4 DID 1 AT 4 IN 3
+visualise SEE 1
+vital KEY 4
+vitality PEP 1 ZAP 1
+viz SC 1
+vlad ME 1
+vogue FAD 1
+voguish IN 2
+voice AIR 2 SAY 2
+volcano TNA 1
+volkswagen VW 50
+volt V 50
+volume V 50 VOL 1
+volunteer TA 72
+vote X 100
+vow IDO 4
+vowel IOU 1
+vulgar AP 1 LOW 1
+w AD 1 AT 1
+wa ST 1
+waffle YAP 1
+wage PAY 8
+wager BET 19 LAY 1
+wail CRY 3
+walk PAD 1
+walkover WO 50
+wall DAM 2
+wallop TAN 1
+wally ASS 2
+wander AY 1 ERR 1 GAD 2 OVE 1
+want ED 2 ILL 1 FOR 1
+war NAM 1
+warm HOT 1 SUN 4
+warship SUB 1
+wary SHY 1
+washer MOP 1
+washington WA 53 DC 8
+waste POO 1
+watanabe KEN 1
+watch EYE 10 LO 2 SEE 5 SPY 2 AT 1
+watched SAW 1
+water EAU 3 PEE 8 SEA 12 WEE 3 WET 2 MED 1
+waterproof MAC 2
+wave WAG 1
+way AVE 2 HOW 1 RD 6 ST 43 STS 1
+we UK 1 WE 6
+weak AW 1 WAN 3
+wealthy CH 1
+weapon ARM 34 AXE 2 BOW 2 GAT 1 GUN 5
+wear AGE 1 DON 1 IN 28 ON 1
+weather SKY 1
+web NET 9
+wedge GIB 1 JAM 1
+wee GO 1 PEE 3
+weed HOE 3 POT 3
+week W 50 WK 56
+weep CRY 11 SOB 1
+weigh SAT 1
+weight W 50 FAT 1 KG 1 ON 1 OZ 1 TON 15 WT 3
+weird ODD 2 RUM 7
+welcome AVE 5 ET 1 HI 13
+welfare AID 1
+well ER 1 FIT 2 OH 1 OK 1 SO 8 SPA 2
+welshman DAI 6
+west W 50 MAE 9 TOW 1
+western W 50
+wet DRY 1
+wetland FEN 1
+whale ORC 1 SEI 1
+what AS 1 EH 29 QUO 1
+whatever ANY 3
+wheel COG 2 CAR 10
+whelp CUB 1
+when AS 246 IF 1
+whenever IF 7
+whether IF 2
+which HAT 1 QUI 1
+whichever ANY 1
+while AS 52
+whilst AS 1
+whimsical FEY 3
+whine CRY 1
+whip CAT 5 TAN 2
+whippersnapper PUP 1
+whiskey W 50 RYE 1
+whisky RYE 1
+whistleblower REF 3
+whistler REF 4
+white WAN 3
+whizz ACE 1 PRO 1
+who WHO 1
+whoever ANY 1
+whole ALL 5 ONE 1 SUM 2
+whop BIG 1
+whopper LIE 2
+wicked ACE 3 BAD 7 FAB 1 SH 1
+wickedness SIN 4
+wicket W 50 AW 1 SOW 1
+widdecombe ANN 1
+wide W 50 AW 1
+width W 50
+wife W 50 AW 4 RIB 2 US 1 UX 4
+wig RUG 5
+wild MAD 5
+wildebeest GNU 3
+will LL 1
+william WM 51
+willow BAT 1
+wilt SAG 1
+wily SLY 1
+win NET 1 WIN 1 TOP 1 UP 33
+wind AIR 2 GAS 3 URN 1
+wine AVA 1 RED 52 VIN 2 CRU 1
+wing ALA 1 ARM 3 EL 2 ELL 1 IMB 1
+winger JAY 1 TIT 1
+winner ACE 2
+wino SOT 1
+wiper MOP 1
+wire BUG 1
+wisconsin WI 51 WIS 50
+wisecracker WIT 1
+wish IRE 1 OPE 1
+witch BAG 1 HAG 9
+witchcraft OBI 1
+with W 50 AND 167 CON 2 CUM 3 OF 2 ON 1
+withdraw OFF 1
+within IN 2
+without EX 7 IT 1 NO 3 WO 5
+witness EYE 1 IER 1 SEE 10 SPY 1 SAW 1
+witticism MOT 1 PUN 4
+wizard ACE 3 HEX 1 IN 1
+wolfe TOM 1
+woman W 50 ADA 1 ALI 1 AN 1 ANN 12 DI 8 ENA 5 EVA 2 EVE 8 GAL 2 HEN 6 HER 17 IVY 1 JO 1 MAY 1 MS 1 SAL 1 SHE 26 SUE 3 UNA 1 VAL 1 VI 5
+women W 50
+wonder AWE 11
+wonderful ACE 2 FAB 6
+wood ASH 27 BER 2 ELM 5 FIR 6 LOG 2 OAK 5
+woodcutter SAW 1
+wooden ASH 1
+word MOT 1 WD 1
+wordplay PUN 4
+work OP 306 ACT 6 DIG 1 DO 3 ERG 1 GO 24 JOB 4 OFF 1 ON 300 PLY 16 RUN 7 TOW 1 USE 1 WK 4 RAN 3 ART 1 OPS 3
+worker ANT 139 ANY 1 BEE 11 MAN 5 MEN 33 TU 1
+workforce MEN 2
+workshop LAB 1
+world ORB 2
+worn OLD 2 ON 4
+worried ATE 49
+worry NAG 2 AIL 2 DOG 1 EAT 10 IRK 1 RET 1
+worth EM 1
+worthless BUM 3
+wound CUT 2 URE 1
+wounded CUT 3
+wow BOY 1 COR 7 GEE 1
+wrath IRE 3
+wreath LEI 1
+wreck MAR 2
+wrench TUG 1
+wretch RAT 1
+wrink OLD 1
+write PEN 32 EXT 1 MS 6 R 1
+writer BIC 5 INK 1 ME 6 NIB 9 PEN 121 POE 2
+wrong AL 1 BAD 1 BUM 2 DOX 1 OFF 1 OUT 6 SIN 50 UP 1 ILL 1
+wrongdo SIN 3
+wyoming WY 50
+x TEN 1
+xenon XE 50
+y ART 1 UL 1
+yak GAB 1
+yank TUG 4
+yankee Y 50 US 10
+yankees YY 1
+yard Y 50 YD 54 YDS 50 YY 1
+yarn ABB 1 FIB 1
+year Y 50 YR 63 YRS 50 AY 4 AGE 4 YY 1
+yearl HOG 1
+yell OAR 1
+yellow OR 12
+yemen YAR 50
+yen AY 1
+yes I 20 AY 5 OK 3
+yesterday FRI 1
+yet BUT 5 THO 1
+yikes EEK 5
+you TU 2 YA 1 YE 30
+young NEW 3 PUP 1 YR 2
+youngster BOY 5 CUB 16 LAD 9 PUP 3 SON 4 TOT 4 ADS 1 FRY 1
+your YR 64 YRS 50 THY 11
+youth BOY 3 ING 1 KID 1 LAD 35 SON 1 UP 1
+yuck ICK 1 UGH 1
+yugoslavia YU 50
+zambia Z 50
+zealot NUT 2
+zero O 50 NIL 2 NO 2
+zest PEP 1
+zimbabwe ZW 50
+zinc ZN 50
+zip O 50 NIL 1
+zirconium ZR 50
+zone ZZ 1
+zulu Z 50

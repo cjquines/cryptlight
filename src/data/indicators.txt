@@ -1,3 +1,4 @@
+50% v50
 a >
 bad >
 way a1
@@ -60,7 +61,7 @@ of a1
 little h25i8
 long a1
 lot >
-of h2
+of y50h2
 <
 medley >
 of a1
@@ -148,13 +149,13 @@ of a1
 <
 <
 aback r1
-abandon d9a2 >
+abandon j50l50d9a2 >
 by d1
 original >
 recipe d1
 <
 <
-abandoned a132d9
+abandoned a132j50d9
 abandonment >
 of a1
 <
@@ -165,7 +166,7 @@ by i2h1
 aberrant a70
 aberration a1
 abhorrent a1
-abject a2
+abject j20a2
 abnormal a81t1
 aboard c70i51h2k1
 abolish >
@@ -174,7 +175,7 @@ pound d1
 abominable a52
 abomination a1
 abort a1d1
-about k1897a517r514c70i30h4 >
+about k1897r564a517c70i30h4 >
 it i1
 one i1
 show r1
@@ -190,7 +191,7 @@ turn r1
 <
 abridge d1
 abroad a146
-abrupt d3
+abrupt y50d3
 abscond d1
 abseil i1
 absence d1
@@ -685,7 +686,7 @@ align a1
 alive k1
 all >
 about a3r3k1
-around a2r1 >
+around r51a2 >
 for k1
 <
 at >
@@ -749,11 +750,19 @@ return r1
 <
 <
 alloy a1
-almost d49 >
+almost y50d49 >
+entire y50
 recognise d1
 <
 aloft r4
-aloud f10
+aloud f60
+alpha >
+and >
+omega >
+in n50
+<
+<
+<
 alter a118 >
 image a1
 <
@@ -790,14 +799,14 @@ spy >
 return r1
 <
 <
-amid c70i41h3
-amidst c70i5
+amid c70h53i41
+amidst c70h50i5
 amiss a72
 amok a81
-among i99c70h35k1
-amongst i10h4
+among i99h85c70k1
+amongst h54i10
 amount >
-of i1
+of h50i1
 <
 amplify >
 call f1
@@ -860,7 +869,7 @@ anguish a1
 animated a133
 animation a1
 annex k1
-announce f85
+announce f135
 announcement f6 >
 of f4
 <
@@ -957,11 +966,11 @@ arcane a1
 arduous a1
 argument a1
 arid i1
-arise r49 >
+arise r99 >
 from a21r1
 in h1
 <
-around k466a249r194c70i16h2 >
+around k466a249r244c70i16h2 >
 in >
 proper >
 position a1
@@ -997,7 +1006,7 @@ in i1
 <
 art a1k1
 artful a27
-articulate f23 >
+articulate f73 >
 by a1
 <
 artificial a2
@@ -1096,7 +1105,7 @@ it f1
 <
 sound f1
 spoke f1
-state f8
+state f58
 tell f4
 that >
 sound f1
@@ -1131,7 +1140,7 @@ say f7
 say f2
 <
 <
-ascend r49
+ascend r99
 ascendant r4
 ascent r1
 asian >
@@ -1185,11 +1194,13 @@ edge >
 of k1
 <
 fault a23
+first p50
 hear f8
-heart i4h3k1
+heart u50i4h3k1
 home i1
 interval t4
 large a3
+last q50
 loggerhead a2
 odd a22t1
 play a1
@@ -1210,6 +1221,7 @@ auditor f1
 centre >
 of i1
 <
+edge n50
 heart >
 of i2
 <
@@ -1241,7 +1253,7 @@ by i2
 au i1 >
 contraire r1
 <
-audible f95 >
+audible f145 >
 receive f1
 <
 audio f3 >
@@ -1258,12 +1270,12 @@ around k1
 from h2
 <
 avalanche a1
-avoid d13 >
+avoid l50j50d13 >
 outsider d1
 <
 awaken a1
-away a18d8 >
-from d2
+away j50a18d8 >
+from j50d2
 with >
 the >
 fairy a1
@@ -1273,13 +1285,16 @@ fairy a1
 awful a465
 awkward a267
 awry a75
+ax j50l50
+axis l50
 b i2k1h1
-back r1294 >
+back r1394 >
 across k1
 at >
 home r1
 <
 from r2
+from/of/off q50
 in r8h3i1
 inside r3
 internal r1
@@ -1294,7 +1309,7 @@ street r1
 there r1
 to >
 back r2
-front r22
+front r72
 some >
 extent r1
 <
@@ -1308,12 +1323,13 @@ backfiring r42
 backpedal r1
 backside >
 first r1
+of q50
 <
-backslide r9
-backtrack r33
+backslide r59
+backtrack r83
 backup r1
-backward r59
-backwards r28 >
+backward r109
+backwards r78 >
 in r1
 <
 bad a667 >
@@ -1354,10 +1370,13 @@ up a2 >
 by i1
 <
 <
-banish d3
+banish j50l50d3
 bank k8
 banking k8
-bar d6k2 >
+banks >
+of n20
+<
+bar l50d6k2 >
 from d1
 in h1i1
 <
@@ -1532,9 +1551,13 @@ after k1
 befoul a1
 befuddle a82
 begin >
+in/of/to p50
 to >
 break d1
 <
+<
+beginner >
+in p50
 <
 behave a1 >
 bad a2
@@ -1859,7 +1882,7 @@ belong >
 to h5i1
 <
 belt a71k1 >
-out d1
+out j50l50d1
 <
 bemuse a53
 bench >
@@ -1895,9 +1918,14 @@ between i23c20k2h1
 bewildered a78
 bewildering a1
 beyond d1
+big >
+end >
+of p50
+<
+<
 billet k1
 billow a2
-bin d1
+bin j50l50d1
 bind k2 >
 by i5h2
 up i1 >
@@ -1908,7 +1936,7 @@ with i1
 binding k8
 bisect i1
 bit h4t1 >
-of h7i3 >
+of p50h7i3 >
 a >
 pig >
 to >
@@ -1931,6 +1959,9 @@ bitter a1
 bizarre a168 >
 blend a20
 illustrate a1
+<
+blank >
+out j50l50
 <
 blanket c50k2i1 >
 with i1
@@ -1959,7 +1990,10 @@ return r1
 <
 <
 blossom a2
-blow a14d2 >
+blot l50 >
+out j50
+<
+blow j50l50a14d2 >
 apart a1
 around a2
 top d2
@@ -1967,7 +2001,7 @@ up a129r1
 <
 blowout a1
 blowy a1
-blue a2
+blue l20a2
 blunder a127
 blur a63
 blurry a52
@@ -1987,7 +2021,8 @@ bone c20
 bonk a1
 bonker a52
 boob a4
-boost r3a1
+boomerang r50
+boost r53a1
 boot >
 out d1
 up r1
@@ -1995,6 +2030,7 @@ up r1
 boozy a2
 border k18i1 >
 by i2
+of n50
 <
 bore c50i2 >
 by c50k1
@@ -2007,6 +2043,11 @@ by c50i6
 <
 boss a40
 botch a87
+both >
+side >
+of n50
+<
+<
 bother a70 >
 by a1
 <
@@ -2021,16 +2062,18 @@ cut >
 off d1
 <
 <
-bounce r1 >
+bounce j50l50r1 >
 around a2
 back h1r1
 <
-bouncing a2
+bouncing l50a2
 bouncy a4
 bound c50k6i4a1 >
 by c50
+of n50
 over r1
 <
+boundless w50
 bout k1r1
 bow a20
 bowl a2 >
@@ -2078,7 +2121,7 @@ hold h1
 brigad k1
 bring i1 >
 aboard i1
-about r25a6k4
+about r75a6k4
 around r1
 back r86h1 >
 by h1
@@ -2097,13 +2140,13 @@ to a1
 out d3a1
 over r17
 round c20r10k2i2
-up r103h1
+up r153h1
 <
 bristle a1
 broach a20 >
 by i1
 <
-broadcast a367f160 >
+broadcast a367f210 >
 about a1
 of a1
 <
@@ -2131,6 +2174,8 @@ bruise a1
 bruised a53
 bruising a2
 brush >
+aside l50
+off l50
 up r1
 <
 brutal a3
@@ -2152,6 +2197,9 @@ in h1
 of a1
 special a1
 up r3
+<
+bulk >
+of y50
 <
 bully a4
 bum a94
@@ -2203,6 +2251,7 @@ but d1 >
 corrupt a1
 different a1
 entertain k1
+for l50
 full >
 of k1
 <
@@ -2232,6 +2281,7 @@ unruly a1
 <
 butcher a97k1
 butt >
+of q50
 out d1
 <
 buy >
@@ -2271,7 +2321,7 @@ ear f2
 mouth f1
 sound f9 >
 of f2 >
-it f94
+it f144
 <
 <
 <
@@ -2281,7 +2331,7 @@ mouth f5
 <
 <
 <
-bypass k7d1 >
+bypass j50l50k7d1 >
 centre d1
 the >
 odd t1
@@ -2362,17 +2412,23 @@ supply a1
 upset a1
 withdraw r1
 <
-cancel d3
+cancel j50l50d3
 canoodle a1
 canter a1
+cap >
+from/of p50
+<
 capable >
 of >
 make a1
 <
 <
 caper a1
+capital >
+of p50
+<
 capricious a24
-capsize r44a4
+capsize r94a4
 captivate k4i3 >
 by i16k1
 <
@@ -2423,8 +2479,11 @@ cascade a1
 case c50k14h6i4 >
 by c50
 for k2h1
+for/of n50
 in i1
+of n50
 <
+cashier j50
 casserole a1
 cast a177d1 >
 about r1
@@ -2435,15 +2494,15 @@ in i4
 into i1
 of a1
 off d2
-out a1d1
-up r20
+out j50l50a1d1
+up r70
 <
 casual a113 >
 announce f1
 drunk a1
 <
 catastrophic a26
-catch k162c110f26i22h11a1 >
+catch k162c110f76i22h11a1 >
 by i52c50h3k1
 in i59c50h4k1
 inside i1
@@ -2471,6 +2530,7 @@ about a1
 <
 cecil f1
 ceda k1
+cede j50l50
 celebrity >
 on >
 the >
@@ -2480,11 +2540,20 @@ up r1
 <
 censor d3
 central h3k1i1 >
+ingredient >
+of u50
+<
 part >
 of d1
 <
 role h1
 to h1i1
+<
+centre >
+for/of u50
+<
+centrepiece >
+of u50
 <
 chafe a1
 chain k2
@@ -2523,6 +2592,7 @@ disturbed a1
 enthrall >
 by h1i1
 <
+face p50
 fighting a1
 from a2h2
 go >
@@ -2605,11 +2675,13 @@ choreographed a1
 chris k1
 christm r1
 chronic a1
-chuck a2i1 >
+chuck j50a2i1 >
 in i1
+out j50l50
 over k1
 up a1
 <
+chump q20
 chunk h1 >
 of h1i1
 <
@@ -2658,15 +2730,17 @@ clean a1 >
 bra i1
 up a1
 <
-clear a40d2 >
+clear j50a40d2 >
 away d1
-of d1
+of l50d1
+out j50n50
 <
 cleave c20i1
+cleft j20
 clench c50k3a1 >
 in c50
 <
-climb r112 >
+climb r162 >
 up r1
 <
 climber r1
@@ -2677,7 +2751,7 @@ to k1
 <
 to c50
 <
-clip c50d2h2k1i1 >
+clip c50y50d2h2k1i1 >
 by c50
 <
 clipping a1
@@ -2690,8 +2764,13 @@ clog i1
 close k2 >
 by c50i1
 in c50k1
+of/to q50
+to q50
 <
 closing k2
+closure >
+of q50
+<
 cloth c50k27h3 >
 for k1
 <
@@ -2713,12 +2792,15 @@ clutch c90k47h4i3 >
 by c50i2
 <
 coach a1
+coast >
+of n50
+<
 coat k16i3 >
 in i3
 with i4
 <
-cock a1r1 >
-up a21r1
+cock r51a1 >
+up r51a21
 <
 cocktail a68 >
 of a1
@@ -2757,7 +2839,7 @@ across k5h1 >
 as f1
 <
 around a1
-back r112 >
+back r162 >
 in r1
 <
 between i1
@@ -2778,7 +2860,7 @@ into i5
 loose a2
 north r1
 off d1
-out a6 >
+out j50a6 >
 around k1
 bad a1
 of h3a2i1
@@ -2799,7 +2881,7 @@ swamp k2
 <
 undine a1
 unstick a5
-up r107h1 >
+up r157h1 >
 beneath >
 it r1
 <
@@ -2843,7 +2925,7 @@ complicate a1
 complicated a108
 complication a1
 component >
-of h5i2
+of h55i2
 put >
 together a1
 <
@@ -2876,7 +2958,7 @@ some h1i1
 <
 compromise a6
 compromising a1
-conceal k64h31a21c20i9 >
+conceal k64j50l50h31a21c20i9 >
 by i12h10k1
 in i4
 presence >
@@ -2884,8 +2966,11 @@ of k1
 <
 <
 concealment h1i1
-concede d3
+concede j50l50d3
 conceivable a1
+conclusion >
+of/to q50
+<
 concoct a99
 concoction a30 >
 of a1
@@ -2901,6 +2986,7 @@ configure a1
 confine c50k5i3 >
 by h3i3
 in c50
+of n50
 to i6
 within i1
 <
@@ -2948,7 +3034,7 @@ constrict k1h1
 construct a51
 construction a28
 construe a3
-consume k81c50i13h7 >
+consume k81c50j50i13h7 >
 by c50i46k3h2
 in i5h1
 <
@@ -2994,7 +3080,7 @@ juvenile r1
 <
 contribute >
 in h1
-to h14i14
+to h64i14
 <
 contributing h1
 contribution >
@@ -3016,7 +3102,8 @@ by i3
 controlling k8
 controversial a8
 conversational f1
-conversely r8
+converse r20
+conversely r28
 conversion a26
 convert a239r2 >
 into a1
@@ -3054,11 +3141,12 @@ up r1
 cordon >
 off k1
 <
-core h1i1 >
+core n50h1i1 >
 in h1
 member >
 of h1
 <
+of u50
 <
 corner k1h1 >
 by i2
@@ -3204,7 +3292,7 @@ yield a2
 count >
 backwards r1
 <
-counter r35 >
+counter r55 >
 serving >
 of r1
 <
@@ -3217,15 +3305,17 @@ course a1
 cover k276c70h21i15d1 >
 by c50i44h11
 for k3h1
+from/of n100
+head( b50
 in c50i46h2
 over k2
-up k11h3r2d1 >
+up j50k11h3r2d1 >
 by i2
 <
 with i13
 <
 coverage k2
-covered c20k9h9i9
+covered j50c20k9h9i9
 covert a1
 covet >
 by k1
@@ -3323,6 +3413,12 @@ crush c50a25k13 >
 by c50i5
 <
 crushed a95d1
+crust >
+from/of n50
+<
+crux >
+of u50
+<
 cry f1 >
 of f1
 <
@@ -3347,22 +3443,23 @@ curious a198
 curl a43
 curly a1
 curse a1
-curtail d3
+curt y50
+curtail y50d3
 curvy a1
 cushion k2
 custom a1
 customise a1
-cut c50i34d26a6k1h1 >
+cut c50j50y50l50i34d26a6k1h1 >
 apart i1
 back r1
-by k20i3
+by l50k20i3
 even t1
 in i2
 into i5
 it k1
-of h1i1
+of h51i1
 off d4
-out d1
+out j50d1
 short d9
 through i6k1 >
 by k1
@@ -3376,7 +3473,7 @@ rough a1
 with k2
 <
 cutback r2
-cutting i81c70d4h2k1 >
+cutting i81c70l50d4h2k1 >
 take >
 from h1
 <
@@ -3446,8 +3543,8 @@ by >
 speaker f1
 <
 <
-decline a2
-declining d2
+decline j50l50a2
+declining l50d2
 decode a3
 decompose a26
 decomposition a1
@@ -3460,12 +3557,16 @@ decorative a2
 decreasing r1
 decrepit a4
 decrypt a3
+deduct j50
 deep i1
 deface a1
 defect a1
 defective a77
 defend k29h1i1 >
 by i8h2
+<
+deficient >
+in l50
 <
 defile a21
 define >
@@ -3477,11 +3578,12 @@ deformed a24
 deft a1
 defunct d1
 degenerate a8
+delete j50l50
 delimit k1
 delineate k1
 delinquent a6
 delirious a76
-deliver f7a2h1 >
+deliver f57j50l50a2h1 >
 by f1
 for >
 the >
@@ -3513,21 +3615,24 @@ demolish a123
 demonstrate h2i1
 denounce a1
 dent a1
-deny d12
-depart d2a1
+deny l50d12 >
+open b50
+<
+depart j50d2a1
 departure >
 of d1
 <
 deplorable a142
 deploy a114
 deployment a2
+deport j50l50
 depose d2
 deposit i1 >
 between i1
 <
 deprave a1
 deprive >
-of d1 >
+of l50d1 >
 one d1
 <
 <
@@ -3548,7 +3653,9 @@ describe k84h5i2 >
 by i12h1
 <
 desecrate a2
-desert d3
+desert j50d3 >
+by l50
+<
 design a152 >
 for a1
 of a7
@@ -3567,7 +3674,7 @@ of a4
 <
 destructive a1
 desultory a71
-detach a3d1
+detach j50a3d1
 detail d1
 detailed d3
 detain c50k10i4h2 >
@@ -3577,7 +3684,7 @@ in i2
 <
 detect f1 >
 by >
-auditor f1
+auditor f51
 <
 <
 detectable >
@@ -3606,7 +3713,7 @@ way a1
 <
 devise a61
 devoid >
-of d1
+of l50d1
 <
 devour c70k11a1i1 >
 by c50i7k1
@@ -3655,7 +3762,7 @@ direction >
 take d1
 <
 dirty a1
-disappear d2
+disappear j50d2
 disarrange a71
 disarray a74 >
 as >
@@ -3665,10 +3772,10 @@ roman a1
 disaster a19
 disastrous a150
 disband a2
-discard d3a1
+discard j50d3a1
 discern a1f1
 discernible h1
-discharge a1d1
+discharge j50l50n50a1d1
 discipline a1
 disciplined a3
 disclose a21h1 >
@@ -3682,10 +3789,10 @@ disconcert a26
 disconnect a1
 discord a21
 discordant a31
-discount d1 >
+discount l50d1 >
 lead d1
 <
-discounted d3
+discounted j50d3
 discover h5d1i1 >
 among i1
 in i6h3
@@ -3694,10 +3801,13 @@ discuss f32 >
 loud f1
 <
 diseased a5
+disembowelled n50
 disengaged d1
 disentangle a2
 disfigure a74
 disfigurement a1
+disgorge l50
+disgorged j50
 disgrace a1
 disgraceful a3
 disgruntled a4
@@ -3711,7 +3821,7 @@ of a2
 out a32
 up a6
 <
-dishearten d6
+dishearten m50n50d6
 dishevel a84
 dishonest a1
 disintegrate a124
@@ -3725,14 +3835,14 @@ dislocation a1
 dislodge a4d1
 dismantle a79
 dismember a2
-dismiss d8a1 >
+dismiss j50l50d8a1 >
 good d1
 heart d1
 <
 dismissal >
 of d1
 <
-dismissing d7
+dismissing l50d7
 disorder a86 >
 in a1
 <
@@ -3741,7 +3851,8 @@ disorganise a33
 disorganized a73
 disorient a71
 disorientate a29
-dispatch a1d1
+disown j50l50
+dispatch j50l50a1d1
 dispatchment d1
 dispel a21
 dispense a5 >
@@ -3766,7 +3877,7 @@ disposal a2 >
 of a1
 <
 dispose a78 >
-of a22d1
+of j50l50a22d1
 to >
 give a1
 <
@@ -3774,7 +3885,7 @@ give a1
 disposition a6
 dispute a12
 disquieted a20
-disregard d5
+disregard j50l50d5
 disrepair a1
 disreputable a51
 disrespectf h1
@@ -3822,7 +3933,7 @@ of a1
 <
 disturbed a206
 disturbing a19i3
-ditch d9 >
+ditch j50l50d9 >
 regular t1
 <
 dither a93
@@ -3843,6 +3954,9 @@ diversion a2
 diversity a1
 divert a60d1r1
 diverting a1
+divest >
+of l50
+<
 divide c70i37k1 >
 amongst h1
 by c50k18
@@ -3851,6 +3965,7 @@ up i1
 divulge f1
 dizzy a84
 do a50 >
+close y50
 a >
 backflip r2
 somersault r1
@@ -3883,7 +3998,7 @@ hear f1
 say f19
 <
 <
-dock d4
+dock y50d4
 doctor a321
 documan k1
 dodder a50
@@ -3897,6 +4012,9 @@ cut i1
 not >
 require d1
 <
+<
+doesn't >
+enjoy l20
 <
 doff d1
 dominate k2i1 >
@@ -3919,7 +4037,7 @@ up r3a1
 <
 doodle a3
 dotty a87
-double r1 >
+double r21 >
 back r1
 <
 doubtful a28
@@ -3931,6 +4049,7 @@ draft a2
 drag >
 around a1
 <
+drained n50
 drama a1
 drastic a6
 draw a1 >
@@ -3980,22 +4099,24 @@ upset r1
 drip a1
 drive a1 >
 around a1
-out d1
+out l50d1
 <
 drivel a1
 driven >
 around a1
 away d1
+out j50
 through i1
 <
 drizzle >
 with i1
 <
-drop d37i2 >
+drop j50l50d37i2 >
 back d1
 in i4k2d1
 into i2
 odd t1
+of p50
 off d2
 out d1
 the >
@@ -4015,7 +4136,7 @@ with a2
 drunke a139
 drunken a18
 dubious a76
-duck i1 >
+duck j50i1 >
 escape d1
 out >
 of d1
@@ -4024,7 +4145,7 @@ of d1
 dud a3
 duff a58
 dull i1
-dump d4a2 >
+dump j50l50d4a2 >
 in i5
 <
 dunk >
@@ -4039,6 +4160,9 @@ dynamic a21
 dysfunction a1
 early >
 closing d2
+sign >
+of p50v50
+<
 <
 earn k1
 ease a1
@@ -4059,13 +4183,13 @@ by k1
 eating >
 flower i1
 <
-eb r11
-ebb r1
+eb r61
+ebb r51
 eccentric a173
 eccentricity a1
 echo r6
-eclipse k2d1i1
-eclipsed >
+eclipse l50k2d1i1
+eclipsed j50 >
 by i2
 <
 eddy a2
@@ -4074,6 +4198,7 @@ away >
 from d1
 <
 by c50
+of n50
 <
 edit a168 >
 of a1
@@ -4095,7 +4220,7 @@ side >
 of k4
 <
 <
-eject d2
+eject j50l50d2
 elaborate a91 >
 in a1
 play a1
@@ -4104,18 +4229,19 @@ elastic a24
 electric a1
 element a1 >
 in h1i1
-of h4i3
+of h54p50i3
 <
-elevate r43a20
+elevate r93a20
 elevation r3
 elh i1
-eliminate d2 >
+eliminate j50l50d2 >
 the >
 leader d1
 <
 <
 elite i1
 elsewhere a1
+elude l50j50
 emanate >
 from h1
 <
@@ -4140,10 +4266,10 @@ in i4
 emcompass k1
 emend a20
 emendation a20
-emerge d1 >
+emerge j50d1 >
 from i2
 <
-emerging h1 >
+emerging j50h1 >
 dazed a1
 <
 emission d1
@@ -4155,7 +4281,7 @@ in i2h1 >
 back r1
 <
 <
-empty d4i2 >
+empty n100d4i2 >
 out d1
 <
 encapsulate c50k12h3i3 >
@@ -4172,7 +4298,9 @@ enclose c70k9h4i1 >
 by c50i1
 in c50
 <
-enclosure h2i1
+enclosure h2i1 >
+to h50
+<
 encompass c50k9 >
 by c50
 <
@@ -4184,10 +4312,12 @@ encrypt a6 >
 by a1
 <
 end >
+for/in/of/to q50
+in/of q50
 of k1
 up r2
 <
-endless d64
+endless d64y50w50
 energetic a5
 energise a2
 energize a50
@@ -4265,15 +4395,17 @@ in i2
 envelope k3 >
 for k1
 <
-environ c20
+environ c20 >
+of n50
+<
 environment h2k1i1 >
 for k3
 <
 equivocal a20
 er a21
-eradicate d2
+eradicate j50l50d2
 erase d1
-erect r23 >
+erect r73 >
 house r1
 <
 erection r1 >
@@ -4292,16 +4424,22 @@ eruption a21 >
 of a1
 <
 escalate r4
-escape d9
+escape j50d9
 escaped a1
-eschew d1
+eschew j50l50d1
 especially a1
 essence >
 of h1
 <
-essential h13i2 >
+essential u50h13i2 >
+character >
+of u50
+<
 element h1
 for i1
+ingredient >
+of u50
+<
 on i1
 to h13i3
 <
@@ -4309,6 +4447,7 @@ established h1 >
 around k1
 within i1
 <
+evacuate n50
 evacuation i1
 evade d1
 evasive a1
@@ -4371,12 +4510,12 @@ evoke a1f1
 evolution a22
 evolutionary a1
 evolve a129
-ex h1
+ex l20h1
 exacerbate a1
 exalt r2
 excavate a1
-except d1 >
-for d4 >
+except l50d1 >
+for l50d4 >
 the >
 first d3
 <
@@ -4400,13 +4539,13 @@ excited a368
 excitement a1 >
 to a1
 <
-exclude >
+exclude j50l50 >
 from d2
 <
 excreting d1
 execute a1
 exercise a217
-exhaust a1d1
+exhaust n50a1d1
 exhibit h5i1 >
 change a1
 in >
@@ -4419,7 +4558,9 @@ of h1i1
 exhibition h1i1 >
 of h1
 <
-exit >
+exil l50
+exile j50l50
+exit j50 >
 left d1
 <
 exorbitant a1
@@ -4427,7 +4568,7 @@ exotic a176 >
 arrangement a1
 <
 expand i1
-expel d2 >
+expel j50l50d2 >
 from d1
 <
 expend d2 >
@@ -4452,7 +4593,7 @@ of a2
 explosive a139
 expose a1d1h1i1
 exposed h3d2a1i1
-express f15d3
+express j50l50f15d3
 expression >
 of f1 >
 surprise >
@@ -4461,6 +4602,8 @@ about r1
 <
 <
 expulsion d1
+expunge j50l50
+expunging l50
 extended a1 >
 over k1
 <
@@ -4469,8 +4612,8 @@ to k2
 <
 external c70k2i2
 extra c20
-extract d6h4 >
-from h7i3
+extract j50d6h4 >
+from h57i3
 <
 extractable >
 from a1
@@ -4481,16 +4624,23 @@ of h1
 extraordinary a127
 extravagant a129
 extravaganza a1
+extreme >
+of q50n50
+<
+extremity >
+of n50
+<
 extricate a1
 exuberant a2
-exude h2d1
-exuded d1
+exude l50j50h2d1
+exuded j50d1
 f i1
 fabricate a106
 fabrication a3
 fabulous a4
 face r2a1 >
 backwards r3
+of p50
 setback r1
 the >
 wrong >
@@ -4505,9 +4655,11 @@ a i1
 <
 <
 faceless d1
-factor h1
+factor h1 >
+in h50
+<
 fade d2
-fail a180d6 >
+fail a180j50d6 >
 in >
 the >
 end d1
@@ -4531,7 +4683,7 @@ register d1
 fake a92
 fall a3 >
 apart a4
-back r4
+back r54
 in i2
 into i1 >
 disrepair a1
@@ -4568,6 +4720,9 @@ fantasy a1
 far >
 from >
 stable a1
+<
+side >
+of q50
 <
 <
 farcical a1
@@ -4649,7 +4804,7 @@ with k1
 <
 with c70k16h1
 <
-fillet a1i1
+fillet n50a1i1
 filling >
 of h1i1
 <
@@ -4658,10 +4813,16 @@ for k1
 <
 filth a1
 filthy a1
-final >
+final q70 >
+bit >
+from/of/off q50
+<
 turn >
 up r1
 <
+<
+finale >
+of/to q50
 <
 find h19i6a1 >
 accommodation >
@@ -4711,21 +4872,52 @@ wear i1
 <
 finicky a1
 finish >
+of/off/to q50
 premature d1
+touch >
+for q50
 <
-fire a46d2i1 >
+<
+fire j50l50a46d2i1 >
 from d1
 secret i1
 up r2
 <
 first >
+and >
+last >
+letter n2710
+<
+<
+in/of/to p50
+letter p2770 >
+capital p100
+<
+letter( p250
 off d1
+or >
+second >
+half v200
+<
+<
+pair >
+of v50
+<
 she d1
+show >
+of p50
+<
+sign >
+of p50
+<
 to >
 come >
 out d1
 <
 go d1
+<
+two >
+letter v100
 <
 <
 fish >
@@ -4746,7 +4938,7 @@ fitting a51i1
 fix a27k5i1 >
 by i1
 in i1
-up r1
+up r51
 <
 fixed a131
 fixup r1
@@ -4765,6 +4957,7 @@ flaky a2
 flamboyant a4
 flank c90k4i1 >
 by c50i7
+of n50
 <
 flap a17 >
 about a1
@@ -4789,7 +4982,7 @@ flicker a9
 flighty a5
 flimsy a1
 fling a3
-flip r218a6 >
+flip r268a6 >
 flop r20
 out a1
 over r31
@@ -4835,7 +5028,7 @@ flush a2
 fluster a20
 flustered a82
 flutter a20
-fly a245 >
+fly a245j50 >
 across k1
 all >
 over >
@@ -4850,7 +5043,7 @@ off a1
 over k2
 <
 focus >
-of h1
+of u50h1
 on k1
 <
 fog a20
@@ -4923,10 +5116,10 @@ analysis a1
 announcement f1
 arrangement a1
 assembly a1
-audience f20
+audience f70
 audit f5
 audition f8
-auditor f5
+auditor f55
 backing r1
 battle a1
 beat a1 >
@@ -5015,7 +5208,7 @@ it a1
 kneading a1
 knitting a1
 lifting r1
-listener f13
+listener f63
 manoeuvre a1
 manufacturing a1
 massage a1
@@ -5169,25 +5362,31 @@ wrapping >
 round k1
 <
 <
+forbidden >
+to j50
+<
 force a42 >
 into i1
 out a1d1
 <
 fore k1
 foreign a45
+foremost >
+in/of p50
+<
 forge a109
-forget d13 >
+forget l50d13 >
 the >
 last d1
 sequence a1
 <
 <
 forgo d3
-forgotten d3
+forgotten j50d3
 fork >
 out a1
 <
-forlorn a5
+forlorn j20a5
 form a106 >
 break >
 for i1
@@ -5220,13 +5419,14 @@ fragile a1
 fragment a22h1i1 >
 from h1
 inconsistent a1
-of a1h1i1
+of h51a1i1
 <
 fragmented a3
 frame c90k25h3i2 >
 by c50i16k1
 <
 framed k3
+frameless w50
 franc h1
 frantic a39
 frantical a35
@@ -5237,11 +5437,11 @@ out a25
 <
 freakish a25
 freaky a1
-free a278d4i1 >
-from d1h1 >
+free a278j50d4i1 >
+from l50d1h1 >
 outsider d1
 <
-of d2
+of l50d2
 use a1
 <
 freeform a1
@@ -5264,7 +5464,9 @@ frighten a2
 frightful a39
 frill a1
 frilly a5
-fringe k4
+fringe k4 >
+of p50n50
+<
 fringed >
 by i3
 <
@@ -5275,13 +5477,14 @@ frizzy a1
 frolic a6
 frolick a41
 frolicsome a20
-from h98a38i23d1 >
+from h148a38i23d1 >
 a >
 speaker f1
 <
+back r50
 be a1
 behind r23
-below r8
+below r58
 down >
 under r1
 <
@@ -5308,18 +5511,18 @@ south r2
 the a1 >
 assembly a1
 audience f1
-back r6
-bottom r23
-east r46
+back r56
+bottom r73
+east r96
 rear r11
-right r24
+right r74
 sound >
 of >
 it f3
 <
 <
 soundtrack f1
-south r32
+south r82
 wrong >
 side r1
 <
@@ -5344,6 +5547,9 @@ get a1
 <
 <
 <
+<
+front >
+of p50
 <
 froth a1
 fruity a1
@@ -5407,7 +5613,7 @@ gaseous a1
 gatecrash c20i6k1 >
 by c50
 <
-gather a33k31c20f4h3i2 >
+gather f54a33k31c20h3i2 >
 about k1
 by i4h1
 haphazard a1
@@ -5594,6 +5800,9 @@ out a1
 <
 set a1
 settled a1
+shoot >
+of l50
+<
 smash a2
 some h2
 sort a1 >
@@ -5775,7 +5984,7 @@ up a1
 <
 ghastly a9
 giddy a75
-gine a23d6 >
+gine j50a23d6 >
 astray a1
 awry a1
 back r1
@@ -5889,12 +6098,15 @@ with i1
 glean >
 from a1
 <
+glimpse >
+of p50
+<
 glimpsed >
 in i1
 <
 gnar a1
 gnarl a4
-go d7a1 >
+go j50d7a1 >
 aboard i2
 about c50k3a1
 abroad a1
@@ -5911,7 +6123,7 @@ to k1
 <
 astray a31d1
 awry a3
-back r67 >
+back r117 >
 inside r1
 into i1
 <
@@ -5942,7 +6154,7 @@ retirement r1
 <
 mad a8
 mushy a1
-north r52
+north r102
 nuts a1
 off a176t1 >
 course a1
@@ -5962,7 +6174,7 @@ limit r1
 <
 retro r2
 rickety a1
-round r58k38a9
+round r108k38a9
 straight a20
 the >
 other >
@@ -5986,7 +6198,7 @@ west r1
 <
 <
 uncovered d1
-up r45 >
+up r95 >
 in h1r1
 <
 uphill r5
@@ -5994,7 +6206,7 @@ upside >
 down r1
 <
 walkabout a1
-west r49a2
+west r99a2
 wild a10
 with >
 a >
@@ -6115,8 +6327,8 @@ gulp c50k2i1 >
 by c50
 <
 gush a2
-gut d8
-gutless d2
+gut w50n50d8
+gutless n50d2
 guzzle k9
 gyrate a23r2
 h i2h1
@@ -6130,6 +6342,9 @@ hail f1
 hairy a51
 half >
 abandoned d1
+conceal v50
+hearted( v50
+of v50
 <
 hallucinogenic a1
 ham a1
@@ -6137,7 +6352,7 @@ hammer a3 >
 up r1
 <
 hammered a80
-hamper k7a2i2h1 >
+hamper y20k7a2i2h1 >
 by h2
 <
 hand >
@@ -6234,9 +6449,9 @@ hash a74
 hasty a1
 hatch a3
 haul >
-up r24
+up r74
 <
-have k37h10i4 >
+have l50k37h10i4 >
 a >
 breakdown a1
 <
@@ -6271,8 +6486,9 @@ mixed a1
 new >
 coinage a1
 <
-no d4 >
+no l50d4 >
 bound i1
+lead b50
 piano d1
 tip d1
 <
@@ -6499,14 +6715,16 @@ turn >
 up r1
 <
 <
-head >
+head b20 >
 back r5
+for/from/of/off p50
+for/to p50
 north r15
 obscure d1
 off d14
 oust d1
 over >
-heel r25
+heel r75
 <
 removed d1
 sack d1
@@ -6525,8 +6743,9 @@ turned r1
 west r15
 <
 headless d6
+headlong r20
 healing a1
-hear f244a1 >
+hear f294a1 >
 about f1
 by >
 many f1
@@ -6541,10 +6760,10 @@ be f2
 <
 <
 heart >
-of h1i1
+of u50h1i1
 <
 hearten i1
-heartless d17
+heartless m50n50d17
 hearty h2 >
 back r1
 <
@@ -6556,7 +6775,9 @@ hedge c20k6 >
 by c50
 off k1
 <
-heel a1
+heel a1 >
+of q50
+<
 heinous a4
 hellbound r1
 hellish a1
@@ -6584,7 +6805,7 @@ in h1
 <
 herein h1
 hiccup a2
-hidden a20d2i2k1 >
+hidden j50a20d2i2k1 >
 by c50i4
 in i6
 <
@@ -6604,6 +6825,9 @@ piggledy a20
 high a110
 hilarious a1
 hinge i1
+hint >
+of p50
+<
 hire k1
 his a1 >
 mysterious a1
@@ -6619,12 +6843,12 @@ by h1i1
 <
 hobble a1
 hog k5
-hoist r5a1
+hoist r55a1
 hold k385c90h59i59 >
 a i1
 about k2
 amid i1
-back r19h3i2d1 >
+back r69h3i2d1 >
 by i3h2r2
 in i1r1
 <
@@ -6650,13 +6874,13 @@ over r1
 together >
 by k1
 <
-up r35i1 >
+up r85i1 >
 by i3r3h1
 in i1
 <
 <
 holder k1
-hollow d1
+hollow n50d1
 home k1h1 >
 to k2h1
 <
@@ -6698,6 +6922,9 @@ hub h1
 hug c70k57h3i3 >
 by c50i16
 <
+hull >
+from/of n50
+<
 humbug a1
 hunger >
 within i1
@@ -6715,6 +6942,7 @@ hurl a1
 hurricane a1
 hurried a1
 hurt a62
+husk w50
 hybrid a36
 hybridise a2
 hyperactive a1
@@ -6793,7 +7021,7 @@ worried a1
 <
 iffy a3
 ignite a1
-ignore d45a1 >
+ignore j50l50d45a1 >
 at >
 first d1
 <
@@ -6889,7 +7117,7 @@ improve a1
 improved a8
 improvise a64
 impure a1
-in i2310h301k129c70r1 >
+in i2310h351k129c70r1 >
 a i1 >
 bad >
 way a24
@@ -7036,7 +7264,7 @@ arrear r3
 articulation f1
 audience f11
 audio f2
-audition f29
+audition f79
 auditorium f14
 bad >
 shape a2
@@ -7088,7 +7316,7 @@ confinement k1i1
 conflict a4
 confusion a39
 congregation a1
-conversation f27
+conversation f77
 conversion a1
 convulsion a2
 corrupt >
@@ -7254,7 +7482,7 @@ other >
 word a22
 <
 panic a1
-part h17i7 >
+part h67i7 >
 of i2h1
 through h1i1
 <
@@ -7289,7 +7517,7 @@ interview f1
 <
 reaction r1
 rebellion a21
-recess r5
+recess r25
 recession r14
 recital f5
 recollection r1
@@ -7304,17 +7532,17 @@ of r1
 remix a1
 reorganisation a1
 replacement a1
-report f12 >
+report f62 >
 of f1
 <
 reshuffle a1
 resort a13
 retirement r41
 retreat r39
-retrospect r47
+retrospect r97
 retrospective r1
-return r10
-reverse r3
+return r30
+reverse r53
 review r12a1
 revival r1
 revolt a24r2
@@ -7341,6 +7569,7 @@ smash a1
 snooker a1
 some i1 >
 form a1
+measure h50
 way a2
 <
 song f1
@@ -7355,7 +7584,7 @@ display a2
 specified >
 order a1
 <
-speech f51
+speech f101
 station k1
 stew a1
 stir a1
@@ -7439,7 +7668,7 @@ train a3
 translation a11
 trouble a140
 turmoil a10
-turn r32
+turn r52
 turnover r1
 twist a1
 unusual >
@@ -7515,7 +7744,7 @@ of k1
 <
 incoherent a22
 incompetent a3
-incomplete d3h1i1
+incomplete y50d3h1i1
 incomprehensible a2
 incongruous a2
 inconstant a20
@@ -7550,6 +7779,7 @@ by k1
 infiltrate c70i16h3k1 >
 by c50k6
 <
+infinite y50
 infirm a20
 inflame a2
 informal a1
@@ -7581,12 +7811,15 @@ to h1i1
 inhibit c50k8 >
 by c50h2i2
 <
-initial >
+initial p100 >
 deny d1
 ignore d1
 lose d1
 obscure d1
 suppress d1
+<
+initiation >
+of/in/to p50
 <
 inject k8i5h1 >
 by i1
@@ -7631,7 +7864,7 @@ into h1
 this i1
 <
 inset k1i1
-inside i94c70h17k14 >
+inside i94c70h67w50k14 >
 of h2i1
 <
 insider h2d1
@@ -7675,7 +7908,7 @@ interior h4i1 >
 of h1i1
 <
 interject k1i1
-interminable d2
+interminable w50y50d2
 intermittent t15
 internal c20h3i1 >
 evidence h1
@@ -7741,6 +7974,9 @@ to i1
 <
 to c50i29
 <
+introduction >
+from/to p50
+<
 intrude >
 on i1
 <
@@ -7758,7 +7994,7 @@ invention a23
 inventive a2
 inverse r1
 inversion r1
-invert r37
+invert r87
 invest c20i14k3h2 >
 in i67c20h2
 with c50k1
@@ -7792,6 +8028,10 @@ by a1
 irritating a4
 irrupt a1
 is >
+available j50
+enjoy >
+by j20
+<
 a >
 feature >
 of h1
@@ -8202,6 +8442,8 @@ worried a3
 wrong a9
 <
 island k1
+isolate l50
+isolated j50
 israel i1
 it >
 block i1
@@ -8305,6 +8547,7 @@ jazzy a36
 jelly a2
 jerk a15
 jerky a21
+jettison j50l50
 jig a3
 jigger a1
 jiggle a174 >
@@ -8346,7 +8589,7 @@ jung a20
 jungle >
 of a1
 <
-junk a32d1
+junk l50a32d1
 just >
 a >
 bit h2 >
@@ -8369,11 +8612,11 @@ regular t1
 <
 <
 keel >
-over r29a1
+over r79a1
 <
 keep k285c70i21h19 >
 at i1
-back r1 >
+back r51 >
 inside r1
 <
 by c50i26h6k2
@@ -8394,14 +8637,14 @@ kennel k2
 kick a1 >
 around a1
 off a1
-out a1
+out j50l50a1
 <
 kickback r1
 kidnap k3 >
 by i1
 me i1
 <
-kill a1d1
+kill j50l50a1d1
 kind a1 >
 of a28
 <
@@ -8423,7 +8666,7 @@ knobble a1
 knock a2 >
 about a21r2
 around a1
-back r122
+back r172j50l50
 for >
 a >
 loop a1
@@ -8431,7 +8674,7 @@ loop a1
 six a1
 <
 off a1d1
-out d5a3
+out j50l50d5a3
 over r65a3
 to >
 the >
@@ -8451,15 +8694,16 @@ labyrinthine a21
 lace a2 >
 with k3h1i1
 <
-lack d6 >
+lack l50d6 >
 a d2
 of >
 leadership d1
 <
 <
-lacking d42t2 >
+lacking l50j50d42t2 >
 devious d1
 ending d1
+heart n50
 name d1
 time d1
 <
@@ -8478,18 +8722,28 @@ in i1
 lap c20k2
 lapse a1
 larde k1
-large d5
+large y50d5
 lark a3
 lascivious a1
 lash a1
 lasso k1
-last >
+last q50 >
+drop >
+of q50
+<
+from/in/of/to q50
+letter q1490
+letter( q200
 out d1
+shred >
+of q50
+<
 <
 late >
 getting >
 underway d1
 <
+in/of q50
 <
 lateral a1
 laughable a3
@@ -8519,14 +8773,19 @@ of a1
 <
 lead >
 astray a3
+character >
+in p50
+<
+from/to p50
 <
 leader >
 getting >
 ignore d1
 <
+in/of p50
 <
-leaderless d1
-leak d2
+leaderless b50d1
+leak l50j50d2
 leaky a1
 lean >
 over r1
@@ -8540,13 +8799,17 @@ leaning >
 back r1
 <
 leap r1
-leave d49 >
+leave l50j50d49 >
+by l50
 in i2
-out d6
+out l50d6
 <
 lecture f1
 lef h1
 left r22d9 >
+extremity >
+of p50
+<
 hand r1
 unfinished d1
 <
@@ -8557,7 +8820,10 @@ of h2
 leo >
 leaf d1
 <
-less d15
+less l50d15
+lessen >
+by l50
+<
 let >
 go a2
 in k6h1i1
@@ -8568,8 +8834,8 @@ go a1
 <
 loose a32
 off a1
-out a5d1
-slip a52d1
+out j50l50a5d1
+slip a52j50l50d1
 <
 lets >
 both >
@@ -8577,6 +8843,7 @@ end >
 go h1
 <
 <
+slip l50
 <
 letter a6 >
 about a1
@@ -8589,20 +8856,20 @@ represent a1
 <
 li h1
 liberal a133
-liberate a3
+liberate j50l50a3
 lick a50
 lidl k1
 lido k1
 lie >
-about k6r1
+about r51k6
 across i1
-around r3
+around r53
 back r7
 in i7
 within i1
 <
 lif h1
-lift r98d2 >
+lift r168d2 >
 from h1
 given >
 to r1
@@ -8618,17 +8885,20 @@ this a1
 lima k1
 limit c70k32 >
 by c50i10h1
+of/to q50n50
 <
 limitation >
 for k1
 <
 limited d2i2k1
+limitless w50
 limple a1
 line c70i7 >
 by k1
 collect >
 by i1
 <
+of w50
 with c50k3i1
 <
 link h3 >
@@ -8640,7 +8910,9 @@ liquefy a1
 liquid a78
 liquidate a1
 liquidise a1
-list c20
+list c20 >
+of n20
+<
 listed c20
 listen f9 >
 to f19
@@ -8707,7 +8979,7 @@ by i1
 <
 awful a2
 bac r1
-back r48
+back r98
 different a3
 dishevel a1
 dodgy a1
@@ -8727,7 +8999,7 @@ way r1
 <
 untidy a1
 unusual a1
-up r34
+up r84
 upset r1
 west r1
 <
@@ -8739,16 +9011,17 @@ loose a231
 loosen a3 >
 up a2
 <
-lop d2 >
+lop b20d2 >
 off d1
 <
-lose d56 >
+lose d56l50 >
 an d1
 element >
 regular t1
 <
 face d2
 head d2
+head( b50
 heart d3
 its >
 head d1
@@ -8761,7 +9034,7 @@ the >
 first d1
 <
 <
-lost a172d15 >
+lost a172j50d15 >
 heart d1
 <
 loud f6 >
@@ -8795,7 +9068,7 @@ maddening a23
 madness a24
 magic a3
 magical a51
-main d3
+main y50d3
 maintain k41h2a1i1 >
 by i3
 <
@@ -8810,7 +9083,7 @@ of a20
 case >
 for h1
 <
-comeback r25 >
+comeback r75 >
 in r1
 <
 contribution >
@@ -8887,7 +9160,7 @@ of a22h1
 off >
 with a1
 <
-out f4a2
+out f54a2
 over a1r1
 redundant d1
 return r1
@@ -8975,6 +9248,7 @@ mar a43
 maraud a1
 march >
 around a1
+from/off n20
 in >
 formation a1
 <
@@ -9109,7 +9383,7 @@ around a1
 <
 meandering a93
 measure >
-of h1
+of h51
 <
 meddle a22 >
 with a1
@@ -9164,7 +9438,9 @@ metamorphosis a22
 methodical a1
 mid i1
 middle >
-of h1
+letter u200
+letter( u400
+of u50h1
 <
 midway >
 through h1
@@ -9217,8 +9493,12 @@ mince a57
 mind k2
 mine a1i1
 mingle a174
+minimum >
+of p50
+<
 minority h1
 mint a21
+minus l50
 mire >
 in i1
 <
@@ -9267,7 +9547,7 @@ misprinted a3
 misread a7
 misrepresent a48
 misrepresentation a3
-miss d7 >
+miss l50d7 >
 every >
 other t1 >
 letter t1
@@ -9278,7 +9558,7 @@ odd >
 place t1
 <
 <
-out d2
+out j50d2
 the >
 first d3
 front d1
@@ -9288,7 +9568,7 @@ queen d1
 <
 misshape a2
 misshapen a75
-missing d60 >
+missing d60l50j50 >
 odd t1
 one d1
 part >
@@ -9374,24 +9654,24 @@ morphed a1
 mortal a20
 most d2 >
 odd a1
-of d9 >
+of y50d9 >
 the >
 way d2
 <
 <
 <
-mostly d35h1
+mostly y50d35h1
 motley a2
 mottle a1
 mould a100
 mouldy a2
-mount r27k1 >
+mount r77k1 >
 hesitation r1
 <
 mountain >
 climbing r1
 <
-mounted r12a1
+mounted r62a1
 move a245 >
 about a5
 around a17r1
@@ -9613,7 +9893,7 @@ by c50i4
 nail c50k2i2 >
 by c50i1
 <
-naked i2d1
+naked w50i2d1
 name k1 >
 by >
 some f1
@@ -9626,7 +9906,7 @@ naughty a184 >
 show a1
 <
 navigate a1
-near d15 >
+near y50d15 >
 all d1
 <
 neaten a20
@@ -9636,7 +9916,7 @@ to h2i1
 neck k1 >
 by i1
 <
-need h1i1 >
+need l50h1i1 >
 a >
 beat a1
 lift r2
@@ -9845,8 +10125,9 @@ nightmarish a1
 nimble a1
 nip c50k2i1 >
 by c50i2
+of p50
 <
-no d17 >
+no l50j50p50d17 >
 end d2
 energy d1
 good a2
@@ -9894,12 +10175,12 @@ nonconformist a3
 nonsense a7
 nonsensical a3
 noodle a1
-northbound r26
+northbound r76
 norther r2
 northern r1
-northward r4
+northward r54
 northwards r7
-not d70a2 >
+not d70l50j50a2 >
 a d2
 admit d1
 advanced d1
@@ -9911,7 +10192,7 @@ altogether h3i2
 an >
 all h1
 <
-available d1
+available j50d1
 bear d1 >
 top d1
 <
@@ -9920,7 +10201,8 @@ complete h4
 consider d1
 count d1
 decrepit a1
-end d1
+end y50d1
+enjoy l20
 entire h18i8d5
 even t3
 exact a30 >
@@ -9940,7 +10222,7 @@ front d1
 full h1
 get d1
 good d1
-half d1
+half v50d1
 have d5
 hold d1
 host d1
@@ -9969,7 +10251,7 @@ proper a22
 put >
 in d1
 <
-quite d4 >
+quite y50d4 >
 all >
 there d1
 <
@@ -9986,10 +10268,11 @@ southern d1
 start d5
 straight a20
 the >
-first d1
+first b50d1
 high >
 class d1
 <
+last y50
 <
 to >
 be >
@@ -10034,6 +10317,13 @@ out >
 of d1
 <
 <
+nowhere >
+to >
+be >
+se j50
+<
+<
+<
 nude i2d1
 nurse k56c50i7h1 >
 by c50i3
@@ -10045,9 +10335,9 @@ nutty a24
 o k2i1r1
 obit k1
 oblique a1
-obliterate a1
+obliterate j50l50a1
 obscura a1
-obscure a83h3d2i1
+obscure a83j50l50h3d2i1
 observe >
 in h2i2
 regular t1
@@ -10266,11 +10556,12 @@ of k4
 fringe >
 of k1
 <
+head r50
 hearsay >
 evidence f1
 <
 its >
-head r1
+head r51
 <
 lifting r1
 manoeuvre a8
@@ -10286,7 +10577,7 @@ radio f16
 rampage a1
 rebound r2
 record f2
-reflection r71
+reflection r91
 regular >
 occasion t1
 <
@@ -10327,7 +10618,7 @@ of k4i1
 <
 phone f21
 prowl a1
-radio f103 >
+radio f153 >
 sound >
 like f1
 <
@@ -10339,10 +10630,10 @@ rise r15
 rock a53
 run a2
 spin r1
-telephone f1
+telephone f51
 tongue f7
 turn r7
-up r15
+up r65
 way >
 back r29
 up r6
@@ -10354,7 +10645,7 @@ of k1
 traffic >
 news f1
 <
-vacation d1
+vacation n50d1
 way >
 back r2
 up r1
@@ -10407,6 +10698,13 @@ say f1
 must >
 go d1
 <
+of >
+central >
+pair >
+lose v50
+<
+<
+<
 part >
 so i1
 <
@@ -10442,8 +10740,13 @@ solution h1i1
 <
 up r1
 <
+onset >
+of p50
+<
 open i26a1 >
 by k6
+for p50
+for/in/of p50
 out a1
 to k1
 <
@@ -10466,7 +10769,7 @@ be a1
 other a1
 such a1
 <
-oral f14 >
+oral f64 >
 transmit f1
 <
 orbit k3
@@ -10499,8 +10802,10 @@ f k1
 orgy a1
 orien i1
 orient i1
-origin a1
-original a48 >
+origin a1 >
+in/of p50
+<
+original p100a48 >
 dismiss d1
 order a1
 out d1
@@ -10518,18 +10823,19 @@ express a1
 name a1
 <
 our k1
-oust d3 >
+oust j50l50d3 >
 its >
 leader d1
 <
 <
-out a979d27k5 >
+out a979l50j50d27k5 >
 and >
 about a1
 <
 by d1
 loud f13
 of a23d6h4k3 >
+bound w50
 character a1
 control a21
 gear a20
@@ -10545,6 +10851,7 @@ place a35
 position a2
 sequence a1
 shape a7
+sight j50
 sort a26
 sync a1
 the >
@@ -10567,6 +10874,9 @@ outburst a4
 outcome a3 >
 of a20
 <
+outer >
+wear n50
+<
 outfit a1
 outflank k2 >
 by k1
@@ -10579,14 +10889,14 @@ outpour a1
 outrage a21
 outrageous a49
 outset i1
-outside k255c70i4 >
+outside k255c70n50i4 >
 of k27c20
 <
 outskirt k1
 outspoken f29
 outstanding k3d1
 outward c20k5
-over r440k181a22c20i2h1 >
+over r490k181a22c20i2h1 >
 fifty a1
 in h1r1
 shoulder r1
@@ -10604,7 +10914,7 @@ overflowing a1
 overhaul a3r1 >
 of r1
 <
-overhear f29
+overhear f79
 overlapping i1
 overlook d6 >
 by d1
@@ -10626,10 +10936,13 @@ by i2
 <
 overstated r1
 overtake k2
-overthrow a25r14 >
+overthrow r64a25 >
 in r1
 <
-overturn r155a44 >
+overture >
+from/to p50
+<
+overturn r205a44 >
 large r1
 <
 overwhelm c70k13 >
@@ -10708,7 +11021,7 @@ a >
 comeback r1
 <
 <
-of h95i27 >
+of h145i27 >
 it h1
 the i1
 <
@@ -10724,7 +11037,7 @@ through h1
 <
 <
 partake h1
-partial h22i6 >
+partial h72i6 >
 complete h1i1
 conceal h1
 retreat >
@@ -10744,11 +11057,11 @@ partook >
 in k1
 <
 party a5
-pass d3h1 >
+pass l50j50d3h1 >
 around a1
 back r3
 backwards r1
-over r2
+over j50l50r2
 round r3k1
 through h2i1
 to >
@@ -10790,7 +11103,7 @@ peculiar a123 >
 look a20
 <
 peculliar a50
-peel d1i1
+peel w50d1i1
 pell >
 mell a20
 <
@@ -10852,7 +11165,7 @@ pick f1 >
 out >
 from h1
 <
-up f89c50r41k15i1 >
+up f139c50r41k15i1 >
 by c50i10 >
 the >
 ear f2
@@ -10873,7 +11186,7 @@ piece h4a3i1 >
 back r1
 for a1
 from h2
-of h10i3a1
+of h60i3a1
 out >
 of h1
 <
@@ -10896,6 +11209,7 @@ pinch c70k49i6h1 >
 bottom i1
 by c50i11k1
 in i1
+of p50
 <
 pirate a1
 pirouet r1
@@ -10990,6 +11304,7 @@ up r1
 <
 polished a2
 politico k1
+poll j20l20
 pollute a7
 poo a1
 poop a1
@@ -11009,7 +11324,7 @@ over h1
 <
 portion >
 o h1
-of h7i1
+of h57i1
 <
 portray >
 different a1
@@ -11066,6 +11381,9 @@ prance a28
 prange a1
 pre i1
 precarious a6
+preface >
+to p50
+<
 preparation a24 >
 of a4
 <
@@ -11095,8 +11413,16 @@ prickly a2
 priest >
 about r1
 <
-primary r20 >
+primary p50r20 >
 deficient d1
+<
+principal p50 >
+character >
+in p50
+<
+<
+principle >
+of p50
 <
 print >
 back >
@@ -11163,8 +11489,11 @@ for >
 some f1
 <
 <
-pronounced f63
+pronounced f113
 pronouncement f4
+prop >
+up r50
+<
 proper a20 >
 allocate a1
 arrange a1
@@ -11219,7 +11548,7 @@ for k2
 provision h1
 provoke a57
 prowl a2
-prune d1h1i1
+prune y50d1h1i1
 pub >
 about r1
 <
@@ -11244,7 +11573,7 @@ rear r1
 <
 <
 in i1
-out d2a1
+out j100d2a1
 up r17
 <
 pulp a5
@@ -11292,8 +11621,8 @@ another >
 way a74r1
 <
 around k6
-away d2
-back r45 >
+away j50l50d2
+back r95 >
 part >
 of h1
 <
@@ -11329,7 +11658,7 @@ speech f1
 <
 off d4a2
 on i6k1
-out a119d5 >
+out a119j50l50d5 >
 of >
 joint a1
 <
@@ -11349,7 +11678,7 @@ sword a1
 work a1
 <
 together a2
-up r70 >
+up r120 >
 outside r1
 painting r1
 <
@@ -11365,7 +11694,7 @@ quake a2
 qualification a1
 qualified a2
 quantity >
-of h1i1
+of h51i1
 <
 quarry a21 >
 from h1
@@ -11382,7 +11711,7 @@ questionable a39
 quicken a1
 quilt i1
 quirky a26
-quit d3
+quit j50d3
 quite >
 different a1
 excited a1
@@ -11398,7 +11727,7 @@ from h1
 quoted f1
 r i1
 rabid a23
-race a6 >
+race j50a6 >
 over r1
 <
 rack a1
@@ -11412,7 +11741,7 @@ by a1
 raging a20
 ragtag a1
 raid i1
-raise r262 >
+raise r312 >
 among r1
 it r1
 sample >
@@ -11427,7 +11756,7 @@ rambling a114f1 >
 account a1
 <
 rampage a32
-rampant a88r4
+rampant a88r24
 ramshackle a10
 rancid a1
 random a51
@@ -11456,7 +11785,7 @@ reaction a21
 reactionary r10
 read >
 about r1
-aloud f12
+aloud f62
 back r1
 from >
 right >
@@ -11465,7 +11794,7 @@ left r1
 <
 <
 <
-out f15 >
+out f65 >
 loud f1
 <
 over r2
@@ -11487,10 +11816,11 @@ realignment a2
 realise h1
 reallocate a2
 reapplication a1
-rear r35 >
+rear r85 >
 end >
 missing d1
 <
+in/of q50
 up r2
 view r1
 <
@@ -11510,20 +11840,20 @@ rebellious a28r2
 reboot a3
 reborn a50
 rebrand a2
-rebuff r6
+rebuff j50l50r26
 rebuild a151
 rebut r2
 rebuttal r1
 recalcitrant a20
 recalculated a1
 recalculation a1
-recall r190a1 >
+recall r210a1 >
 in h1r1
 of r2
 some r1
 <
 recast a40
-recede r27
+recede r77
 receive k102c90i3r1 >
 by c50i20
 in i3
@@ -11545,7 +11875,7 @@ aloud f1
 reckless a121
 reclassification a1
 recline r1
-recoil r25
+recoil r45
 recollect a38r1
 recollection r1 >
 of r1
@@ -11580,7 +11910,7 @@ rectify a26
 recto k1
 recur r2
 recurrence r1
-recurrent r11
+recurrent r31
 recycle a12
 recycled a93
 red a20
@@ -11597,7 +11927,7 @@ redevelopment a14 >
 of a1
 <
 redirect r2
-redirected r8a5
+redirected r28a5
 rediscover a2
 redistribute a29
 redistribution a2
@@ -11606,7 +11936,7 @@ redraft a32
 redraw a3
 redress a3
 reduce h1i1 >
-by d2
+by l50d2
 <
 reduced a23d4h1
 reduction d2
@@ -11618,13 +11948,14 @@ refine a24
 refined a37
 refit a22
 refitting a2
-reflect r63 >
+reflect r83 >
 in r1
 <
 reflection r26a1 >
 to r1
 <
 reflective r13
+reflex r20
 reform a252 >
 character a1
 for a1
@@ -11651,9 +11982,11 @@ refurbish a107
 refurbishment a3 >
 of a1
 <
-refuse d1
+refuse d1 >
+to j50
+<
 regardless >
-of >
+of l20 >
 the >
 odd t1
 <
@@ -11676,8 +12009,8 @@ west r1
 regional >
 broadcast f1
 <
-regress r10
-regressive r13 >
+regress r60
+regressive r63 >
 bill r1
 <
 regrettable a1
@@ -11777,7 +12110,7 @@ reinterpretation a2
 reinvent a1
 reinvention a1
 reissue a1
-reject r54d7 >
+reject r54l50d7 >
 a >
 lot >
 of >
@@ -11786,7 +12119,7 @@ rubbish r1
 <
 <
 <
-rejected r252d7k2 >
+rejected r252j50d7k2 >
 among r1
 challenge r1
 father r1
@@ -11801,15 +12134,16 @@ relapse r2
 relationship a1
 relax a177
 relay a53
-release a2d1 >
+release l50a2d1 >
 at d1
 odd >
 item t1
 <
 <
-released a8d1
+released j50a8d1
+relegate j50l50
 relieve d1
-relinquish d1
+relinquish j50l50d1
 relocate a21
 remain >
 in i2
@@ -11833,7 +12167,7 @@ every >
 other t1
 <
 <
-removed a10d5 >
+removed j50a10d5 >
 from a1
 <
 rend i1
@@ -11849,7 +12183,7 @@ renew a1
 renewable a3
 renewal a1
 renewed a8
-renounce d1
+renounce j50l50d1
 renovate a105
 renovation a11 >
 of a1
@@ -11869,7 +12203,7 @@ repainted a1
 repair a113 >
 to a2
 <
-repel r23d1
+repel r43d1
 repellent r1
 repelling d1r1
 rephrase >
@@ -11883,7 +12217,7 @@ of a1
 <
 replant a7
 replay a1
-report f168 >
+report f218 >
 about f1
 by f1
 of f41
@@ -11891,7 +12225,7 @@ to >
 be f1
 <
 <
-reported f589 >
+reported f639 >
 get f1
 <
 reposition a80r1
@@ -11916,7 +12250,7 @@ reproduced a10
 reproduction a2
 reprogram a1
 reprogramme a1
-repulsed r5
+repulsed r25
 repulsing r1
 reputed f2
 require k5 >
@@ -12020,7 +12354,7 @@ retain c50k22h7i3 >
 by c50i9
 in i1
 <
-retire r213 >
+retire r263 >
 chap r1
 in r1
 peer r1
@@ -12031,6 +12365,7 @@ of r1
 retiring >
 officer r1
 <
+retort r20
 retrace r1 >
 step r1
 <
@@ -12038,22 +12373,22 @@ retract r14
 retraction r2
 retrain a1
 retrained a2
-retreat r107 >
+retreat r157 >
 inside h1
 somewhat r1
 <
 retrieve r3
 retro r24
 retrofit r1
-retrograde r29
-retrogress r1
-retrogressive r4
+retrograde r49
+retrogress r21
+retrogressive r24
 retrospect r1
-retrospective r62 >
+retrospective r82 >
 focusing h1
 <
 retune a3
-return r829 >
+return r879 >
 book r1
 from r1 >
 the >
@@ -12094,9 +12429,9 @@ revel a3
 revelry a1
 reverberate a3r3
 reversal r1
-reverse r94 >
+reverse r144 >
 into r1
-of >
+of r50 >
 that r1
 <
 some i1
@@ -12105,6 +12440,7 @@ reversible r3
 reversing >
 revolutionary r1
 <
+revert r20
 review a75r40h1 >
 of r3a2
 <
@@ -12132,7 +12468,7 @@ revolting a1
 revolution r26a4 >
 in a2
 <
-revolutionary r244a99k1
+revolutionary r294a99k1
 revolutionise a2r1
 revolutionize a1
 revolve a1r1
@@ -12178,10 +12514,14 @@ riff a1
 rifle a1
 rig a54
 right >
+about r50
 away d1
 <
 riled a1
 rim k1
+rind >
+from/of n50
+<
 ring c90k12h1
 ringed c20 >
 by i2
@@ -12205,7 +12545,7 @@ up a1
 <
 ripe a1
 ripple a5
-rise r262 >
+rise r312 >
 of r4
 society r1
 up r1
@@ -12227,21 +12567,23 @@ n >
 rolling a50
 <
 <
+rocket r50
 rocky a125
 rococo a1
 rogue a111
 roister a1
-roll a62r16 >
+roll a62r36 >
 about r2
 around r3a1
 back r1
 in a1i1
+of r20
 over r13
 together a1
 up r3
 <
 rollick a2
-rolling a78r32 >
+rolling a78r52 >
 back r1
 over r10
 <
@@ -12256,7 +12598,7 @@ on i1
 <
 rot a6
 rotary a1r1
-rotate r26a2k1
+rotate r76a2k1
 rotation r1 >
 in r1
 <
@@ -12267,7 +12609,7 @@ suggest f1
 up a6
 <
 roughshod a1
-round k168c120r76a40i3 >
+round k168r146c120a40i3 >
 about k1
 by c50i1
 it k1
@@ -12286,6 +12628,7 @@ row a1
 rowdy a6
 rub a1d1 >
 into i1
+out j50l50
 <
 rubbish a73
 rubbishy a1
@@ -12313,7 +12656,7 @@ it f2
 of f3
 <
 rumple a22
-run a213 >
+run a213j50 >
 across h1
 amok a53
 around a12r2
@@ -12362,6 +12705,7 @@ salad a25
 sally a1
 sample h4a1 >
 backwards r1
+from h50
 of h7
 <
 sandwich c70k38h10i1 >
@@ -12381,10 +12725,11 @@ switched r1
 saucy a2
 saunter a1
 savage a10
-save k17d3i1 >
+save l100k17d3i1 >
 by i2
+skin w50
 <
-say f295 >
+say f345 >
 to f3 >
 be f13
 make f2
@@ -12412,7 +12757,7 @@ letter a1
 raise r1
 <
 scoff k10d1i1
-score k1d1i1 >
+score j50l50k1d1i1 >
 regular t1
 <
 scotch a2
@@ -12423,23 +12768,26 @@ scramble a131 >
 around a1
 up a1
 <
-scrap a10d2h1i1 >
-of h1
+scrap j50l50a10d2h1i1 >
+of p50h1
 <
 scrappy a21
-scratch d3a1 >
+scratch l50j50d3a1 >
+backside y50
 half d1
 head >
 in >
 horror d1
 <
 <
+head( b50
 <
-scratched a1d1
+scratched j50a1d1
 scrawl a55
-screen c50k12h3 >
+screen c50l50k12h3 >
 by c50i2h1
 <
+screened j50
 screw a48 >
 by a1
 up a3
@@ -12447,7 +12795,7 @@ up a3
 screwball a1
 screwy a20
 scribble a60
-scrub d5a1
+scrub j50l50d5a1
 scruffy a34
 scrum a1
 scrummage a3
@@ -12528,6 +12876,9 @@ seasick a1
 seasoned a1
 seat k1
 seclude h1
+second v50 >
+letter v50
+<
 secret h6 >
 reveal h1
 <
@@ -12536,7 +12887,7 @@ by i1
 <
 section h9i1 >
 in h1i1
-of h14i4
+of h64i4
 <
 secure k54c50i2 >
 by c50i11k1
@@ -12565,13 +12916,13 @@ by i1
 <
 <
 selection t1 >
-from h2i1
-of h4i3
+from h52i1
+of h54i3
 <
 selective h1
 send a4 >
 abroad a1
-back r115 >
+back r165 >
 in i1
 <
 crazy a1
@@ -12584,7 +12935,7 @@ back r2
 <
 north r2
 off a6d1
-out a6 >
+out l50j50a6 >
 first d1
 <
 over r7 >
@@ -12592,7 +12943,7 @@ theatre r1
 <
 round r5k1
 skyward r1
-up r66 >
+up r116 >
 old >
 husband >
 and >
@@ -12628,7 +12979,7 @@ during i2h1
 in i7
 out a1
 regular t1
-up r108a30 >
+up r158a30 >
 as a1
 contain r1
 in h1r1
@@ -12647,8 +12998,8 @@ set a92k1h1 >
 about c50k9r5a2
 apart i1
 around k3
-aside d1
-back r45
+aside j50l50d1
+back r95
 different a20
 during i1
 for i1
@@ -12674,7 +13025,7 @@ wrong >
 way r1
 <
 <
-up r80a2 >
+up r130a2 >
 outside k1
 <
 <
@@ -12738,8 +13089,9 @@ sheathed >
 by i1
 in i1
 <
-shed a7d6
-shell k1 >
+shed j50l50a7d6
+shell w50k1 >
+from/of n50
 out a2d1
 <
 shelter c90k17i2 >
@@ -12750,7 +13102,7 @@ shenanigan a1
 shield k4i1 >
 by i2
 <
-shift a275d1 >
+shift a275l50j50d1 >
 around a2
 from d1
 <
@@ -12770,7 +13122,7 @@ shocked a9
 shocking a17
 shoddy a2
 shoot a205d1 >
-of d2
+of l50d2
 to >
 piece a1
 <
@@ -12786,11 +13138,11 @@ short d53a1 >
 book >
 about r1
 <
-of d1 >
+of l50d1 >
 time d2
 <
 <
-shorten d2
+shorten y50d2
 should >
 accept k1
 arrange a1
@@ -12861,6 +13213,7 @@ out f1
 <
 shove a50 >
 around a1
+out j50l50
 up r1
 <
 show h22i4a1k1 >
@@ -12894,7 +13247,7 @@ the >
 door d1
 <
 through h1
-up r34
+up r84
 what >
 force a1
 <
@@ -12904,7 +13257,10 @@ shower a6 >
 of a2
 with i1
 <
-shred a56
+shred a56 >
+of p50
+<
+shrink r20
 shroud c50k1 >
 by c50
 in i5
@@ -12914,16 +13270,21 @@ shuffle a111 >
 around a1
 the a1
 <
-shun d10 >
+shun j50d10 >
 by d1
 <
 shut >
 in k2
 <
 shuttle a1
-shy d1
+shy d1 >
+of l50
+<
 sick a47
 sickly a7
+side >
+of n50
+<
 significant h1
 silly a177
 simmer a4
@@ -12953,15 +13314,20 @@ sizzle a1
 sketchy a20
 skew a2
 skewer i2
+ski r20
 skid a1
-skin d3
-skip d4a2r1 >
+skin w50d3 >
+of n50
+<
+skinless w50
+skip l50d4a2r1 >
 regular t1
 <
 skirl a1
 skirt c50k18h2i2 >
 around k1
 by c50i1
+of/on n50
 <
 skittish a21
 skyward r22
@@ -12976,7 +13342,7 @@ slaughter a27
 sleazy a1
 slice i4h1 >
 by k1
-of h2
+of h52p50
 <
 slide a4
 slight h2 >
@@ -13029,6 +13395,7 @@ snake a11
 snaking a1
 snap a4 >
 by i1
+of p20
 <
 snare c50k3i1
 snared >
@@ -13037,7 +13404,7 @@ by c50i1
 snarf k1
 snaring c50k4i1
 snarl a160
-snatch k5h2i1 >
+snatch j50k5h2i1 >
 by i4
 <
 snazzy a1
@@ -13046,11 +13413,14 @@ snooker a1
 snort k2 >
 by i1
 <
-snub d3
+snub y50j50l50d3
 snuggle c50
 so >
 bad >
 organise a1
+<
+it's >
+say f50
 <
 order a1
 person >
@@ -13083,12 +13453,12 @@ soak a20 >
 up k1
 <
 soaked a20
-soaring r4
+soaring r24
 sof h1
 soil a3
 solution a24
 solve a5
-some h356i45 >
+some h406i45 >
 character h2 >
 for h1
 <
@@ -13107,7 +13477,7 @@ say f3
 occupant >
 of h1
 <
-of h16i4 >
+of h66i4 >
 a h1
 it h1i1 >
 in >
@@ -13127,7 +13497,7 @@ get a1
 settle a1
 use a1
 <
-somersault r3a2
+somersault r53a2
 something >
 in h1
 of h1
@@ -13174,11 +13544,11 @@ him f1
 made >
 by f1
 <
-of f18
+of f68
 <
 soup a30
 source a1h1 >
-of h1
+of p50h1
 <
 souse a50 >
 with i1
@@ -13237,7 +13607,7 @@ spelt >
 different a1
 out a2
 <
-spend d5a4 >
+spend l50j50d5a4 >
 in i1
 <
 spew a1
@@ -13246,19 +13616,22 @@ spike i3 >
 with k3
 <
 spiked a1
-spild a30d1
-spill a45d2 >
+spild j50a30d1
+spill l50j50a45d2 >
 affect a1
 of a2
 over r3
 <
 spillage a1
-spin a222r48 >
+spin a222r98 >
 around r2
 over r1
 round r5
 <
 spiral a1
+spirited >
+away j50
+<
 spit >
 out f3
 <
@@ -13274,14 +13647,14 @@ splatter a4
 splay a1
 splice a1
 splinter a1
-split c70i43a25k2 >
+split c70j50i43a25k2 >
 by k14i3
 <
 splotchy a1
 splurge a2
 spoil a142i1
 spoilt a38
-spoke f20 >
+spoke f70 >
 aloud f1
 as f1
 of f7
@@ -13296,7 +13669,7 @@ by k1h1
 <
 spot >
 in i2h1
-of h1
+of p50h1
 <
 spotted >
 when >
@@ -13332,7 +13705,7 @@ up a2
 <
 sprung a1
 spurious a20
-spurn a1d1
+spurn j50l50a1d1
 sputter a1
 squabble a1
 squal a1
@@ -13345,6 +13718,7 @@ squeeze c50k15a3i2 >
 by c50i3
 in i1
 into i2
+out j50l50
 <
 squelc h1
 squidgy a1
@@ -13372,14 +13746,14 @@ stall c20 >
 by c20
 <
 stampede a3
-stand r16 >
+stand r66 >
 around k1
 down d1
 in i10
 outside k2
 over r1
 round k1
-up r15
+up r65
 <
 start a150 >
 from >
@@ -13388,7 +13762,11 @@ end r1
 <
 <
 late d2
+of/off/to p50
 off d2
+<
+starter >
+of p50
 <
 startle a4
 starts >
@@ -13398,7 +13776,7 @@ stash k5h1i1 >
 in i3
 <
 state f6
-stated f10 >
+stated f60 >
 aloud f1
 <
 statement h1f1
@@ -13416,6 +13794,9 @@ steep >
 in i2
 <
 steer >
+clear >
+of l50
+<
 round a1
 <
 stew a139
@@ -13427,11 +13808,11 @@ into h1i1
 is >
 raised r1
 <
-up r24
+up r74
 with c20
 <
 sticky a1
-stifle c50k29i1 >
+stifle c50j50l50k29i1 >
 by c50i4k1 >
 shout >
 of >
@@ -13459,7 +13840,7 @@ with k1
 <
 stocking k13i6
 stoke k1
-stolen d1i1 >
+stolen j50d1i1 >
 by i1
 <
 stomach i2k1h1 >
@@ -13523,9 +13904,9 @@ stretchy a1
 strew a4 >
 about a1
 <
-stricke a25
+stricke j50a25
 strident f1
-strike a2d2 >
+strike l50j50a2d2 >
 from d1
 only >
 odd >
@@ -13533,9 +13914,11 @@ character t1
 <
 <
 <
-striking a3d2
+striking l50a3d2
 string h1
-stripped d1h1i1
+stripped j50d1h1i1 >
+of l50
+<
 stroke d1
 structure a22
 struggle a238
@@ -13558,6 +13941,7 @@ stuffed a5i2h1
 stumble a32
 stun a1
 stunned a2
+stunt y50
 stupid a147 >
 put a1
 to >
@@ -13615,6 +13999,9 @@ withdrawal r1
 <
 suffocate k2
 suggested f5
+suggestion >
+of p50
+<
 suit i1
 suitable a1
 sundry a1
@@ -13626,7 +14013,7 @@ supply a119
 support h2
 supporting k1
 suppose a1
-suppress c50k38h3d2i1 >
+suppress c50j50l50k38h3d2i1 >
 by c50i4k1
 every >
 other t1
@@ -13646,7 +14033,7 @@ by a1
 <
 <
 surrealist a1
-surrender d1
+surrender j50l50d1
 surreptitious a1
 surround c90k22h2i1 >
 by i62c50k5h2
@@ -13731,7 +14118,8 @@ tackle c50k26h1 >
 by c50i4k1h1
 <
 tacky a1
-tail d1 >
+tail y50d1 >
+of q50
 tuck >
 in i1
 <
@@ -13748,7 +14136,7 @@ spin a2r1
 tumble a1r1
 turn r1
 <
-aback r21 >
+aback r71 >
 about r1
 <
 aboard >
@@ -13816,7 +14204,7 @@ only >
 part h1i1
 <
 order a1
-out a2d2 >
+out j50l50a2d2 >
 of h2
 <
 outside k2
@@ -13855,7 +14243,7 @@ through i3
 turn r3t1 >
 for a1
 <
-up r26k1 >
+up r76k1 >
 by i2r1
 <
 without k1
@@ -13884,7 +14272,7 @@ by c20
 <
 tarnished a1
 taste >
-of h2i1
+of p50h2i1
 <
 tatter a33
 tatty a12
@@ -13896,14 +14284,19 @@ teaser a1
 teasing a1
 tectonic a1
 teeter a20
-tell f23 >
+tell f73 >
 to f1
 <
 temper a22
 tempest a1
 tempestuous a20
 tentative a20
-term k1
+term k1 >
+of q50
+<
+terminal >
+to q50
+<
 terrible a513 >
 take a1
 <
@@ -14197,7 +14590,7 @@ into c50i2 >
 disarray a1
 <
 on k1
-out a18d3
+out l50j50a18d3
 over r5
 up r14a1
 <
@@ -14220,7 +14613,9 @@ tingle a1
 tinker a1 >
 with a1
 <
-tip a23r13 >
+tip r63a23b20 >
+from/of n50
+from/of/off p50
 off a1
 over r5
 to >
@@ -14644,6 +15039,9 @@ bear k4i1
 become a12 >
 corrupt a1
 involved i1
+<
+begin >
+with p50
 <
 besiege k2
 bind k2
@@ -15437,7 +15835,7 @@ rise r1
 <
 <
 <
-extent h15i8
+extent h65i8
 <
 sort >
 out a3
@@ -15612,19 +16010,21 @@ together a1 >
 somehow a1
 <
 toil a2
-top d2 >
+top b20d2 >
 missing d1
+of p50
 <
-topless d12a1
+topless b50d12a1
 topple a3d1r1
 topsy >
-turvy a20r1
+turvy r51a20
 <
 torment a83 >
 of a1
 <
 torn a33t1 >
 off d1
+out j50
 up a1
 <
 torpedo a2
@@ -15653,6 +16053,9 @@ totall a1
 totter a3
 totty a1
 tou k1
+touch >
+of p50
+<
 tough a1
 tour k134a27i2 >
 around k2
@@ -15674,8 +16077,12 @@ sky r1
 surface r1
 <
 <
+tower r20
 toy a4 >
 with a4
+<
+trace >
+of p50
 <
 tracked i1
 trade a5i1
@@ -15683,6 +16090,7 @@ traffic a1
 tragic a16
 train a27 >
 for a1
+of q50
 <
 trained a118
 trample a2
@@ -15781,8 +16189,8 @@ the >
 odd t1
 <
 <
-trimmed a50d2i1
-trip a18 >
+trimmed a50y50d2i1
+trip r20a18 >
 to >
 see a1
 <
@@ -15802,7 +16210,7 @@ trousers c50k8h5
 trump >
 up a50
 <
-truncate d1
+truncate y50d1
 truss a1
 try a1
 trying a2
@@ -15821,11 +16229,11 @@ tumultuous a21
 tune a3
 turbulent a100
 turmoil a4
-turn r248a233 >
+turn r298a233 >
 against r1
 around r7
 back r27
-down d2
+down j50l50d2
 head r1
 in r1
 into a4r1
@@ -15842,18 +16250,18 @@ to >
 be a1
 <
 <
-over r26a2
+over r76a2
 round r3
 to a2r1
 turtle r1
-up r302h2 >
+up r352h2 >
 in r2h1i1
 <
 <
 turnaround a1
-turned r175a123 >
+turned r225a123 >
 around r6
-over r44a3
+over r94a3
 round r4a2
 scarlet r1
 u r1
@@ -15862,25 +16270,28 @@ down r2
 <
 <
 turner a2
-turnover r30
+turnover r30 >
+in r50
+of r50
+<
 tussle a1
 tussling a4
 tweak a76
 twerk a1
 twinkle a4
-twirl r8a1 >
+twirl r28a1 >
 it >
 around r1
 <
 <
-twist a35r3 >
+twist r53a35 >
 and >
 turn a1
 <
 of a3
 <
-twisted a125r40
-twisting a13r10 >
+twisted a125r90
+twisting r60a13 >
 back r1
 <
 twisty a1
@@ -15901,7 +16312,8 @@ type a1 >
 of a1
 <
 ugly a28
-ultimate >
+ultimate q50 >
+in q50
 want d1
 <
 unaccompany >
@@ -15909,6 +16321,7 @@ by d1
 <
 unbalanced a3
 unbelievable a1
+unbound w50
 unbridle a2
 unbuttoned a1
 uncanny a1
@@ -15920,6 +16333,7 @@ uncomfortable a12
 uncommon a27 >
 identify a1
 <
+unconfine w50
 unconnect >
 character t1
 <
@@ -15931,7 +16345,7 @@ uncoordinated a1
 uncork d1
 uncouth a52
 uncover h2a1
-uncovered d2h1i1
+uncovered w50d2h1i1
 undecided a20
 under i1 >
 control a1
@@ -15962,7 +16376,8 @@ undisciplined a22
 undo a38c20
 undress d2i1
 uneasy a37
-unending d1
+unemployed j50
+unending y50d1
 uneven t4a2 >
 bit t1
 <
@@ -15973,12 +16388,12 @@ unfair a3
 unfamiliar a27
 unfathomable a1
 unfil d1
-unfinished d6a1
+unfinished y50d6a1
 unfit a3
 unfold a107
 unfolding a53
 unfortunate a296
-unframed d1
+unframed w50d1
 unfurl a2
 ungain a1
 unhapp a1
@@ -15995,8 +16410,8 @@ unknotted a1
 unleash a3
 unlikely a23
 unlimited d2i1
-unload d2
-unloaded a1 >
+unload l50d2
+unloaded j50a1 >
 from h1
 <
 unlock a1
@@ -16005,7 +16420,7 @@ unmask d1
 unnamed d1
 unnatural a25
 unoccupied d1
-unopen d3
+unopen b50d3
 unorthodox a39
 unpalatable a1
 unpleasant a3
@@ -16014,6 +16429,7 @@ unravel a64
 unreasonable a1
 unrecognisable a1
 unreliable a26
+unremember j20
 unrest a20
 unrestrain a23
 unrestrained a1
@@ -16026,8 +16442,10 @@ unscramble a23
 unscrew a1
 unseate d3
 unseemly a6
-unsettled a111
-unsettling a29
+unsettle l20
+unsettled a111j20
+unsettling a29l20
+unsheathed w50
 unsight d1
 unsolve a1
 unsound a21
@@ -16051,13 +16469,14 @@ mixture a1
 spelling a1
 <
 unveil a1d1h1
+unwanted j50
 unwell a2
 unwind a5
 unwise a2
 unwont a20
 unwork r1
-unwrap a1d1
-up r728a61 >
+unwrap w50a1d1
+up r778a61 >
 across k1
 and >
 come r2
@@ -16085,14 +16504,14 @@ with r1
 <
 upbringing r2
 upcome r18
-upend r13
+upend r63
 upgrade a2
 upheaval a23
 uphill r3
 uphold r6
 upholster a1
 uplift r1
-uplifted r9
+uplifted r59
 uplifting r23 >
 part >
 of r1
@@ -16111,12 +16530,12 @@ rise r1
 <
 uppish r1
 uppity r1
-upright r3
-uprise r70a1h1
+upright r53
+uprise r90a1h1
 upriver r1
 uproar a1
 uproot a8r3
-upset a566r400 >
+upset a566r450 >
 by a2
 girl r1
 knight r1
@@ -16125,7 +16544,7 @@ sailor r1
 some r1
 <
 upside >
-down r30
+down r80
 <
 upstairs r1
 upstand r13
@@ -16134,11 +16553,13 @@ upsurge >
 in r1
 <
 uptake r1
-upturn r12
-upward r3 >
-mobile r25
+upturn r12 >
+in r50
 <
-upwards r2
+upward r3 >
+mobile r75
+<
+upwards r52
 usage a20
 use a33h3 >
 a >
@@ -16173,7 +16594,7 @@ some h2i1
 sound >
 from f1
 <
-up r6
+up r56
 <
 used a25h8 >
 about k1
@@ -16194,20 +16615,22 @@ stuff i1
 useless a2
 usher i1
 utilise a1
-utter f8
+utter f58
 utterance >
 of f1
 <
-vacant d1
-vacate d1
+vacant n50d1
+vacate n50d1
 vacillate a24
+vacuous n50
 vagrant a13
 vague a151 >
 overhear f1
 <
 vandalise a50
 vandalize a20
-vanish d1
+vanish j70l20d1
+vanquish j50l50
 vari h1
 variable a89
 variant a23
@@ -16233,7 +16656,8 @@ vehicle k1 >
 for h1
 <
 veil h1
-verbal f18 >
+vent j50l50
+verbal f68 >
 output f1
 propose f1
 <
@@ -16264,7 +16688,9 @@ phone f1
 <
 vibrate a3
 vibration a1
-vice c20
+vice c20 >
+versa r20
+<
 vicious a2
 view >
 about k1
@@ -16301,6 +16727,7 @@ vociferous f1
 voice f5 >
 by f1
 <
+void n100j50l50
 volatile a36
 volcanic a3
 voluble f1
@@ -16332,7 +16759,7 @@ around a12
 round a2r1
 <
 wangle a1
-want d20 >
+want l50j50d20 >
 last d1
 lift r1
 rid >
@@ -16353,7 +16780,7 @@ wary k1
 wash >
 up r1
 <
-waste a150d16
+waste a150j50l50d16
 wave a183
 waver a78
 wavy a52
@@ -16365,7 +16792,8 @@ out a20
 <
 wayward a42
 we >
-hear f429 >
+gather f50
+hear f479 >
 vague f1
 <
 is >
@@ -16409,11 +16837,11 @@ varied a20
 <
 welling a1
 west r2
-westbound r26
+westbound r76
 wester r1
 western r1
-westward r3
-westwards r3
+westward r53
+westwards r53
 what >
 can >
 make a1
@@ -16433,7 +16861,9 @@ make a6
 provide a1
 <
 get >
+go p50
 keep h1
+start p50
 <
 go >
 into h1
@@ -16458,6 +16888,9 @@ vegetable f1
 <
 <
 turn r1
+wind >
+up q50
+<
 you >
 might >
 catch f1
@@ -16467,7 +16900,12 @@ up f1
 <
 <
 <
-wheel r7a4 >
+what's >
+is >
+behind q50
+<
+<
+wheel r57a4 >
 over r1
 <
 when >
@@ -17147,10 +17585,13 @@ up a4r3
 windblown a1
 windswept a1
 windy a54
-wing k2
-wipe a1d1 >
+wing k2 >
+of n50
+<
+wingless w50
+wipe j50l50a1d1 >
 off d1
-out d2
+out j50l50d2
 <
 witch i1
 with h3k2 >
@@ -17252,6 +17693,7 @@ dismiss d1
 <
 heart >
 of k1
+void m50
 <
 imagination a1
 implant k1
@@ -17384,7 +17826,7 @@ variety a1
 waver a1
 working a1
 <
-withdraw r38d1 >
+withdraw r88d1 >
 for >
 example r1
 <
@@ -17392,9 +17834,9 @@ from h1
 <
 withdrawal r4d1
 wither a51
-withhold k1d1i1
+withhold j50k1d1i1
 within c70i59h4k2
-without k150d30c20i2 >
+without k150l50d30c20i2 >
 a d1 >
 hint >
 of >
@@ -17410,7 +17852,7 @@ even >
 part t1
 <
 finish d1
-limit d1
+limit w50d1
 love d2
 one d1
 oxygen d1
@@ -17428,6 +17870,9 @@ about a1
 around a1
 <
 woeful a7
+won't >
+have l50
+<
 wonderful a1
 wonky a53
 wool a20
@@ -17505,6 +17950,7 @@ around k4 >
 in r1
 <
 by i4
+for/from/of/on n50
 in c50i13h2k1
 round i1
 up i2a1k1 >
@@ -17514,6 +17960,7 @@ with i2
 <
 wrapper >
 for k1
+for/from/of/on n50
 <
 wreathed h1 >
 in c50i2
@@ -17546,7 +17993,7 @@ the h1
 <
 out d1
 retrospective r1
-up r37
+up r87
 <
 wrong a365 >
 associate a1
@@ -17572,10 +18019,10 @@ z a20
 <
 yank a20
 year k1
-yield >
+yield j50l20 >
 up r1
 <
-yielding a21
+yielding a21l20
 yo k1
 you >
 announce f1

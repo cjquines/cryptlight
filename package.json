@@ -34,7 +34,8 @@
     "!src/data/indicators.txt"
   ],
   "scripts": {
-    "build:data": "tsx scripts/build-data.ts",
+    "build:abbreviations": "tsx scripts/build-abbreviations.ts",
+    "build:indicators": "tsx scripts/build-indicators.ts",
     "build:tsc": "tsc --build tsconfig.build.json",
     "format": "prettier --write .",
     "lint": "eslint",

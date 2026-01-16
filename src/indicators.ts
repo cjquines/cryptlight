@@ -235,6 +235,7 @@ export class IndicatorMatcher {
   }
 
   insert(lemmas: string[], type: IndicatorType, score: number) {
+    lemmas = lemmas.filter(Boolean);
     if (lemmas.length === 0) {
       return;
     }
