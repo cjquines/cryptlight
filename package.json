@@ -1,6 +1,6 @@
 {
   "name": "cryptlight",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A cryptic crossword clue solving aid",
   "keywords": [
     "puzzles"
@@ -31,7 +31,7 @@
     "dist/**/*",
     "src/**/*",
     "!src/**/*.test.ts",
-    "!src/data/indicators.txt"
+    "!src/data/*.txt"
   ],
   "scripts": {
     "build:abbreviations": "tsx scripts/build-abbreviations.ts",
