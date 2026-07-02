@@ -1,7 +1,8 @@
-import { Cromulence } from "cromulence";
-import { slugify } from "cromulence";
+import { Cromulence, slugify } from "cromulence";
+import { Abbreviations } from "./abbreviations.js";
 import { datamuse } from "./datamuse.js";
 import * as Iter from "./iterable.js";
+import { lemmatize } from "./nlp.js";
 import { anagrams, interval, subsequences } from "./util.js";
 
 /** A string of "words" and how they were produced. */
@@ -81,6 +82,7 @@ class WordDerivation {
 
 export type WordsetData = {
   wordlist: Record<string, number>;
+  abbreviations: string[];
 };
 
 /**
@@ -97,6 +99,7 @@ export type WordsetData = {
  * const results = definition.intersect(wordplay).match(/.{6}/);
  */
 export class Wordset implements Iterable<WordDerivation> {
+  static abbreviations: Abbreviations;
   static cromulence: Cromulence;
 
   private seen: WordDerivation[] = [];
@@ -111,6 +114,8 @@ export class Wordset implements Iterable<WordDerivation> {
   }
 
   static load(data: WordsetData): void {
+    Wordset.abbreviations = new Abbreviations();
+    Wordset.abbreviations.parse(data.abbreviations);
     Wordset.cromulence = new Cromulence(data.wordlist);
   }
 
@@ -146,16 +151,26 @@ export class Wordset implements Iterable<WordDerivation> {
   }
 
   static async synonym(words: string): Promise<Wordset> {
-    const results = await datamuse({ meansLike: words, maxResults: 1000 });
-    return new Wordset(
-      results.map((result) => {
+    const oneLook = (
+      await datamuse({ meansLike: words, maxResults: 1000 })
+    ).map((result) => {
+      return new WordDerivation({
+        words: [slugify(result.word).toUpperCase()],
+        description: `synonym of "${words}"`,
+        parents: [],
+      });
+    });
+    const abbreviations = Iter.map(
+      lemmatize(words).flatMap(({ lemma }) => Wordset.abbreviations.get(lemma)),
+      ({ abbreviation }) => {
         return new WordDerivation({
-          words: [slugify(result.word).toUpperCase()],
-          description: `synonym of "${words}"`,
+          words: [slugify(abbreviation).toUpperCase()],
+          description: `abbreviation of "${words}"`,
           parents: [],
         });
-      }),
+      },
     );
+    return new Wordset(Iter.chain([oneLook, abbreviations]));
   }
 
   // cryptic-y transformations:
@@ -543,6 +558,9 @@ export class Wordset implements Iterable<WordDerivation> {
    * Take only the words that match the given regex.
    *
    * A common special case is to take only matches of a given length.
+   *
+   * TODO: should we be adding ^...$ to this?
+   * TODO: we should really be pulling in length constraints up to synonyms
    */
   match(regex: RegExp): Wordset {
     return new Wordset(

@@ -1,13 +1,19 @@
-import { Cromulence } from "cromulence";
-import { describe, expect, test } from "vitest";
+import { downloadWordsetData } from "#download";
+import { beforeAll, describe, expect, test } from "vitest";
 import * as Iter from "./iterable.js";
-import { Wordset } from "./wordset.js";
 import { runAPITests } from "./testUtil.js";
+import { Wordset } from "./wordset.js";
 
 describe("wordset", () => {
-  Wordset.cromulence = new Cromulence({
-    test: 5,
-    word: 5,
+  beforeAll(async () => {
+    if (runAPITests) {
+      Wordset.load(await downloadWordsetData());
+    } else {
+      Wordset.load({
+        wordlist: { test: 5, word: 5 },
+        abbreviations: ["about A 50 C 50 CA 107 IS 2 OF 5 ON 94 RE 53"],
+      });
+    }
   });
 
   test("literal", () => {
@@ -252,7 +258,7 @@ describe("wordset", () => {
           Iter.chain([
             Wordset.literal("test"),
             Wordset.literal("wo rd"),
-            Wordset.literal("nonexistent"),
+            Wordset.literal("qwertyuiop"),
           ]),
         ).wordlike(),
       ),
@@ -290,7 +296,7 @@ describe("wordset", () => {
     const tadConfused = Wordset.literal("tad").anagram();
     const returningProfit = (await Wordset.synonym("profit")).reverse();
     const wordplay = tadConfused.insert(returningProfit);
-    const results = Array.from(definition.intersect(wordplay).match(/.{6}/));
+    const results = Array.from(definition.intersect(wordplay).match(/^.{6}$/));
 
     expect(results).toEqual([
       expect.objectContaining({
@@ -301,5 +307,19 @@ describe("wordset", () => {
     expect(results[0]!.description).toMatchInlineSnapshot(
       `"synonym of "Escort" = AT(TEN<)D*"`,
     );
+  });
+
+  test.runIf(runAPITests)("combined operations 2", async () => {
+    const wordplay = (await Wordset.synonym("yard"))
+      .insert(await Wordset.synonym("weak"))
+      .reverse();
+    const results = Array.from(
+      (await Wordset.synonym("sagging")).intersect(wordplay).match(/^.{6}$/),
+    );
+    expect(results).toEqual([
+      expect.objectContaining({
+        words: ["DROOPY"],
+      }),
+    ]);
   });
 });
