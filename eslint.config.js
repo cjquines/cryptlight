@@ -4,7 +4,12 @@ import tseslint from "typescript-eslint";
 import vitest from "@vitest/eslint-plugin";
 
 export default defineConfig([
-  globalIgnores(["app", "dist"]),
+  globalIgnores([
+    "app",
+    "dist",
+    "src/dsl/parser.ts",
+    "src/dsl/parser.terms.ts",
+  ]),
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
@@ -28,6 +33,10 @@ export default defineConfig([
     plugins: { vitest },
     rules: {
       ...vitest.configs.recommended.rules,
+      "vitest/expect-expect": [
+        "error",
+        { assertFunctionNames: ["expect", "parses"] },
+      ],
     },
   },
 ]);
