@@ -1,0 +1,53 @@
+@top Program { expression }
+
+@skip { space }
+
+@precedence {
+  postfix,
+  prefix @right,
+  concat @left,
+  intersect @left
+}
+
+expression {
+  Word |
+  Parenthesized |
+  Postfix |
+  Call |
+  Index |
+  Prefix |
+  Concat |
+  Intersect
+}
+
+Word { identifier | quoted }
+
+Parenthesized { "(" expression ")" }
+
+Postfix { expression !postfix (Anagram | Reverse | Lookup) }
+Anagram { "*" }
+Reverse { "<" }
+Lookup { "?" }
+
+Call { expression !postfix "." OpName ArgList? }
+OpName { identifier }
+ArgList { "(" (Argument ("," Argument)*)? ")" }
+Argument { expression | Number }
+
+Index { expression !postfix "[" Number "]" }
+
+Prefix { OpName ":" !prefix expression }
+
+Concat { expression !concat "+" expression }
+
+Intersect { expression !intersect "=" expression }
+
+@tokens {
+  space { @whitespace+ }
+  identifier { $[a-zA-Z]+ }
+  quoted { '"' $[a-zA-Z ]+ '"' }
+  Number { "-"? $[0-9]+ }
+  "." "(" ")" "[" "]" ":" "+" "=" "*" "<" "?" ","
+}
+
+@detectDelim
