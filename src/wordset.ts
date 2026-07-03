@@ -1,9 +1,10 @@
 import { Cromulence, slugify } from "cromulence";
 import { Abbreviations } from "./abbreviations.js";
+import * as AsyncIter from "./asyncIterable.js";
 import { datamuse } from "./datamuse.js";
-import * as Iter from "./iterable.js";
 import { lemmatize } from "./nlp.js";
-import { anagrams, interval, subsequences } from "./util.js";
+import { Regex } from "./regex.js";
+import { anagrams, Interval, interval, subsequences } from "./util.js";
 
 /** A string of "words" and how they were produced. */
 class WordDerivation {
@@ -78,6 +79,10 @@ class WordDerivation {
     }
     return mapped.join("");
   }
+
+  ifMatches(need: Regex): this | null {
+    return need.test(this.joined) ? this : null;
+  }
 }
 
 export type WordsetData = {
@@ -86,32 +91,21 @@ export type WordsetData = {
 };
 
 /**
- * A set of "words". Wordsets are an abstraction for doing transformations over
- * multiple possibilities at once, which we can intersect and filter as needed.
+ * A lazy pipeline over "words", materialized as an iterator of WordDerivations
+ * exactly once.
  *
  * For example, the solution to the cryptic clue "Escort is tad confused about
  * returning profit (6)" can be found by:
  *
- * const definition = await Wordset.synonym("Escort");
+ * const definition = Wordset.synonym("Escort");
  * const tadConfused = Wordset.literal("tad").anagram();
- * const returningProfit = await Wordset.synonym("profit").reverse();
+ * const returningProfit = Wordset.synonym("profit").reverse();
  * const wordplay = tadConfused.insert(returningProfit);
- * const results = definition.intersect(wordplay).match(/.{6}/);
+ * const results = await definition.intersect(wordplay).matches(/^.{6}$/);
  */
-export class Wordset implements Iterable<WordDerivation> {
+export abstract class Wordset {
   static abbreviations: Abbreviations;
   static cromulence: Cromulence;
-
-  private seen: WordDerivation[] = [];
-  private iter: Iterator<WordDerivation>;
-
-  constructor(items: Iterator<WordDerivation> | Iterable<WordDerivation>) {
-    if (typeof items === "object" && "next" in items) {
-      this.iter = items;
-    } else {
-      this.iter = items[Symbol.iterator]();
-    }
-  }
 
   static load(data: WordsetData): void {
     Wordset.abbreviations = new Abbreviations();
@@ -119,58 +113,70 @@ export class Wordset implements Iterable<WordDerivation> {
     Wordset.cromulence = new Cromulence(data.wordlist);
   }
 
-  [Symbol.iterator](): Iterator<WordDerivation> {
-    let index = 0;
+  /** Possible `joined` lengths of results. */
+  abstract _length(): Interval;
 
-    return {
-      next: () => {
-        while (index >= this.seen.length) {
-          const item = this.iter.next();
-          if (item.done) {
-            return { value: undefined, done: true };
-          }
-          this.seen.push(item.value);
-        }
-        return { value: this.seen[index++]!, done: false };
-      },
-    };
+  /**
+   * Yield WordDerivations (or null) matching the wordset filters and the
+   * given regex.
+   */
+  abstract _run(regex: Regex): AsyncIterable<WordDerivation | null>;
+
+  #length: Interval | null = null;
+
+  /** Possible `joined` lengths of results. */
+  get length(): Interval {
+    return (this.#length ??= this._length());
   }
 
+  private hasRun = false;
+
+  /**
+   * Yield WordDerivations matching the wordset filters and the given regex.
+   * Single-use.
+   */
+  async *run(
+    input?: string | RegExp | Regex | Interval,
+  ): AsyncIterable<WordDerivation> {
+    if (this.hasRun) {
+      throw new Error("Wordset.run may only be called once");
+    }
+    this.hasRun = true;
+
+    if (input instanceof Interval && input.isEmpty()) {
+      return;
+    }
+
+    const regex =
+      input === undefined
+        ? new Regex(/^.*$/)
+        : input instanceof Interval
+          ? new Regex(input.regex)
+          : input instanceof Regex
+            ? input
+            : new Regex(input);
+
+    if (regex.length.isEmpty()) {
+      return;
+    }
+
+    for await (const item of this._run(regex)) {
+      if (item !== null) {
+        yield item;
+      }
+    }
+  }
+
+  // sources:
+
+  /** A literal string. */
   static literal(words: string): Wordset {
-    const slugs = words
-      .split(" ")
-      .map((word) => slugify(word).toUpperCase())
-      .filter((slug) => slug.length > 0);
-    return new Wordset([
-      new WordDerivation({
-        words: slugs,
-        description: `literal "${words}"`,
-        parents: [],
-      }),
-    ]);
+    return new Literal(words);
   }
 
-  static async synonym(words: string): Promise<Wordset> {
-    const oneLook = (
-      await datamuse({ meansLike: words, maxResults: 1000 })
-    ).map((result) => {
-      return new WordDerivation({
-        words: [slugify(result.word).toUpperCase()],
-        description: `synonym of "${words}"`,
-        parents: [],
-      });
-    });
-    const abbreviations = Iter.map(
-      lemmatize(words).flatMap(({ lemma }) => Wordset.abbreviations.get(lemma)),
-      ({ abbreviation }) => {
-        return new WordDerivation({
-          words: [slugify(abbreviation).toUpperCase()],
-          description: `abbreviation of "${words}"`,
-          parents: [],
-        });
-      },
-    );
-    return new Wordset(Iter.chain([oneLook, abbreviations]));
+  /** A synonym (or abbreviation) of some string. */
+  static synonym(words: string): Wordset {
+    return new Synonym(words);
   }
 
   // cryptic-y transformations:
@@ -182,16 +188,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * but we don't check that.
    */
   anagram(): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, (item) => {
-        return Iter.map(anagrams(item.joined), (anagram) => {
-          return new WordDerivation({
-            description: `${anagram}*`,
-            parents: [item],
-          });
-        });
-      }),
-    );
+    return new Anagram(this);
   }
 
   /**
@@ -201,15 +198,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * though, because this preserve spacing.
    */
   concat(other: Wordset): Wordset {
-    return new Wordset(
-      Iter.map(Iter.product(this, other), ([left, right]) => {
-        return new WordDerivation({
-          words: [...left.words, ...right.words],
-          description: `${left}+${right}`,
-          parents: [left, right],
-        });
-      }),
-    );
+    return new Concat(this, other);
   }
 
   /**
@@ -219,26 +208,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * Compare with remove, which takes indices, rather than letters.
    */
   delete(other: Wordset): Wordset {
-    return new Wordset(
-      Iter.flatMap(Iter.product(this, other), function* ([whole, part]) {
-        if (whole.joined.length <= part.joined.length) {
-          return;
-        }
-
-        for (const indices of subsequences(whole.joined, part.joined)) {
-          const description = whole.mapString((letter, i) => [
-            indices.has(i) && !indices.has(i - 1) ? "(-" : "",
-            indices.has(i) ? letter.toLowerCase() : letter,
-            indices.has(i) && !indices.has(i + 1) ? ")" : "",
-          ]);
-
-          yield new WordDerivation({
-            description,
-            parents: [whole, part],
-          });
-        }
-      }),
-    );
+    return new Delete(this, other);
   }
 
   /**
@@ -248,79 +218,21 @@ export class Wordset implements Iterable<WordDerivation> {
    * Compare with remove, which takes indices, rather than letters.
    */
   deleteAll(other: Wordset): Wordset {
-    return new Wordset(
-      Iter.flatMap(Iter.product(this, other), function* ([whole, part]) {
-        const splits = whole.joined.split(part.joined);
-        if (splits.length === 1) {
-          return;
-        }
-
-        const indices = new Set(
-          splits.slice(0, -1).reduce<number[]>((acc, split) => {
-            const base = (acc.at(-1) ?? -1) + 1 + split.length;
-            return [...acc, ...interval(base, base + part.joined.length - 1)];
-          }, []),
-        );
-
-        yield new WordDerivation({
-          description: whole.mapString((letter, i) => [
-            indices.has(i) && !indices.has(i - 1) ? "(-" : "",
-            indices.has(i) ? letter.toLowerCase() : letter,
-            indices.has(i) && !indices.has(i + 1) ? ")" : "",
-          ]),
-          parents: [whole, part],
-        });
-      }),
-    );
+    return new DeleteAll(this, other);
   }
 
   /**
    * Delete some (strictly) middle substring of this: T(-hi)S.
    */
   ends(): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        for (const start of interval(1, item.joined.length - 2)) {
-          for (const end of interval(start + 1, item.joined.length - 1)) {
-            yield new WordDerivation({
-              description: item.mapString((letter, i) => [
-                i === start ? "(-" : "",
-                start <= i && i < end ? letter.toLowerCase() : letter,
-                i === end - 1 ? ")" : "",
-              ]),
-              parents: [item],
-            });
-          }
-        }
-      }),
-    );
+    return new Ends(this);
   }
 
   /**
    * A homophone of this: "THIS".
    */
-  async homophone(): Promise<Wordset> {
-    const promises = await Promise.all(
-      Array.from(this).map(async (item) => {
-        const phrase = item.words.join(" ");
-        return {
-          item,
-          phrase,
-          results: await datamuse({ soundsLike: phrase }),
-        };
-      }),
-    );
-    return new Wordset(
-      Iter.flatMap(promises, ({ item, phrase, results }) =>
-        results.map((result) => {
-          const { word: homophone } = result;
-          return new WordDerivation({
-            description: `${homophone.toUpperCase()} "${phrase}"`,
-            parents: [item],
-          });
-        }),
-      ),
-    );
+  homophone(): Wordset {
+    return new Homophone(this);
   }
 
   /**
@@ -329,19 +241,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * This is called "containment" in cryptic clues.
    */
   insert(other: Wordset): Wordset {
-    return new Wordset(
-      Iter.flatMap(Iter.product(this, other), function* ([container, content]) {
-        for (const i of interval(1, container.joined.length - 1)) {
-          yield new WordDerivation({
-            description: container.mapString((letter, j) => [
-              j === i ? `(${content})` : "",
-              letter,
-            ]),
-            parents: [container, content],
-          });
-        }
-      }),
-    );
+    return new Insert(this, other);
   }
 
   /**
@@ -350,19 +250,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * Special case of substring.
    */
   prefix(): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        for (const i of interval(item.joined.length - 1, 1, -1)) {
-          yield new WordDerivation({
-            description: item.mapString((letter, j) => [
-              j === i ? "_" : "",
-              j < i ? letter : "",
-            ]),
-            parents: [item],
-          });
-        }
-      }),
-    );
+    return new Prefix(this);
   }
 
   /**
@@ -372,35 +260,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * removing the last letters.
    */
   remove(indices: number[]): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        const valid = item.words.every((word) =>
-          indices.every((idx) =>
-            idx >= 0 ? word.length > idx : word.length >= -idx,
-          ),
-        );
-
-        if (!valid) {
-          return;
-        }
-
-        const descriptions = item.words.map((word) =>
-          Array.from(word)
-            .map((letter, i) =>
-              indices.includes(i) || indices.includes(i - word.length)
-                ? `(-${letter.toLowerCase()})`
-                : letter,
-            )
-            .join(""),
-        );
-
-        yield new WordDerivation({
-          words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
-          description: descriptions.join(" "),
-          parents: [item],
-        });
-      }),
-    );
+    return new Remove(this, indices);
   }
 
   /**
@@ -410,15 +270,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * fine to reverse a wordset with more than one item.
    */
   reverse(): Wordset {
-    return new Wordset(
-      Iter.map(this, (item) => {
-        const reversed = Array.from(item.joined);
-        return new WordDerivation({
-          description: `${item.mapString(() => [reversed.pop()!])}<`,
-          parents: [item],
-        });
-      }),
-    );
+    return new Reverse(this);
   }
 
   /**
@@ -428,37 +280,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * selecting the last letters.
    */
   select(indices: number[]): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        const valid = item.words.every((word) =>
-          indices.every((idx) =>
-            idx >= 0 ? word.length > idx : word.length >= -idx,
-          ),
-        );
-
-        if (!valid) {
-          return;
-        }
-
-        const descriptions = item.words.map((word) =>
-          Array.from(word)
-            .map((letter, i) =>
-              indices.includes(i) || indices.includes(i - word.length)
-                ? `_${letter}_`
-                : "",
-            )
-            .join("")
-            .replaceAll(/__+/g, "_")
-            .replaceAll(/(^_)|(_$)/g, ""),
-        );
-
-        yield new WordDerivation({
-          words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
-          description: descriptions.join(" "),
-          parents: [item],
-        });
-      }),
-    );
+    return new Select(this, indices);
   }
 
   /**
@@ -467,38 +289,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * This is called "hidden word" in cryptic clues.
    */
   substring(): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        const full = item.words.join("");
-
-        // We need to preserve spacing: the substring of "bath island" is
-        // "_TH IS_", not "_THIS_". (Prefix and suffix indicators don't tend to
-        // be multi-word, so we don't do the same thing for those.)
-        const spaces = item.words.reduce<number[]>(
-          (acc, word) => [...acc, (acc.at(-1) ?? 0) + word.length],
-          [],
-        );
-
-        for (const start of interval(0, full.length - 1)) {
-          for (const end of interval(start, full.length - 1)) {
-            const descriptions = [
-              start > 0 ? "_" : "",
-              ...interval(start, end).flatMap((i) => [
-                spaces.includes(i) && i !== start ? " " : "",
-                full[i]!,
-              ]),
-              end < full.length ? "_" : "",
-            ].join("");
-
-            yield new WordDerivation({
-              words: [descriptions.replaceAll(/[^A-Z]/g, "")],
-              description: descriptions,
-              parents: [item],
-            });
-          }
-        }
-      }),
-    );
+    return new Substring(this);
   }
 
   /**
@@ -507,19 +298,7 @@ export class Wordset implements Iterable<WordDerivation> {
    * Special case of substring.
    */
   suffix(): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        for (const i of interval(1, item.joined.length - 1)) {
-          yield new WordDerivation({
-            description: item.mapString((letter, j) => [
-              j === i ? `_` : "",
-              j >= i ? letter : "",
-            ]),
-            parents: [item],
-          });
-        }
-      }),
-    );
+    return new Suffix(this);
   }
 
   // non-cryptic-y transformations:
@@ -530,46 +309,11 @@ export class Wordset implements Iterable<WordDerivation> {
    * We ignore spacing when intersecting.
    */
   intersect(other: Wordset): Wordset {
-    // TODO: optimize by chunking the wordsets, rather than wholesale
-    // intersecting
-    const map = new Map<string, WordDerivation>();
-
-    for (const item of other) {
-      if (!map.has(item.joined)) {
-        map.set(item.joined, item);
-      }
-    }
-
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        if (map.has(item.joined)) {
-          const other = map.get(item.joined)!;
-          yield new WordDerivation({
-            words: item.words,
-            description: `${item.description} = ${other.description}`,
-            parents: [item, other],
-          });
-        }
-      }),
-    );
+    return new Intersect(this, other);
   }
 
-  /**
-   * Take only the words that match the given regex.
-   *
-   * A common special case is to take only matches of a given length.
-   *
-   * TODO: should we be adding ^...$ to this?
-   * TODO: we should really be pulling in length constraints up to synonyms
-   */
-  match(regex: RegExp): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        if (regex.test(item.joined)) {
-          yield item;
-        }
-      }),
-    );
+  union(other: Wordset): Wordset {
+    return new Union(this, other);
   }
 
   /**
@@ -578,12 +322,626 @@ export class Wordset implements Iterable<WordDerivation> {
    * Specifically, we take the words that have a non-negative cromulence.
    */
   wordlike(): Wordset {
-    return new Wordset(
-      Iter.flatMap(this, function* (item) {
-        if (Wordset.cromulence.cromulence(item.joined) >= 0) {
-          yield item;
+    return new Wordlike(this);
+  }
+
+  // convenience sinks:
+
+  async matches(
+    input?: string | RegExp | Regex | Interval,
+  ): Promise<WordDerivation[]> {
+    const matches: WordDerivation[] = [];
+    for await (const item of this.run(input)) {
+      matches.push(item);
+    }
+    return matches;
+  }
+
+  async all(): Promise<WordDerivation[]> {
+    return this.matches();
+  }
+}
+
+class Literal extends Wordset {
+  private derivation: WordDerivation;
+
+  constructor(words: string) {
+    super();
+    const slugs = words
+      .split(" ")
+      .map((word) => slugify(word).toUpperCase())
+      .filter((slug) => slug.length > 0);
+    this.derivation = new WordDerivation({
+      words: slugs,
+      description: `literal "${words}"`,
+      parents: [],
+    });
+  }
+
+  _length(): Interval {
+    return Interval.of(this.derivation.joined.length);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await -- intentional
+  async *_run(args: Regex): AsyncIterable<WordDerivation | null> {
+    yield this.derivation.ifMatches(args);
+  }
+}
+
+class Synonym extends Wordset {
+  private words: string;
+
+  constructor(words: string) {
+    super();
+    this.words = words;
+  }
+
+  _length(): Interval {
+    return Interval.positive;
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    const oneLook = await datamuse({ meansLike: this.words, maxResults: 1000 });
+    for (const result of oneLook) {
+      yield new WordDerivation({
+        words: [slugify(result.word).toUpperCase()],
+        description: `synonym of "${this.words}"`,
+        parents: [],
+      }).ifMatches(regex);
+    }
+    for (const { lemma } of lemmatize(this.words)) {
+      for (const { abbreviation } of Wordset.abbreviations.get(lemma)) {
+        yield new WordDerivation({
+          words: [slugify(abbreviation).toUpperCase()],
+          description: `abbreviation of "${this.words}"`,
+          parents: [],
+        }).ifMatches(regex);
+      }
+    }
+  }
+}
+
+// cryptic-y transformations:
+
+class Anagram extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return this.parent.length;
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const parent of this.parent.run(regex.length)) {
+      for (const anagram of anagrams(parent.joined)) {
+        yield new WordDerivation({
+          description: `${anagram}*`,
+          parents: [parent],
+        }).ifMatches(regex);
+      }
+    }
+  }
+}
+
+// like concat or insert
+abstract class SumSet extends Wordset {
+  protected left: Wordset;
+  protected right: Wordset;
+
+  constructor(left: Wordset, right: Wordset) {
+    super();
+    this.left = left;
+    this.right = right;
+  }
+
+  _length(): Interval {
+    return this.left.length.add(this.right.length);
+  }
+
+  protected abstract combine(
+    left: WordDerivation,
+    right: WordDerivation,
+  ): Iterable<WordDerivation>;
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    // TODO: slice rather than just length
+    for await (const [left, right] of AsyncIter.product(
+      this.left.run(this.left.length.meet(regex.length.sub(this.right.length))),
+      this.right.run(
+        this.right.length.meet(regex.length.sub(this.left.length)),
+      ),
+    )) {
+      for (const deriv of this.combine(left, right)) {
+        yield deriv.ifMatches(regex);
+      }
+    }
+  }
+}
+
+class Concat extends SumSet {
+  protected *combine(
+    left: WordDerivation,
+    right: WordDerivation,
+  ): Iterable<WordDerivation> {
+    yield new WordDerivation({
+      words: [...left.words, ...right.words],
+      description: `${left}+${right}`,
+      parents: [left, right],
+    });
+  }
+}
+
+class Insert extends SumSet {
+  protected *combine(
+    container: WordDerivation,
+    content: WordDerivation,
+  ): Iterable<WordDerivation> {
+    for (const i of interval(1, container.joined.length - 1)) {
+      yield new WordDerivation({
+        description: container.mapString((letter, j) => [
+          j === i ? `(${content})` : "",
+          letter,
+        ]),
+        parents: [container, content],
+      });
+    }
+  }
+}
+
+class Delete extends Wordset {
+  private whole: Wordset;
+  private part: Wordset;
+
+  constructor(whole: Wordset, part: Wordset) {
+    super();
+    this.whole = whole;
+    this.part = part;
+  }
+
+  _length(): Interval {
+    return this.whole.length.sub(this.part.length).meet(Interval.positive);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const [whole, part] of AsyncIter.product(
+      this.whole.run(
+        this.whole.length.meet(regex.length.add(this.part.length)),
+      ),
+      this.part.run(this.part.length.meet(this.whole.length.sub(regex.length))),
+    )) {
+      if (whole.joined.length <= part.joined.length) {
+        continue;
+      }
+
+      for (const indices of subsequences(whole.joined, part.joined)) {
+        yield new WordDerivation({
+          description: whole.mapString((letter, i) => [
+            indices.has(i) && !indices.has(i - 1) ? "(-" : "",
+            indices.has(i) ? letter.toLowerCase() : letter,
+            indices.has(i) && !indices.has(i + 1) ? ")" : "",
+          ]),
+          parents: [whole, part],
+        }).ifMatches(regex);
+      }
+    }
+  }
+}
+
+class DeleteAll extends Wordset {
+  private whole: Wordset;
+  private part: Wordset;
+
+  constructor(whole: Wordset, part: Wordset) {
+    super();
+    this.whole = whole;
+    this.part = part;
+  }
+
+  _length(): Interval {
+    return Interval.of(0, this.whole.length.sub(this.part.length).max);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const [whole, part] of AsyncIter.product(
+      this.whole.run(
+        Interval.of(
+          regex.length.add(this.part.length).min,
+          this.whole.length.max,
+        ),
+      ),
+      this.part.run(this.part.length.meet(Interval.positive)),
+    )) {
+      const splits = whole.joined.split(part.joined);
+      if (splits.length === 1) {
+        continue;
+      }
+
+      const indices = new Set(
+        splits.slice(0, -1).reduce<number[]>((acc, split) => {
+          const base = (acc.at(-1) ?? -1) + 1 + split.length;
+          return [...acc, ...interval(base, base + part.joined.length - 1)];
+        }, []),
+      );
+
+      yield new WordDerivation({
+        description: whole.mapString((letter, i) => [
+          indices.has(i) && !indices.has(i - 1) ? "(-" : "",
+          indices.has(i) ? letter.toLowerCase() : letter,
+          indices.has(i) && !indices.has(i + 1) ? ")" : "",
+        ]),
+        parents: [whole, part],
+      }).ifMatches(regex);
+    }
+  }
+}
+
+class Ends extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return Interval.of(2, Math.max(2, this.parent.length.max - 1));
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(regex.length.min + 1, Infinity)),
+    )) {
+      for (const start of interval(1, item.joined.length - 2)) {
+        for (const end of interval(start + 1, item.joined.length - 1)) {
+          yield new WordDerivation({
+            description: item.mapString((letter, i) => [
+              i === start ? "(-" : "",
+              start <= i && i < end ? letter.toLowerCase() : letter,
+              i === end - 1 ? ")" : "",
+            ]),
+            parents: [item],
+          }).ifMatches(regex);
         }
-      }),
-    );
+      }
+    }
+  }
+}
+
+class Homophone extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return Interval.positive;
+  }
+
+  async *_run(need: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run()) {
+      const phrase = item.words.join(" ");
+      const results = await datamuse({ soundsLike: phrase });
+      for (const result of results) {
+        yield new WordDerivation({
+          description: `${result.word.toUpperCase()} "${phrase}"`,
+          parents: [item],
+        }).ifMatches(need);
+      }
+    }
+  }
+}
+
+class Prefix extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return Interval.of(1, Math.max(1, this.parent.length.max - 1));
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(regex.length.min, Infinity)),
+    )) {
+      for (const i of interval(item.joined.length - 1, 1, -1)) {
+        yield new WordDerivation({
+          description: item.mapString((letter, j) => [
+            j === i ? "_" : "",
+            j < i ? letter : "",
+          ]),
+          parents: [item],
+        }).ifMatches(regex);
+      }
+    }
+  }
+}
+
+class Remove extends Wordset {
+  private parent: Wordset;
+  private indices: number[];
+
+  constructor(parent: Wordset, indices: number[]) {
+    super();
+    this.parent = parent;
+    this.indices = indices;
+  }
+
+  _length(): Interval {
+    return Interval.of(0, this.parent.length.max);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run()) {
+      const valid = item.words.every((word) =>
+        this.indices.every((idx) =>
+          idx >= 0 ? word.length > idx : word.length >= -idx,
+        ),
+      );
+
+      if (!valid) {
+        continue;
+      }
+
+      const descriptions = item.words.map((word) =>
+        Array.from(word)
+          .map((letter, i) =>
+            this.indices.includes(i) || this.indices.includes(i - word.length)
+              ? `(-${letter.toLowerCase()})`
+              : letter,
+          )
+          .join(""),
+      );
+
+      yield new WordDerivation({
+        words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
+        description: descriptions.join(" "),
+        parents: [item],
+      }).ifMatches(regex);
+    }
+  }
+}
+
+class Reverse extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return this.parent.length;
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    // TODO: push positional constraints of regex
+    for await (const item of this.parent.run(regex.length)) {
+      const reversed = Array.from(item.joined);
+      yield new WordDerivation({
+        description: `${item.mapString(() => [reversed.pop()!])}<`,
+        parents: [item],
+      }).ifMatches(regex);
+    }
+  }
+}
+
+class Select extends Wordset {
+  private parent: Wordset;
+  private indices: number[];
+
+  constructor(parent: Wordset, indices: number[]) {
+    super();
+    this.parent = parent;
+    this.indices = indices;
+  }
+
+  _length(): Interval {
+    return Interval.of(0, this.parent.length.max);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run()) {
+      const valid = item.words.every((word) =>
+        this.indices.every((idx) =>
+          idx >= 0 ? word.length > idx : word.length >= -idx,
+        ),
+      );
+
+      if (!valid) {
+        continue;
+      }
+
+      const descriptions = item.words.map((word) =>
+        Array.from(word)
+          .map((letter, i) =>
+            this.indices.includes(i) || this.indices.includes(i - word.length)
+              ? `_${letter}_`
+              : "",
+          )
+          .join("")
+          .replaceAll(/__+/g, "_")
+          .replaceAll(/(^_)|(_$)/g, ""),
+      );
+
+      yield new WordDerivation({
+        words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
+        description: descriptions.join(" "),
+        parents: [item],
+      }).ifMatches(regex);
+    }
+  }
+}
+
+class Substring extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return Interval.of(1, this.parent.length.max);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(regex.length.min, Infinity)),
+    )) {
+      const full = item.words.join("");
+
+      // We need to preserve spacing: the substring of "bath island" is
+      // "_TH IS_", not "_THIS_". (Prefix and suffix indicators don't tend to
+      // be multi-word, so we don't do the same thing for those.)
+      const spaces = item.words.reduce<number[]>(
+        (acc, word) => [...acc, (acc.at(-1) ?? 0) + word.length],
+        [],
+      );
+
+      for (const start of interval(0, full.length - 1)) {
+        for (const end of interval(start, full.length - 1)) {
+          const descriptions = [
+            start > 0 ? "_" : "",
+            ...interval(start, end).flatMap((i) => [
+              spaces.includes(i) && i !== start ? " " : "",
+              full[i]!,
+            ]),
+            end < full.length ? "_" : "",
+          ].join("");
+
+          yield new WordDerivation({
+            words: [descriptions.replaceAll(/[^A-Z]/g, "")],
+            description: descriptions,
+            parents: [item],
+          }).ifMatches(regex);
+        }
+      }
+    }
+  }
+}
+
+class Suffix extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return Interval.of(1, Math.max(1, this.parent.length.max - 1));
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(regex.length.min, Infinity)),
+    )) {
+      for (const i of interval(1, item.joined.length - 1)) {
+        yield new WordDerivation({
+          description: item.mapString((letter, j) => [
+            j === i ? "_" : "",
+            j >= i ? letter : "",
+          ]),
+          parents: [item],
+        }).ifMatches(regex);
+      }
+    }
+  }
+}
+
+// non-cryptic-y transformations:
+
+class Intersect extends Wordset {
+  private left: Wordset;
+  private right: Wordset;
+
+  constructor(left: Wordset, right: Wordset) {
+    super();
+    this.left = left;
+    this.right = right;
+  }
+
+  _length(): Interval {
+    return this.left.length.meet(this.right.length);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    const map = new Map<string, WordDerivation>();
+
+    for await (const item of this.right.run(regex)) {
+      if (!map.has(item.joined)) {
+        map.set(item.joined, item);
+      }
+    }
+
+    if (map.size === 0) {
+      return;
+    }
+
+    for await (const item of this.left.run(regex)) {
+      const other = map.get(item.joined);
+      if (other) {
+        yield new WordDerivation({
+          words: item.words,
+          description: `${item.description} = ${other.description}`,
+          parents: [item, other],
+        });
+      }
+    }
+  }
+}
+
+class Union extends Wordset {
+  private left: Wordset;
+  private right: Wordset;
+
+  constructor(left: Wordset, right: Wordset) {
+    super();
+    this.left = left;
+    this.right = right;
+  }
+
+  _length(): Interval {
+    return this.left.length.join(this.right.length);
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.left.run(regex)) {
+      yield item;
+    }
+    for await (const item of this.right.run(regex)) {
+      yield item;
+    }
+  }
+}
+
+class Wordlike extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return this.parent.length;
+  }
+
+  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(regex)) {
+      if (Wordset.cromulence.cromulence(item.joined) >= 0) {
+        yield item;
+      }
+    }
   }
 }

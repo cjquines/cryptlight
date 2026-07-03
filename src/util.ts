@@ -51,7 +51,9 @@ export function* subsequences(
   word: string,
   sub: string,
 ): Generator<Set<number>> {
-  if (sub.length === 0) return;
+  if (sub.length === 0 || sub.length > word.length) {
+    return;
+  }
 
   function* recurse(
     i: number,
@@ -75,4 +77,84 @@ export function* subsequences(
   }
 
   yield* recurse(0, 0);
+}
+
+/** An *inclusive* interval of integers. */
+export class Interval {
+  min: number;
+  max: number;
+
+  constructor(min: number, max: number) {
+    this.min = min;
+    this.max = max;
+  }
+
+  static of(min: number, max = min): Interval {
+    return new Interval(min, max);
+  }
+
+  static get positive(): Interval {
+    return new Interval(1, Infinity);
+  }
+
+  [Symbol.iterator](): Iterator<number> {
+    let index = this.min;
+
+    return {
+      next: () => {
+        if (index <= this.max) {
+          return { value: index++, done: false };
+        } else {
+          return { value: undefined, done: true };
+        }
+      },
+    };
+  }
+
+  /** The number of integers in `this`. */
+  get length(): number {
+    return Math.max(0, this.max - this.min + 1);
+  }
+
+  /** A regex matching strings with length in `this`. */
+  get regex(): RegExp {
+    const min = Math.max(0, this.min);
+    return this.max === Infinity
+      ? new RegExp(`^.{${min},}$`)
+      : new RegExp(`^.{${min},${Math.max(min, this.max)}}$`);
+  }
+
+  isEmpty(): boolean {
+    return this.min > this.max;
+  }
+
+  equals(other: Interval): boolean {
+    return this.min === other.min && this.max === other.max;
+  }
+
+  /** Possible results of `this + other`. */
+  add(other: Interval): Interval {
+    return new Interval(this.min + other.min, this.max + other.max);
+  }
+
+  /** Possible results of `this - other`. */
+  sub(other: Interval): Interval {
+    return new Interval(this.min - other.max, this.max - other.min);
+  }
+
+  /** Numbers in both `this` and `other`. */
+  meet(other: Interval): Interval {
+    return new Interval(
+      Math.max(this.min, other.min),
+      Math.min(this.max, other.max),
+    );
+  }
+
+  /** Numbers in either `this` or `other`. */
+  join(other: Interval): Interval {
+    return new Interval(
+      Math.min(this.min, other.min),
+      Math.max(this.max, other.max),
+    );
+  }
 }
