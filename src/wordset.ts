@@ -192,6 +192,16 @@ export abstract class Wordset {
   }
 
   /**
+   * Center letters of this: _HI_.
+   *
+   * Not a special case of substring, because this maps per-word.
+   */
+  // TODO: implement
+  // centers(): Wordset {
+  //   return new Centers(this);
+  // }
+
+  /**
    * Concat this with other: THIS+OTHER.
    *
    * This is called "charades" in cryptic clues. They're not quite the same,
@@ -247,7 +257,7 @@ export abstract class Wordset {
   /**
    * Prefix of this: TH_.
    *
-   * Special case of substring.
+   * Not a special case of substring, because this maps per-word.
    */
   prefix(): Wordset {
     return new Prefix(this);
@@ -295,7 +305,7 @@ export abstract class Wordset {
   /**
    * Suffix of this: _IS.
    *
-   * Special case of substring.
+   * Not a special case of substring, because this maps per-word.
    */
   suffix(): Wordset {
     return new Suffix(this);
@@ -508,42 +518,6 @@ class Concat extends Wordset {
   }
 }
 
-class Insert extends Wordset {
-  private container: Wordset;
-  private content: Wordset;
-
-  constructor(container: Wordset, content: Wordset) {
-    super();
-    this.container = container;
-    this.content = content;
-  }
-
-  _length(): Interval {
-    return this.container.length.add(this.content.length);
-  }
-
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const [container, content] of AsyncIter.product(
-      this.container.run(
-        this.container.length.meet(pattern.length.sub(this.content.length)),
-      ),
-      this.content.run(
-        this.content.length.meet(pattern.length.sub(this.container.length)),
-      ),
-    )) {
-      for (const i of interval(1, container.joined.length - 1)) {
-        yield new WordDerivation({
-          description: container.mapString((letter, j) => [
-            j === i ? `(${content})` : "",
-            letter,
-          ]),
-          parents: [container, content],
-        }).ifMatches(pattern);
-      }
-    }
-  }
-}
-
 class Delete extends Wordset {
   private whole: Wordset;
   private part: Wordset;
@@ -685,6 +659,42 @@ class Homophone extends Wordset {
         yield new WordDerivation({
           description: `${result.word.toUpperCase()} "${phrase}"`,
           parents: [item],
+        }).ifMatches(pattern);
+      }
+    }
+  }
+}
+
+class Insert extends Wordset {
+  private container: Wordset;
+  private content: Wordset;
+
+  constructor(container: Wordset, content: Wordset) {
+    super();
+    this.container = container;
+    this.content = content;
+  }
+
+  _length(): Interval {
+    return this.container.length.add(this.content.length);
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const [container, content] of AsyncIter.product(
+      this.container.run(
+        this.container.length.meet(pattern.length.sub(this.content.length)),
+      ),
+      this.content.run(
+        this.content.length.meet(pattern.length.sub(this.container.length)),
+      ),
+    )) {
+      for (const i of interval(1, container.joined.length - 1)) {
+        yield new WordDerivation({
+          description: container.mapString((letter, j) => [
+            j === i ? `(${content})` : "",
+            letter,
+          ]),
+          parents: [container, content],
         }).ifMatches(pattern);
       }
     }
