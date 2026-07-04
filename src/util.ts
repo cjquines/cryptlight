@@ -84,7 +84,7 @@ export class Interval {
   min: number;
   max: number;
 
-  constructor(min: number, max: number) {
+  private constructor(min: number, max: number) {
     this.min = min;
     this.max = max;
   }
@@ -95,6 +95,18 @@ export class Interval {
 
   static get positive(): Interval {
     return new Interval(1, Infinity);
+  }
+
+  static get nonnegative(): Interval {
+    return new Interval(0, Infinity);
+  }
+
+  static get any(): Interval {
+    return new Interval(-Infinity, Infinity);
+  }
+
+  static get empty(): Interval {
+    return new Interval(Infinity, -Infinity);
   }
 
   [Symbol.iterator](): Iterator<number> {
@@ -116,14 +128,6 @@ export class Interval {
     return Math.max(0, this.max - this.min + 1);
   }
 
-  /** A regex matching strings with length in `this`. */
-  get regex(): RegExp {
-    const min = Math.max(0, this.min);
-    return this.max === Infinity
-      ? new RegExp(`^.{${min},}$`)
-      : new RegExp(`^.{${min},${Math.max(min, this.max)}}$`);
-  }
-
   isEmpty(): boolean {
     return this.min > this.max;
   }
@@ -135,6 +139,15 @@ export class Interval {
   /** Possible results of `this + other`. */
   add(other: Interval): Interval {
     return new Interval(this.min + other.min, this.max + other.max);
+  }
+
+  /** Possible results of `sum(intervals)`. */
+  static sum(intervals: Iterable<Interval>): Interval {
+    let result = Interval.of(0);
+    for (const interval of intervals) {
+      result = result.add(interval);
+    }
+    return result;
   }
 
   /** Possible results of `this - other`. */
@@ -150,11 +163,29 @@ export class Interval {
     );
   }
 
+  /** Numbers in all `intervals`. */
+  static meet(intervals: Iterable<Interval>): Interval {
+    let result = Interval.any;
+    for (const interval of intervals) {
+      result = result.meet(interval);
+    }
+    return result;
+  }
+
   /** Numbers in either `this` or `other`. */
   join(other: Interval): Interval {
     return new Interval(
       Math.min(this.min, other.min),
       Math.max(this.max, other.max),
     );
+  }
+
+  /** Numbers in any `intervals`. */
+  static join(intervals: Iterable<Interval>): Interval {
+    let result = Interval.empty;
+    for (const interval of intervals) {
+      result = result.join(interval);
+    }
+    return result;
   }
 }

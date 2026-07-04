@@ -42,6 +42,17 @@ describe("wordset", () => {
         description: "THIS+IS",
       }),
     ]);
+    expect(
+      await Wordset.literal("cat")
+        .union(Wordset.literal("cab"))
+        .concat(Wordset.literal("dog").union(Wordset.literal("dig")))
+        .matches(/^CAT.O.$/),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["CAT", "DOG"],
+        description: "CAT+DOG",
+      }),
+    ]);
   });
 
   test("delete", async () => {
@@ -146,10 +157,10 @@ describe("wordset", () => {
 
   test("intersect, union", async () => {
     expect(
-      await Wordset.literal("hello")
-        .union(Wordset.literal("world"))
-        .intersect(Wordset.literal("world").union(Wordset.literal("peace")))
-        .all(),
+      await Wordset.intersect([
+        Wordset.literal("hello").union(Wordset.literal("world")),
+        Wordset.literal("world").union(Wordset.literal("peace")),
+      ]).all(),
     ).toEqual([
       expect.objectContaining({
         words: ["WORLD"],
@@ -168,10 +179,12 @@ describe("wordset", () => {
 
   test("remove", async () => {
     expect(
-      await Wordset.literal("hello")
-        .union(Wordset.literal("abc"))
-        .union(Wordset.literal("hello abc"))
-        .union(Wordset.literal("hello world"))
+      await Wordset.union([
+        Wordset.literal("hello"),
+        Wordset.literal("abc"),
+        Wordset.literal("hello abc"),
+        Wordset.literal("hello world"),
+      ])
         .remove([0, -3, 4])
         .all(),
     ).toEqual([
@@ -197,10 +210,12 @@ describe("wordset", () => {
 
   test("select", async () => {
     expect(
-      await Wordset.literal("hello")
-        .union(Wordset.literal("abc"))
-        .union(Wordset.literal("hello abc"))
-        .union(Wordset.literal("hello world"))
+      await Wordset.union([
+        Wordset.literal("hello"),
+        Wordset.literal("abc"),
+        Wordset.literal("hello abc"),
+        Wordset.literal("hello world"),
+      ])
         .select([0, -3, 4])
         .all(),
     ).toEqual([
@@ -211,6 +226,17 @@ describe("wordset", () => {
       expect.objectContaining({
         words: ["HLO", "WRD"],
         description: "H_L_O W_R_D",
+      }),
+    ]);
+    expect(
+      await Wordset.literal("alpha bravo charlie")
+        .select([0])
+        .concat(Wordset.literal("x"))
+        .matches(/^.{4}$/),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["A", "B", "C", "X"],
+        description: "ABC+X",
       }),
     ]);
   });
@@ -225,9 +251,11 @@ describe("wordset", () => {
 
   test("wordlike", async () => {
     expect(
-      await Wordset.literal("test")
-        .union(Wordset.literal("wo rd"))
-        .union(Wordset.literal("qwertyuiop"))
+      await Wordset.union([
+        Wordset.literal("test"),
+        Wordset.literal("wo rd"),
+        Wordset.literal("qwertyuiop"),
+      ])
         .wordlike()
         .all(),
     ).toEqual([
@@ -256,6 +284,18 @@ describe("wordset", () => {
         words: ["THISLAN"],
         description: "_TH ISL AN_",
       }),
+    );
+  });
+
+  test("matches", async () => {
+    const result = await Wordset.literal("things").matches(/^.{4,}$/);
+    expect(result.map((d) => d.words.join(""))).toContain("THINGS");
+  });
+
+  test("a wordset is single-use", async () => {
+    const x = Wordset.literal("ab");
+    await expect(x.concat(x).all()).rejects.toThrow(
+      "Wordset.run may only be called once",
     );
   });
 

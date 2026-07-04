@@ -45,7 +45,9 @@
   },
   "dependencies": {
     "compromise": "^14.14.5",
-    "cromulence": "^0.5.1"
+    "cromulence": "^0.5.1",
+    "regjsgen": "^0.8.0",
+    "regjsparser": "^0.13.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

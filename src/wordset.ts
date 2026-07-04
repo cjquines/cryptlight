@@ -3,7 +3,7 @@ import { Abbreviations } from "./abbreviations.js";
 import * as AsyncIter from "./asyncIterable.js";
 import { datamuse } from "./datamuse.js";
 import { lemmatize } from "./nlp.js";
-import { Regex } from "./regex.js";
+import { Pattern } from "./pattern.js";
 import { anagrams, Interval, interval, subsequences } from "./util.js";
 
 /** A string of "words" and how they were produced. */
@@ -41,11 +41,11 @@ class WordDerivation {
   constructor({
     words,
     description,
-    parents,
+    parents = [],
   }: {
     words?: string[];
     description: string;
-    parents: WordDerivation[];
+    parents?: WordDerivation[];
   }) {
     this._words = words;
     this.description = description;
@@ -80,8 +80,8 @@ class WordDerivation {
     return mapped.join("");
   }
 
-  ifMatches(need: Regex): this | null {
-    return need.test(this.joined) ? this : null;
+  ifMatches(pattern: Pattern): this | null {
+    return pattern.test(this.joined) ? this : null;
   }
 }
 
@@ -118,9 +118,9 @@ export abstract class Wordset {
 
   /**
    * Yield WordDerivations (or null) matching the wordset filters and the
-   * given regex.
+   * given pattern.
    */
-  abstract _run(regex: Regex): AsyncIterable<WordDerivation | null>;
+  abstract _run(pattern: Pattern): AsyncIterable<WordDerivation | null>;
 
   #length: Interval | null = null;
 
@@ -136,7 +136,7 @@ export abstract class Wordset {
    * Single-use.
    */
   async *run(
-    input?: string | RegExp | Regex | Interval,
+    input?: RegExp | Pattern | Interval,
   ): AsyncIterable<WordDerivation> {
     if (this.hasRun) {
       throw new Error("Wordset.run may only be called once");
@@ -147,20 +147,20 @@ export abstract class Wordset {
       return;
     }
 
-    const regex =
+    const pattern =
       input === undefined
-        ? new Regex(/^.*$/)
+        ? Pattern.any
         : input instanceof Interval
-          ? new Regex(input.regex)
-          : input instanceof Regex
+          ? Pattern.length(input)
+          : input instanceof Pattern
             ? input
-            : new Regex(input);
+            : Pattern.parse(input);
 
-    if (regex.length.isEmpty()) {
+    if (pattern.length.isEmpty()) {
       return;
     }
 
-    for await (const item of this._run(regex)) {
+    for await (const item of this._run(pattern)) {
       if (item !== null) {
         yield item;
       }
@@ -312,8 +312,38 @@ export abstract class Wordset {
     return new Intersect(this, other);
   }
 
+  static intersect(sets: Iterable<Wordset>): Wordset {
+    let result: Wordset | null = null;
+    for (const set of sets) {
+      if (result === null) {
+        result = set;
+      } else {
+        result = result.intersect(set);
+      }
+    }
+    if (result === null) {
+      throw new Error("empty intersection");
+    }
+    return result;
+  }
+
   union(other: Wordset): Wordset {
     return new Union(this, other);
+  }
+
+  static union(sets: Iterable<Wordset>): Wordset {
+    let result: Wordset | null = null;
+    for (const set of sets) {
+      if (result === null) {
+        result = set;
+      } else {
+        result = result.union(set);
+      }
+    }
+    if (result === null) {
+      throw new Error("empty union");
+    }
+    return result;
   }
 
   /**
@@ -328,7 +358,7 @@ export abstract class Wordset {
   // convenience sinks:
 
   async matches(
-    input?: string | RegExp | Regex | Interval,
+    input?: RegExp | Pattern | Interval,
   ): Promise<WordDerivation[]> {
     const matches: WordDerivation[] = [];
     for await (const item of this.run(input)) {
@@ -363,8 +393,8 @@ class Literal extends Wordset {
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await -- intentional
-  async *_run(args: Regex): AsyncIterable<WordDerivation | null> {
-    yield this.derivation.ifMatches(args);
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    yield this.derivation.ifMatches(pattern);
   }
 }
 
@@ -380,22 +410,29 @@ class Synonym extends Wordset {
     return Interval.positive;
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
-    const oneLook = await datamuse({ meansLike: this.words, maxResults: 1000 });
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    yield* Wordset.literal(this.words).run(pattern);
+
+    const oneLook = await datamuse({
+      spelledLike: pattern.oneLook,
+      meansLike: this.words,
+      maxResults: 1000,
+    });
     for (const result of oneLook) {
       yield new WordDerivation({
         words: [slugify(result.word).toUpperCase()],
         description: `synonym of "${this.words}"`,
         parents: [],
-      }).ifMatches(regex);
+      }).ifMatches(pattern);
     }
+
     for (const { lemma } of lemmatize(this.words)) {
       for (const { abbreviation } of Wordset.abbreviations.get(lemma)) {
         yield new WordDerivation({
           words: [slugify(abbreviation).toUpperCase()],
           description: `abbreviation of "${this.words}"`,
           parents: [],
-        }).ifMatches(regex);
+        }).ifMatches(pattern);
       }
     }
   }
@@ -415,22 +452,21 @@ class Anagram extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
-    for await (const parent of this.parent.run(regex.length)) {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const parent of this.parent.run(pattern.length)) {
       for (const anagram of anagrams(parent.joined)) {
         yield new WordDerivation({
           description: `${anagram}*`,
           parents: [parent],
-        }).ifMatches(regex);
+        }).ifMatches(pattern);
       }
     }
   }
 }
 
-// like concat or insert
-abstract class SumSet extends Wordset {
-  protected left: Wordset;
-  protected right: Wordset;
+class Concat extends Wordset {
+  private left: Wordset;
+  private right: Wordset;
 
   constructor(left: Wordset, right: Wordset) {
     super();
@@ -442,52 +478,68 @@ abstract class SumSet extends Wordset {
     return this.left.length.add(this.right.length);
   }
 
-  protected abstract combine(
-    left: WordDerivation,
-    right: WordDerivation,
-  ): Iterable<WordDerivation>;
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    const leftLength = this.left.length.meet(
+      pattern.length.sub(this.right.length),
+    );
+    const rightLength = this.right.length.meet(
+      pattern.length.sub(this.left.length),
+    );
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
-    // TODO: slice rather than just length
+    const leftPattern =
+      leftLength.isEmpty() || leftLength.max === Infinity
+        ? leftLength
+        : pattern.prefixes(leftLength);
+    const rightPattern =
+      rightLength.isEmpty() || rightLength.max === Infinity
+        ? rightLength
+        : pattern.reverse().prefixes(rightLength).reverse();
+
     for await (const [left, right] of AsyncIter.product(
-      this.left.run(this.left.length.meet(regex.length.sub(this.right.length))),
-      this.right.run(
-        this.right.length.meet(regex.length.sub(this.left.length)),
-      ),
+      this.left.run(leftPattern),
+      this.right.run(rightPattern),
     )) {
-      for (const deriv of this.combine(left, right)) {
-        yield deriv.ifMatches(regex);
-      }
+      yield new WordDerivation({
+        words: [...left.words, ...right.words],
+        description: `${left}+${right}`,
+        parents: [left, right],
+      }).ifMatches(pattern);
     }
   }
 }
 
-class Concat extends SumSet {
-  protected *combine(
-    left: WordDerivation,
-    right: WordDerivation,
-  ): Iterable<WordDerivation> {
-    yield new WordDerivation({
-      words: [...left.words, ...right.words],
-      description: `${left}+${right}`,
-      parents: [left, right],
-    });
-  }
-}
+class Insert extends Wordset {
+  private container: Wordset;
+  private content: Wordset;
 
-class Insert extends SumSet {
-  protected *combine(
-    container: WordDerivation,
-    content: WordDerivation,
-  ): Iterable<WordDerivation> {
-    for (const i of interval(1, container.joined.length - 1)) {
-      yield new WordDerivation({
-        description: container.mapString((letter, j) => [
-          j === i ? `(${content})` : "",
-          letter,
-        ]),
-        parents: [container, content],
-      });
+  constructor(container: Wordset, content: Wordset) {
+    super();
+    this.container = container;
+    this.content = content;
+  }
+
+  _length(): Interval {
+    return this.container.length.add(this.content.length);
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const [container, content] of AsyncIter.product(
+      this.container.run(
+        this.container.length.meet(pattern.length.sub(this.content.length)),
+      ),
+      this.content.run(
+        this.content.length.meet(pattern.length.sub(this.container.length)),
+      ),
+    )) {
+      for (const i of interval(1, container.joined.length - 1)) {
+        yield new WordDerivation({
+          description: container.mapString((letter, j) => [
+            j === i ? `(${content})` : "",
+            letter,
+          ]),
+          parents: [container, content],
+        }).ifMatches(pattern);
+      }
     }
   }
 }
@@ -506,12 +558,14 @@ class Delete extends Wordset {
     return this.whole.length.sub(this.part.length).meet(Interval.positive);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const [whole, part] of AsyncIter.product(
       this.whole.run(
-        this.whole.length.meet(regex.length.add(this.part.length)),
+        this.whole.length.meet(pattern.length.add(this.part.length)),
       ),
-      this.part.run(this.part.length.meet(this.whole.length.sub(regex.length))),
+      this.part.run(
+        this.part.length.meet(this.whole.length.sub(pattern.length)),
+      ),
     )) {
       if (whole.joined.length <= part.joined.length) {
         continue;
@@ -525,7 +579,7 @@ class Delete extends Wordset {
             indices.has(i) && !indices.has(i + 1) ? ")" : "",
           ]),
           parents: [whole, part],
-        }).ifMatches(regex);
+        }).ifMatches(pattern);
       }
     }
   }
@@ -545,11 +599,11 @@ class DeleteAll extends Wordset {
     return Interval.of(0, this.whole.length.sub(this.part.length).max);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const [whole, part] of AsyncIter.product(
       this.whole.run(
         Interval.of(
-          regex.length.add(this.part.length).min,
+          pattern.length.add(this.part.length).min,
           this.whole.length.max,
         ),
       ),
@@ -574,7 +628,7 @@ class DeleteAll extends Wordset {
           indices.has(i) && !indices.has(i + 1) ? ")" : "",
         ]),
         parents: [whole, part],
-      }).ifMatches(regex);
+      }).ifMatches(pattern);
     }
   }
 }
@@ -591,9 +645,9 @@ class Ends extends Wordset {
     return Interval.of(2, Math.max(2, this.parent.length.max - 1));
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(regex.length.min + 1, Infinity)),
+      this.parent.length.meet(Interval.of(pattern.length.min + 1, Infinity)),
     )) {
       for (const start of interval(1, item.joined.length - 2)) {
         for (const end of interval(start + 1, item.joined.length - 1)) {
@@ -604,7 +658,7 @@ class Ends extends Wordset {
               i === end - 1 ? ")" : "",
             ]),
             parents: [item],
-          }).ifMatches(regex);
+          }).ifMatches(pattern);
         }
       }
     }
@@ -623,7 +677,7 @@ class Homophone extends Wordset {
     return Interval.positive;
   }
 
-  async *_run(need: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run()) {
       const phrase = item.words.join(" ");
       const results = await datamuse({ soundsLike: phrase });
@@ -631,7 +685,7 @@ class Homophone extends Wordset {
         yield new WordDerivation({
           description: `${result.word.toUpperCase()} "${phrase}"`,
           parents: [item],
-        }).ifMatches(need);
+        }).ifMatches(pattern);
       }
     }
   }
@@ -649,9 +703,9 @@ class Prefix extends Wordset {
     return Interval.of(1, Math.max(1, this.parent.length.max - 1));
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(regex.length.min, Infinity)),
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
       for (const i of interval(item.joined.length - 1, 1, -1)) {
         yield new WordDerivation({
@@ -660,7 +714,7 @@ class Prefix extends Wordset {
             j < i ? letter : "",
           ]),
           parents: [item],
-        }).ifMatches(regex);
+        }).ifMatches(pattern);
       }
     }
   }
@@ -680,7 +734,7 @@ class Remove extends Wordset {
     return Interval.of(0, this.parent.length.max);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run()) {
       const valid = item.words.every((word) =>
         this.indices.every((idx) =>
@@ -706,7 +760,7 @@ class Remove extends Wordset {
         words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
         description: descriptions.join(" "),
         parents: [item],
-      }).ifMatches(regex);
+      }).ifMatches(pattern);
     }
   }
 }
@@ -723,14 +777,13 @@ class Reverse extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
-    // TODO: push positional constraints of regex
-    for await (const item of this.parent.run(regex.length)) {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(pattern.reverse())) {
       const reversed = Array.from(item.joined);
       yield new WordDerivation({
         description: `${item.mapString(() => [reversed.pop()!])}<`,
         parents: [item],
-      }).ifMatches(regex);
+      }).ifMatches(pattern);
     }
   }
 }
@@ -746,10 +799,12 @@ class Select extends Wordset {
   }
 
   _length(): Interval {
-    return Interval.of(0, this.parent.length.max);
+    const positive = new Set(this.indices.filter((idx) => idx >= 0)).size;
+    const negative = new Set(this.indices.filter((idx) => idx < 0)).size;
+    return Interval.of(Math.max(positive, negative), this.parent.length.max);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run()) {
       const valid = item.words.every((word) =>
         this.indices.every((idx) =>
@@ -765,19 +820,18 @@ class Select extends Wordset {
         Array.from(word)
           .map((letter, i) =>
             this.indices.includes(i) || this.indices.includes(i - word.length)
-              ? `_${letter}_`
-              : "",
+              ? letter
+              : "_",
           )
           .join("")
-          .replaceAll(/__+/g, "_")
-          .replaceAll(/(^_)|(_$)/g, ""),
+          .replaceAll(/__+/g, "_"),
       );
 
       yield new WordDerivation({
         words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
         description: descriptions.join(" "),
         parents: [item],
-      }).ifMatches(regex);
+      }).ifMatches(pattern);
     }
   }
 }
@@ -794,9 +848,9 @@ class Substring extends Wordset {
     return Interval.of(1, this.parent.length.max);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(regex.length.min, Infinity)),
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
       const full = item.words.join("");
 
@@ -823,7 +877,7 @@ class Substring extends Wordset {
             words: [descriptions.replaceAll(/[^A-Z]/g, "")],
             description: descriptions,
             parents: [item],
-          }).ifMatches(regex);
+          }).ifMatches(pattern);
         }
       }
     }
@@ -842,9 +896,9 @@ class Suffix extends Wordset {
     return Interval.of(1, Math.max(1, this.parent.length.max - 1));
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(regex.length.min, Infinity)),
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
       for (const i of interval(1, item.joined.length - 1)) {
         yield new WordDerivation({
@@ -853,7 +907,7 @@ class Suffix extends Wordset {
             j >= i ? letter : "",
           ]),
           parents: [item],
-        }).ifMatches(regex);
+        }).ifMatches(pattern);
       }
     }
   }
@@ -875,10 +929,10 @@ class Intersect extends Wordset {
     return this.left.length.meet(this.right.length);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     const map = new Map<string, WordDerivation>();
 
-    for await (const item of this.right.run(regex)) {
+    for await (const item of this.right.run(pattern)) {
       if (!map.has(item.joined)) {
         map.set(item.joined, item);
       }
@@ -888,7 +942,7 @@ class Intersect extends Wordset {
       return;
     }
 
-    for await (const item of this.left.run(regex)) {
+    for await (const item of this.left.run(pattern)) {
       const other = map.get(item.joined);
       if (other) {
         yield new WordDerivation({
@@ -915,11 +969,11 @@ class Union extends Wordset {
     return this.left.length.join(this.right.length);
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.left.run(regex)) {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.left.run(pattern)) {
       yield item;
     }
-    for await (const item of this.right.run(regex)) {
+    for await (const item of this.right.run(pattern)) {
       yield item;
     }
   }
@@ -937,8 +991,8 @@ class Wordlike extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(regex: Regex): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(regex)) {
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(pattern)) {
       if (Wordset.cromulence.cromulence(item.joined) >= 0) {
         yield item;
       }
