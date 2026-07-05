@@ -295,19 +295,30 @@ export abstract class Wordset {
   }
 
   /**
-   * Replace from with to: TH(from→TO)IS.
+   * Replace from in this with to: T(from→TO)S.
+   *
+   * Unlike `replaceAll`, this asserts from appears exactly once in this.
    */
   replace(from: Wordset, to: Wordset): Wordset {
     return new Replace(this, from, to);
   }
 
   /**
-   * Replace the letter at indices with to: (t→TO)H(i→TO)S.
+   * Replace all from in this with to: T(from→TO)S.
    *
-   * `index` may be negative, counting from the end.
+   * Replacing every instance is uncommon: you probably want `replace` instead.
    */
-  replaceAt(index: number, to: Wordset): Wordset {
-    return new ReplaceAt(this, index, to);
+  replaceAll(from: Wordset, to: Wordset): Wordset {
+    return new ReplaceAll(this, from, to);
+  }
+
+  /**
+   * Replace each word's letters at indices with to: (t→TO)H(i→TO)S.
+   *
+   * `indices` may be negative, counting from the end.
+   */
+  replaceAt(indices: number[], to: Wordset): Wordset {
+    return new ReplaceAt(this, indices, to);
   }
 
   /**
@@ -862,6 +873,79 @@ class Remove extends Wordset {
   }
 }
 
+/**
+ * Replace per-word non-overlapping occurrences of `from` in `whole` with `to`.
+ */
+function replaceOccurrences(
+  whole: WordDerivation,
+  from: string,
+  to: WordDerivation,
+): { words: string[]; description: string; count: number } {
+  const words: string[] = [];
+  const descriptions: string[] = [];
+  let count = 0;
+
+  for (const word of whole.words) {
+    let description = "";
+    let out = "";
+    for (let i = 0; i < word.length; ) {
+      if (word.startsWith(from, i)) {
+        description += `(${from.toLowerCase()}→${to})`;
+        out += to.joined;
+        i += from.length;
+        count += 1;
+      } else {
+        description += word[i]!;
+        out += word[i]!;
+        i += 1;
+      }
+    }
+    words.push(out);
+    descriptions.push(description);
+  }
+
+  return { words, description: descriptions.join(" "), count };
+}
+
+/**
+ * Replace occurrences of `from` in `whole` with `to`, keeping only results
+ * whose replacement count `accepts`.
+ */
+async function* replaceRun(
+  whole: Wordset,
+  from: Wordset,
+  to: Wordset,
+  pattern: Pattern,
+  accepts: (count: number) => boolean,
+): AsyncIterable<WordDerivation | null> {
+  const wholes = await whole.all();
+  const froms = await from.all();
+  const tos = await to.all();
+
+  for (const w of wholes) {
+    for (const f of froms) {
+      if (f.joined.length === 0) {
+        continue;
+      }
+      for (const t of tos) {
+        const { words, description, count } = replaceOccurrences(
+          w,
+          f.joined,
+          t,
+        );
+        if (!accepts(count)) {
+          continue;
+        }
+        yield new WordDerivation({
+          words,
+          description,
+          parents: [w, f, t],
+        }).ifMatches(pattern);
+      }
+    }
+  }
+}
+
 class Replace extends Wordset {
   private whole: Wordset;
   private from: Wordset;
@@ -878,41 +962,139 @@ class Replace extends Wordset {
     return this.whole.length
       .sub(this.from.length)
       .add(this.to.length)
-      .meet(Interval.positive);
+      .meet(Interval.nonnegative);
   }
 
-  // eslint-disable-next-line require-yield -- TODO: stub
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    await Promise.resolve();
-    throw new Error(`Replace._run not implemented (${pattern.source})`);
+  _run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    return replaceRun(
+      this.whole,
+      this.from,
+      this.to,
+      pattern,
+      (count) => count === 1,
+    );
+  }
+}
+
+class ReplaceAll extends Wordset {
+  private whole: Wordset;
+  private from: Wordset;
+  private to: Wordset;
+
+  constructor(whole: Wordset, from: Wordset, to: Wordset) {
+    super();
+    this.whole = whole;
+    this.from = from;
+    this.to = to;
+  }
+
+  _length(): Interval {
+    const W = this.whole.length;
+    const T = this.to.length;
+
+    const fMin = Math.max(1, this.from.length.min);
+    const fMax = Math.max(1, this.from.length.max);
+
+    const kMax = W.max === Infinity ? Infinity : Math.floor(W.max / fMin);
+    const growth = T.max - fMin;
+    const max = W.max + (growth > 0 ? kMax * growth : 0);
+
+    const wMin = Math.max(1, W.min);
+    const fFit = Math.min(fMax, wMin);
+    const shrink = T.min - fFit;
+    const min = wMin + Math.min(Math.floor(wMin / fFit) * shrink, shrink);
+
+    return Interval.of(min, max).meet(Interval.nonnegative);
+  }
+
+  _run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    return replaceRun(
+      this.whole,
+      this.from,
+      this.to,
+      pattern,
+      (count) => count >= 1,
+    );
   }
 }
 
 class ReplaceAt extends Wordset {
   private parent: Wordset;
-  private index: number;
+  private indices: number[];
   private to: Wordset;
 
-  constructor(parent: Wordset, index: number, to: Wordset) {
+  constructor(parent: Wordset, indices: number[], to: Wordset) {
     super();
     this.parent = parent;
-    this.index = index;
+    this.indices = indices;
     this.to = to;
   }
 
   _length(): Interval {
-    return this.parent.length
-      .sub(Interval.of(1))
-      .add(this.to.length)
-      .meet(Interval.positive);
+    const W = this.parent.length;
+    const T = this.to.length;
+    if (this.indices.length === 0) {
+      return W;
+    }
+
+    const max =
+      T.max >= 1
+        ? W.max === Infinity || T.max === Infinity
+          ? Infinity
+          : W.max * T.max
+        : W.max - 1;
+    const min = T.min >= 1 ? W.min + (T.min - 1) : 0;
+
+    return Interval.of(min, max).meet(Interval.nonnegative);
   }
 
-  // eslint-disable-next-line require-yield -- TODO: stub
   async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    await Promise.resolve();
-    throw new Error(
-      `ReplaceAt._run not implemented (@${this.index}, ${pattern.source})`,
-    );
+    const items = await this.parent.all();
+    const tos = await this.to.all();
+
+    for (const to of tos) {
+      for (const item of items) {
+        const valid = item.words.every((word) =>
+          this.indices.every((idx) =>
+            idx >= 0 ? word.length > idx : word.length >= -idx,
+          ),
+        );
+        if (!valid) {
+          continue;
+        }
+
+        const words: string[] = [];
+        const descriptions: string[] = [];
+        for (const word of item.words) {
+          const selected = new Set(
+            interval(0, word.length - 1).filter(
+              (i) =>
+                this.indices.includes(i) ||
+                this.indices.includes(i - word.length),
+            ),
+          );
+          let description = "";
+          let out = "";
+          for (let i = 0; i < word.length; i++) {
+            if (selected.has(i)) {
+              description += `(${word[i]!.toLowerCase()}→${to})`;
+              out += to.joined;
+            } else {
+              description += word[i]!;
+              out += word[i]!;
+            }
+          }
+          words.push(out);
+          descriptions.push(description);
+        }
+
+        yield new WordDerivation({
+          words,
+          description: descriptions.join(" "),
+          parents: [item, to],
+        }).ifMatches(pattern);
+      }
+    }
   }
 }
 

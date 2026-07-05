@@ -255,6 +255,56 @@ describe("wordset", () => {
     ]);
   });
 
+  test("replace", async () => {
+    expect(
+      await Wordset.literal("hello world")
+        .replace(
+          Wordset.literal("e").union(Wordset.literal("o")),
+          Wordset.literal("x").union(Wordset.literal("y")),
+        )
+        .all(),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["HXLLO", "WORLD"],
+        description: "H(e→X)LLO WORLD",
+      }),
+      expect.objectContaining({ words: ["HYLLO", "WORLD"] }),
+    ]);
+  });
+
+  test("replaceAll", async () => {
+    expect(
+      await Wordset.literal("hello world")
+        .replaceAll(
+          Wordset.literal("l").union(Wordset.literal("o")),
+          Wordset.literal("x").union(Wordset.literal("y")),
+        )
+        .all(),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["HEXXO", "WORXD"],
+        description: "HE(l→X)(l→X)O WOR(l→X)D",
+      }),
+      expect.objectContaining({ words: ["HEYYO", "WORYD"] }),
+      expect.objectContaining({ words: ["HELLX", "WXRLD"] }),
+      expect.objectContaining({ words: ["HELLY", "WYRLD"] }),
+    ]);
+  });
+
+  test("replaceAt", async () => {
+    expect(
+      await Wordset.literal("hello world")
+        .replaceAt([0, -1], Wordset.literal("x").union(Wordset.literal("y")))
+        .all(),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["XELLX", "XORLX"],
+        description: "(h→X)ELL(o→X) (w→X)ORL(d→X)",
+      }),
+      expect.objectContaining({ words: ["YELLY", "YORLY"] }),
+    ]);
+  });
+
   test("reverse", async () => {
     expect(await Wordset.literal("this").reverse().all()).toEqual([
       expect.objectContaining({
