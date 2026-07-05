@@ -1,6 +1,7 @@
 import { Cromulence, slugify } from "cromulence";
 import { Abbreviations } from "./abbreviations.js";
 import * as AsyncIter from "./asyncIterable.js";
+import * as Iter from "./iterable.js";
 import { datamuse } from "./datamuse.js";
 import { lemmatize } from "./nlp.js";
 import { Pattern } from "./pattern.js";
@@ -182,6 +183,13 @@ export abstract class Wordset {
   // cryptic-y transformations:
 
   /**
+   * Alternating letters of this: ThIs or tHiS.
+   */
+  alternate(offset: 0 | 1): Wordset {
+    return new Alternate(this, offset);
+  }
+
+  /**
    * Anagrams: THIS*.
    *
    * It's *probably* a mistake to anagram a wordset with more than one item,
@@ -192,14 +200,20 @@ export abstract class Wordset {
   }
 
   /**
-   * Center letters of this: _HI_.
-   *
-   * Not a special case of substring, because this maps per-word.
+   * Delete a leading substring of each word: (-t)HIS.
    */
-  // TODO: implement
-  // centers(): Wordset {
-  //   return new Centers(this);
-  // }
+  behead(): Wordset {
+    return new Slice(this, "reach", "stop", "delete");
+  }
+
+  /**
+   * Center letters of each word: _HI_.
+   *
+   * Drops an equal number (>= 1) of letters from each end, keeping the middle.
+   */
+  centers(): Wordset {
+    return new Centers(this);
+  }
 
   /**
    * Concat this with other: THIS+OTHER.
@@ -209,6 +223,13 @@ export abstract class Wordset {
    */
   concat(other: Wordset): Wordset {
     return new Concat(this, other);
+  }
+
+  /**
+   * Delete a trailing substring of each word: THI(-s).
+   */
+  curtail(): Wordset {
+    return new Slice(this, "stop", "reach", "delete");
   }
 
   /**
@@ -232,10 +253,10 @@ export abstract class Wordset {
   }
 
   /**
-   * Delete some (strictly) middle substring of this: T(-hi)S.
+   * Delete some (strictly) middle substring of each word: T(-hi)S.
    */
   ends(): Wordset {
-    return new Ends(this);
+    return new Slice(this, "stop", "stop", "delete");
   }
 
   /**
@@ -255,12 +276,12 @@ export abstract class Wordset {
   }
 
   /**
-   * Prefix of this: TH_.
+   * A (proper) prefix of each word: TH_.
    *
    * Not a special case of substring, because this maps per-word.
    */
   prefix(): Wordset {
-    return new Prefix(this);
+    return new Slice(this, "reach", "stop", "keep");
   }
 
   /**
@@ -271,6 +292,22 @@ export abstract class Wordset {
    */
   remove(indices: number[]): Wordset {
     return new Remove(this, indices);
+  }
+
+  /**
+   * Replace from with to: TH(from→TO)IS.
+   */
+  replace(from: Wordset, to: Wordset): Wordset {
+    return new Replace(this, from, to);
+  }
+
+  /**
+   * Replace the letter at indices with to: (t→TO)H(i→TO)S.
+   *
+   * `index` may be negative, counting from the end.
+   */
+  replaceAt(index: number, to: Wordset): Wordset {
+    return new ReplaceAt(this, index, to);
   }
 
   /**
@@ -303,12 +340,12 @@ export abstract class Wordset {
   }
 
   /**
-   * Suffix of this: _IS.
+   * A (proper) suffix of each word: _IS.
    *
    * Not a special case of substring, because this maps per-word.
    */
   suffix(): Wordset {
-    return new Suffix(this);
+    return new Slice(this, "stop", "reach", "keep");
   }
 
   // non-cryptic-y transformations:
@@ -450,6 +487,81 @@ class Synonym extends Wordset {
 
 // cryptic-y transformations:
 
+function renderMask(
+  words: string[],
+  survivors: Set<number>[],
+  mode: "keep" | "delete",
+): { words: string[]; description: string } {
+  const descriptions = words.map((word, w) => {
+    const keep = survivors[w]!;
+    if (mode === "keep") {
+      return Array.from(word)
+        .map((letter, i) => (keep.has(i) ? letter : "_"))
+        .join("")
+        .replaceAll(/__+/g, "_");
+    }
+    return Array.from(word)
+      .map((letter, i) => {
+        const drop = !keep.has(i);
+        return [
+          drop && (i === 0 || keep.has(i - 1)) ? "(-" : "",
+          drop ? letter.toLowerCase() : letter,
+          drop && (i === word.length - 1 || keep.has(i + 1)) ? ")" : "",
+        ].join("");
+      })
+      .join("");
+  });
+
+  return {
+    words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
+    description: descriptions.join(" "),
+  };
+}
+
+class Alternate extends Wordset {
+  private parent: Wordset;
+  private offset: 0 | 1;
+
+  constructor(parent: Wordset, offset: 0 | 1) {
+    super();
+    this.parent = parent;
+    this.offset = offset;
+  }
+
+  _length(): Interval {
+    const { min, max } = this.parent.length;
+    // For a phrase of length n, offset 0 selects ceil(n/2) letters and offset 1
+    // selects floor(n/2). The count is monotonic in n, so the bounds map
+    // directly. (The naive ceil(min)..floor(max) is empty for odd lengths.)
+    const count = (n: number) =>
+      this.offset === 0 ? Math.ceil(n / 2) : Math.floor(n / 2);
+    return Interval.of(count(min), count(max));
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+    )) {
+      // Alternation runs across the whole phrase, not per word, so the letter
+      // index keeps counting past spaces: "AbC dEfGh IjK", giving "ACEGIK".
+      let index = 0;
+      const rendered = item.words.map((word) =>
+        Array.from(word)
+          .map((letter) =>
+            index++ % 2 === this.offset ? letter : letter.toLowerCase(),
+          )
+          .join(""),
+      );
+      const description = rendered.join(" ");
+      yield new WordDerivation({
+        words: [description.replaceAll(/[^A-Z]/g, "")],
+        description,
+        parents: [item],
+      }).ifMatches(pattern);
+    }
+  }
+}
+
 class Anagram extends Wordset {
   private parent: Wordset;
 
@@ -468,6 +580,42 @@ class Anagram extends Wordset {
         yield new WordDerivation({
           description: `${anagram}*`,
           parents: [parent],
+        }).ifMatches(pattern);
+      }
+    }
+  }
+}
+
+class Centers extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return Interval.of(1, Math.max(1, this.parent.length.max - 2));
+  }
+
+  private *runs(n: number): Generator<Set<number>> {
+    for (let k = 1; n - 1 - k >= k; k++) {
+      yield new Set(interval(k, n - 1 - k));
+    }
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+    )) {
+      const perWord = item.words.map((word) => [...this.runs(word.length)]);
+      if (perWord.some((runs) => runs.length === 0)) {
+        continue;
+      }
+      for (const survivors of Iter.product(...perWord)) {
+        yield new WordDerivation({
+          ...renderMask(item.words, survivors, "keep"),
+          parents: [item],
         }).ifMatches(pattern);
       }
     }
@@ -607,38 +755,6 @@ class DeleteAll extends Wordset {
   }
 }
 
-class Ends extends Wordset {
-  private parent: Wordset;
-
-  constructor(parent: Wordset) {
-    super();
-    this.parent = parent;
-  }
-
-  _length(): Interval {
-    return Interval.of(2, Math.max(2, this.parent.length.max - 1));
-  }
-
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min + 1, Infinity)),
-    )) {
-      for (const start of interval(1, item.joined.length - 2)) {
-        for (const end of interval(start + 1, item.joined.length - 1)) {
-          yield new WordDerivation({
-            description: item.mapString((letter, i) => [
-              i === start ? "(-" : "",
-              start <= i && i < end ? letter.toLowerCase() : letter,
-              i === end - 1 ? ")" : "",
-            ]),
-            parents: [item],
-          }).ifMatches(pattern);
-        }
-      }
-    }
-  }
-}
-
 class Homophone extends Wordset {
   private parent: Wordset;
 
@@ -701,35 +817,6 @@ class Insert extends Wordset {
   }
 }
 
-class Prefix extends Wordset {
-  private parent: Wordset;
-
-  constructor(parent: Wordset) {
-    super();
-    this.parent = parent;
-  }
-
-  _length(): Interval {
-    return Interval.of(1, Math.max(1, this.parent.length.max - 1));
-  }
-
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
-      for (const i of interval(item.joined.length - 1, 1, -1)) {
-        yield new WordDerivation({
-          description: item.mapString((letter, j) => [
-            j === i ? "_" : "",
-            j < i ? letter : "",
-          ]),
-          parents: [item],
-        }).ifMatches(pattern);
-      }
-    }
-  }
-}
-
 class Remove extends Wordset {
   private parent: Wordset;
   private indices: number[];
@@ -744,6 +831,10 @@ class Remove extends Wordset {
     return Interval.of(0, this.parent.length.max);
   }
 
+  private survives(word: string, i: number): boolean {
+    return !this.indices.includes(i) && !this.indices.includes(i - word.length);
+  }
+
   async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const item of this.parent.run()) {
       const valid = item.words.every((word) =>
@@ -756,22 +847,72 @@ class Remove extends Wordset {
         continue;
       }
 
-      const descriptions = item.words.map((word) =>
-        Array.from(word)
-          .map((letter, i) =>
-            this.indices.includes(i) || this.indices.includes(i - word.length)
-              ? `(-${letter.toLowerCase()})`
-              : letter,
-          )
-          .join(""),
+      const survivors = item.words.map(
+        (word) =>
+          new Set(
+            interval(0, word.length - 1).filter((i) => this.survives(word, i)),
+          ),
       );
 
       yield new WordDerivation({
-        words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
-        description: descriptions.join(" "),
+        ...renderMask(item.words, survivors, "delete"),
         parents: [item],
       }).ifMatches(pattern);
     }
+  }
+}
+
+class Replace extends Wordset {
+  private whole: Wordset;
+  private from: Wordset;
+  private to: Wordset;
+
+  constructor(whole: Wordset, from: Wordset, to: Wordset) {
+    super();
+    this.whole = whole;
+    this.from = from;
+    this.to = to;
+  }
+
+  _length(): Interval {
+    return this.whole.length
+      .sub(this.from.length)
+      .add(this.to.length)
+      .meet(Interval.positive);
+  }
+
+  // eslint-disable-next-line require-yield -- TODO: stub
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    await Promise.resolve();
+    throw new Error(`Replace._run not implemented (${pattern.source})`);
+  }
+}
+
+class ReplaceAt extends Wordset {
+  private parent: Wordset;
+  private index: number;
+  private to: Wordset;
+
+  constructor(parent: Wordset, index: number, to: Wordset) {
+    super();
+    this.parent = parent;
+    this.index = index;
+    this.to = to;
+  }
+
+  _length(): Interval {
+    return this.parent.length
+      .sub(Interval.of(1))
+      .add(this.to.length)
+      .meet(Interval.positive);
+  }
+
+  // eslint-disable-next-line require-yield -- TODO: stub
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    await Promise.resolve();
+    throw new Error(
+      `ReplaceAt._run not implemented (@${this.index}, ${pattern.source})`,
+    );
   }
 }
 
@@ -826,22 +967,100 @@ class Select extends Wordset {
         continue;
       }
 
-      const descriptions = item.words.map((word) =>
-        Array.from(word)
-          .map((letter, i) =>
-            this.indices.includes(i) || this.indices.includes(i - word.length)
-              ? letter
-              : "_",
-          )
-          .join("")
-          .replaceAll(/__+/g, "_"),
+      const survivors = item.words.map(
+        (word) =>
+          new Set(
+            interval(0, word.length - 1).filter(
+              (i) =>
+                this.indices.includes(i) ||
+                this.indices.includes(i - word.length),
+            ),
+          ),
       );
 
       yield new WordDerivation({
-        words: descriptions.map((word) => word.replaceAll(/[^A-Z]/g, "")),
-        description: descriptions.join(" "),
+        ...renderMask(item.words, survivors, "keep"),
         parents: [item],
       }).ifMatches(pattern);
+    }
+  }
+}
+
+type Side = "reach" | "stop";
+
+/**
+ * Slice each word. For each side of the slice, specify whether to reach that
+ * end of the word or stop before. Also specify whether to keep or delete slice.
+ */
+class Slice extends Wordset {
+  private parent: Wordset;
+  private left: Side;
+  private right: Side;
+  private mode: "keep" | "delete";
+
+  constructor(
+    parent: Wordset,
+    left: Side,
+    right: Side,
+    mode: "keep" | "delete",
+  ) {
+    super();
+    this.parent = parent;
+    this.left = left;
+    this.right = right;
+    this.mode = mode;
+  }
+
+  _length(): Interval {
+    const min =
+      this.mode === "delete" && this.left === "stop" && this.right === "stop"
+        ? 2
+        : 1;
+    return Interval.of(min, Math.max(min, this.parent.length.max - 1));
+  }
+
+  private *runs(n: number): Generator<Set<number>> {
+    const starts = this.left === "reach" ? [0] : interval(1, n - 1);
+    const ends = this.right === "reach" ? [n - 1] : interval(n - 2, 0, -1);
+    const all: Set<number>[] = [];
+    for (const start of starts) {
+      for (const end of ends) {
+        if (start > end) {
+          continue;
+        }
+        const run = new Set(interval(start, end));
+        const survivors =
+          this.mode === "keep"
+            ? run
+            : new Set(interval(0, n - 1).filter((i) => !run.has(i)));
+        if (survivors.size > 0) {
+          all.push(survivors);
+        }
+      }
+    }
+    // In delete mode the run is what's removed, so iterating the run
+    // smallest-first yields the *largest* deletion first. Reverse so the
+    // largest survivor comes first, matching keep mode (THI_ before T_).
+    if (this.mode === "delete") {
+      all.reverse();
+    }
+    yield* all;
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+    )) {
+      const perWord = item.words.map((word) => [...this.runs(word.length)]);
+      if (perWord.some((runs) => runs.length === 0)) {
+        continue;
+      }
+      for (const survivors of Iter.product(...perWord)) {
+        yield new WordDerivation({
+          ...renderMask(item.words, survivors, this.mode),
+          parents: [item],
+        }).ifMatches(pattern);
+      }
     }
   }
 }
@@ -893,36 +1112,6 @@ class Substring extends Wordset {
     }
   }
 }
-
-class Suffix extends Wordset {
-  private parent: Wordset;
-
-  constructor(parent: Wordset) {
-    super();
-    this.parent = parent;
-  }
-
-  _length(): Interval {
-    return Interval.of(1, Math.max(1, this.parent.length.max - 1));
-  }
-
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
-      for (const i of interval(1, item.joined.length - 1)) {
-        yield new WordDerivation({
-          description: item.mapString((letter, j) => [
-            j === i ? "_" : "",
-            j >= i ? letter : "",
-          ]),
-          parents: [item],
-        }).ifMatches(pattern);
-      }
-    }
-  }
-}
-
 // non-cryptic-y transformations:
 
 class Intersect extends Wordset {

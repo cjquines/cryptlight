@@ -24,6 +24,29 @@ describe("wordset", () => {
     ]);
   });
 
+  test("alternate", async () => {
+    expect(await Wordset.literal("abc defgh ijk").alternate(0).all()).toEqual([
+      expect.objectContaining({
+        words: ["ACEGIK"],
+        description: "AbC dEfGh IjK",
+      }),
+    ]);
+    expect(await Wordset.literal("abc defgh ijk").alternate(1).all()).toEqual([
+      expect.objectContaining({
+        words: ["BDFHJ"],
+        description: "aBc DeFgH iJk",
+      }),
+    ]);
+    expect(
+      await Wordset.literal("abcde")
+        .alternate(0)
+        .concat(Wordset.literal("x"))
+        .all(),
+    ).toEqual([
+      expect.objectContaining({ words: ["ACE", "X"], description: "ACE+X" }),
+    ]);
+  });
+
   test("anagram", async () => {
     expect(await Wordset.literal("this").anagram().all()).toContainEqual(
       expect.objectContaining({
@@ -33,27 +56,35 @@ describe("wordset", () => {
     );
   });
 
-  test.todo("centers", async () => {
-    // expect(await Wordset.literal("this").centers().all()).toEqual([
-    //   expect.objectContaining({
-    //     words: ["HI"],
-    //     description: "_HI_",
-    //   }),
-    // ]);
-    // expect(
-    //   await Wordset.literal("abcdef ghijkl")
-    //     .centers()
-    //     .matches(/^.{6}$/),
-    // ).toEqual([
-    //   expect.objectContaining({
-    //     words: ["BCDE", "IJ"],
-    //     description: "_BCDE_ _IJ_",
-    //   }),
-    //   expect.objectContaining({
-    //     words: ["CD", "HIJK"],
-    //     description: "_CD_ _HIJK_",
-    //   }),
-    // ]);
+  test("behead", async () => {
+    expect(await Wordset.literal("this").behead().all()).toEqual([
+      expect.objectContaining({ words: ["HIS"], description: "(-t)HIS" }),
+      expect.objectContaining({ words: ["IS"], description: "(-th)IS" }),
+      expect.objectContaining({ words: ["S"], description: "(-thi)S" }),
+    ]);
+  });
+
+  test("centers", async () => {
+    expect(await Wordset.literal("this").centers().all()).toEqual([
+      expect.objectContaining({
+        words: ["HI"],
+        description: "_HI_",
+      }),
+    ]);
+    expect(
+      await Wordset.literal("abcdef ghijkl")
+        .centers()
+        .matches(/^.{6}$/),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["CD", "HIJK"],
+        description: "_CD_ _HIJK_",
+      }),
+      expect.objectContaining({
+        words: ["BCDE", "IJ"],
+        description: "_BCDE_ _IJ_",
+      }),
+    ]);
   });
 
   test("concat", async () => {
@@ -75,6 +106,14 @@ describe("wordset", () => {
         words: ["CAT", "DOG"],
         description: "CAT+DOG",
       }),
+    ]);
+  });
+
+  test("curtail", async () => {
+    expect(await Wordset.literal("this").curtail().all()).toEqual([
+      expect.objectContaining({ words: ["THI"], description: "THI(-s)" }),
+      expect.objectContaining({ words: ["TH"], description: "TH(-is)" }),
+      expect.objectContaining({ words: ["T"], description: "T(-his)" }),
     ]);
   });
 
@@ -178,35 +217,20 @@ describe("wordset", () => {
     );
   });
 
-  test("intersect, union", async () => {
-    expect(
-      await Wordset.intersect([
-        Wordset.literal("hello").union(Wordset.literal("world")),
-        Wordset.literal("world").union(Wordset.literal("peace")),
-      ]).all(),
-    ).toEqual([
-      expect.objectContaining({
-        words: ["WORLD"],
-        description: 'literal "world" = literal "world"',
-      }),
-    ]);
-  });
-
   test("prefix", async () => {
     expect(await Wordset.literal("this").prefix().all()).toEqual([
       expect.objectContaining({ words: ["THI"], description: "THI_" }),
       expect.objectContaining({ words: ["TH"], description: "TH_" }),
       expect.objectContaining({ words: ["T"], description: "T_" }),
     ]);
-    // TODO: fix
-    // expect(
-    //   await Wordset.literal("hello world")
-    //     .prefix()
-    //     .matches(/^.{3}$/),
-    // ).toEqual([
-    //   expect.objectContaining({ words: ["HE", "W"], description: "HE_ W_" }),
-    //   expect.objectContaining({ words: ["H", "WO"], description: "H_ WO_" }),
-    // ]);
+    expect(
+      await Wordset.literal("hello world")
+        .prefix()
+        .matches(/^.{3}$/),
+    ).toEqual([
+      expect.objectContaining({ words: ["H", "WO"], description: "H_ WO_" }),
+      expect.objectContaining({ words: ["HE", "W"], description: "HE_ W_" }),
+    ]);
   });
 
   test("remove", async () => {
@@ -273,38 +297,6 @@ describe("wordset", () => {
     ]);
   });
 
-  test("suffix", async () => {
-    expect(await Wordset.literal("this").suffix().all()).toEqual([
-      expect.objectContaining({ words: ["HIS"], description: "_HIS" }),
-      expect.objectContaining({ words: ["IS"], description: "_IS" }),
-      expect.objectContaining({ words: ["S"], description: "_S" }),
-    ]);
-    // TODO: fix
-    // expect(
-    //   await Wordset.literal("hello world")
-    //     .suffix()
-    //     .matches(/^.{3}$/),
-    // ).toEqual([
-    //   expect.objectContaining({ words: ["LO", "D"], description: "_LO _D" }),
-    //   expect.objectContaining({ words: ["O", "LD"], description: "_O _LD" }),
-    // ]);
-  });
-
-  test("wordlike", async () => {
-    expect(
-      await Wordset.union([
-        Wordset.literal("test"),
-        Wordset.literal("wo rd"),
-        Wordset.literal("qwertyuiop"),
-      ])
-        .wordlike()
-        .all(),
-    ).toEqual([
-      expect.objectContaining({ words: ["TEST"] }),
-      expect.objectContaining({ words: ["WO", "RD"] }),
-    ]);
-  });
-
   test("substring", async () => {
     const result = await Wordset.literal("bath isl and").substring().all();
 
@@ -326,6 +318,51 @@ describe("wordset", () => {
         description: "_TH ISL AN_",
       }),
     );
+  });
+
+  test("suffix", async () => {
+    expect(await Wordset.literal("this").suffix().all()).toEqual([
+      expect.objectContaining({ words: ["HIS"], description: "_HIS" }),
+      expect.objectContaining({ words: ["IS"], description: "_IS" }),
+      expect.objectContaining({ words: ["S"], description: "_S" }),
+    ]);
+    expect(
+      await Wordset.literal("hello world")
+        .suffix()
+        .matches(/^.{3}$/),
+    ).toEqual([
+      expect.objectContaining({ words: ["O", "LD"], description: "_O _LD" }),
+      expect.objectContaining({ words: ["LO", "D"], description: "_LO _D" }),
+    ]);
+  });
+
+  test("intersect, union", async () => {
+    expect(
+      await Wordset.intersect([
+        Wordset.literal("hello").union(Wordset.literal("world")),
+        Wordset.literal("world").union(Wordset.literal("peace")),
+      ]).all(),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["WORLD"],
+        description: 'literal "world" = literal "world"',
+      }),
+    ]);
+  });
+
+  test("wordlike", async () => {
+    expect(
+      await Wordset.union([
+        Wordset.literal("test"),
+        Wordset.literal("wo rd"),
+        Wordset.literal("qwertyuiop"),
+      ])
+        .wordlike()
+        .all(),
+    ).toEqual([
+      expect.objectContaining({ words: ["TEST"] }),
+      expect.objectContaining({ words: ["WO", "RD"] }),
+    ]);
   });
 
   test("matches", async () => {
