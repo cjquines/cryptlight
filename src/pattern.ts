@@ -1,11 +1,7 @@
-import { createRequire } from "node:module";
 import type { CharacterClassBody, RootNode as Node } from "regjsparser";
 import regjsparser from "regjsparser";
+import regjsgen from "regjsgen";
 import { interval, Interval } from "./util.js";
-
-const regjsgen = createRequire(import.meta.url)("regjsgen") as {
-  generate: (node: Node) => string;
-};
 
 /** The length range of strings a single node can match. */
 function nodeLength(node: Node): Interval {
