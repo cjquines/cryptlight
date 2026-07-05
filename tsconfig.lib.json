@@ -1,13 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "include": ["src/**/*.ts", "!src/**/*.test.ts"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts", "src/testUtil.ts", "src/download.node.ts"],
   "compilerOptions": {
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
 
-    "module": "nodenext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "rootDir": "src",
 
     "noEmit": true,

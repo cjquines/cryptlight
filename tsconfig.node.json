@@ -5,8 +5,11 @@
     "*.ts",
     "scripts/**/*.ts",
     "src/**/*.test.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/testUtil.ts",
+    "src/download.node.ts"
   ],
+  "exclude": ["src/fetch.d.ts"],
   "compilerOptions": {
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
