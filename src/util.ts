@@ -6,41 +6,44 @@ export function interval(start: number, end: number, step = 1): number[] {
   return result;
 }
 
-export function anagrams(word: string): Set<string> {
-  const anagrams = new Set<string>([word]);
-  const letters = Array.from(word);
+/**
+ * The distinct rearrangements of word, lazily, starting with word itself.
+ *
+ * `allows(index, letter)` prunes the search: a rearrangement is only produced
+ * if every letter is allowed at its index.
+ */
+export function* anagrams(
+  word: string,
+  allows: (index: number, letter: string) => boolean = () => true,
+): Generator<string> {
+  // Distinct letters in order of first appearance, so word comes first.
+  const counts = new Map<string, number>();
+  for (const letter of word) {
+    counts.set(letter, (counts.get(letter) ?? 0) + 1);
+  }
+  const letters = Array.from(counts.keys());
+  const n = Array.from(word).length;
+  const prefix: string[] = [];
 
-  const n = word.length;
-  const indices = interval(0, n - 1);
-  const cycles = interval(n, 1, -1);
-
-  while (n > 0) {
-    let broke = false;
-
-    for (let i = n - 1; i >= 0; i--) {
-      cycles[i]! -= 1;
-      if (cycles[i] === 0) {
-        indices.push(...indices.splice(i, 1));
-        cycles[i] = n - i;
-      } else {
-        const j = cycles[i]!;
-
-        const k = indices[i]!;
-        indices[i] = indices[n - j]!;
-        indices[n - j] = k;
-
-        anagrams.add(indices.map((i) => letters[i]).join(""));
-        broke = true;
-        break;
-      }
+  function* recurse(): Generator<string> {
+    if (prefix.length === n) {
+      yield prefix.join("");
+      return;
     }
-
-    if (!broke) {
-      return anagrams;
+    for (const letter of letters) {
+      const count = counts.get(letter)!;
+      if (count === 0 || !allows(prefix.length, letter)) {
+        continue;
+      }
+      counts.set(letter, count - 1);
+      prefix.push(letter);
+      yield* recurse();
+      prefix.pop();
+      counts.set(letter, count);
     }
   }
 
-  return anagrams;
+  yield* recurse();
 }
 
 /**

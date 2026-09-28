@@ -3,9 +3,21 @@ import { anagrams, Interval } from "./util.js";
 
 describe("util", () => {
   test("anagrams", () => {
-    expect(anagrams("abc")).toEqual(
-      new Set(["abc", "acb", "bac", "bca", "cab", "cba"]),
-    );
+    expect(Array.from(anagrams("abc"))).toEqual([
+      "abc",
+      "acb",
+      "bac",
+      "bca",
+      "cab",
+      "cba",
+    ]);
+    expect(Array.from(anagrams("aab"))).toEqual(["aab", "aba", "baa"]);
+    expect(
+      Array.from(
+        anagrams("abc", (index, letter) => index !== 0 || letter === "c"),
+      ),
+    ).toEqual(["cab", "cba"]);
+    expect(Array.from(anagrams(""))).toEqual([""]);
   });
 
   test("Interval", () => {
