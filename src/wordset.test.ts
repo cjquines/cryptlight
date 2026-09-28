@@ -552,6 +552,30 @@ describe("wordset", () => {
     expect(results.map((result) => result.joined)).toContain("ETHEL");
   });
 
+  test("intersect checks candidates instead of enumerating", async () => {
+    // 14 letters: enumerating the anagrams would take far too long.
+    const results = await Wordset.literal("dovetail joints")
+      .intersect(Wordset.literal("joints dovetail").anagram())
+      .all();
+    expect(results).toEqual([
+      expect.objectContaining({
+        words: ["DOVETAIL", "JOINTS"],
+        description: 'literal "dovetail joints" = DOVETAILJOINTS*',
+      }),
+    ]);
+    expect(
+      (
+        await Wordset.union([
+          Wordset.literal("listen"),
+          Wordset.literal("lintel"),
+          Wordset.literal("silent"),
+        ])
+          .intersect(Wordset.literal("tinsel").anagram().reverse())
+          .all()
+      ).map((result) => result.joined),
+    ).toEqual(["LISTEN", "SILENT"]);
+  });
+
   test("anagram does not enumerate eagerly", async () => {
     // 12! permutations would not fit in a Set; the pattern prunes them.
     const results = await Wordset.literal("reforge chain")

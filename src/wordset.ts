@@ -120,8 +120,15 @@ export abstract class Wordset {
   /**
    * Yield WordDerivations (or null) matching the wordset filters and the
    * given pattern.
+   *
+   * If `candidates` is given, only derivations whose `joined` is a candidate
+   * are wanted. Implementations may use it to prune their search, or ignore
+   * it: `run` filters the results either way.
    */
-  abstract _run(pattern: Pattern): AsyncIterable<WordDerivation | null>;
+  abstract _run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null>;
 
   #length: Interval | null = null;
 
@@ -133,11 +140,12 @@ export abstract class Wordset {
   private hasRun = false;
 
   /**
-   * Yield WordDerivations matching the wordset filters and the given regex.
-   * Single-use.
+   * Yield WordDerivations matching the wordset filters and the given regex,
+   * and, if given, whose `joined` is one of `candidates`. Single-use.
    */
   async *run(
     input?: RegExp | Pattern | Interval,
+    candidates?: ReadonlySet<string>,
   ): AsyncIterable<WordDerivation> {
     if (this.hasRun) {
       throw new Error("Wordset.run may only be called once");
@@ -161,8 +169,8 @@ export abstract class Wordset {
       return;
     }
 
-    for await (const item of this._run(pattern)) {
-      if (item !== null) {
+    for await (const item of this._run(pattern, candidates)) {
+      if (item !== null && (candidates?.has(item.joined) ?? true)) {
         yield item;
       }
     }
@@ -368,7 +376,9 @@ export abstract class Wordset {
   /**
    * Intersect this and other: THIS = OTHER.
    *
-   * We ignore spacing when intersecting.
+   * We ignore spacing when intersecting. This is materialized first and its
+   * results are checked against other, so this should be the smaller side:
+   * usually the definition, with the wordplay as other.
    */
   intersect(other: Wordset): Wordset {
     return new Intersect(this, other);
@@ -554,6 +564,7 @@ class Synonym extends Wordset {
   private async *inflected(
     text: string,
     pattern: Pattern,
+    candidates: ReadonlySet<string> | undefined,
     unseen: (derivation: WordDerivation) => WordDerivation | null,
   ): AsyncIterable<WordDerivation | null> {
     const uninflected = uninflect(text);
@@ -576,9 +587,21 @@ class Synonym extends Wordset {
       ),
     );
 
+    // Inflecting is slow, so skip base forms that can't match. Inflections
+    // keep all but perhaps the last letter: SLEEP(y) → SLEEPIEST.
+    const prefixes =
+      candidates &&
+      new Set(
+        Array.from(candidates).flatMap((candidate) =>
+          interval(0, candidate.length).map((n) => candidate.slice(0, n)),
+        ),
+      );
     for (const { word } of responses.flat()) {
-      // Inflecting is slow, so skip base forms that can't match.
-      if (!pattern.allows(0, word[0] ?? "")) {
+      const stem = slugify(word).toUpperCase().slice(0, -1);
+      if (
+        !pattern.allows(0, word[0] ?? "") ||
+        (prefixes && !prefixes.has(stem))
+      ) {
         continue;
       }
       for (const form of inflect(word, uninflected.inflection)) {
@@ -592,7 +615,10 @@ class Synonym extends Wordset {
     }
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
     const seen = new Set<string>();
     const unseen = (derivation: WordDerivation): WordDerivation | null => {
       if (seen.has(derivation.joined)) {
@@ -637,7 +663,7 @@ class Synonym extends Wordset {
       yield derivation && unseen(derivation);
     }
 
-    yield* this.inflected(text, pattern, unseen);
+    yield* this.inflected(text, pattern, candidates, unseen);
 
     // Look up the whole phrase ("South-East" is "southeast") and each word.
     const lemmas = new Set(lemmatize(text).map(({ lemma }) => lemma));
@@ -735,6 +761,10 @@ class Alternate extends Wordset {
   }
 }
 
+function sortLetters(word: string): string {
+  return Array.from(word).sort().join("");
+}
+
 class Anagram extends Wordset {
   private parent: Wordset;
 
@@ -747,11 +777,27 @@ class Anagram extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
+    // Checking candidates is far cheaper than enumerating the n! anagrams of
+    // long fodder.
+    const byLetters = new Map<string, string[]>();
+    for (const candidate of candidates ?? []) {
+      if (pattern.test(candidate)) {
+        const key = sortLetters(candidate);
+        byLetters.set(key, [...(byLetters.get(key) ?? []), candidate]);
+      }
+    }
+
     for await (const parent of this.parent.run(pattern.length)) {
-      for (const anagram of anagrams(parent.joined, (index, letter) =>
-        pattern.allows(index, letter),
-      )) {
+      const found = candidates
+        ? (byLetters.get(sortLetters(parent.joined)) ?? [])
+        : anagrams(parent.joined, (index, letter) =>
+            pattern.allows(index, letter),
+          );
+      for (const anagram of found) {
         yield new WordDerivation({
           description: `${anagram}*`,
           parents: [parent],
@@ -1325,8 +1371,21 @@ class Reverse extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(pattern.reverse())) {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
+    const reversedCandidates =
+      candidates &&
+      new Set(
+        Array.from(candidates, (candidate) =>
+          Array.from(candidate).reverse().join(""),
+        ),
+      );
+    for await (const item of this.parent.run(
+      pattern.reverse(),
+      reversedCandidates,
+    )) {
       const reversed = Array.from(item.joined);
       yield new WordDerivation({
         description: `${item.mapString(() => [reversed.pop()!])}<`,
@@ -1527,21 +1586,36 @@ class Intersect extends Wordset {
     return this.left.length.meet(this.right.length);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    const map = new Map<string, WordDerivation>();
-
-    for await (const item of this.right.run(pattern)) {
-      if (!map.has(item.joined)) {
-        map.set(item.joined, item);
-      }
+  /**
+   * Materializes left, then runs right with left's results as candidates. So
+   * left should be the smaller side, usually the definition: many operations
+   * can check a candidate far faster than they can enumerate.
+   */
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
+    const lefts: WordDerivation[] = [];
+    for await (const item of this.left.run(pattern, candidates)) {
+      lefts.push(item);
     }
 
-    if (map.size === 0) {
+    if (lefts.length === 0) {
       return;
     }
 
-    for await (const item of this.left.run(pattern)) {
-      const other = map.get(item.joined);
+    const rights = new Map<string, WordDerivation>();
+    for await (const item of this.right.run(
+      pattern,
+      new Set(lefts.map((item) => item.joined)),
+    )) {
+      if (!rights.has(item.joined)) {
+        rights.set(item.joined, item);
+      }
+    }
+
+    for (const item of lefts) {
+      const other = rights.get(item.joined);
       if (other) {
         yield new WordDerivation({
           words: item.words,
@@ -1567,11 +1641,14 @@ class Union extends Wordset {
     return this.left.length.join(this.right.length);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.left.run(pattern)) {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.left.run(pattern, candidates)) {
       yield item;
     }
-    for await (const item of this.right.run(pattern)) {
+    for await (const item of this.right.run(pattern, candidates)) {
       yield item;
     }
   }
@@ -1589,8 +1666,11 @@ class Wordlike extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(pattern)) {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(pattern, candidates)) {
       if (Wordset.cromulence.cromulence(item.joined) >= 0) {
         yield item;
       }
