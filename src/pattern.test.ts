@@ -67,4 +67,23 @@ describe("regex", () => {
     expect(Pattern.length(Interval.of(5, Infinity)).source).toBe("^.{5,}$");
     expect(Pattern.length(Interval.of(5, 3)).source).toBe("^.{5}$");
   });
+
+  test("oneLook", () => {
+    expect(Pattern.parse(/^.{5}$/).oneLook).toBe("?????");
+    expect(Pattern.parse(/^a.[bc]d.$/).oneLook).toBe("a??d?");
+    expect(Pattern.parse(/^A..$/).oneLook).toBe("a??");
+    expect(Pattern.parse(/^.{2,4}$/).oneLook).toBe("??*");
+    expect(Pattern.parse(/^.{2,}$/).oneLook).toBe("??*");
+  });
+
+  test("allows", () => {
+    const pattern = Pattern.parse(/^a[bc].*$/);
+    expect(pattern.allows(0, "a")).toBe(true);
+    expect(pattern.allows(0, "A")).toBe(true);
+    expect(pattern.allows(0, "b")).toBe(false);
+    expect(pattern.allows(1, "c")).toBe(true);
+    expect(pattern.allows(1, "d")).toBe(false);
+    expect(pattern.allows(5, "z")).toBe(true);
+    expect(Pattern.parse(/^ab$/).allows(2, "a")).toBe(false);
+  });
 });

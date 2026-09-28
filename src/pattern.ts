@@ -235,6 +235,20 @@ export class Pattern {
     return (this.regexp ??= new RegExp(this.source, "i")).test(string);
   }
 
+  #atoms = new Map<number, RegExp | null>();
+
+  /** Whether some match of `this` may have `letter` at `index`. */
+  allows(index: number, letter: string): boolean {
+    let atom = this.#atoms.get(index);
+    if (atom === undefined) {
+      const node = nodesIndex(this.nodes, index);
+      atom =
+        node === null ? null : new RegExp(`^${regjsgen.generate(node)}$`, "i");
+      this.#atoms.set(index, atom);
+    }
+    return atom?.test(letter) ?? false;
+  }
+
   /** A Pattern matching a prefix of a `this`-match with length in `length`. */
   prefixes(length: Interval): Pattern {
     const nodes: Node[] = [];
@@ -261,11 +275,24 @@ export class Pattern {
 
   #oneLook: string | null = null;
 
-  /** Convert a pattern to a OneLook/Datamuse-compatible wildcard. */
+  /**
+   * Convert a pattern to a OneLook/Datamuse-compatible wildcard. Fixed-length
+   * patterns spell out the positions that must be a single letter.
+   */
   get oneLook(): string {
-    // TODO: make this tighter?
-    return (this.#oneLook ??=
-      "?".repeat(this.length.min) +
-      (this.length.max > this.length.min ? "*" : ""));
+    const { min, max } = this.length;
+    if (min !== max) {
+      return (this.#oneLook ??= "?".repeat(min) + (max > min ? "*" : ""));
+    }
+    return (this.#oneLook ??= interval(0, min - 1)
+      .map((i) => {
+        const atom = nodesIndex(this.nodes, i);
+        if (atom?.type !== "value") {
+          return "?";
+        }
+        const letter = String.fromCodePoint(atom.codePoint).toLowerCase();
+        return /^[a-z]$/.test(letter) ? letter : "?";
+      })
+      .join(""));
   }
 }
