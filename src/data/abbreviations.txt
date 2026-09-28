@@ -929,7 +929,7 @@ australiannative ROO 4
 australianstate NSW 1
 austria A 50 AUS 1 INA 1
 authenticationcode PIN 1
-author ME 3 PAN 1 PEN 8 POE 3
+author A 50 ME 3 PAN 1 PEN 8 POE 3
 authorisation OK 2
 authorise LET 3
 authority ACE 1 SAY 1
@@ -1021,6 +1021,7 @@ badtype RAT 1
 badweather AIL 1
 baffled GOT 1
 bag ACK 1 ER 1 NET 1 SAC 11 SAG 1 WIN 1
+bagel O 50
 bahamas BS 51
 bahrain BRN 50
 bake HOT 1
@@ -1091,7 +1092,7 @@ battle ON 1 VIE 1 WAR 9
 battwice IN 1
 bavariancapital CH 1
 bay RSE 1
-be BE 2 ENS 1 MAN 2
+be B 50 BE 2 ENS 1 MAN 2
 beabsent OFF 1
 beactive DO 1
 beaker MUG 1
@@ -1456,7 +1457,7 @@ boxer ALI 18 PUG 1
 boxerperhaps DOG 1
 boxin PEN 1
 boxtop LID 1
-boy AL 5 BEN 5 CUB 1 DAN 1 ED 5 HE 2 IAN 2 KEN 3 KIT 1 LAD 102 LEO 1 LES 1 NED 1 ON 1 RAY 3 REG 3 ROB 2 RON 1 SAM 2 SEB 1 SID 1 SO 1 SON 110 STU 1 TED 3 TIM 6 TOM 5
+boy B 50 AL 5 BEN 5 CUB 1 DAN 1 ED 5 HE 2 IAN 2 KEN 3 KIT 1 LAD 102 LEO 1 LES 1 NED 1 ON 1 RAY 3 REG 3 ROB 2 RON 1 SAM 2 SEB 1 SID 1 SO 1 SON 110 STU 1 TED 3 TIM 6 TOM 5
 boycott BAN 4
 boyfriend BF 1 MEN 1
 boygrowup MEN 1
@@ -1746,7 +1747,7 @@ cashondelivery COD 1
 cask TUB 1 TUN 6
 casserole POT 1
 cast DIE 1 LOB 1 SHY 5
-castle AC 1
+castle R 50 AC 1
 castlighton LIT 2
 casualshirt TEE 1
 casualwalker ER 1
@@ -2763,7 +2764,7 @@ directcurrent DC 50
 directdebit DD 51
 directed LED 2 RAN 2
 directfrom EX 3
-direction EST 1 NE 1 UP 1 WAY 1 ES 1 EN 1 SE 1
+direction N 50 S 50 E 50 W 50 L 50 R 50 EST 1 NE 1 UP 1 WAY 1 ES 1 EN 1 SE 1
 directive LAW 1
 director DIR 2 DD 1
 directorgeneral DG 52
@@ -2873,6 +2874,7 @@ done UP 1
 doneedlework SEW 1
 donkey ASS 21
 donothing SAT 1
+donut O 50
 doorkeeper ERS 1
 dope ASS 8 GEN 12 LE 1 NIT 1 POT 3
 dormmonitor RA 1
@@ -2929,7 +2931,7 @@ drinkvenue BAR 1
 drinkvessel CUP 1 MUG 3
 drinkwithlieutenant LT 1
 drip IV 3
-drive DR 57 ADV 1 ER 1 GO 2 RAM 6 RAN 3
+drive DR 57 D 50 ADV 1 ER 1 GO 2 RAM 6 RAN 3
 drivehome RAM 1
 driveinto RAM 2
 drivel ROT 3
@@ -3347,6 +3349,7 @@ extramoney TIP 2
 extraordinary ACE 1
 extrapaymentgiven TIP 1
 extrasensoryperception ESP 50
+extrasession OT 50
 extraterrestrial ET 56
 extratime ET 2
 extravagant OTT 3
@@ -3384,7 +3387,7 @@ fadefrommemory DIE 1
 fag CIG 1
 fahrenheit F 50
 fahrenheitdrop EAR 1
-fail DIE 6 DUD 1 ECT 1 IS 1
+fail F 50 DIE 6 DUD 1 ECT 1 IS 1
 failtoopen ASK 1 OLE 1
 failtowork DUD 1
 failure DUD 5 ER 1
@@ -3932,6 +3935,7 @@ fuelsupply GAS 1
 fulfil MET 2
 full ALL 4 ED 1 UP 1
 fullstop DOT 1
+fulltime FT 50
 fume GAS 1
 function ACT 2 DO 6 GO 3 TAN 3 USE 3 ON 8 DOS 1
 fund POT 3 AID 1
@@ -4232,7 +4236,7 @@ gram G 100 GM 100
 grammarschool GS 2
 gramme GR 1
 gran NAN 2
-grand BIG 2
+grand G 50 BIG 2
 grandma NA 1 NAN 12
 grandmother NAN 2
 grandparent NAN 1
@@ -4277,7 +4281,7 @@ greekfilm Z 1
 greekgod PAN 1
 greekisland COS 6
 greekletter ETA 1 RHO 1 XI 1 PIS 1
-green ECO 23 EP 1 NEW 1 RAW 8 VE 1
+green G 50 ECO 23 EP 1 NEW 1 RAW 8 VE 1
 greenlight GO 4 OK 1
 greenstuff SS 1 VEG 1
 greenvegetable PEA 1
@@ -4538,7 +4542,7 @@ heel CAD 3
 hefty FAT 1
 hehave HED 3
 hehold HE 1
-height HT 56 SUM 1
+height HT 56 H 50 SUM 1
 heighten UP 2
 heinousact SIN 1
 heir SON 1
@@ -4591,7 +4595,7 @@ hiddenmike TAP 1
 hide FUR 3 TAN 1
 hideaway DEN 1
 hideout DEN 4
-high OFF 2 UP 11 TOP 2
+high H 50 OFF 2 UP 11 TOP 2
 highcard ACE 1
 higheducation UNI 1
 highexplosive HE 53
@@ -4659,7 +4663,7 @@ holdoffice IN 1
 holdup GET 1 ROB 3
 holdupby ON 1
 holdupprogress ALL 1
-hole DEN 1 GAP 2 PIT 6 OO 1
+hole O 50 DEN 1 GAP 2 PIT 6 OO 1
 holeinthewall ATM 1
 holeinwall ATM 1
 holiday HOL 1 OFF 1 VAC 2
@@ -4764,7 +4768,7 @@ humorousperson WIT 1
 humour WIT 7
 humourless DRY 3 PO 1
 humourmagazine MAD 1
-hundred C 50 AC 2 TON 6
+hundred CC 50 C 50 AC 2 TON 6
 hundredandfifty CL 1
 hundredandone CI 1
 hundredweight CWT 50
@@ -5252,7 +5256,7 @@ isvictorious WON 3
 iswithin AM 1
 isyou ART 1
 it SA 54 IT 31 SEX 5 ZA 1
-italian IT 108 AST 1
+italian IT 108 I 50 AST 1
 italianarticle IL 1
 italiancapital OME 1
 italianplaymaker FO 1
@@ -5517,7 +5521,7 @@ lacrosseteam TEN 5
 lacynapkin LY 1
 lad AL 1 BOY 14 NED 1 RON 1 SON 20 TED 1
 ladder RUN 2
-lady LAV 1 LOO 2 ANN 1 DI 2 EVE 1 HER 2 KAY 1 KO 1 MAN 1 SHE 2
+lady L 50 LAV 1 LOO 2 ANN 1 DI 2 EVE 1 HER 2 KAY 1 KO 1 MAN 1 SHE 2
 ladyperhaps LOO 1
 lair DEN 10
 lake L 50 AL 7 LAR 1 LL 4
@@ -5692,7 +5696,7 @@ life BIO 2 GO 1 VIM 1
 lifeforce CHI 1
 lifesaver ARK 1
 lift UP 5 UPS 1
-light ALE 1 DAY 2 LED 7 LUX 1 RAY 7 UV 3 IN 1 ON 2
+light LT 50 ALE 1 DAY 2 LED 7 LUX 1 RAY 7 UV 3 IN 1 ON 2
 lightbrown TAN 6
 lighter SUN 2
 lighterbrand BIC 1
@@ -5741,7 +5745,7 @@ link TIE 3
 lion LEO 5 RO 1 VIP 2
 lionperhaps CAT 1
 lip RIM 7
-liquid INK 1
+liquid L 50 INK 1
 liquiduseforwashing LYE 1
 liquor GIN 4 RUM 7
 lisp TH 1
@@ -5760,7 +5764,7 @@ literature LIT 58
 lithium LI 56
 lithuania LT 51
 litre AL 4
-little BIT 4 LET 1 LOW 1 TAD 13 WEE 51
+little L 50 BIT 4 LET 1 LOW 1 TAD 13 WEE 51
 littlebeing ELF 1
 littlebird TIT 5
 littleboy BEN 1 DAN 1 KEN 1 LEN 1 PAT 1 SID 1 TED 1 TIM 1 VIC 1
@@ -5851,7 +5855,7 @@ londoncollege LSE 2
 londongardens KEW 1
 londonlandmark EYE 1
 londonpolice MET 1
-long AL 1 BIG 1 DIE 2 YEN 3 OPE 1
+long L 50 AL 1 BIG 1 DIE 2 YEN 3 OPE 1
 longperiod AGE 1 ERA 2
 longperiodoftime AGE 1
 longsince AGO 1
@@ -5884,6 +5888,7 @@ losering FOR 1
 losetension SAG 1
 loseto TO 1
 loseweight TON 1
+loss L 50
 lostheart NA 1
 lot SET 1
 lotofenergy EEE 1
@@ -5920,7 +5925,7 @@ lovergine EX 1
 loveronce EX 1
 loverthatis EX 1
 lovingbook ARY 1
-low MOO 31 SAD 1
+low L 50 MOO 31 SAD 1
 lowarea FEN 1
 lowbill ONE 1
 lowcloud FOG 1
@@ -6695,7 +6700,7 @@ niobium NB 50
 nip BIT 2
 nitrogen N 50
 nitwit TIT 1
-no NAY 15 NIX 2 NO 9
+no N 50 NAY 15 NIX 2 NO 9
 noamateur PRO 3
 noanswer ANS 1
 nobackslide ON 1
@@ -6736,6 +6741,7 @@ nolongerwith OLD 1
 nolongeryoung OLD 1
 nomatterwhat ANY 1
 nomore EX 2
+none O 50
 nonetheless BUT 1 YET 1
 nonsense BS 2 COD 1 ROT 17
 noon M 50 N 50 ATN 1
@@ -7253,6 +7259,7 @@ optic EYE 1
 optimistic UP 1
 opus OP 51
 or OR 12
+orange O 50
 orangejuice OJ 2
 orbison ROY 1
 orchestraarea PIT 2
@@ -7353,6 +7360,7 @@ overthehill OLD 1
 overthepond USA 1
 overthere YON 5
 overthetop OTT 53
+overtime OT 50
 overweight DY 1 FAT 11
 owe DUE 4
 owing DUE 2
@@ -7459,7 +7467,7 @@ particle ION 3
 particular OWN 3
 particularinterest BAG 1
 partinhospital ENT 1
-partner PAL 2 EW 1 NS 1 SES 1
+partner SO 50 PAL 2 EW 1 NS 1 SES 1
 partnerdispatch EX 1
 partnerinspecialrelationship US 1
 partnernolonger EX 2
@@ -8131,6 +8139,7 @@ pubturnup BAR 1
 pubworker ER 1
 pucciniopus CA 1
 puce RED 1
+puertorico PR 50
 puff AD 3
 pull AXE 1 LUG 2 TOW 7 TUG 6
 pullback LUG 1
@@ -8232,7 +8241,7 @@ racetrackcontestant CAR 1
 racket CON 1 DIN 15
 radiantdischarge ARC 1
 radiation UV 2
-radical RED 7
+radical R 50 RED 7
 radioactive HOT 1
 radioband AM 1
 radioformat AM 1
@@ -8281,7 +8290,7 @@ reachmaturity UP 1
 reaction TIC 1
 reactiontocomedy HA 1
 reactiontosomethingamazing OOH 1
-read CON 1 ON 1
+read R 50 CON 1 ON 1
 readinhaste ING 1
 readmaterial OOK 1
 ready APT 1 FIT 2 ON 2 SET 16
@@ -8356,7 +8365,7 @@ register LOG 6
 registerednurse RN 1
 regress IS 1
 regret RUE 55 TY 1
-regular SET 1 OFT 7
+regular R 50 SET 1 OFT 7
 regularexercise FIT 1
 regulartake ON 2
 regulate SET 1
@@ -8433,7 +8442,7 @@ representative MP 9 REP 5
 reprimand RAP 1 WIG 1
 reptile ASP 2
 reptilianbrain ID 1
-republican AR 10 REP 2
+republican R 50 AR 10 REP 2
 repugnantsound UGH 1
 reputation TE 1
 request ASK 20 BEG 1
@@ -8526,7 +8535,7 @@ rightreverend RR 2
 rightsay OK 1
 rigid SET 2
 rim LIP 3
-ring AO 2 AL 1 PEN 1 OO 9 OS 2
+ring O 50 AO 2 AL 1 PEN 1 OO 9 OS 2
 riotgas CS 50
 ripoff CON 2 ROB 1 HAD 1
 rise IS 1 ITS 1 UP 3
@@ -10912,7 +10921,7 @@ tragic SAD 1
 trail DOG 1 LAG 1
 trailbehind LAG 1
 trailer AD 7
-train AIM 2 PE 18 PT 6 BR 1 ELS 1 RY 1
+train RR 50 EL 50 AIM 2 PE 18 PT 6 BR 1 ELS 1 RY 1
 trainabovestreetlevel EL 1
 trainonhightrack ELS 1
 trainoverhead EL 1
@@ -10973,7 +10982,7 @@ troublemaker ATE 1 ELF 1 IMP 13
 troublesomefellow NED 1
 troublesomefemale ATE 1
 truck RIG 2 UP 1 VAN 7
-true SO 1 YEA 1
+true T 50 SO 1 YEA 1
 trump CAP 2
 trunk LOG 1
 trustee TR 3
@@ -11173,6 +11182,7 @@ undistinguish WET 1
 undocumented ID 1
 undress RAW 1
 unea WAG 1
+unearthlycharacter ET 50
 uneasyincompany SHY 2
 unelect OUT 1
 uneven ODD 1
@@ -11237,7 +11247,7 @@ unpopular OUT 4
 unprofessional LAY 1
 unrefined RAW 2
 unrulycrowd MOB 1
-unsatisfactory OFF 1
+unsatisfactory U 50 OFF 1
 unseasoned RAW 1
 unserviceable US 51
 unsophisticated VE 1
@@ -11378,6 +11388,7 @@ veryloud FF 77 AFF 2
 veryminorblow PAT 1
 verymuch FAR 2 LOT 1 SO 8
 verynoisy FF 1
+veryold VO 50
 veryoldcity UR 3
 veryone ALL 1
 verypopular BIG 1 HOT 4 IN 1
@@ -11611,7 +11622,7 @@ whatvictorwilldo WIN 1
 whatyouexpect PAR 1
 whatyouislookfor IT 1
 whatyoumightfindoncollar TIE 1
-wheel COG 2 CAR 10
+wheel O 50 OO 50 COG 2 CAR 10
 wheelvehicle TER 1
 whelp CUB 1
 when AS 246 IF 1
@@ -11665,6 +11676,7 @@ whomightitbe DR 1
 whop BIG 1
 whopper LIE 2
 whowanttophonehome ET 1
+why Y 50
 wicked ACE 3 BAD 7 FAB 1 SH 1
 wickedact SIN 1
 wickedbehaviour SIN 1
@@ -11871,10 +11883,10 @@ yarn ABB 1 FIB 1
 year Y 50 YR 63 YRS 50 AY 4 AGE 4 YY 1
 yearl HOG 1
 yell OAR 1
-yellow OR 12
+yellow Y 50 OR 12
 yemen YAR 50
 yen AY 1
-yes I 20 AY 5 OK 3
+yes Y 50 I 20 AY 5 OK 3
 yesterday FRI 1
 yestoitalian SI 1
 yet BUT 5 THO 1

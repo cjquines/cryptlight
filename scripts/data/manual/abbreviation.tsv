@@ -223,7 +223,7 @@ Doctor of Divinity	DD
 Doctor of Medicine	MD		
 Doctor of Philosophy	PHD		
 Dominca	WD		
-drive	DR		
+drive	DR	D	
 dry	TT		
 duke	D		
 Earl	E		
@@ -325,7 +325,7 @@ hard	H
 Hawaii	HI		
 headquarters	HQ		
 hearts	H		
-height	HT		
+height	HT	H	
 helium	HE		
 Her Majesty	HM		
 heroin	H		
@@ -382,7 +382,7 @@ iron	FE
 island	I		
 Israel	IL		
 it	SA		
-Italian	IT		
+Italian	IT	I	
 Italy	I		
 Ivory Coast	CI		
 jack	AB	J	
@@ -885,3 +885,47 @@ Zambia	Z
 Zimbabwe	ZW		
 zinc	ZN		
 zirconium	ZR
+loss	L		
+high	H		
+low	L		
+liquid	L		
+lady	L		
+little	L		
+long	L		
+author	A		
+be	B		
+boy	B		
+failing	F		
+unsatisfactory	U		
+republican	R		
+radical	R		
+regular	R		
+reading	R		
+castle	R		
+green	G		
+grand	G		
+true	T		
+no	N		
+none	O		
+ring	O		
+wheel	O		
+hole	O		
+bagel	O		
+donut	O		
+wheels	OO		
+orange	O		
+yellow	Y		
+why	Y		
+yes	Y		
+direction	N	S	E
+direction	W	L	R
+partner	SO		
+hundreds	CC		
+full time	FT		
+overtime	OT		
+extra session	OT		
+train	RR	EL	
+light	LT		
+Puerto Rico	PR		
+very old	VO		
+unearthly character	ET		
