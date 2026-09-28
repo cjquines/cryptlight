@@ -269,6 +269,25 @@ describe("wordset", () => {
         description: "H(e→X)LLO WORLD",
       }),
       expect.objectContaining({ words: ["HYLLO", "WORLD"] }),
+      // Each occurrence of O is replaced separately.
+      expect.objectContaining({
+        words: ["HELLX", "WORLD"],
+        description: "HELL(o→X) WORLD",
+      }),
+      expect.objectContaining({
+        words: ["HELLO", "WXRLD"],
+        description: "HELLO W(o→X)RLD",
+      }),
+      expect.objectContaining({ words: ["HELLY", "WORLD"] }),
+      expect.objectContaining({ words: ["HELLO", "WYRLD"] }),
+    ]);
+    expect(
+      await Wordset.literal("that")
+        .replace(Wordset.literal("t"), Wordset.literal("w"))
+        .all(),
+    ).toEqual([
+      expect.objectContaining({ words: ["WHAT"], description: "(t→W)HAT" }),
+      expect.objectContaining({ words: ["THAW"], description: "THA(t→W)" }),
     ]);
   });
 
@@ -405,7 +424,7 @@ describe("wordset", () => {
       await Wordset.union([
         Wordset.literal("test"),
         Wordset.literal("wo rd"),
-        Wordset.literal("qwertyuiop"),
+        Wordset.literal("xqzjvkw"),
       ])
         .wordlike()
         .all(),
@@ -457,5 +476,87 @@ describe("wordset", () => {
         words: ["DROOPY"],
       }),
     ]);
+  });
+
+  test.runIf(runAPITests)("homophone", async () => {
+    const results = await Wordset.literal("whet")
+      .homophone()
+      .matches(/^.{3}$/);
+    expect(results).toContainEqual(
+      expect.objectContaining({ words: ["WET"], description: 'WET "WHET"' }),
+    );
+  });
+
+  test.runIf(runAPITests)("synonym finds short pieces in a range", async () => {
+    // ORE is a 3-letter synonym of "material"; a single `sp=?*` query over
+    // lengths 1..4 misses it.
+    const results = await Wordset.literal("ad")
+      .concat(Wordset.synonym("material"))
+      .matches(/^.{5}$/);
+    expect(results.map((result) => result.joined)).toContain("ADORE");
+  });
+
+  test.runIf(runAPITests)("synonym normalizes clue text", async () => {
+    expect(
+      (await Wordset.synonym("South-East").matches(/^.{2}$/)).map(
+        (result) => result.joined,
+      ),
+    ).toContain("SE");
+    expect(
+      (await Wordset.synonym("Father’s").matches(/^.{4}$/)).map(
+        (result) => result.joined,
+      ),
+    ).toContain("POPS");
+  });
+
+  test.runIf(runAPITests)("synonym inflects to match", async () => {
+    const results = await Wordset.synonym("birds").matches(/^.{7}$/);
+    expect(results).toContainEqual(
+      expect.objectContaining({
+        words: ["FALCONS"],
+        description: 'synonym of "birds" (FALCON, plural)',
+      }),
+    );
+  });
+
+  test.runIf(runAPITests)("synonym single letters and numerals", async () => {
+    // Datamuse suggests E, G, Q, ... for "zero"; only the abbreviation stays.
+    expect(
+      (await Wordset.synonym("zero").matches(/^.$/)).map(
+        (result) => result.joined,
+      ),
+    ).toEqual(["O"]);
+    expect(
+      (await Wordset.synonym("1150").matches(/^.{3}$/)).map(
+        (result) => result.joined,
+      ),
+    ).toContain("MCL");
+    expect(
+      (await Wordset.synonym("post office").matches(/^.{2}$/)).map(
+        (result) => result.joined,
+      ),
+    ).toContain("PO");
+  });
+
+  test.runIf(runAPITests)("synonym has no duplicates", async () => {
+    const joined = (await Wordset.synonym("about").matches(/^.{1,2}$/)).map(
+      (result) => result.joined,
+    );
+    expect(joined).toEqual([...new Set(joined)]);
+  });
+
+  test.runIf(runAPITests)("remove bounds the parent length", async () => {
+    const results = await Wordset.synonym("biblical city")
+      .remove([0])
+      .matches(/^.{5}$/);
+    expect(results.map((result) => result.joined)).toContain("ETHEL");
+  });
+
+  test("anagram does not enumerate eagerly", async () => {
+    // 12! permutations would not fit in a Set; the pattern prunes them.
+    const results = await Wordset.literal("reforge chain")
+      .anagram()
+      .matches(/^change.{6}$/);
+    expect(results.map((result) => result.joined)).toContain("CHANGEREFOIR");
   });
 });

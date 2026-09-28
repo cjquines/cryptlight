@@ -1,9 +1,9 @@
 import { Cromulence, slugify } from "cromulence";
-import { Abbreviations } from "./abbreviations.js";
+import { abbreviationKey, Abbreviations } from "./abbreviations.js";
 import * as AsyncIter from "./asyncIterable.js";
 import * as Iter from "./iterable.js";
 import { datamuse } from "./datamuse.js";
-import { lemmatize } from "./nlp.js";
+import { inflect, lemmatize, uninflect } from "./nlp.js";
 import { Pattern } from "./pattern.js";
 import { anagrams, Interval, interval, subsequences } from "./util.js";
 
@@ -237,6 +237,9 @@ export abstract class Wordset {
    *
    * Compare with deleteAll, which removes all instances at once.
    * Compare with remove, which takes indices, rather than letters.
+   *
+   * Letters are removed in order. To remove them in any order ("oil-less
+   * idol"), delete `other.anagram()`.
    */
   delete(other: Wordset): Wordset {
     return new Delete(this, other);
@@ -297,7 +300,8 @@ export abstract class Wordset {
   /**
    * Replace from in this with to: T(from→TO)S.
    *
-   * Unlike `replaceAll`, this asserts from appears exactly once in this.
+   * If from appears more than once, each occurrence gives its own result:
+   * THAT gives (t→W)HAT and THA(t→W). Compare with `replaceAll`.
    */
   replace(from: Wordset, to: Wordset): Wordset {
     return new Replace(this, from, to);
@@ -456,6 +460,56 @@ class Literal extends Wordset {
   }
 }
 
+/**
+ * Normalize typographic punctuation in clue text, which is usually pasted
+ * from a web page, to the ASCII that Datamuse and our lemmatizer expect.
+ */
+function normalizeClueText(text: string): string {
+  return text
+    .replaceAll(/[‘’‛′]/g, "'")
+    .replaceAll(/[“”″]/g, '"')
+    .replaceAll(/[‐‑‒–—]/g, "-");
+}
+
+/** The roman numeral for an integer like "1150", or null. */
+function romanNumeral(text: string): string | null {
+  if (!/^\s*\d+\s*$/.test(text)) {
+    return null;
+  }
+  let n = parseInt(text, 10);
+  if (n < 1 || n > 3999) {
+    return null;
+  }
+  const values: [number, string][] = [
+    [1000, "M"],
+    [900, "CM"],
+    [500, "D"],
+    [400, "CD"],
+    [100, "C"],
+    [90, "XC"],
+    [50, "L"],
+    [40, "XL"],
+    [10, "X"],
+    [9, "IX"],
+    [5, "V"],
+    [4, "IV"],
+    [1, "I"],
+  ];
+  let numeral = "";
+  for (const [value, letters] of values) {
+    for (; n >= value; n -= value) {
+      numeral += letters;
+    }
+  }
+  return numeral;
+}
+
+/**
+ * Query at most this many exact lengths separately; longer words share one
+ * open-ended query.
+ */
+const MAX_EXACT_LENGTHS = 8;
+
 class Synonym extends Wordset {
   private words: string;
 
@@ -468,29 +522,137 @@ class Synonym extends Wordset {
     return Interval.positive;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    yield* Wordset.literal(this.words).run(pattern);
+  /**
+   * Datamuse returns at most 1000 results, ranked by relevance. A query over
+   * a range of lengths (`sp=??*`) crowds out short words that a query for
+   * one exact length (`sp=??`) would return, so we query the shortest
+   * lengths exactly.
+   */
+  private spellings(pattern: Pattern): string[] {
+    const lengths = pattern.length.meet(Interval.positive);
+    if (lengths.isEmpty()) {
+      return [];
+    }
+    const exact = lengths.meet(
+      Interval.of(lengths.min, lengths.min + MAX_EXACT_LENGTHS - 1),
+    );
+    const spellings = Array.from(
+      exact,
+      (n) => pattern.prefixes(Interval.of(n)).oneLook,
+    );
+    if (lengths.max > exact.max) {
+      spellings.push(`${"?".repeat(exact.max + 1)}*`);
+    }
+    return spellings;
+  }
 
-    const oneLook = await datamuse({
-      spelledLike: pattern.oneLook,
-      meansLike: this.words,
-      maxResults: 1000,
-    });
-    for (const result of oneLook) {
-      yield new WordDerivation({
-        words: [slugify(result.word).toUpperCase()],
+  /**
+   * Datamuse mostly returns base forms: "birds" gives FALCON, not FALCONS. If
+   * the definition is inflected, look up its base form and inflect the
+   * results to match.
+   */
+  private async *inflected(
+    text: string,
+    pattern: Pattern,
+    unseen: (derivation: WordDerivation) => WordDerivation | null,
+  ): AsyncIterable<WordDerivation | null> {
+    const uninflected = uninflect(text);
+    if (uninflected === null) {
+      return;
+    }
+
+    // Inflecting adds at most this many letters: CHILD → CHILDREN.
+    const growth = 4;
+    const baseLengths = pattern.length
+      .add(Interval.of(-growth, 0))
+      .meet(Interval.positive);
+    const responses = await Promise.all(
+      this.spellings(Pattern.length(baseLengths)).map((spelledLike) =>
+        datamuse({
+          spelledLike,
+          meansLike: uninflected.base,
+          maxResults: 1000,
+        }),
+      ),
+    );
+
+    for (const { word } of responses.flat()) {
+      // Inflecting is slow, so skip base forms that can't match.
+      if (!pattern.allows(0, word[0] ?? "")) {
+        continue;
+      }
+      for (const form of inflect(word, uninflected.inflection)) {
+        const derivation = new WordDerivation({
+          words: [slugify(form).toUpperCase()],
+          description: `synonym of "${this.words}" (${word.toUpperCase()}, ${uninflected.inflection})`,
+          parents: [],
+        }).ifMatches(pattern);
+        yield derivation && unseen(derivation);
+      }
+    }
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    const seen = new Set<string>();
+    const unseen = (derivation: WordDerivation): WordDerivation | null => {
+      if (seen.has(derivation.joined)) {
+        return null;
+      }
+      seen.add(derivation.joined);
+      return derivation;
+    };
+
+    for await (const literal of Wordset.literal(this.words).run(pattern)) {
+      yield unseen(literal);
+    }
+
+    const text = normalizeClueText(this.words);
+    const responses = await Promise.all(
+      this.spellings(pattern).map((spelledLike) =>
+        datamuse({ spelledLike, meansLike: text, maxResults: 1000 }),
+      ),
+    );
+    for (const result of responses.flat()) {
+      const slug = slugify(result.word).toUpperCase();
+      // Datamuse's single letters are noise ("zero" gives E, G, Q, ...);
+      // single letters come from the abbreviation table instead.
+      if (slug.length < 2) {
+        continue;
+      }
+      const derivation = new WordDerivation({
+        words: [slug],
         description: `synonym of "${this.words}"`,
         parents: [],
       }).ifMatches(pattern);
+      yield derivation && unseen(derivation);
     }
 
-    for (const { lemma } of lemmatize(this.words)) {
+    const numeral = romanNumeral(text);
+    if (numeral !== null) {
+      const derivation = new WordDerivation({
+        words: [numeral],
+        description: `roman numeral of "${this.words}"`,
+        parents: [],
+      }).ifMatches(pattern);
+      yield derivation && unseen(derivation);
+    }
+
+    yield* this.inflected(text, pattern, unseen);
+
+    // Look up the whole phrase ("South-East" is "southeast") and each word.
+    const lemmas = new Set(lemmatize(text).map(({ lemma }) => lemma));
+    const key = abbreviationKey(text);
+    if (key !== undefined) {
+      lemmas.add(key);
+    }
+    for (const lemma of lemmas) {
       for (const { abbreviation } of Wordset.abbreviations.get(lemma)) {
-        yield new WordDerivation({
+        const derivation = new WordDerivation({
           words: [slugify(abbreviation).toUpperCase()],
           description: `abbreviation of "${this.words}"`,
           parents: [],
         }).ifMatches(pattern);
+        yield derivation && unseen(derivation);
       }
     }
   }
@@ -587,7 +749,9 @@ class Anagram extends Wordset {
 
   async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
     for await (const parent of this.parent.run(pattern.length)) {
-      for (const anagram of anagrams(parent.joined)) {
+      for (const anagram of anagrams(parent.joined, (index, letter) =>
+        pattern.allows(index, letter),
+      )) {
         yield new WordDerivation({
           description: `${anagram}*`,
           parents: [parent],
@@ -766,6 +930,12 @@ class DeleteAll extends Wordset {
   }
 }
 
+/**
+ * How many letters a homophone's spelling may differ in length from the
+ * original: WHET/WET, QUAY/KEY.
+ */
+const HOMOPHONE_SLACK = 2;
+
 class Homophone extends Wordset {
   private parent: Wordset;
 
@@ -779,11 +949,20 @@ class Homophone extends Wordset {
   }
 
   async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run()) {
+    // Each parent costs a Datamuse query, so only run parents that could
+    // plausibly sound like a match.
+    for await (const item of this.parent.run(
+      this.parent.length
+        .meet(
+          pattern.length.add(Interval.of(-HOMOPHONE_SLACK, HOMOPHONE_SLACK)),
+        )
+        .meet(Interval.positive),
+    )) {
       const phrase = item.words.join(" ");
       const results = await datamuse({ soundsLike: phrase });
       for (const result of results) {
         yield new WordDerivation({
+          words: [slugify(result.word).toUpperCase()],
           description: `${result.word.toUpperCase()} "${phrase}"`,
           parents: [item],
         }).ifMatches(pattern);
@@ -847,7 +1026,9 @@ class Remove extends Wordset {
   }
 
   async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run()) {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+    )) {
       const valid = item.words.every((word) =>
         this.indices.every((idx) =>
           idx >= 0 ? word.length > idx : word.length >= -idx,
@@ -873,14 +1054,40 @@ class Remove extends Wordset {
   }
 }
 
+type Replacement = { words: string[]; description: string };
+
 /**
- * Replace per-word non-overlapping occurrences of `from` in `whole` with `to`.
+ * Replace each single occurrence of `from` in `whole` with `to`, one result
+ * per occurrence.
  */
-function replaceOccurrences(
+function* replaceEach(
   whole: WordDerivation,
   from: string,
   to: WordDerivation,
-): { words: string[]; description: string; count: number } {
+): Generator<Replacement> {
+  for (const [w, word] of whole.words.entries()) {
+    for (let i = word.indexOf(from); i >= 0; i = word.indexOf(from, i + 1)) {
+      const replaced = `${word.slice(0, i)}${to.joined}${word.slice(i + from.length)}`;
+      const described = `${word.slice(0, i)}(${from.toLowerCase()}→${to})${word.slice(i + from.length)}`;
+      yield {
+        words: whole.words.map((other, v) => (v === w ? replaced : other)),
+        description: whole.words
+          .map((other, v) => (v === w ? described : other))
+          .join(" "),
+      };
+    }
+  }
+}
+
+/**
+ * Replace per-word non-overlapping occurrences of `from` in `whole` with `to`,
+ * if there are any.
+ */
+function* replaceAllOccurrences(
+  whole: WordDerivation,
+  from: string,
+  to: WordDerivation,
+): Generator<Replacement> {
   const words: string[] = [];
   const descriptions: string[] = [];
   let count = 0;
@@ -888,7 +1095,7 @@ function replaceOccurrences(
   for (const word of whole.words) {
     let description = "";
     let out = "";
-    for (let i = 0; i < word.length; ) {
+    for (let i = 0; i < word.length;) {
       if (word.startsWith(from, i)) {
         description += `(${from.toLowerCase()}→${to})`;
         out += to.joined;
@@ -904,23 +1111,27 @@ function replaceOccurrences(
     descriptions.push(description);
   }
 
-  return { words, description: descriptions.join(" "), count };
+  if (count > 0) {
+    yield { words, description: descriptions.join(" ") };
+  }
 }
 
-/**
- * Replace occurrences of `from` in `whole` with `to`, keeping only results
- * whose replacement count `accepts`.
- */
+/** Replace `from` in `whole` with `to`, in the ways `replacements` gives. */
 async function* replaceRun(
   whole: Wordset,
   from: Wordset,
   to: Wordset,
   pattern: Pattern,
-  accepts: (count: number) => boolean,
+  replacements: (
+    whole: WordDerivation,
+    from: string,
+    to: WordDerivation,
+  ) => Iterable<Replacement>,
+  lengths: { whole: Interval; from: Interval; to: Interval },
 ): AsyncIterable<WordDerivation | null> {
-  const wholes = await whole.all();
-  const froms = await from.all();
-  const tos = await to.all();
+  const wholes = await whole.matches(lengths.whole);
+  const froms = await from.matches(lengths.from.meet(Interval.positive));
+  const tos = await to.matches(lengths.to);
 
   for (const w of wholes) {
     for (const f of froms) {
@@ -928,19 +1139,13 @@ async function* replaceRun(
         continue;
       }
       for (const t of tos) {
-        const { words, description, count } = replaceOccurrences(
-          w,
-          f.joined,
-          t,
-        );
-        if (!accepts(count)) {
-          continue;
+        for (const { words, description } of replacements(w, f.joined, t)) {
+          yield new WordDerivation({
+            words,
+            description,
+            parents: [w, f, t],
+          }).ifMatches(pattern);
         }
-        yield new WordDerivation({
-          words,
-          description,
-          parents: [w, f, t],
-        }).ifMatches(pattern);
       }
     }
   }
@@ -966,13 +1171,18 @@ class Replace extends Wordset {
   }
 
   _run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    return replaceRun(
-      this.whole,
-      this.from,
-      this.to,
-      pattern,
-      (count) => count === 1,
-    );
+    // One replacement: |result| = |whole| - |from| + |to|.
+    const [W, F, T, P] = [
+      this.whole.length,
+      this.from.length,
+      this.to.length,
+      pattern.length,
+    ];
+    return replaceRun(this.whole, this.from, this.to, pattern, replaceEach, {
+      whole: W.meet(P.sub(T).add(F)),
+      from: F.meet(W.sub(P).add(T)).meet(Interval.of(0, W.max)),
+      to: T.meet(P.sub(W).add(F)),
+    });
   }
 }
 
@@ -1013,7 +1223,12 @@ class ReplaceAll extends Wordset {
       this.from,
       this.to,
       pattern,
-      (count) => count >= 1,
+      replaceAllOccurrences,
+      {
+        whole: this.whole.length,
+        from: this.from.length.meet(Interval.of(0, this.whole.length.max)),
+        to: this.to.length,
+      },
     );
   }
 }
@@ -1138,7 +1353,9 @@ class Select extends Wordset {
   }
 
   async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run()) {
+    for await (const item of this.parent.run(
+      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+    )) {
       const valid = item.words.every((word) =>
         this.indices.every((idx) =>
           idx >= 0 ? word.length > idx : word.length >= -idx,
