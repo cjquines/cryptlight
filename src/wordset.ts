@@ -189,6 +189,9 @@ export abstract class Wordset {
   }
 
   // cryptic-y transformations:
+  //
+  // Operations described as acting on "each word" also treat a phrase as a
+  // single word: "giant cave" curtails to GIAN CAV (and so on) and to GIANTCAV.
 
   /**
    * Alternating letters of this: ThIs or tHiS.
@@ -686,6 +689,14 @@ class Synonym extends Wordset {
 
 // cryptic-y transformations:
 
+/**
+ * The ways a per-word operation sees `item`: word by word and, for a phrase,
+ * as one word. "Giant cave, almost" cuts the phrase, not each word.
+ */
+function wordings(item: WordDerivation): string[][] {
+  return item.words.length > 1 ? [item.words, [item.joined]] : [item.words];
+}
+
 function renderMask(
   words: string[],
   survivors: Set<number>[],
@@ -829,15 +840,17 @@ class Centers extends Wordset {
     for await (const item of this.parent.run(
       this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
-      const perWord = item.words.map((word) => [...this.runs(word.length)]);
-      if (perWord.some((runs) => runs.length === 0)) {
-        continue;
-      }
-      for (const survivors of Iter.product(...perWord)) {
-        yield new WordDerivation({
-          ...renderMask(item.words, survivors, "keep"),
-          parents: [item],
-        }).ifMatches(pattern);
+      for (const words of wordings(item)) {
+        const perWord = words.map((word) => [...this.runs(word.length)]);
+        if (perWord.some((runs) => runs.length === 0)) {
+          continue;
+        }
+        for (const survivors of Iter.product(...perWord)) {
+          yield new WordDerivation({
+            ...renderMask(words, survivors, "keep"),
+            parents: [item],
+          }).ifMatches(pattern);
+        }
       }
     }
   }
@@ -1075,27 +1088,31 @@ class Remove extends Wordset {
     for await (const item of this.parent.run(
       this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
-      const valid = item.words.every((word) =>
-        this.indices.every((idx) =>
-          idx >= 0 ? word.length > idx : word.length >= -idx,
-        ),
-      );
-
-      if (!valid) {
-        continue;
-      }
-
-      const survivors = item.words.map(
-        (word) =>
-          new Set(
-            interval(0, word.length - 1).filter((i) => this.survives(word, i)),
+      for (const words of wordings(item)) {
+        const valid = words.every((word) =>
+          this.indices.every((idx) =>
+            idx >= 0 ? word.length > idx : word.length >= -idx,
           ),
-      );
+        );
 
-      yield new WordDerivation({
-        ...renderMask(item.words, survivors, "delete"),
-        parents: [item],
-      }).ifMatches(pattern);
+        if (!valid) {
+          continue;
+        }
+
+        const survivors = words.map(
+          (word) =>
+            new Set(
+              interval(0, word.length - 1).filter((i) =>
+                this.survives(word, i),
+              ),
+            ),
+        );
+
+        yield new WordDerivation({
+          ...renderMask(words, survivors, "delete"),
+          parents: [item],
+        }).ifMatches(pattern);
+      }
     }
   }
 }
@@ -1315,45 +1332,47 @@ class ReplaceAt extends Wordset {
 
     for (const to of tos) {
       for (const item of items) {
-        const valid = item.words.every((word) =>
-          this.indices.every((idx) =>
-            idx >= 0 ? word.length > idx : word.length >= -idx,
-          ),
-        );
-        if (!valid) {
-          continue;
-        }
-
-        const words: string[] = [];
-        const descriptions: string[] = [];
-        for (const word of item.words) {
-          const selected = new Set(
-            interval(0, word.length - 1).filter(
-              (i) =>
-                this.indices.includes(i) ||
-                this.indices.includes(i - word.length),
+        for (const itemWords of wordings(item)) {
+          const valid = itemWords.every((word) =>
+            this.indices.every((idx) =>
+              idx >= 0 ? word.length > idx : word.length >= -idx,
             ),
           );
-          let description = "";
-          let out = "";
-          for (let i = 0; i < word.length; i++) {
-            if (selected.has(i)) {
-              description += `(${word[i]!.toLowerCase()}→${to})`;
-              out += to.joined;
-            } else {
-              description += word[i]!;
-              out += word[i]!;
-            }
+          if (!valid) {
+            continue;
           }
-          words.push(out);
-          descriptions.push(description);
-        }
 
-        yield new WordDerivation({
-          words,
-          description: descriptions.join(" "),
-          parents: [item, to],
-        }).ifMatches(pattern);
+          const words: string[] = [];
+          const descriptions: string[] = [];
+          for (const word of itemWords) {
+            const selected = new Set(
+              interval(0, word.length - 1).filter(
+                (i) =>
+                  this.indices.includes(i) ||
+                  this.indices.includes(i - word.length),
+              ),
+            );
+            let description = "";
+            let out = "";
+            for (let i = 0; i < word.length; i++) {
+              if (selected.has(i)) {
+                description += `(${word[i]!.toLowerCase()}→${to})`;
+                out += to.joined;
+              } else {
+                description += word[i]!;
+                out += word[i]!;
+              }
+            }
+            words.push(out);
+            descriptions.push(description);
+          }
+
+          yield new WordDerivation({
+            words,
+            description: descriptions.join(" "),
+            parents: [item, to],
+          }).ifMatches(pattern);
+        }
       }
     }
   }
@@ -1415,31 +1434,33 @@ class Select extends Wordset {
     for await (const item of this.parent.run(
       this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
-      const valid = item.words.every((word) =>
-        this.indices.every((idx) =>
-          idx >= 0 ? word.length > idx : word.length >= -idx,
-        ),
-      );
-
-      if (!valid) {
-        continue;
-      }
-
-      const survivors = item.words.map(
-        (word) =>
-          new Set(
-            interval(0, word.length - 1).filter(
-              (i) =>
-                this.indices.includes(i) ||
-                this.indices.includes(i - word.length),
-            ),
+      for (const words of wordings(item)) {
+        const valid = words.every((word) =>
+          this.indices.every((idx) =>
+            idx >= 0 ? word.length > idx : word.length >= -idx,
           ),
-      );
+        );
 
-      yield new WordDerivation({
-        ...renderMask(item.words, survivors, "keep"),
-        parents: [item],
-      }).ifMatches(pattern);
+        if (!valid) {
+          continue;
+        }
+
+        const survivors = words.map(
+          (word) =>
+            new Set(
+              interval(0, word.length - 1).filter(
+                (i) =>
+                  this.indices.includes(i) ||
+                  this.indices.includes(i - word.length),
+              ),
+            ),
+        );
+
+        yield new WordDerivation({
+          ...renderMask(words, survivors, "keep"),
+          parents: [item],
+        }).ifMatches(pattern);
+      }
     }
   }
 }
@@ -1509,15 +1530,17 @@ class Slice extends Wordset {
     for await (const item of this.parent.run(
       this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
     )) {
-      const perWord = item.words.map((word) => [...this.runs(word.length)]);
-      if (perWord.some((runs) => runs.length === 0)) {
-        continue;
-      }
-      for (const survivors of Iter.product(...perWord)) {
-        yield new WordDerivation({
-          ...renderMask(item.words, survivors, this.mode),
-          parents: [item],
-        }).ifMatches(pattern);
+      for (const words of wordings(item)) {
+        const perWord = words.map((word) => [...this.runs(word.length)]);
+        if (perWord.some((runs) => runs.length === 0)) {
+          continue;
+        }
+        for (const survivors of Iter.product(...perWord)) {
+          yield new WordDerivation({
+            ...renderMask(words, survivors, this.mode),
+            parents: [item],
+          }).ifMatches(pattern);
+        }
       }
     }
   }

@@ -84,6 +84,10 @@ describe("wordset", () => {
         words: ["BCDE", "IJ"],
         description: "_BCDE_ _IJ_",
       }),
+      expect.objectContaining({
+        words: ["DEFGHI"],
+        description: "_DEFGHI_",
+      }),
     ]);
   });
 
@@ -114,6 +118,20 @@ describe("wordset", () => {
       expect.objectContaining({ words: ["THI"], description: "THI(-s)" }),
       expect.objectContaining({ words: ["TH"], description: "TH(-is)" }),
       expect.objectContaining({ words: ["T"], description: "T(-his)" }),
+    ]);
+  });
+
+  test("curtail treats a phrase as one word", async () => {
+    // "Giant cave, almost"
+    expect(
+      await Wordset.literal("giant cave")
+        .curtail()
+        .matches(/^.{8}$/),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["GIANTCAV"],
+        description: "GIANTCAV(-e)",
+      }),
     ]);
   });
 
@@ -230,6 +248,7 @@ describe("wordset", () => {
     ).toEqual([
       expect.objectContaining({ words: ["H", "WO"], description: "H_ WO_" }),
       expect.objectContaining({ words: ["HE", "W"], description: "HE_ W_" }),
+      expect.objectContaining({ words: ["HEL"], description: "HEL_" }),
     ]);
   });
 
@@ -248,9 +267,18 @@ describe("wordset", () => {
         words: ["EL"],
         description: "(-h)E(-l)L(-o)",
       }),
+      // A phrase is also treated as one word.
+      expect.objectContaining({
+        words: ["ELLBC"],
+        description: "(-h)ELL(-oa)BC",
+      }),
       expect.objectContaining({
         words: ["EL", "OL"],
         description: "(-h)E(-l)L(-o) (-w)O(-r)L(-d)",
+      }),
+      expect.objectContaining({
+        words: ["ELLWOLD"],
+        description: "(-h)ELL(-o)WO(-r)LD",
       }),
     ]);
   });
@@ -320,7 +348,12 @@ describe("wordset", () => {
         words: ["XELLX", "XORLX"],
         description: "(h→X)ELL(o→X) (w→X)ORL(d→X)",
       }),
+      expect.objectContaining({
+        words: ["XELLOWORLX"],
+        description: "(h→X)ELLOWORL(d→X)",
+      }),
       expect.objectContaining({ words: ["YELLY", "YORLY"] }),
+      expect.objectContaining({ words: ["YELLOWORLY"] }),
     ]);
   });
 
@@ -348,10 +381,13 @@ describe("wordset", () => {
         words: ["HLO"],
         description: "H_L_O",
       }),
+      // A phrase is also treated as one word.
+      expect.objectContaining({ words: ["HOA"], description: "H_OA_" }),
       expect.objectContaining({
         words: ["HLO", "WRD"],
         description: "H_L_O W_R_D",
       }),
+      expect.objectContaining({ words: ["HOR"], description: "H_O_R_" }),
     ]);
     expect(
       await Wordset.literal("alpha bravo charlie")
@@ -402,6 +438,7 @@ describe("wordset", () => {
     ).toEqual([
       expect.objectContaining({ words: ["O", "LD"], description: "_O _LD" }),
       expect.objectContaining({ words: ["LO", "D"], description: "_LO _D" }),
+      expect.objectContaining({ words: ["RLD"], description: "_RLD" }),
     ]);
   });
 
