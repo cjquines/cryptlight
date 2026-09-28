@@ -1,7 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { Abbreviations } from "../src/abbreviations.js";
-import { lemmatize } from "../src/nlp.js";
+import { abbreviationKey, Abbreviations } from "../src/abbreviations.js";
 import { distOutputDir, parseCSV, parseTSV, srcOutputDir } from "./util.js";
 import { slugify } from "cromulence";
 
@@ -22,12 +21,12 @@ async function main() {
     abbr2: string;
     abbr3: string;
   }>(path.join("manual", "abbreviation.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    if (lemmas.length !== 1) continue;
+    const lemma = abbreviationKey(record.text);
+    if (lemma === undefined) continue;
     for (const abbr of [record.abbr1, record.abbr2, record.abbr3]) {
       if (!abbr) continue;
       abbreviationData.push({
-        lemma: lemmas[0]!,
+        lemma,
         abbreviation: slugify(abbr).toUpperCase(),
         score: 50,
       });
@@ -39,19 +38,19 @@ async function main() {
     letter: string;
     type: string;
   }>(path.join("manual", "abbreviation2.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    if (lemmas.length !== 1) continue;
+    const lemma = abbreviationKey(record.text);
+    if (lemma === undefined) continue;
     abbreviationData.push({
-      lemma: lemmas[0]!,
+      lemma,
       abbreviation: record.letter,
       score: record.type === "Standard" ? 50 : 20,
     });
     for (const other of record.other.split("/")) {
       if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.length !== 1 || otherLemmas[0] === lemmas[0]) continue;
+      const otherLemma = abbreviationKey(other);
+      if (otherLemma === undefined || otherLemma === lemma) continue;
       abbreviationData.push({
-        lemma: otherLemmas[0]!,
+        lemma: otherLemma,
         abbreviation: slugify(record.letter).toUpperCase(),
         score: record.type === "Standard" ? 50 : 20,
       });
@@ -64,10 +63,10 @@ async function main() {
     answer: string;
     clue_rowids: string;
   }>("georgeho-charades.csv")) {
-    const lemmas = lemmatize(charade).map((l) => l.lemma);
-    if (lemmas.length !== 1) continue;
+    const lemma = abbreviationKey(charade);
+    if (lemma === undefined) continue;
     abbreviationData.push({
-      lemma: lemmas[0]!,
+      lemma,
       abbreviation: slugify(answer).toUpperCase(),
       score: Array.from(clue_rowids.matchAll(/,/g)).length + 1,
     });

@@ -1,3 +1,16 @@
+import { slugify } from "cromulence";
+import { lemmatize } from "./nlp.js";
+
+/**
+ * The key a phrase's abbreviations are stored under: its lemma, or for a
+ * phrase, its lemmas joined. "Post offices" and "post-office" are both
+ * "postoffice".
+ */
+export function abbreviationKey(text: string): string | undefined {
+  const lemmas = lemmatize(text).map(({ lemma }) => lemma);
+  return lemmas.length > 1 ? slugify(lemmas.join("")) : lemmas[0];
+}
+
 export class Abbreviations {
   data: Map<string, Map<string, number>>;
 
