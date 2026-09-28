@@ -290,6 +290,27 @@ export abstract class Wordset {
   }
 
   /**
+   * Move one letter to another position: LAST gives SLAT, ASLT, ...
+   *
+   * Acts on the phrase as a whole. Compare with `rotate`, which only moves
+   * a letter between the ends.
+   */
+  moveLetter(): Wordset {
+    return new MoveLetter(this, "any");
+  }
+
+  /**
+   * Concat this with other, sharing letters where they meet:
+   * RESPONSIVE + VELY → RESPONSIVELY.
+   *
+   * At least one letter is shared, and each side keeps at least one letter
+   * of its own.
+   */
+  overlap(other: Wordset): Wordset {
+    return new Overlap(this, other);
+  }
+
+  /**
    * A (proper) prefix of each word: TH_.
    *
    * Not a special case of substring, because this maps per-word.
@@ -347,6 +368,14 @@ export abstract class Wordset {
   }
 
   /**
+   * Move the first letter to the end, or the last letter to the front:
+   * LAST gives ASTL and TLAS.
+   */
+  rotate(): Wordset {
+    return new MoveLetter(this, "ends");
+  }
+
+  /**
    * Select the specified indices from each word in this: _I_ _A_.
    *
    * Indices can be negative, to handle indicators like "tails of", which mean
@@ -354,6 +383,16 @@ export abstract class Wordset {
    */
   select(indices: number[]): Wordset {
     return new Select(this, indices);
+  }
+
+  /**
+   * Swap the starts of two words: BOAT SHOE gives SHOAT BOE (swapping the
+   * leading consonants) and SOAT BHOE (swapping first letters).
+   *
+   * Spoonerisms are about sound, so chain `homophone` to respell the result.
+   */
+  spoonerism(): Wordset {
+    return new Spoonerism(this);
   }
 
   /**
@@ -1066,6 +1105,110 @@ class Insert extends Wordset {
   }
 }
 
+class MoveLetter extends Wordset {
+  private parent: Wordset;
+  private moves: "any" | "ends";
+
+  constructor(parent: Wordset, moves: "any" | "ends") {
+    super();
+    this.parent = parent;
+    this.moves = moves;
+  }
+
+  _length(): Interval {
+    return this.parent.length;
+  }
+
+  private *targets(n: number): Generator<[number, number]> {
+    if (this.moves === "ends") {
+      yield [0, n - 1];
+      yield [n - 1, 0];
+      return;
+    }
+    for (const from of interval(0, n - 1)) {
+      for (const to of interval(0, n - 1)) {
+        if (from !== to) {
+          yield [from, to];
+        }
+      }
+    }
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(pattern.length)) {
+      const letters = Array.from(item.joined);
+      const seen = new Set<string>([item.joined]);
+      for (const [from, to] of this.targets(letters.length)) {
+        const moved = [...letters];
+        const [letter] = moved.splice(from, 1);
+        moved.splice(to, 0, letter!);
+        const result = moved.join("");
+        if (seen.has(result)) {
+          continue;
+        }
+        seen.add(result);
+        yield new WordDerivation({
+          words: [result],
+          description: `${result} (${letter!.toLowerCase()} moved)`,
+          parents: [item],
+        }).ifMatches(pattern);
+      }
+    }
+  }
+}
+
+class Overlap extends Wordset {
+  private left: Wordset;
+  private right: Wordset;
+
+  constructor(left: Wordset, right: Wordset) {
+    super();
+    this.left = left;
+    this.right = right;
+  }
+
+  _length(): Interval {
+    // Sharing k letters, where 1 <= k < min(|left|, |right|).
+    const { left, right } = this;
+    return Interval.of(
+      Math.max(left.length.min, right.length.min, 2) + 1,
+      left.length.max + right.length.max - 1,
+    );
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    // Each side is a proper prefix or suffix of the result.
+    const sideLength = Interval.of(2, pattern.length.max - 1);
+    const leftLength = this.left.length.meet(sideLength);
+    const rightLength = this.right.length.meet(sideLength);
+
+    const leftPattern =
+      leftLength.isEmpty() || leftLength.max === Infinity
+        ? leftLength
+        : pattern.prefixes(leftLength);
+    const rightPattern =
+      rightLength.isEmpty() || rightLength.max === Infinity
+        ? rightLength
+        : pattern.reverse().prefixes(rightLength).reverse();
+
+    for await (const [left, right] of AsyncIter.product(
+      this.left.run(leftPattern),
+      this.right.run(rightPattern),
+    )) {
+      const [l, r] = [left.joined, right.joined];
+      for (const k of interval(1, Math.min(l.length, r.length) - 1)) {
+        if (l.endsWith(r.slice(0, k))) {
+          yield new WordDerivation({
+            words: [l + r.slice(k)],
+            description: `${left}+${right} (${r.slice(0, k).toLowerCase()} shared)`,
+            parents: [left, right],
+          }).ifMatches(pattern);
+        }
+      }
+    }
+  }
+}
+
 class Remove extends Wordset {
   private parent: Wordset;
   private indices: number[];
@@ -1540,6 +1683,62 @@ class Slice extends Wordset {
             ...renderMask(words, survivors, this.mode),
             parents: [item],
           }).ifMatches(pattern);
+        }
+      }
+    }
+  }
+}
+
+/** The leading consonants of a word: SH in SHOE, B in BOAT. */
+function onset(word: string): string {
+  return /^[^AEIOU]*/.exec(word)![0];
+}
+
+class Spoonerism extends Wordset {
+  private parent: Wordset;
+
+  constructor(parent: Wordset) {
+    super();
+    this.parent = parent;
+  }
+
+  _length(): Interval {
+    return this.parent.length;
+  }
+
+  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+    for await (const item of this.parent.run(pattern.length)) {
+      const { words } = item;
+      const seen = new Set<string>();
+      for (const i of interval(0, words.length - 1)) {
+        for (const j of interval(i + 1, words.length - 1)) {
+          const [a, b] = [words[i]!, words[j]!];
+          // Swap the leading consonants, or failing that the first letters.
+          for (const [x, y] of [
+            [onset(a), onset(b)],
+            [a.slice(0, 1), b.slice(0, 1)],
+          ] as const) {
+            if (x === y || x.length === 0 || y.length === 0) {
+              continue;
+            }
+            const swapped = words.map((word, w) =>
+              w === i
+                ? y + a.slice(x.length)
+                : w === j
+                  ? x + b.slice(y.length)
+                  : word,
+            );
+            const key = swapped.join(" ");
+            if (seen.has(key)) {
+              continue;
+            }
+            seen.add(key);
+            yield new WordDerivation({
+              words: swapped,
+              description: `${key} (spoonerism of ${words.join(" ")})`,
+              parents: [item],
+            }).ifMatches(pattern);
+          }
         }
       }
     }

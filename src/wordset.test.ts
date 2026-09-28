@@ -235,6 +235,37 @@ describe("wordset", () => {
     );
   });
 
+  test("moveLetter", async () => {
+    const results = await Wordset.literal("last").moveLetter().all();
+    expect(results).toContainEqual(
+      expect.objectContaining({
+        words: ["SLAT"],
+        description: "SLAT (s moved)",
+      }),
+    );
+    expect(results.map((result) => result.joined)).not.toContain("LAST");
+    expect(new Set(results.map((result) => result.joined)).size).toBe(
+      results.length,
+    );
+  });
+
+  test("overlap", async () => {
+    expect(
+      await Wordset.literal("responsive")
+        .overlap(Wordset.literal("vely"))
+        .all(),
+    ).toEqual([
+      expect.objectContaining({
+        words: ["RESPONSIVELY"],
+        description: "RESPONSIVE+VELY (ve shared)",
+      }),
+    ]);
+    // Neither side may be swallowed whole.
+    expect(
+      await Wordset.literal("ab").overlap(Wordset.literal("abc")).all(),
+    ).toEqual([]);
+  });
+
   test("prefix", async () => {
     expect(await Wordset.literal("this").prefix().all()).toEqual([
       expect.objectContaining({ words: ["THI"], description: "THI_" }),
@@ -357,6 +388,14 @@ describe("wordset", () => {
     ]);
   });
 
+  test("rotate", async () => {
+    expect(
+      (await Wordset.literal("last").rotate().all()).map(
+        (result) => result.joined,
+      ),
+    ).toEqual(["ASTL", "TLAS"]);
+  });
+
   test("reverse", async () => {
     expect(await Wordset.literal("this").reverse().all()).toEqual([
       expect.objectContaining({
@@ -400,6 +439,17 @@ describe("wordset", () => {
         description: "ABC+X",
       }),
     ]);
+  });
+
+  test("spoonerism", async () => {
+    expect(await Wordset.literal("boat shoe").spoonerism().all()).toEqual([
+      expect.objectContaining({
+        words: ["SHOAT", "BOE"],
+        description: "SHOAT BOE (spoonerism of BOAT SHOE)",
+      }),
+      expect.objectContaining({ words: ["SOAT", "BHOE"] }),
+    ]);
+    expect(await Wordset.literal("single").spoonerism().all()).toEqual([]);
   });
 
   test("substring", async () => {
