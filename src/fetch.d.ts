@@ -4,3 +4,8 @@ declare function fetch(input: string): Promise<{
   json(): Promise<unknown>;
   text(): Promise<string>;
 }>;
+
+declare function setTimeout(
+  callback: (...args: never[]) => void,
+  ms: number,
+): unknown;

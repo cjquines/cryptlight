@@ -140,15 +140,16 @@ export type DatamuseParams = {
    * **Metadata** flags: A list requesting that extra lexical knowledge be
    * included with the results.
    */
-  metadata?: (//
-  /**
-   * Produced in the defs field of the result object. The definitions are
-   * from Wiktionary and WordNet. If the word is an inflected form (such as
-   * the plural of a noun or a conjugated form of a verb), then an additional
-   * defHeadword field will be added indicating the base form from which the
-   * definitions are drawn.
-   */
-  | "definitions"
+  metadata?: (
+    //
+    /**
+     * Produced in the defs field of the result object. The definitions are
+     * from Wiktionary and WordNet. If the word is an inflected form (such as
+     * the plural of a noun or a conjugated form of a verb), then an additional
+     * defHeadword field will be added indicating the base form from which the
+     * definitions are drawn.
+     */
+    | "definitions"
     /**
      * One or more part-of-speech codes will be added to the tags field of the
      * result object. "n" means noun, "v" means verb, "adj" means adjective,
@@ -335,6 +336,61 @@ export function* queryParts(
   }
 }
 
+const cache = new Map<string, Promise<DatamuseResult[]>>();
+
+const RETRY_DELAYS_MS = [1000, 4000, 16000];
+
+/**
+ * At most this many requests are in flight at once. Datamuse blocks clients
+ * that send bursts of requests.
+ */
+const MAX_CONCURRENT = 4;
+let inFlight = 0;
+const waiting: (() => void)[] = [];
+
+async function throttledFetch(url: string) {
+  if (inFlight < MAX_CONCURRENT) {
+    inFlight++;
+  } else {
+    // A finishing request hands its slot straight to us.
+    await new Promise<void>((resolve) => {
+      waiting.push(resolve);
+    });
+  }
+  try {
+    return await fetch(url);
+  } finally {
+    const next = waiting.shift();
+    if (next) {
+      next();
+    } else {
+      inFlight--;
+    }
+  }
+}
+
+async function fetchResults(url: string): Promise<DatamuseResult[]> {
+  for (let attempt = 0; ; attempt++) {
+    const response = await throttledFetch(url);
+    // Datamuse sits behind CloudFront, which answers throttled requests with
+    // an HTML 403 page rather than JSON.
+    if (response.ok) {
+      return (await response.json()) as DatamuseResult[];
+    }
+    const delay = RETRY_DELAYS_MS[attempt];
+    if (delay === undefined) {
+      throw new Error(`datamuse: HTTP ${response.status} for ${url}`);
+    }
+    await new Promise<void>((resolve) => {
+      setTimeout(resolve, delay);
+    });
+  }
+}
+
+/**
+ * Query Datamuse. Identical queries share one request for the lifetime of the
+ * process; failed queries are evicted so they can be retried.
+ */
 export async function datamuse(
   params: DatamuseParams,
 ): Promise<DatamuseResult[]> {
@@ -346,8 +402,11 @@ export async function datamuse(
     .join("&");
 
   const url = `https://api.datamuse.com/words?${queryString}`;
-  const response = await fetch(url);
-  const results = (await response.json()) as DatamuseResult[];
-
+  let results = cache.get(url);
+  if (results === undefined) {
+    results = fetchResults(url);
+    cache.set(url, results);
+    results.catch(() => cache.delete(url));
+  }
   return results;
 }
