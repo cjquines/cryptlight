@@ -663,6 +663,32 @@ describe("wordset", () => {
     ).toEqual(["LISTEN", "SILENT"]);
   });
 
+  test("concat and insert pass candidates to their parts", async () => {
+    // 7! × 7! pairs without candidates.
+    expect(
+      (
+        await Wordset.literal("gfedcba nmlkjih")
+          .intersect(
+            Wordset.literal("abcdefg")
+              .anagram()
+              .concat(Wordset.literal("hijklmn").anagram()),
+          )
+          .all()
+      ).map((result) => result.joined),
+    ).toEqual(["GFEDCBANMLKJIH"]);
+    expect(
+      (
+        await Wordset.literal("gfehijklmndcba")
+          .intersect(
+            Wordset.literal("abcdefg")
+              .anagram()
+              .insert(Wordset.literal("hijklmn").anagram()),
+          )
+          .all()
+      ).map((result) => result.joined),
+    ).toEqual(["GFEHIJKLMNDCBA"]);
+  });
+
   test("anagram does not enumerate eagerly", async () => {
     // 12! permutations would not fit in a Set; the pattern prunes them.
     const results = await Wordset.literal("reforge chain")

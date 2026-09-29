@@ -909,7 +909,10 @@ class Concat extends Wordset {
     return this.left.length.add(this.right.length);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
     const leftLength = this.left.length.meet(
       pattern.length.sub(this.right.length),
     );
@@ -926,9 +929,23 @@ class Concat extends Wordset {
         ? rightLength
         : pattern.reverse().prefixes(rightLength).reverse();
 
+    // Each candidate splits into a left prefix and a right suffix.
+    let leftCandidates: Set<string> | undefined;
+    let rightCandidates: Set<string> | undefined;
+    if (candidates) {
+      leftCandidates = new Set();
+      rightCandidates = new Set();
+      for (const candidate of candidates) {
+        for (const k of interval(0, candidate.length)) {
+          leftCandidates.add(candidate.slice(0, k));
+          rightCandidates.add(candidate.slice(k));
+        }
+      }
+    }
+
     for await (const [left, right] of AsyncIter.product(
-      this.left.run(leftPattern),
-      this.right.run(rightPattern),
+      this.left.run(leftPattern, leftCandidates),
+      this.right.run(rightPattern, rightCandidates),
     )) {
       yield new WordDerivation({
         words: [...left.words, ...right.words],
@@ -1083,13 +1100,35 @@ class Insert extends Wordset {
     return this.container.length.add(this.content.length);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  async *_run(
+    pattern: Pattern,
+    candidates?: ReadonlySet<string>,
+  ): AsyncIterable<WordDerivation | null> {
+    // Each candidate splits into content strictly inside it, and the
+    // container around that.
+    let containerCandidates: Set<string> | undefined;
+    let contentCandidates: Set<string> | undefined;
+    if (candidates) {
+      containerCandidates = new Set();
+      contentCandidates = new Set();
+      for (const candidate of candidates) {
+        for (const i of interval(1, candidate.length - 1)) {
+          for (const j of interval(i, candidate.length - 1)) {
+            containerCandidates.add(candidate.slice(0, i) + candidate.slice(j));
+            contentCandidates.add(candidate.slice(i, j));
+          }
+        }
+      }
+    }
+
     for await (const [container, content] of AsyncIter.product(
       this.container.run(
         this.container.length.meet(pattern.length.sub(this.content.length)),
+        containerCandidates,
       ),
       this.content.run(
         this.content.length.meet(pattern.length.sub(this.container.length)),
+        contentCandidates,
       ),
     )) {
       for (const i of interval(1, container.joined.length - 1)) {
