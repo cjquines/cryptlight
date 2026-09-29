@@ -4564,7 +4564,7 @@ helponeselftofood ATE 1
 helpus SOS 4
 hem RIM 1
 hence SO 2
-henry HAL 7 OH 1
+henry H 50 HAL 7 OH 1
 henryis HIS 1
 hepasson OB 1
 her DIS 1 HER 2
@@ -6176,7 +6176,7 @@ mayfirst OFM 1
 mbli GA 1
 mccluskey LEN 1
 mckellen IAN 1
-me ME 10 MI 1
+me I 50 ME 10 MI 1
 meadow LEA 32
 meagre LOW 1
 meal ER 2 TEA 8
@@ -6675,6 +6675,7 @@ newsreport IN 1
 newssupremo NED 1
 newtechnology IT 2
 newtestament NT 51 ANT 1
+newton N 50
 newvisitorinitial NV 1
 newyork NY 50
 newzealand NZ 50
@@ -10285,7 +10286,7 @@ theatrecompany REP 4
 theatreperformance OP 1
 theatricalcompany REP 1
 theatricalwork AMA 1
-theauthor ME 2
+theauthor I 50 ME 2
 thebest TOP 1
 thebill TAB 2
 thebird HEN 1
