@@ -86,4 +86,16 @@ describe("regex", () => {
     expect(pattern.allows(5, "z")).toBe(true);
     expect(Pattern.parse(/^ab$/).allows(2, "a")).toBe(false);
   });
+
+  test("never", () => {
+    const never = Pattern.never;
+    expect(never.length.isEmpty()).toBe(true);
+    expect(never.test("")).toBe(false);
+    expect(never.allows(0, "a")).toBe(false);
+    expect(never.reverse().length.isEmpty()).toBe(true);
+    expect(never.prefixes(Interval.of(1, 3)).length.isEmpty()).toBe(true);
+    expect(
+      Pattern.parse(/^abc$/).prefixes(Interval.empty).length.isEmpty(),
+    ).toBe(true);
+  });
 });

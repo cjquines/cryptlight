@@ -91,6 +91,33 @@ export type WordsetData = {
   abbreviations: string[];
 };
 
+/** What a run is asked for. */
+export type RunArgs = {
+  pattern: Pattern;
+  /**
+   * Only derivations whose `joined` is a candidate are wanted.
+   * Implementations may use it to prune their search, or ignore it: `run`
+   * filters the results either way.
+   */
+  candidates?: ReadonlySet<string> | undefined;
+};
+
+/** Compile-time args for wordset and descendants. Run narrows further. */
+export type Plan = {
+  node: Wordset;
+  args: RunArgs;
+  children: Plan[];
+};
+
+/** One child's compile-time args, as declared by its parent's `_plan`. */
+type PlanStep = Pick<Plan, "node" | "args">;
+
+/** Runs a child with compile-time plan args plus run-time narrowing. */
+type RunChild = (
+  child: Wordset,
+  narrower?: { candidates: ReadonlySet<string> },
+) => AsyncIterable<WordDerivation>;
+
 /**
  * A lazy pipeline over "words", materialized as an iterator of WordDerivations
  * exactly once.
@@ -118,16 +145,18 @@ export abstract class Wordset {
   abstract _length(): Interval;
 
   /**
-   * Yield WordDerivations (or null) matching the wordset filters and the
-   * given pattern.
-   *
-   * If `candidates` is given, only derivations whose `joined` is a candidate
-   * are wanted. Implementations may use it to prune their search, or ignore
-   * it: `run` filters the results either way.
+   * Each child with the args it runs under, given this wordset's args.
+   * Compile-time. Leaves return [].
+   */
+  abstract _plan(args: RunArgs): PlanStep[];
+
+  /**
+   * Yield WordDerivations (or null) matching the wordset filters and `args`.
+   * Children *must* be run through `runChild`.
    */
   abstract _run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
+    args: RunArgs,
+    runChild: RunChild,
   ): AsyncIterable<WordDerivation | null>;
 
   #length: Interval | null = null;
@@ -143,37 +172,72 @@ export abstract class Wordset {
    * Yield WordDerivations matching the wordset filters and the given regex,
    * and, if given, whose `joined` is one of `candidates`. Single-use.
    */
-  async *run(
+  run(
     input?: RegExp | Pattern | Interval,
     candidates?: ReadonlySet<string>,
   ): AsyncIterable<WordDerivation> {
+    return this.execute(this.plan(input, candidates));
+  }
+
+  /** Run `plan`, which must be a plan of this. Single-use. */
+  private async *execute(plan: Plan): AsyncIterable<WordDerivation> {
     if (this.hasRun) {
       throw new Error("Wordset.run may only be called once");
     }
     this.hasRun = true;
 
-    if (input instanceof Interval && input.isEmpty()) {
+    const { args } = plan;
+    if (args.pattern.length.isEmpty()) {
       return;
     }
 
-    const pattern =
-      input === undefined
-        ? Pattern.any
-        : input instanceof Interval
-          ? Pattern.length(input)
-          : input instanceof Pattern
-            ? input
-            : Pattern.parse(input);
+    const plans = new Map(plan.children.map((child) => [child.node, child]));
+    const runChild: RunChild = (child, narrower) => {
+      const childPlan = plans.get(child);
+      if (childPlan === undefined) {
+        throw new Error("runChild: not a child declared by _plan");
+      }
+      if (narrower === undefined) {
+        return child.execute(childPlan);
+      }
+      // Narrowed candidates change what descendants are asked for, so
+      // re-plan this subtree.
+      const planCands = childPlan.args.candidates;
+      const narrowCands = narrower.candidates;
+      return child.execute(
+        child.planWith({
+          pattern: childPlan.args.pattern,
+          candidates: planCands
+            ? planCands.intersection(narrowCands)
+            : narrowCands,
+        }),
+      );
+    };
 
-    if (pattern.length.isEmpty()) {
-      return;
-    }
-
-    for await (const item of this._run(pattern, candidates)) {
-      if (item !== null && (candidates?.has(item.joined) ?? true)) {
+    for await (const item of this._run(args, runChild)) {
+      if (item !== null && (args.candidates?.has(item.joined) ?? true)) {
         yield item;
       }
     }
+  }
+
+  /** Compile-time args this Wordset would run. Can call any number of times. */
+  plan(
+    input?: RegExp | Pattern | Interval,
+    candidates?: ReadonlySet<string>,
+  ): Plan {
+    return this.planWith({ pattern: Pattern.from(input), candidates });
+  }
+
+  private planWith(args: RunArgs): Plan {
+    const empty = args.pattern.length.isEmpty();
+    return {
+      node: this,
+      args,
+      children: this._plan(args).map((step) =>
+        step.node.planWith(empty ? { pattern: Pattern.never } : step.args),
+      ),
+    };
   }
 
   // sources:
@@ -506,8 +570,12 @@ class Literal extends Wordset {
     return Interval.of(this.derivation.joined.length);
   }
 
+  _plan(): PlanStep[] {
+    return [];
+  }
+
   // eslint-disable-next-line @typescript-eslint/require-await -- intentional
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  async *_run({ pattern }: RunArgs): AsyncIterable<WordDerivation | null> {
     yield this.derivation.ifMatches(pattern);
   }
 }
@@ -657,10 +725,14 @@ class Synonym extends Wordset {
     }
   }
 
-  async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
-  ): AsyncIterable<WordDerivation | null> {
+  _plan(): PlanStep[] {
+    return [];
+  }
+
+  async *_run({
+    pattern,
+    candidates,
+  }: RunArgs): AsyncIterable<WordDerivation | null> {
     const seen = new Set<string>();
     const unseen = (derivation: WordDerivation): WordDerivation | null => {
       if (seen.has(derivation.joined)) {
@@ -787,10 +859,24 @@ class Alternate extends Wordset {
     return Interval.of(count(min), count(max));
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       // Alternation runs across the whole phrase, not per word, so the letter
       // index keeps counting past spaces: "AbC dEfGh IjK", giving "ACEGIK".
       let index = 0;
@@ -827,9 +913,15 @@ class Anagram extends Wordset {
     return this.parent.length;
   }
 
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      { node: this.parent, args: { pattern: Pattern.from(pattern.length) } },
+    ];
+  }
+
   async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
+    { pattern, candidates }: RunArgs,
+    runChild: RunChild,
   ): AsyncIterable<WordDerivation | null> {
     // Checking candidates is far cheaper than enumerating the n! anagrams of
     // long fodder.
@@ -841,7 +933,7 @@ class Anagram extends Wordset {
       }
     }
 
-    for await (const parent of this.parent.run(pattern.length)) {
+    for await (const parent of runChild(this.parent)) {
       const found = candidates
         ? (byLetters.get(sortLetters(parent.joined)) ?? [])
         : anagrams(parent.joined, (index, letter) =>
@@ -875,10 +967,24 @@ class Centers extends Wordset {
     }
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       for (const words of wordings(item)) {
         const perWord = words.map((word) => [...this.runs(word.length)]);
         if (perWord.some((runs) => runs.length === 0)) {
@@ -909,10 +1015,7 @@ class Concat extends Wordset {
     return this.left.length.add(this.right.length);
   }
 
-  async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
-  ): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern, candidates }: RunArgs): PlanStep[] {
     const leftLength = this.left.length.meet(
       pattern.length.sub(this.right.length),
     );
@@ -943,9 +1046,31 @@ class Concat extends Wordset {
       }
     }
 
+    return [
+      {
+        node: this.left,
+        args: {
+          pattern: Pattern.from(leftPattern),
+          candidates: leftCandidates,
+        },
+      },
+      {
+        node: this.right,
+        args: {
+          pattern: Pattern.from(rightPattern),
+          candidates: rightCandidates,
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
     for await (const [left, right] of AsyncIter.product(
-      this.left.run(leftPattern, leftCandidates),
-      this.right.run(rightPattern, rightCandidates),
+      runChild(this.left),
+      runChild(this.right),
     )) {
       yield new WordDerivation({
         words: [...left.words, ...right.words],
@@ -970,14 +1095,34 @@ class Delete extends Wordset {
     return this.whole.length.sub(this.part.length).meet(Interval.positive);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.whole,
+        args: {
+          pattern: Pattern.from(
+            this.whole.length.meet(pattern.length.add(this.part.length)),
+          ),
+        },
+      },
+      {
+        node: this.part,
+        args: {
+          pattern: Pattern.from(
+            this.part.length.meet(this.whole.length.sub(pattern.length)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
     for await (const [whole, part] of AsyncIter.product(
-      this.whole.run(
-        this.whole.length.meet(pattern.length.add(this.part.length)),
-      ),
-      this.part.run(
-        this.part.length.meet(this.whole.length.sub(pattern.length)),
-      ),
+      runChild(this.whole),
+      runChild(this.part),
     )) {
       if (whole.joined.length <= part.joined.length) {
         continue;
@@ -1011,15 +1156,35 @@ class DeleteAll extends Wordset {
     return Interval.of(0, this.whole.length.sub(this.part.length).max);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.whole,
+        args: {
+          pattern: Pattern.from(
+            Interval.of(
+              pattern.length.add(this.part.length).min,
+              this.whole.length.max,
+            ),
+          ),
+        },
+      },
+      {
+        node: this.part,
+        args: {
+          pattern: Pattern.from(this.part.length.meet(Interval.positive)),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
     for await (const [whole, part] of AsyncIter.product(
-      this.whole.run(
-        Interval.of(
-          pattern.length.add(this.part.length).min,
-          this.whole.length.max,
-        ),
-      ),
-      this.part.run(this.part.length.meet(Interval.positive)),
+      runChild(this.whole),
+      runChild(this.part),
     )) {
       const splits = whole.joined.split(part.joined);
       if (splits.length === 1) {
@@ -1063,16 +1228,32 @@ class Homophone extends Wordset {
     return Interval.positive;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern }: RunArgs): PlanStep[] {
     // Each parent costs a Datamuse query, so only run parents that could
     // plausibly sound like a match.
-    for await (const item of this.parent.run(
-      this.parent.length
-        .meet(
-          pattern.length.add(Interval.of(-HOMOPHONE_SLACK, HOMOPHONE_SLACK)),
-        )
-        .meet(Interval.positive),
-    )) {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length
+              .meet(
+                pattern.length.add(
+                  Interval.of(-HOMOPHONE_SLACK, HOMOPHONE_SLACK),
+                ),
+              )
+              .meet(Interval.positive),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       const phrase = item.words.join(" ");
       const results = await datamuse({ soundsLike: phrase });
       for (const result of results) {
@@ -1100,10 +1281,7 @@ class Insert extends Wordset {
     return this.container.length.add(this.content.length);
   }
 
-  async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
-  ): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern, candidates }: RunArgs): PlanStep[] {
     // Each candidate splits into content strictly inside it, and the
     // container around that.
     let containerCandidates: Set<string> | undefined;
@@ -1121,15 +1299,35 @@ class Insert extends Wordset {
       }
     }
 
+    return [
+      {
+        node: this.container,
+        args: {
+          pattern: Pattern.from(
+            this.container.length.meet(pattern.length.sub(this.content.length)),
+          ),
+          candidates: containerCandidates,
+        },
+      },
+      {
+        node: this.content,
+        args: {
+          pattern: Pattern.from(
+            this.content.length.meet(pattern.length.sub(this.container.length)),
+          ),
+          candidates: contentCandidates,
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
     for await (const [container, content] of AsyncIter.product(
-      this.container.run(
-        this.container.length.meet(pattern.length.sub(this.content.length)),
-        containerCandidates,
-      ),
-      this.content.run(
-        this.content.length.meet(pattern.length.sub(this.container.length)),
-        contentCandidates,
-      ),
+      runChild(this.container),
+      runChild(this.content),
     )) {
       for (const i of interval(1, container.joined.length - 1)) {
         yield new WordDerivation({
@@ -1173,8 +1371,17 @@ class MoveLetter extends Wordset {
     }
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(pattern.length)) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      { node: this.parent, args: { pattern: Pattern.from(pattern.length) } },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       const letters = Array.from(item.joined);
       const seen = new Set<string>([item.joined]);
       for (const [from, to] of this.targets(letters.length)) {
@@ -1215,7 +1422,7 @@ class Overlap extends Wordset {
     );
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern }: RunArgs): PlanStep[] {
     // Each side is a proper prefix or suffix of the result.
     const sideLength = Interval.of(2, pattern.length.max - 1);
     const leftLength = this.left.length.meet(sideLength);
@@ -1230,9 +1437,19 @@ class Overlap extends Wordset {
         ? rightLength
         : pattern.reverse().prefixes(rightLength).reverse();
 
+    return [
+      { node: this.left, args: { pattern: Pattern.from(leftPattern) } },
+      { node: this.right, args: { pattern: Pattern.from(rightPattern) } },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
     for await (const [left, right] of AsyncIter.product(
-      this.left.run(leftPattern),
-      this.right.run(rightPattern),
+      runChild(this.left),
+      runChild(this.right),
     )) {
       const [l, r] = [left.joined, right.joined];
       for (const k of interval(1, Math.min(l.length, r.length) - 1)) {
@@ -1266,10 +1483,24 @@ class Remove extends Wordset {
     return !this.indices.includes(i) && !this.indices.includes(i - word.length);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       for (const words of wordings(item)) {
         const valid = words.every((word) =>
           this.indices.every((idx) =>
@@ -1363,27 +1594,26 @@ function* replaceAllOccurrences(
 
 /** Replace `from` in `whole` with `to`, in the ways `replacements` gives. */
 async function* replaceRun(
-  whole: Wordset,
-  from: Wordset,
-  to: Wordset,
+  wholes: AsyncIterable<WordDerivation>,
+  froms: AsyncIterable<WordDerivation>,
+  tos: AsyncIterable<WordDerivation>,
   pattern: Pattern,
   replacements: (
     whole: WordDerivation,
     from: string,
     to: WordDerivation,
   ) => Iterable<Replacement>,
-  lengths: { whole: Interval; from: Interval; to: Interval },
 ): AsyncIterable<WordDerivation | null> {
-  const wholes = await whole.matches(lengths.whole);
-  const froms = await from.matches(lengths.from.meet(Interval.positive));
-  const tos = await to.matches(lengths.to);
+  const ws = await AsyncIter.toArray(wholes);
+  const fs = await AsyncIter.toArray(froms);
+  const ts = await AsyncIter.toArray(tos);
 
-  for (const w of wholes) {
-    for (const f of froms) {
+  for (const w of ws) {
+    for (const f of fs) {
       if (f.joined.length === 0) {
         continue;
       }
-      for (const t of tos) {
+      for (const t of ts) {
         for (const { words, description } of replacements(w, f.joined, t)) {
           yield new WordDerivation({
             words,
@@ -1415,7 +1645,7 @@ class Replace extends Wordset {
       .meet(Interval.nonnegative);
   }
 
-  _run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern }: RunArgs): PlanStep[] {
     // One replacement: |result| = |whole| - |from| + |to|.
     const [W, F, T, P] = [
       this.whole.length,
@@ -1423,11 +1653,39 @@ class Replace extends Wordset {
       this.to.length,
       pattern.length,
     ];
-    return replaceRun(this.whole, this.from, this.to, pattern, replaceEach, {
-      whole: W.meet(P.sub(T).add(F)),
-      from: F.meet(W.sub(P).add(T)).meet(Interval.of(0, W.max)),
-      to: T.meet(P.sub(W).add(F)),
-    });
+    return [
+      {
+        node: this.whole,
+        args: { pattern: Pattern.from(W.meet(P.sub(T).add(F))) },
+      },
+      {
+        node: this.from,
+        args: {
+          pattern: Pattern.from(
+            F.meet(W.sub(P).add(T))
+              .meet(Interval.of(0, W.max))
+              .meet(Interval.positive),
+          ),
+        },
+      },
+      {
+        node: this.to,
+        args: { pattern: Pattern.from(T.meet(P.sub(W).add(F))) },
+      },
+    ];
+  }
+
+  _run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    return replaceRun(
+      runChild(this.whole),
+      runChild(this.from),
+      runChild(this.to),
+      pattern,
+      replaceEach,
+    );
   }
 }
 
@@ -1462,18 +1720,33 @@ class ReplaceAll extends Wordset {
     return Interval.of(min, max).meet(Interval.nonnegative);
   }
 
-  _run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
+  _plan(): PlanStep[] {
+    return [
+      { node: this.whole, args: { pattern: Pattern.from(this.whole.length) } },
+      {
+        node: this.from,
+        args: {
+          pattern: Pattern.from(
+            this.from.length
+              .meet(Interval.of(0, this.whole.length.max))
+              .meet(Interval.positive),
+          ),
+        },
+      },
+      { node: this.to, args: { pattern: Pattern.from(this.to.length) } },
+    ];
+  }
+
+  _run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
     return replaceRun(
-      this.whole,
-      this.from,
-      this.to,
+      runChild(this.whole),
+      runChild(this.from),
+      runChild(this.to),
       pattern,
       replaceAllOccurrences,
-      {
-        whole: this.whole.length,
-        from: this.from.length.meet(Interval.of(0, this.whole.length.max)),
-        to: this.to.length,
-      },
     );
   }
 }
@@ -1508,9 +1781,20 @@ class ReplaceAt extends Wordset {
     return Interval.of(min, max).meet(Interval.nonnegative);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    const items = await this.parent.all();
-    const tos = await this.to.all();
+  _plan(): PlanStep[] {
+    // TODO: push down lengths; this runs both sides unconstrained.
+    return [
+      { node: this.parent, args: { pattern: Pattern.any } },
+      { node: this.to, args: { pattern: Pattern.any } },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    const items = await AsyncIter.toArray(runChild(this.parent));
+    const tos = await AsyncIter.toArray(runChild(this.to));
 
     for (const to of tos) {
       for (const item of items) {
@@ -1572,10 +1856,7 @@ class Reverse extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
-  ): AsyncIterable<WordDerivation | null> {
+  _plan({ pattern, candidates }: RunArgs): PlanStep[] {
     const reversedCandidates =
       candidates &&
       new Set(
@@ -1583,10 +1864,19 @@ class Reverse extends Wordset {
           Array.from(candidate).reverse().join(""),
         ),
       );
-    for await (const item of this.parent.run(
-      pattern.reverse(),
-      reversedCandidates,
-    )) {
+    return [
+      {
+        node: this.parent,
+        args: { pattern: pattern.reverse(), candidates: reversedCandidates },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       const reversed = Array.from(item.joined);
       yield new WordDerivation({
         description: `${item.mapString(() => [reversed.pop()!])}<`,
@@ -1612,10 +1902,24 @@ class Select extends Wordset {
     return Interval.of(Math.max(positive, negative), this.parent.length.max);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       for (const words of wordings(item)) {
         const valid = words.every((word) =>
           this.indices.every((idx) =>
@@ -1708,10 +2012,24 @@ class Slice extends Wordset {
     yield* all;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       for (const words of wordings(item)) {
         const perWord = words.map((word) => [...this.runs(word.length)]);
         if (perWord.some((runs) => runs.length === 0)) {
@@ -1745,8 +2063,17 @@ class Spoonerism extends Wordset {
     return this.parent.length;
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(pattern.length)) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      { node: this.parent, args: { pattern: Pattern.from(pattern.length) } },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       const { words } = item;
       const seen = new Set<string>();
       for (const i of interval(0, words.length - 1)) {
@@ -1796,10 +2123,24 @@ class Substring extends Wordset {
     return Interval.of(1, this.parent.length.max);
   }
 
-  async *_run(pattern: Pattern): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(
-      this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
-    )) {
+  _plan({ pattern }: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: Pattern.from(
+            this.parent.length.meet(Interval.of(pattern.length.min, Infinity)),
+          ),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
       const full = item.words.join("");
 
       // We need to preserve spacing: the substring of "bath island" is
@@ -1852,24 +2193,28 @@ class Intersect extends Wordset {
    * left should be the smaller side, usually the definition: many operations
    * can check a candidate far faster than they can enumerate.
    */
+  _plan(args: RunArgs): PlanStep[] {
+    // At run time, right is also narrowed to left's results.
+    return [
+      { node: this.left, args },
+      { node: this.right, args: { pattern: args.pattern } },
+    ];
+  }
+
   async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
+    _args: RunArgs,
+    runChild: RunChild,
   ): AsyncIterable<WordDerivation | null> {
-    const lefts: WordDerivation[] = [];
-    for await (const item of this.left.run(pattern, candidates)) {
-      lefts.push(item);
-    }
+    const lefts = await AsyncIter.toArray(runChild(this.left));
 
     if (lefts.length === 0) {
       return;
     }
 
     const rights = new Map<string, WordDerivation>();
-    for await (const item of this.right.run(
-      pattern,
-      new Set(lefts.map((item) => item.joined)),
-    )) {
+    for await (const item of runChild(this.right, {
+      candidates: new Set(lefts.map((item) => item.joined)),
+    })) {
       if (!rights.has(item.joined)) {
         rights.set(item.joined, item);
       }
@@ -1902,16 +2247,19 @@ class Union extends Wordset {
     return this.left.length.join(this.right.length);
   }
 
+  _plan(args: RunArgs): PlanStep[] {
+    return [
+      { node: this.left, args },
+      { node: this.right, args },
+    ];
+  }
+
   async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
+    _args: RunArgs,
+    runChild: RunChild,
   ): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.left.run(pattern, candidates)) {
-      yield item;
-    }
-    for await (const item of this.right.run(pattern, candidates)) {
-      yield item;
-    }
+    yield* runChild(this.left);
+    yield* runChild(this.right);
   }
 }
 
@@ -1927,11 +2275,15 @@ class Wordlike extends Wordset {
     return this.parent.length;
   }
 
+  _plan(args: RunArgs): PlanStep[] {
+    return [{ node: this.parent, args }];
+  }
+
   async *_run(
-    pattern: Pattern,
-    candidates?: ReadonlySet<string>,
+    _args: RunArgs,
+    runChild: RunChild,
   ): AsyncIterable<WordDerivation | null> {
-    for await (const item of this.parent.run(pattern, candidates)) {
+    for await (const item of runChild(this.parent)) {
       if (Wordset.cromulence.cromulence(item.joined) >= 0) {
         yield item;
       }

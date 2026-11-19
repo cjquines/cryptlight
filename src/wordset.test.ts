@@ -1,6 +1,7 @@
 import { downloadWordsetData } from "#download";
 import { beforeAll, describe, expect, test } from "vitest";
 import { runAPITests } from "./testUtil.js";
+import { Interval } from "./util.js";
 import { Wordset } from "./wordset.js";
 
 describe("wordset", () => {
@@ -607,12 +608,12 @@ describe("wordset", () => {
   });
 
   test.runIf(runAPITests)("synonym single letters and numerals", async () => {
-    // Datamuse suggests E, G, Q, ... for "zero"; only the abbreviation stays.
+    // Datamuse suggests E, G, Q, ... for "zero"; only the abbreviations stay.
     expect(
-      (await Wordset.synonym("zero").matches(/^.$/)).map(
-        (result) => result.joined,
-      ),
-    ).toEqual(["O"]);
+      (await Wordset.synonym("zero").matches(/^.$/))
+        .map((result) => result.joined)
+        .sort(),
+    ).toEqual(["O", "Z"]);
     expect(
       (await Wordset.synonym("1150").matches(/^.{3}$/)).map(
         (result) => result.joined,
@@ -637,6 +638,49 @@ describe("wordset", () => {
       .remove([0])
       .matches(/^.{5}$/);
     expect(results.map((result) => result.joined)).toContain("ETHEL");
+  });
+
+  test("plan", () => {
+    // AT(TEN)D: TAD* containing NET<.
+    const tree = Wordset.literal("tad")
+      .anagram()
+      .insert(Wordset.literal("net").reverse())
+      .plan(/^a.{4}d$/);
+    const [container, content] = tree.children;
+    expect(tree.args.pattern.source).toBe("^a.{4}d$");
+    expect(container!.args.pattern.length).toEqual(Interval.of(3));
+    expect(content!.args.pattern.length).toEqual(Interval.of(3));
+    expect(content!.children[0]!.args.pattern.length).toEqual(Interval.of(3));
+
+    // Plans are compile-time, so they can be asked for repeatedly, and
+    // don't stop the wordset from running.
+    const wordset = Wordset.literal("ten").reverse();
+    wordset.plan();
+    const reversed = wordset.plan(undefined, new Set(["TEN", "NETS"]));
+    expect(reversed.children[0]!.args.candidates).toEqual(
+      new Set(["NET", "STEN"]),
+    );
+  });
+
+  test("plan of an empty pattern is empty", () => {
+    const tree = Wordset.literal("ab")
+      .concat(Wordset.literal("cd"))
+      .plan(Interval.of(5));
+    for (const child of tree.children) {
+      expect(child.args.pattern.length.isEmpty()).toBe(true);
+    }
+  });
+
+  test("intersect narrows right to left's results only at run time", async () => {
+    const tree = Wordset.literal("net")
+      .intersect(Wordset.literal("ten").reverse())
+      .plan();
+    expect(tree.children[1]!.args.candidates).toBeUndefined();
+    expect(
+      await Wordset.literal("net")
+        .intersect(Wordset.literal("ten").reverse())
+        .all(),
+    ).toEqual([expect.objectContaining({ words: ["NET"] })]);
   });
 
   test("intersect checks candidates instead of enumerating", async () => {

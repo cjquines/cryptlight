@@ -179,9 +179,31 @@ export class Pattern {
   /** The interior, non-anchored nodes that make up this pattern. */
   private nodes: Node[];
   private regexp: RegExp | undefined = undefined;
+  /** Whether this matches nothing at all. See `Pattern.never`. */
+  private isNever: boolean;
 
-  private constructor(nodes: Node[]) {
+  private constructor(nodes: Node[], isNever = false) {
     this.nodes = nodes;
+    this.isNever = isNever;
+  }
+
+  /**
+   * A Pattern for a `Wordset.run` input: anything if undefined, and nothing
+   * if an empty Interval.
+   */
+  static from(input?: RegExp | Pattern | Interval): Pattern {
+    if (input === undefined) {
+      return Pattern.any;
+    }
+    if (input instanceof Interval) {
+      return input.isEmpty() ? Pattern.never : Pattern.length(input);
+    }
+    return input instanceof Pattern ? input : Pattern.parse(input);
+  }
+
+  /** A pattern matching no string, with an empty `length`. */
+  static get never(): Pattern {
+    return new Pattern([], true);
   }
 
   /** Parse an input. Regexes must be fully anchored (`^...$`). */
@@ -221,6 +243,9 @@ export class Pattern {
 
   /** The regex source, including the `^...$` anchors. */
   get source(): string {
+    if (this.isNever) {
+      return "^(?!)$";
+    }
     return (this.#source ??= `^${this.nodes.map(regjsgen.generate).join("")}$`);
   }
 
@@ -228,10 +253,16 @@ export class Pattern {
 
   /** The lengths of strings `this` can match. */
   get length(): Interval {
+    if (this.isNever) {
+      return Interval.empty;
+    }
     return (this.#length ??= Interval.sum(this.nodes.map(nodeLength)));
   }
 
   test(string: string): boolean {
+    if (this.isNever) {
+      return false;
+    }
     return (this.regexp ??= new RegExp(this.source, "i")).test(string);
   }
 
@@ -239,6 +270,9 @@ export class Pattern {
 
   /** Whether some match of `this` may have `letter` at `index`. */
   allows(index: number, letter: string): boolean {
+    if (this.isNever) {
+      return false;
+    }
     let atom = this.#atoms.get(index);
     if (atom === undefined) {
       const node = nodesIndex(this.nodes, index);
@@ -251,6 +285,9 @@ export class Pattern {
 
   /** A Pattern matching a prefix of a `this`-match with length in `length`. */
   prefixes(length: Interval): Pattern {
+    if (this.isNever || length.isEmpty()) {
+      return Pattern.never;
+    }
     const nodes: Node[] = [];
 
     for (let i = 0; i < length.max; i++) {
@@ -270,6 +307,9 @@ export class Pattern {
 
   /** A Pattern matching the reversal of strings `this` matches. */
   reverse(): Pattern {
+    if (this.isNever) {
+      return Pattern.never;
+    }
     return new Pattern(this.nodes.map(nodeReverse).reverse());
   }
 

@@ -21,8 +21,8 @@
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
 
-    "lib": ["es2023"],
-    "target": "es2023",
+    "lib": ["es2025"],
+    "target": "es2025",
 
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.lib.tsbuildinfo"
   }
