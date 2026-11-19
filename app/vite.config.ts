@@ -1,6 +1,7 @@
 import * as url from "node:url";
 import { defaultClientConditions, defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 
 const cryptlightDist = url.fileURLToPath(new URL("../dist/", import.meta.url));
 
@@ -15,13 +16,10 @@ export default defineConfig((env) => ({
     },
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          ["babel-plugin-react-compiler"],
-          ["@babel/plugin-proposal-decorators", { version: "2023-11" }],
-        ],
-      },
+    react(),
+    babel({
+      presets: [reactCompilerPreset()],
+      plugins: [["@babel/plugin-proposal-decorators", { version: "2023-11" }]],
     }),
   ],
   ...(env.command === "build"

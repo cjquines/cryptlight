@@ -49,21 +49,21 @@
     "typecheck": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "compromise": "^14.15.1",
+    "compromise": "^14.20.0",
     "cromulence": "^0.6.3",
     "regjsgen": "^0.8.0",
-    "regjsparser": "^0.13.2"
+    "regjsparser": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^26.1.0",
-    "@vitest/eslint-plugin": "^1.6.21",
-    "csv-parse": "^7.0.1",
-    "eslint": "^10.6.0",
-    "prettier": "^3.9.4",
-    "tsx": "^4.23.0",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.1",
-    "vitest": "^4.1.9"
+    "@types/node": "^26.6.6",
+    "@vitest/eslint-plugin": "^1.6.28",
+    "csv-parse": "^7.0.3",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
   }
 }

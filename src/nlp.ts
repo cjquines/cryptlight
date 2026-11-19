@@ -77,7 +77,13 @@ export function uninflect(
     // "threatened" is tagged as an adjective, whose lemma is itself.
     const doc = nlp(word);
     doc.tag("PastTense");
-    terms[terms.length - 1] = doc.verbs().toInfinitive().text();
+    const infinitive = doc.verbs().toInfinitive().text();
+    // But "red" and "naked" are also adjectives, and forcing them to past
+    // tense gives non-verbs "re" and "nake".
+    if (!tags.has("PastTense") && !nlp(infinitive).has("#Verb")) {
+      return null;
+    }
+    terms[terms.length - 1] = infinitive;
   }
   const base = terms.join(" ");
   return base === text.toLowerCase() ? null : { inflection, base };
