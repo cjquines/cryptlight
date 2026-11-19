@@ -24,3 +24,7 @@
   border-radius: 4px;
   padding: 0.5em;
 }
+
+.flashlight-tooltip-phrase {
+  font-weight: bold;
+}

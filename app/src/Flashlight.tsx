@@ -4,15 +4,45 @@ import { useState } from "react";
 import "./Flashlight.css";
 import { useStore } from "./store";
 
+/** For phrase ending at `end`. */
+type GroupedMatches = {
+  end: number;
+  phrase: string;
+  matches: IndicatorMatch[];
+};
+
+function groupMatches(
+  line: { text: string }[],
+  matches: IndicatorMatch[],
+  start: number,
+): GroupedMatches[] {
+  const byEnd = new Map<number, IndicatorMatch[]>();
+  for (const match of matches) {
+    if (match.start !== start) continue;
+    byEnd.set(match.end, [...(byEnd.get(match.end) ?? []), match]);
+  }
+  return [...byEnd]
+    .sort(([a], [b]) => a - b)
+    .map(([end, matches]) => ({
+      end,
+      phrase: line
+        .slice(start, end + 1)
+        .map((token) => token.text)
+        .join("")
+        .trim(),
+      matches: matches.sort((a, b) => b.score - a.score),
+    }));
+}
+
 function FlashlightToken({
   text,
-  matches,
+  phrases,
 }: {
   text: string;
-  matches: IndicatorMatch[];
+  phrases: GroupedMatches[];
 }) {
   const trimmed = text.trim();
-  const hasTooltip = matches.length > 0;
+  const hasTooltip = phrases.length > 0;
   const [tooltipActive, setTooltipActive] = useState(false);
   const { refs, floatingStyles, context } = Floating.useFloating({
     open: tooltipActive,
@@ -47,9 +77,12 @@ function FlashlightToken({
           style={floatingStyles}
           {...getFloatingProps()}
         >
-          {matches.map((match, i) => (
-            <div key={i} className="flashlight-tooltip-item">
-              {match.type} ({match.score})
+          {phrases.map(({ end, phrase, matches }) => (
+            <div key={end} className="flashlight-tooltip-item">
+              <span className="flashlight-tooltip-phrase">{phrase}:</span>{" "}
+              {matches
+                .map((match) => `${match.type} (${String(match.score)})`)
+                .join(", ")}
             </div>
           ))}
         </div>
@@ -71,11 +104,7 @@ function FlashlightOutput() {
             <FlashlightToken
               key={j}
               text={token.text}
-              matches={
-                output[i]?.filter(
-                  (match) => match.start === j && match.end === j,
-                ) ?? []
-              }
+              phrases={groupMatches(line, output[i] ?? [], j)}
             />
           ))}
         </div>
