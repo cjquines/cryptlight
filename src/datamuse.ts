@@ -394,7 +394,11 @@ async function fetchResults(url: string): Promise<DatamuseResult[]> {
 export async function datamuse(
   params: DatamuseParams,
 ): Promise<DatamuseResult[]> {
-  const queryString = Array.from(queryParts(params))
+  const queryString = [
+    ...queryParts(params),
+    // datamuse keys can appear in public-facing apps
+    ["k", "dm_Hd8M1eo7zwVG1m8RJiLXE8tc0SJFhdZu"] as const,
+  ]
     .map(([key, value]) => {
       const encoded = encodeURIComponent(value);
       return `${key}=${encoded}`;
