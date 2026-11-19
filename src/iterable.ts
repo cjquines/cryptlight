@@ -67,3 +67,12 @@ export function* product<T>(...iters: Iterable<T>[]): Iterable<T[]> {
     }
   }
 }
+
+export function* flatMap<T, U>(
+  iter: Iterable<T>,
+  fn: (item: T) => Iterable<U>,
+): Iterable<U> {
+  for (const item of iter) {
+    yield* fn(item);
+  }
+}

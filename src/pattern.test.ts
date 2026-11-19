@@ -98,4 +98,28 @@ describe("regex", () => {
       Pattern.parse(/^abc$/).prefixes(Interval.empty).length.isEmpty(),
     ).toBe(true);
   });
+
+  test("meet", () => {
+    const fourCat = Pattern.parse(/^.cat$/);
+
+    // Exact when either side is any.
+    expect(Pattern.any.meet(fourCat)).toBe(fourCat);
+    expect(fourCat.meet(Pattern.any)).toBe(fourCat);
+    expect(Pattern.parse(/^.{4}$/).meet(fourCat).source).toBe("^.CAT$");
+    expect(
+      Pattern.parse(/^[ab].{2,3}$/).meet(Pattern.parse(/^.b.*$/)).source,
+    ).toBe("^[AB]B..?$");
+    expect(
+      Pattern.parse(/^a.$/).meet(Pattern.parse(/^b.$/)).length.isEmpty(),
+    ).toBe(true);
+    expect(
+      Pattern.parse(/^.{2}$/)
+        .meet(Pattern.parse(/^.{3}$/))
+        .length.isEmpty(),
+    ).toBe(true);
+
+    // Approximate.
+    const meet = Pattern.parse(/^(ab|ba)$/).meet(Pattern.parse(/^(aa|bb)$/));
+    expect(meet.test("ab")).toBe(true);
+  });
 });

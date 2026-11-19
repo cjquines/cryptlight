@@ -21,4 +21,10 @@ describe("asyncIterable", () => {
       [3, 8],
     ]);
   });
+
+  test("flatMap", () => {
+    expect(
+      Array.from(Iter.flatMap([1, 2, 3], (n) => Array<number>(n).fill(n))),
+    ).toEqual([1, 2, 2, 3, 3, 3]);
+  });
 });

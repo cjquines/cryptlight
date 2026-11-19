@@ -740,4 +740,112 @@ describe("wordset", () => {
       .matches(/^change.{6}$/);
     expect(results.map((result) => result.joined)).toContain("CHANGEREFOIR");
   });
+
+  test("values", async () => {
+    expect(
+      (await Wordset.values(["giant", "big top"]).all()).map((d) => d.words),
+    ).toEqual([["GIANT"], ["BIG", "TOP"]]);
+    expect(Wordset.values(["a", "abc"]).length).toEqual(Interval.of(1, 3));
+  });
+
+  test("any", async () => {
+    expect(
+      (await Wordset.any(Interval.of(1)).matches(/^[a-c]$/)).map(
+        (d) => d.joined,
+      ),
+    ).toEqual(["A", "B", "C"]);
+    expect(await Wordset.any(Interval.of(2)).all()).toHaveLength(26 * 26);
+    // With candidates, only checks them.
+    expect(
+      (
+        await Wordset.literal("cat")
+          .intersect(Wordset.any(Interval.of(1, 5)))
+          .all()
+      ).map((d) => d.joined),
+    ).toEqual(["CAT"]);
+  });
+
+  test("an extra letter", async () => {
+    const results = await Wordset.any(Interval.of(1))
+      .concat(Wordset.literal("cat"))
+      .match(/^.cat$/)
+      .all();
+    expect(results).toHaveLength(26);
+    expect(results[0]).toEqual(
+      expect.objectContaining({ words: ["A", "CAT"], description: "A+CAT" }),
+    );
+  });
+
+  test("match", async () => {
+    const tree = Wordset.literal("ten").reverse().match(/^n.t$/).plan(/^.e.$/);
+    expect(tree.children[0]!.args.pattern.source).toBe("^NET$");
+    expect(
+      await Wordset.union([Wordset.literal("net"), Wordset.literal("nut")])
+        .match(/^n.t$/)
+        .matches(/^.e.$/),
+    ).toEqual([expect.objectContaining({ words: ["NET"] })]);
+  });
+
+  test("exclude", async () => {
+    expect(
+      (
+        await Wordset.values(["net", "nut", "big top"])
+          .exclude(["nut", "bigtop"])
+          .all()
+      ).map((d) => d.joined),
+    ).toEqual(["NET"]);
+    expect(
+      Wordset.literal("net")
+        .exclude(["nut"])
+        .plan(undefined, new Set(["NET", "NUT"])).children[0]!.args.candidates,
+    ).toEqual(new Set(["NET"]));
+  });
+
+  test("source", async () => {
+    const net = Wordset.literal("net");
+    const reversed = Wordset.literal("ten").reverse();
+    const [result] = await net.intersect(reversed).all();
+    expect(result!.source).toBeInstanceOf(Wordset);
+    const [left, right] = result!.parents;
+    expect(left!.source).toBe(net);
+    expect(right!.source).toBe(reversed);
+    expect(right!.parents[0]!.source).not.toBe(reversed);
+
+    // Pass-through wordsets keep their child's source.
+    const literal = Wordset.literal("net");
+    const [passed] = await literal.exclude([]).match(/^net$/).all();
+    expect(passed!.source).toBe(literal);
+  });
+
+  test("wordlist", async () => {
+    expect(
+      (await Wordset.wordlist().matches(/^tes.$/)).map((d) => d.joined),
+    ).toContain("TEST");
+    expect(
+      (
+        await Wordset.values(["word", "xqzv"])
+          .intersect(Wordset.wordlist())
+          .all()
+      ).map((d) => d.joined),
+    ).toEqual(["WORD"]);
+  });
+
+  test("flatMap", async () => {
+    const results = await Wordset.literal("cat")
+      .flatMap(([word]) => [`${word}s`, `x${word}`], "pluralish")
+      .all();
+    expect(results).toEqual([
+      expect.objectContaining({
+        words: ["CATS"],
+        description: "CATS (pluralish of CAT)",
+      }),
+      expect.objectContaining({ words: ["XCAT"] }),
+    ]);
+    // Opaque, so nothing is pushed down.
+    expect(
+      Wordset.literal("cat")
+        .flatMap((words) => words)
+        .plan(/^.{3}$/).children[0]!.args.pattern.source,
+    ).toBe("^.*$");
+  });
 });

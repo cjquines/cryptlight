@@ -38,6 +38,11 @@ class WordDerivation {
    * the latter might be TEN<, which has parent NET, etc.
    */
   parents: WordDerivation[];
+  /**
+   * The wordset that created this. Set when it's first yielded from a run;
+   * pass-through wordsets (union, match, ...) keep their child's.
+   */
+  source: Wordset | undefined = undefined;
 
   constructor({
     words,
@@ -139,6 +144,7 @@ export abstract class Wordset {
     Wordset.abbreviations = new Abbreviations();
     Wordset.abbreviations.parse(data.abbreviations);
     Wordset.cromulence = new Cromulence(data.wordlist);
+    wordsByLength = null;
   }
 
   /** Possible `joined` lengths of results. */
@@ -216,6 +222,7 @@ export abstract class Wordset {
 
     for await (const item of this._run(args, runChild)) {
       if (item !== null && (args.candidates?.has(item.joined) ?? true)) {
+        item.source ??= this;
         yield item;
       }
     }
@@ -250,6 +257,24 @@ export abstract class Wordset {
   /** A synonym (or abbreviation) of some string. */
   static synonym(words: string): Wordset {
     return new Synonym(words);
+  }
+
+  /** Given strings, each read like a literal. */
+  static values(words: string[]): Wordset {
+    return new Values(words);
+  }
+
+  /** Every possible string with `length`. */
+  static any(length: Interval): Wordset {
+    return new Any(length);
+  }
+
+  /**
+   * Every word in the wordlist with non-negative cromulence (as `wordlike`),
+   * most frequent first within each length.
+   */
+  static wordlist(): Wordset {
+    return new Wordlist();
   }
 
   // cryptic-y transformations:
@@ -533,6 +558,29 @@ export abstract class Wordset {
     return new Wordlike(this);
   }
 
+  /**
+   * Map each result through `fn`, which gets its words (keeping spacing) and
+   * returns new strings. `name` describes the map in derivations.
+   *
+   * `fn` is opaque, so nothing is pushed down: this runs unconstrained.
+   */
+  flatMap(
+    fn: (words: string[]) => Iterable<string>,
+    name = "flatMap",
+  ): Wordset {
+    return new FlatMap(this, fn, name);
+  }
+
+  /** Take only the words matching `pattern`. */
+  match(pattern: RegExp | Pattern): Wordset {
+    return new Match(this, Pattern.from(pattern));
+  }
+
+  /** Drop the given words. Spacing is ignored. */
+  exclude(words: string[]): Wordset {
+    return new Exclude(this, words);
+  }
+
   // convenience sinks:
 
   async matches(
@@ -550,20 +598,28 @@ export abstract class Wordset {
   }
 }
 
+/** Uppercase slugs of each space-separated word of `words`. */
+function slugs(words: string): string[] {
+  return words
+    .split(" ")
+    .map((word) => slugify(word).toUpperCase())
+    .filter((slug) => slug.length > 0);
+}
+
+function literalDerivation(words: string): WordDerivation {
+  return new WordDerivation({
+    words: slugs(words),
+    description: `literal "${words}"`,
+    parents: [],
+  });
+}
+
 class Literal extends Wordset {
   private derivation: WordDerivation;
 
   constructor(words: string) {
     super();
-    const slugs = words
-      .split(" ")
-      .map((word) => slugify(word).toUpperCase())
-      .filter((slug) => slug.length > 0);
-    this.derivation = new WordDerivation({
-      words: slugs,
-      description: `literal "${words}"`,
-      parents: [],
-    });
+    this.derivation = literalDerivation(words);
   }
 
   _length(): Interval {
@@ -577,6 +633,150 @@ class Literal extends Wordset {
   // eslint-disable-next-line @typescript-eslint/require-await -- intentional
   async *_run({ pattern }: RunArgs): AsyncIterable<WordDerivation | null> {
     yield this.derivation.ifMatches(pattern);
+  }
+}
+
+class Values extends Wordset {
+  private derivations: WordDerivation[];
+
+  constructor(words: string[]) {
+    super();
+    this.derivations = words.map(
+      (word) =>
+        new WordDerivation({
+          words: slugs(word),
+          description: `given "${word}"`,
+          parents: [],
+        }),
+    );
+  }
+
+  _length(): Interval {
+    return Interval.join(
+      this.derivations.map((derivation) =>
+        Interval.of(derivation.joined.length),
+      ),
+    );
+  }
+
+  _plan(): PlanStep[] {
+    return [];
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await -- intentional
+  async *_run({ pattern }: RunArgs): AsyncIterable<WordDerivation | null> {
+    for (const derivation of this.derivations) {
+      yield derivation.ifMatches(pattern);
+    }
+  }
+}
+
+const LETTERS = Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+/** Strings of A–Z of length `n` that `pattern` allows letter by letter. */
+function* letterStrings(n: number, pattern: Pattern): Generator<string> {
+  const prefix: string[] = [];
+  function* recurse(): Generator<string> {
+    if (prefix.length === n) {
+      yield prefix.join("");
+      return;
+    }
+    for (const letter of LETTERS) {
+      if (pattern.allows(prefix.length, letter)) {
+        prefix.push(letter);
+        yield* recurse();
+        prefix.pop();
+      }
+    }
+  }
+  yield* recurse();
+}
+
+class Any extends Wordset {
+  private lengths: Interval;
+
+  constructor(length: Interval) {
+    super();
+    this.lengths = length.meet(Interval.nonnegative);
+  }
+
+  _length(): Interval {
+    return this.lengths;
+  }
+
+  _plan(): PlanStep[] {
+    return [];
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await -- intentional
+  async *_run({
+    pattern,
+    candidates,
+  }: RunArgs): AsyncIterable<WordDerivation | null> {
+    const lengths = this.lengths.meet(pattern.length);
+    const strings = candidates
+      ? Array.from(candidates).filter(
+          (candidate) =>
+            lengths.min <= candidate.length &&
+            candidate.length <= lengths.max &&
+            /^[A-Z]*$/.test(candidate),
+        )
+      : Iter.flatMap(lengths, (n) => letterStrings(n, pattern));
+    for (const string of strings) {
+      yield new WordDerivation({
+        words: [string],
+        description: `any "${string}"`,
+        parents: [],
+      }).ifMatches(pattern);
+    }
+  }
+}
+
+/** Wordlist words with non-negative cromulence, by length. Built lazily. */
+let wordsByLength: Map<number, string[]> | null = null;
+
+function wordlistWords(): Map<number, string[]> {
+  if (wordsByLength === null) {
+    wordsByLength = new Map();
+    for (const slug of Object.keys(Wordset.cromulence.wordlist)) {
+      const words = wordsByLength.get(slug.length) ?? [];
+      words.push(slug.toUpperCase());
+      wordsByLength.set(slug.length, words);
+    }
+  }
+  return wordsByLength;
+}
+
+class Wordlist extends Wordset {
+  _length(): Interval {
+    return Interval.positive;
+  }
+
+  _plan(): PlanStep[] {
+    return [];
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await -- intentional
+  async *_run({
+    pattern,
+    candidates,
+  }: RunArgs): AsyncIterable<WordDerivation | null> {
+    const byLength = wordlistWords();
+    const lengths = pattern.length.meet(
+      Interval.of(1, Math.max(0, ...byLength.keys())),
+    );
+    for (const n of lengths) {
+      const words = candidates
+        ? Array.from(candidates).filter((candidate) => candidate.length === n)
+        : (byLength.get(n) ?? []);
+      for (const word of words) {
+        yield new WordDerivation({
+          words: [word],
+          description: `word "${word}"`,
+          parents: [],
+        }).ifMatches(pattern);
+      }
+    }
   }
 }
 
@@ -742,9 +942,8 @@ class Synonym extends Wordset {
       return derivation;
     };
 
-    for await (const literal of Wordset.literal(this.words).run(pattern)) {
-      yield unseen(literal);
-    }
+    const literal = literalDerivation(this.words).ifMatches(pattern);
+    yield literal && unseen(literal);
 
     const text = normalizeClueText(this.words);
     const responses = await Promise.all(
@@ -2286,6 +2485,120 @@ class Wordlike extends Wordset {
     for await (const item of runChild(this.parent)) {
       if (Wordset.cromulence.cromulence(item.joined) >= 0) {
         yield item;
+      }
+    }
+  }
+}
+
+class Match extends Wordset {
+  private parent: Wordset;
+  private pattern: Pattern;
+
+  constructor(parent: Wordset, pattern: Pattern) {
+    super();
+    this.parent = parent;
+    this.pattern = pattern;
+  }
+
+  _length(): Interval {
+    return this.parent.length.meet(this.pattern.length);
+  }
+
+  _plan(args: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: args.pattern.meet(this.pattern),
+          candidates: args.candidates,
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
+      // Meet approximates, so check both patterns.
+      yield item.ifMatches(pattern) && item.ifMatches(this.pattern);
+    }
+  }
+}
+
+class Exclude extends Wordset {
+  private parent: Wordset;
+  private excluded: ReadonlySet<string>;
+
+  constructor(parent: Wordset, words: string[]) {
+    super();
+    this.parent = parent;
+    this.excluded = new Set(words.map((word) => slugs(word).join("")));
+  }
+
+  _length(): Interval {
+    return this.parent.length;
+  }
+
+  _plan(args: RunArgs): PlanStep[] {
+    return [
+      {
+        node: this.parent,
+        args: {
+          pattern: args.pattern,
+          candidates: args.candidates?.difference(this.excluded),
+        },
+      },
+    ];
+  }
+
+  async *_run(
+    _args: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
+      yield this.excluded.has(item.joined) ? null : item;
+    }
+  }
+}
+
+class FlatMap extends Wordset {
+  private parent: Wordset;
+  private fn: (words: string[]) => Iterable<string>;
+  private name: string;
+
+  constructor(
+    parent: Wordset,
+    fn: (words: string[]) => Iterable<string>,
+    name: string,
+  ) {
+    super();
+    this.parent = parent;
+    this.fn = fn;
+    this.name = name;
+  }
+
+  _length(): Interval {
+    return Interval.nonnegative;
+  }
+
+  _plan(): PlanStep[] {
+    return [{ node: this.parent, args: { pattern: Pattern.any } }];
+  }
+
+  async *_run(
+    { pattern }: RunArgs,
+    runChild: RunChild,
+  ): AsyncIterable<WordDerivation | null> {
+    for await (const item of runChild(this.parent)) {
+      for (const output of this.fn(item.words)) {
+        const words = slugs(output);
+        yield new WordDerivation({
+          words,
+          description: `${words.join(" ")} (${this.name} of ${item})`,
+          parents: [item],
+        }).ifMatches(pattern);
       }
     }
   }

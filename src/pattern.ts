@@ -3,6 +3,8 @@ import regjsparser from "regjsparser";
 import regjsgen from "regjsgen";
 import { interval, Interval } from "./util.js";
 
+const LETTERS = Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
 /** The length range of strings a single node can match. */
 function nodeLength(node: Node): Interval {
   switch (node.type) {
@@ -303,6 +305,54 @@ export class Pattern {
     }
 
     return new Pattern(nodes);
+  }
+
+  /**
+   * A Pattern matching every string *both* `this` and `other` match.
+   *
+   * Exact if either matches any string. Otherwise, it overapproximates:
+   * intersect lengths, then letters at each index. Check results against both.
+   */
+  meet(other: Pattern): Pattern {
+    if (this.isNever || other.isNever) {
+      return Pattern.never;
+    }
+    const any = Pattern.any.source;
+    if (other.source === any) {
+      return this;
+    }
+    if (this.source === any) {
+      return other;
+    }
+
+    const length = this.length.meet(other.length);
+    if (length.isEmpty()) {
+      return Pattern.never;
+    }
+    if (length.max === Infinity) {
+      return this.length.min >= other.length.min ? this : other;
+    }
+
+    const atoms: string[] = [];
+    for (let i = 0; i < length.max; i++) {
+      const letters = LETTERS.filter(
+        (letter) => this.allows(i, letter) && other.allows(i, letter),
+      );
+      if (letters.length === 0) {
+        if (i < length.min) {
+          return Pattern.never;
+        }
+        break;
+      }
+      const atom =
+        letters.length === LETTERS.length
+          ? "."
+          : letters.length === 1
+            ? letters[0]!
+            : `[${letters.join("")}]`;
+      atoms.push(i < length.min ? atom : `${atom}?`);
+    }
+    return Pattern.parse(new RegExp(`^${atoms.join("")}$`));
   }
 
   /** A Pattern matching the reversal of strings `this` matches. */
