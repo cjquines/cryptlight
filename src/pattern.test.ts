@@ -122,4 +122,19 @@ describe("regex", () => {
     const meet = Pattern.parse(/^(ab|ba)$/).meet(Pattern.parse(/^(aa|bb)$/));
     expect(meet.test("ab")).toBe(true);
   });
+
+  test("JSON", () => {
+    for (const pattern of [
+      Pattern.parse(/^.cat$/),
+      Pattern.parse(/^[ab]x?.*$/),
+      Pattern.any,
+      Pattern.never,
+    ]) {
+      const json = JSON.parse(JSON.stringify(pattern)) as string;
+      expect(json).toBe(pattern.source);
+      const parsed = Pattern.fromJSON(json);
+      expect(parsed.source).toBe(pattern.source);
+      expect(parsed.length).toEqual(pattern.length);
+    }
+  });
 });

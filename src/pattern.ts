@@ -261,6 +261,16 @@ export class Pattern {
     return (this.#length ??= Interval.sum(this.nodes.map(nodeLength)));
   }
 
+  toJSON(): string {
+    return this.source;
+  }
+
+  static fromJSON(source: string): Pattern {
+    return source === Pattern.never.source
+      ? Pattern.never
+      : Pattern.parse(new RegExp(source));
+  }
+
   test(string: string): boolean {
     if (this.isNever) {
       return false;

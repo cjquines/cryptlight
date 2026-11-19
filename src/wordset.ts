@@ -7,8 +7,17 @@ import { inflect, lemmatize, uninflect } from "./nlp.js";
 import { Pattern } from "./pattern.js";
 import { anagrams, Interval, interval, subsequences } from "./util.js";
 
+/** A WordDerivation as plain data. */
+export type DerivationData = {
+  words: string[];
+  description: string;
+  /** The `id` of the wordset that created it, if any. */
+  node: string | null;
+  parents: DerivationData[];
+};
+
 /** A string of "words" and how they were produced. */
-class WordDerivation {
+export class WordDerivation {
   private _words: string[] | undefined;
 
   /**
@@ -88,6 +97,18 @@ class WordDerivation {
 
   ifMatches(pattern: Pattern): this | null {
     return pattern.test(this.joined) ? this : null;
+  }
+
+  #json: DerivationData | undefined = undefined;
+
+  /** This as plain data. Cached. Call only once yielded, so `source` is set. */
+  toJSON(): DerivationData {
+    return (this.#json ??= {
+      words: this.words,
+      description: this.description,
+      node: this.source?.id ?? null,
+      parents: this.parents.map((parent) => parent.toJSON()),
+    });
   }
 }
 
@@ -171,6 +192,9 @@ export abstract class Wordset {
   get length(): Interval {
     return (this.#length ??= this._length());
   }
+
+  /** Identifies this wordset to callers, e.g. the node `build` made it from. */
+  id: string | undefined = undefined;
 
   private hasRun = false;
 
@@ -269,10 +293,7 @@ export abstract class Wordset {
     return new Any(length);
   }
 
-  /**
-   * Every word in the wordlist with non-negative cromulence (as `wordlike`),
-   * most frequent first within each length.
-   */
+  /** Every word in the wordlist, most frequent first within each length. */
   static wordlist(): Wordset {
     return new Wordlist();
   }
@@ -732,7 +753,7 @@ class Any extends Wordset {
   }
 }
 
-/** Wordlist words with non-negative cromulence, by length. Built lazily. */
+/** Wordlist words, by length. Built lazily. */
 let wordsByLength: Map<number, string[]> | null = null;
 
 function wordlistWords(): Map<number, string[]> {
@@ -767,7 +788,11 @@ class Wordlist extends Wordset {
     );
     for (const n of lengths) {
       const words = candidates
-        ? Array.from(candidates).filter((candidate) => candidate.length === n)
+        ? Array.from(candidates).filter(
+            (candidate) =>
+              candidate.length === n &&
+              candidate.toLowerCase() in Wordset.cromulence.wordlist,
+          )
         : (byLength.get(n) ?? []);
       for (const word of words) {
         yield new WordDerivation({

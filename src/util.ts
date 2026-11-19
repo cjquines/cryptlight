@@ -135,6 +135,19 @@ export class Interval {
     return this.min > this.max;
   }
 
+  /** `[min, max]`, with an infinite max as null, or null if empty. */
+  toJSON(): [min: number, max: number | null] | null {
+    return this.isEmpty()
+      ? null
+      : [this.min, this.max === Infinity ? null : this.max];
+  }
+
+  static fromJSON(data: [min: number, max: number | null] | null): Interval {
+    return data === null
+      ? Interval.empty
+      : Interval.of(data[0], data[1] ?? Infinity);
+  }
+
   equals(other: Interval): boolean {
     return this.min === other.min && this.max === other.max;
   }

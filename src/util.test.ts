@@ -33,4 +33,20 @@ describe("util", () => {
       Interval.of(2, 3),
     );
   });
+
+  test("Interval JSON", () => {
+    expect(Interval.of(2, 5).toJSON()).toEqual([2, 5]);
+    expect(Interval.positive.toJSON()).toEqual([1, null]);
+    expect(Interval.empty.toJSON()).toBeNull();
+    expect(JSON.stringify({ length: Interval.positive })).toBe(
+      '{"length":[1,null]}',
+    );
+    for (const interval of [
+      Interval.of(2, 5),
+      Interval.positive,
+      Interval.empty,
+    ]) {
+      expect(Interval.fromJSON(interval.toJSON())).toEqual(interval);
+    }
+  });
 });
