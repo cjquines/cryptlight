@@ -19,3 +19,9 @@ declare function setTimeout(
   callback: (...args: never[]) => void,
   ms: number,
 ): unknown;
+
+declare class AbortSignal {
+  readonly aborted: boolean;
+  readonly reason: unknown;
+  throwIfAborted(): void;
+}

@@ -20,6 +20,7 @@ type State = {
 
   workerInited: boolean;
   workerReady: boolean;
+  wordsetReady: boolean;
 
   setMatcherInput: (value: string) => void;
   sendMatcherInput: () => void;
@@ -38,6 +39,7 @@ const stateCreator: StateCreator<State> = (set, get) => ({
 
   workerInited: false,
   workerReady: false,
+  wordsetReady: false,
 
   setMatcherInput: (value) => {
     set({ matcherInput: value });
@@ -73,8 +75,12 @@ const stateCreator: StateCreator<State> = (set, get) => ({
 
     worker.addEventListener("message", ({ data }: { data: WorkerOutput }) => {
       if (data.type === "ready") {
-        set({ workerReady: true });
-        get().sendMatcherInput();
+        if (data.what === "indicators") {
+          set({ workerReady: true });
+          get().sendMatcherInput();
+        } else {
+          set({ wordsetReady: true });
+        }
       } else if (data.type === "output:indicators") {
         if (data.inputID < get().matcherOutputInputID) {
           // old; ignore
@@ -99,9 +105,12 @@ const stateCreator: StateCreator<State> = (set, get) => ({
             matcherInputID: null,
           });
         }
-      } else {
-        data.type satisfies "error";
+      } else if (data.type === "error") {
         console.error("Worker error:", data.error);
+      } else {
+        // TODO: cryptflow handles these.
+        data.type satisfies
+          "wordset:plan" | "wordset:results" | "wordset:error";
       }
     });
 

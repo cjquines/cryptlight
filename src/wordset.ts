@@ -5,7 +5,7 @@ import * as Iter from "./iterable.js";
 import { datamuse } from "./datamuse.js";
 import { inflect, lemmatize, uninflect } from "./nlp.js";
 import { Pattern } from "./pattern.js";
-import { anagrams, Interval, interval, subsequences } from "./util.js";
+import { anagrams, Interval, interval, subsequences, Yielder } from "./util.js";
 
 /** A WordDerivation as plain data. */
 export type DerivationData = {
@@ -144,6 +144,9 @@ type RunChild = (
   narrower?: { candidates: ReadonlySet<string> },
 ) => AsyncIterable<WordDerivation>;
 
+/** Runs yield to event loop at least once per 50 ms. */
+const yielder = new Yielder(50);
+
 /**
  * A lazy pipeline over "words", materialized as an iterator of WordDerivations
  * exactly once.
@@ -201,16 +204,23 @@ export abstract class Wordset {
   /**
    * Yield WordDerivations matching the wordset filters and the given regex,
    * and, if given, whose `joined` is one of `candidates`. Single-use.
+   *
+   * Aborting `signal` makes the run throw its reason. Long runs also yield to
+   * the event loop now and then, so a worker can receive the abort.
    */
   run(
     input?: RegExp | Pattern | Interval,
     candidates?: ReadonlySet<string>,
+    options: { signal?: AbortSignal } = {},
   ): AsyncIterable<WordDerivation> {
-    return this.execute(this.plan(input, candidates));
+    return this.execute(this.plan(input, candidates), options.signal);
   }
 
   /** Run `plan`, which must be a plan of this. Single-use. */
-  private async *execute(plan: Plan): AsyncIterable<WordDerivation> {
+  private async *execute(
+    plan: Plan,
+    signal: AbortSignal | undefined,
+  ): AsyncIterable<WordDerivation> {
     if (this.hasRun) {
       throw new Error("Wordset.run may only be called once");
     }
@@ -228,7 +238,7 @@ export abstract class Wordset {
         throw new Error("runChild: not a child declared by _plan");
       }
       if (narrower === undefined) {
-        return child.execute(childPlan);
+        return child.execute(childPlan, signal);
       }
       // Narrowed candidates change what descendants are asked for, so
       // re-plan this subtree.
@@ -241,10 +251,13 @@ export abstract class Wordset {
             ? planCands.intersection(narrowCands)
             : narrowCands,
         }),
+        signal,
       );
     };
 
     for await (const item of this._run(args, runChild)) {
+      signal?.throwIfAborted();
+      await yielder.yield();
       if (item !== null && (args.candidates?.has(item.joined) ?? true)) {
         item.source ??= this;
         yield item;

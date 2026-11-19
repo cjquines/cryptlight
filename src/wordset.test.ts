@@ -1,5 +1,6 @@
 import { downloadWordsetData } from "#download";
 import { beforeAll, describe, expect, test } from "vitest";
+import * as AsyncIter from "./asyncIterable.js";
 import { runAPITests } from "./testUtil.js";
 import { Interval } from "./util.js";
 import { Wordset } from "./wordset.js";
@@ -847,5 +848,32 @@ describe("wordset", () => {
         .flatMap((words) => words)
         .plan(/^.{3}$/).children[0]!.args.pattern.source,
     ).toBe("^.*$");
+  });
+
+  test("abort", async () => {
+    const aborted = new AbortController();
+    aborted.abort(new Error("stop"));
+    await expect(
+      AsyncIter.toArray(
+        Wordset.literal("a").run(undefined, undefined, {
+          signal: aborted.signal,
+        }),
+      ),
+    ).rejects.toThrow("stop");
+
+    // 26^6 strings: the timer only fires if the run yields to the event loop.
+    const controller = new AbortController();
+    setTimeout(() => {
+      controller.abort(new Error("stop"));
+    }, 20);
+    const start = Date.now();
+    await expect(
+      AsyncIter.toArray(
+        Wordset.any(Interval.of(6)).run(undefined, undefined, {
+          signal: controller.signal,
+        }),
+      ),
+    ).rejects.toThrow("stop");
+    expect(Date.now() - start).toBeLessThan(1000);
   });
 });

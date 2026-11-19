@@ -205,3 +205,22 @@ export class Interval {
     return result;
   }
 }
+
+/** Yields to the event loop at most once every `ms` milliseconds. */
+export class Yielder {
+  private ms: number;
+  private last = Date.now();
+
+  constructor(ms: number) {
+    this.ms = ms;
+  }
+
+  /** Yield to the event loop if `ms` have passed since this last did. */
+  async yield(): Promise<void> {
+    if (Date.now() - this.last < this.ms) {
+      return;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    this.last = Date.now();
+  }
+}

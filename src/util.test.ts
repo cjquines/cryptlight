@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { anagrams, Interval } from "./util.js";
+import { anagrams, Interval, Yielder } from "./util.js";
 
 describe("util", () => {
   test("anagrams", () => {
@@ -48,5 +48,17 @@ describe("util", () => {
     ]) {
       expect(Interval.fromJSON(interval.toJSON())).toEqual(interval);
     }
+  });
+
+  test("Yielder", async () => {
+    let fired = false;
+    setTimeout(() => {
+      fired = true;
+    }, 0);
+    // Not due yet: resolves without reaching the event loop.
+    await new Yielder(1e9).yield();
+    expect(fired).toBe(false);
+    await new Yielder(0).yield();
+    expect(fired).toBe(true);
   });
 });
