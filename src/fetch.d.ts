@@ -1,4 +1,14 @@
-declare function fetch(input: string): Promise<{
+declare class URL {
+  constructor(url: string, base?: string);
+  readonly href: string;
+}
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions -- merges with the built-in ImportMeta
+interface ImportMeta {
+  readonly url: string;
+}
+
+declare function fetch(input: string | URL): Promise<{
   ok: boolean;
   status: number;
   json(): Promise<unknown>;

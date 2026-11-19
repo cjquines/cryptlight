@@ -1,5 +1,5 @@
 import * as url from "node:url";
-import { defineConfig } from "vite";
+import { defaultClientConditions, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig((env) => ({
@@ -25,6 +25,7 @@ export default defineConfig((env) => ({
     ? {}
     : {
         resolve: {
+          conditions: ["cryptlight-source", ...defaultClientConditions],
           alias: {
             cryptlight: url.fileURLToPath(
               new URL("../src/index.ts", import.meta.url),

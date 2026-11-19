@@ -18,8 +18,12 @@
   "type": "module",
   "imports": {
     "#download": {
-      "node": "./src/download.node.ts",
-      "default": "./src/download.ts"
+      "cryptlight-source": {
+        "node": "./src/download.node.ts",
+        "default": "./src/download.ts"
+      },
+      "node": "./dist/download.node.js",
+      "default": "./dist/download.js"
     }
   },
   "exports": {

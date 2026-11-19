@@ -2,10 +2,11 @@ import { loadWordlist } from "cromulence";
 import type { WordsetData } from "./wordset.js";
 
 async function readLines(name: string): Promise<string[]> {
-  const resp = await fetch(
-    `https://cdn.jsdelivr.net/npm/cryptlight@0.1.1/dist/data/${name}`,
-  );
-  return (await resp.text()).split("\n");
+  const resp = await fetch(new URL(`./data/${name}`, import.meta.url));
+  if (!resp.ok) {
+    throw new Error(`failed to load ${name}: ${resp.status}`);
+  }
+  return (await resp.text()).trim().split("\n");
 }
 
 export async function downloadIndicators(): Promise<string[]> {

@@ -10,6 +10,7 @@
 
     "module": "esnext",
     "moduleResolution": "bundler",
+    "customConditions": ["cryptlight-source"],
     "rootDir": "src",
 
     "noEmit": true,

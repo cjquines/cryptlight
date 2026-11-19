@@ -17,6 +17,7 @@
     "strict": true,
 
     "module": "nodenext",
+    "customConditions": ["cryptlight-source"],
     "rootDir": ".",
 
     "noEmit": true,
