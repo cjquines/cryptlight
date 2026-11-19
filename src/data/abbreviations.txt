@@ -1,9 +1,10 @@
-10 X 100
-100 C 100
-1000 K 50 M 100
-5 V 100
-50 L 100
-500 D 100
+$100 C 50
+10 X 50
+100 C 50
+1000 K 50 M 50
+5 V 50
+50 L 50
+500 D 50
 a AN 6 AR 1 AT 2 DO 1 GR 1 HE 1 IN 6 NO 2 ON 1 ONE 17 PER 18
 abandon CAR 1 RAT 1
 abandoned PED 1
@@ -26,6 +27,7 @@ abitofhesitation ER 1
 abitofsun RAY 1
 ablack AB 1
 able CAN 2 ENT 1 FIT 2
+ablebody AB 20
 ableto CAN 1
 abloke MAN 1
 abnormallarge OS 1
@@ -43,32 +45,36 @@ aboutkilometre REK 1
 aboutto DUE 1 ON 1 RE 1
 abouttogivebirth DUE 1
 aboutturn UU 1
-above ON 4
+above SUP 20 ON 4
 abovetherest TOP 1
 abranchofthefightingforce ARM 1
-abridge CUT 1
+abridge ABR 20 CUT 1
+abridgement ABR 20
 abroad OUT 7
-absence OFF 1
+absence ABS 20 OFF 1
 absenceof NO 2
 absent A 50 ABS 50
 absolute A 50 ABS 50
 absolutenot NO 1
 absolutenothing FA 2
+absorbent ABS 20
 abstain DRY 1
 abstainer TT 3
 abstemious DRY 1
+abstract ABS 20
 absurd MAD 1
 abuse MUD 1 ULT 1
 abuzz HUM 1
 academic BA 2 DON 28 MA 3 OUS 1
 academicaward BA 1
 academicfellow DON 1
-academician RA 3
+academician A 50 RA 3
 academictitle DR 1
-academy RA 1
+academy A 50 RA 1
 acard ACE 1
 acceleration A 50
-acceptable IN 1 OK 8 ON 11
+acceptable U 50 IN 1 OK 8 ON 11
+acceptance ACC 20
 acceptassistance AID 1
 accepted A 50 HAD 1 IN 4
 acceptthetruthof BUY 1
@@ -78,15 +84,21 @@ accesstocomputer IN 1
 accident ASH 2 HAP 1
 acclaim UR 1
 accommodation INN 2 PAD 1
+accompany ACC 20
 accompanyby AND 1
 accompanying AND 3
 accomplish DID 3
+accord ACC 20
 accordingly SO 12
 accordto ALA 1 BY 1 PER 8
+accordtoart SA 20
+accordtonature SN 20
 account AC 116 ACC 4
-accountant ACA 1 CA 8 CAS 1
+accountant ACC 20 ACA 1 CA 8 CAS 1
+accountcurrent AC 20
 accumulatecash POT 1
 accumulatedebt OWE 1
+accusative ACC 20
 ace A 50 ANA 1 FAB 1 NE 1 ONE 3 PRO 1
 acertain ONE 13
 acertainage EAR 1
@@ -131,17 +143,20 @@ acourt ACT 1
 acquaintance KEN 1
 acquire GET 4 WIN 2 GOT 5 HAS 1
 acquisitivetype KER 1
-acre A 100
+acre A 50 AC 20
+acreage A 50
 acricketclub ACC 1
 acrossthepond US 1 USA 1
 acryofapproval OLE 1
-act A 50 ACT 1 BE 1 DO 11 ED 1 LAW 1 DID 1 ON 4
+act A 50 ACT 21 BE 1 DO 11 ED 1 LAW 1 DID 1 ON 4
 actas BE 2
 actbad HAM 1
 actinappropriate HAM 1
+actinium AC 20
 action ED 1 WAR 2
 activate ON 1
-active A 50 ON 4
+active A 50 ACT 20 ON 4
+activeduty AD 20
 activenazis SS 1
 activity GO 1
 activityathome DIY 1
@@ -163,6 +178,7 @@ addictto ON 2
 addition SUM 3
 additional ODD 1 AND 1 TOO 1
 additionalinfo PS 1
+additionalpremium AP 20
 address URL 1
 addto AND 2
 addup SUM 1
@@ -175,11 +191,18 @@ adequatematch MET 1
 adhesive GUM 1
 adian CAN 1
 adistrictattorney ADA 1
-adjective A 50
+adjective A 50 ADJ 20
+adjourn ADJ 20
+adjusment ADJ 20
 adjust SET 1
 adjustaskirt HEM 1
+adjutant ADJ 20
+adjutantgeneral AG 20
 administer RAN 1
+administrativetrainee AT 20
 administratorheartless GER 1
+admiral ADM 20
+admiralofthefleet AF 20
 admiration AWE 2
 admire EYE 1
 admirer FAN 6
@@ -190,10 +213,12 @@ adoctor ADR 1 AMB 5 MB 1
 adorn ON 6
 adraw TIE 1
 adrink GIN 1 RUM 2
+adrop GT 20
 adrug AE 1
 aduck NIL 2
 adult A 50 AGE 1 INA 1 UP 1
 adulterate CUT 1
+adultorientedrock AOR 20
 advance A 50 PRE 1 SUB 1
 advanced A 50 IA 2
 advanceddegreeinartandbusiness MBA 1
@@ -201,6 +226,8 @@ advanceinyear OLD 1
 advancepayment SUB 2
 advanceyear AGE 1
 advantage AD 50 IN 1 USE 1 VAN 1
+advent ADV 20
+adverb ADV 20
 adversary FOE 1
 adverseaffect AIL 1
 adversetrafficlight RED 1
@@ -209,8 +236,11 @@ advertise AD 1 PR 4
 advertisement AD 7 ADS 1
 advice TIP 14
 advise RM 1
-advocate ER 1 FOR 1 PRO 1
+advisory ADV 20
+advisoryboard AB 20
+advocate ADV 20 ER 1 FOR 1 PRO 1
 advocategeneral BAR 1
+aerocliub AC 20
 aeroplane JET 1
 aerosol CAN 1
 afair TE 1
@@ -226,6 +256,7 @@ affectmodesty COY 1
 affirmative AY 1 YES 4
 affirmativeresponse AYE 1
 affirmativeword YES 1
+afghanistan AFG 20
 aficionado FAN 3
 afield LEA 1
 afirm ACO 2
@@ -236,12 +267,16 @@ afool ASS 1
 afoot AFT 1
 aforeign UN 3
 aforeignarticle UN 1
+africa AFR 20
+african AFR 20
 africanking TUT 1
 africanparty ANC 1
 africanpolitician ANC 3
+africanunion AU 20
 after ALA 1 EXT 1
-afterdate AD 1
+afterdate AD 21
 afterdeath PM 50
+afterextratime AET 20
 afterhavinggainseat IN 1
 aftermidnight AM 1
 afternoon PM 57 A 50
@@ -250,12 +285,12 @@ afterpasson TH 1
 aftertax NET 2
 afterthought PS 7
 again BIS 4 RE 12 TAN 1 TUT 1
-against CON 75 V 50 VS 51 ON 8 TO 4
+against ADV 20 CON 75 V 50 VS 51 ON 8 TO 4
 againstweaponry GUN 1
 agame GO 1
 age AGE 3 EON 2 ERA 14
-aged AE 1 OLD 2
-agent FED 3 REP 41 SPY 27 TEC 1 CIA 17 MEN 1
+aged AE 21 AET 20 OLD 2
+agent AGT 20 FED 3 REP 41 SPY 27 TEC 1 CIA 17 MEN 1
 agentleman AMR 1
 aggregate ORE 1
 aggressivecall OI 1
@@ -276,8 +311,9 @@ agreatmany TON 1
 agreattime FUN 1
 agreatweight TON 1
 agree FIT 2 NOD 4 AY 2 AYE 1 OK 6 SET 2 YES 7
-agreement ACT 2 AY 1 AYE 1 NOD 2 OK 7 YEA 3 YES 11
+agreement AGT 20 ACT 2 AY 1 AYE 1 NOD 2 OK 7 YEA 3 YES 11
 agreewith FIT 1
+agriculture AGR 20
 agroupofchap MEN 1
 agun GAT 2
 ahand FIN 1
@@ -298,21 +334,34 @@ ahundred AC 2 TON 5
 ahundredandone CI 1
 ahusband AH 1
 aide PA 1
+aidedecamp ADC 20
 ail ILL 5
 ailment ILL 1
 aim END 15 TRY 2
 aimat FOR 1 TO 1
 aimfor AT 1
 air GAS 1 SKY 2
+airborne AB 20
 aircon AC 1
 aircondition AC 56
 airconditioning AC 50
+aircorps AC 20
 aircraft ANE 1 JET 3 MIG 1
-airdefence AD 1
+aircraftsman AC 20
+aircraftswoman ACW 20
+airdefence AD 21
 airforce RAF 2
+airforcecross AFC 20
 airline BA 1 KLM 2
 airliner JET 1
 airman AC 1 RAF 5
+airpolice AP 20
+airraidprecaution ARP 20
+airsearescue ASR 20
+airspeed AS 20
+airstaff AS 20
+airtogroundmissile AGM 20
+airtosurfacemissile ASM 20
 aisle ROW 1
 aisleseat PEW 1
 ajoke GAG 1
@@ -331,19 +380,22 @@ alargenumber LOT 1
 alarmedexpression EEK 1
 alas AY 3 OCH 1
 alaska AK 51
-albania AL 50
+albania AL 50 ALB 20
 albeit IF 1
 albert AL 1
 alberta AB 50
 albertshort AL 1
 album CD 2 EP 1 LP 4
 albummaybe CD 1
+albumorientedrock AOR 20
 alchemi ME 1
 alcohol ALE 2 GIN 4 RUM 4
 alcoholic DRY 1 SOT 2
 alcoholicanonymous AA 50
 alcoholicdrink ALE 2 GIN 3 RUM 3
 alcove BAY 1
+alderman ALD 20
+alderney GBA 20
 aleadingposition VAN 1
 alearner AL 2
 alert FLY 2
@@ -351,7 +403,9 @@ alethalsnake ASP 1
 aletter DEE 1
 alfred AL 1
 alfresco OUT 1
-algeria DZ 50
+algebra ALG 20
+algebraic ALG 20
+algeria ALG 20 DZ 50
 alias AKA 53
 alibi AKA 1
 alien ET 45
@@ -381,11 +435,14 @@ allabout LLA 1
 allegation MUD 1
 alley CUT 1
 allfingerandthumb TEN 1
+allitemsatisfactory AOK 20
 allitsleg VI 1
 allofusis RE 1
 allottime SET 1
 allow LET 120 OK 2 HAS 1
+allpointbulletin APB 20
 allright OK 66 KAY 1 YES 3
+allsection AS 20
 alltherage HIP 1 HOT 1 IN 2
 allthesame BUT 1 YET 1
 allto TEN 1
@@ -412,17 +469,23 @@ alotoftime ERA 1
 alotofweight TON 1
 aloweranimal IT 1
 alpha A 50
+alphabet ABC 20
+alpineclub AC 20
 also AND 56 TOO 42
 alsocall AKA 1
-alsoknowas OR 1
+alsoknowas AKA 50 OR 1
 alter GE 1
 altercation ROW 1
+alternate ALT 20
 alternatecurrent AC 51
 alternative OR 40 ORS 1
 alternativetechnology AT 2
 alternativeto OR 2
 alternativetohoney JAM 1
+alternativevote AV 20
 although BUT 1 THO 2
+altitude ALT 20
+alto A 50 ALT 20
 aluminium AL 57
 always AY 50 AYE 2 EER 9 ER 13
 alwayswithsilver AG 1
@@ -456,6 +519,7 @@ americaninvestigator MAN 1
 americanlawyer DA 4 DAS 1
 americanmale BO 1
 americanorangejuice OJ 1
+americanplan AP 20
 americanport RIO 1
 americanpresident IKE 1
 americanprosecutor DA 1
@@ -469,23 +533,28 @@ americanuniversity MIT 4
 americanwhisky RYE 1
 americanwriter POE 4
 americarepeated US 1
+americium AM 20
 amildimprecation COR 1
 amiss UP 1
+ammeter A 50
+amnestyinternational AI 20
 amole SPY 1
 amoment MO 1
 among IN 9
 amonth AUG 1 DEC 2 JAN 1 MAR 1 MAY 3 MO 1 OCT 3
 amorning AAM 1
 amother AMA 1
-amount SUM 4
+amount AMT 20 SUM 4
 amountofbeer TIN 1
 amountofcoffee CUP 1
 amountofmoney FEE 1 SUM 4
 amountofpower KW 1
 amountto SUM 1
-ampere AMP 50
+amp A 50
+ampere A 50 AMP 50
 amphibian EFT 1
 amplifier AMP 51 MIC 1
+amplitudemodulation AM 20
 amug CAN 1
 amusement FUN 6
 amusing FUN 1
@@ -507,7 +576,7 @@ anarticle AN 1
 anassistant APA 1
 anattempt AGO 2 GO 1
 anawkwardlout OAF 1
-ancient OLD 19
+ancient ANC 20 OLD 19
 ancientcity UR 15
 ancientcraft ARK 1
 ancientfairyfolk FAE 1
@@ -540,9 +609,14 @@ angel KER 2
 anger IRE 47
 anglican CE 2
 anglicanchurch CE 1
+anglofrench AF 20
+anglolatin AL 20
+anglonorman AN 20
+anglosaxon AS 20
 angola AN 50
 angry HOT 2 MAD 4 RED 1 VEX 1
 angrylooking RED 1
+angstrom A 50
 angus GUS 1
 anhour HR 2
 anhouraftermidnight IAM 1
@@ -568,10 +642,10 @@ annex ADD 1
 annoy BUG 1 IRK 2 ITE 1
 annual PA 1
 annualmeeting AGM 1
-annualreturn AR 1
+annualreturn AR 21
 annualservice MOT 1
 anoldwoman AMA 1
-anonymous A 50 AN 2
+anonymous A 50 AN 22
 anorgan EAR 1
 anorth AN 1
 anote TE 1
@@ -586,28 +660,35 @@ anothersortofplug AD 1
 answer A 50 ANS 62
 antagonist FOE 2
 antelope GNU 3
+anterior A 50
 anti-aircraft AA 50
+anti-personnel AP 20
+anti-tank AT 20
+antiballisticmissile ABM 20
 anticipatorytime EVE 1
 antimony SB 50
+antinazileague ANL 20
 antipodeannative ROO 1
 antipodeanrunner EMU 1
 antiquated OLD 1
 antique OLD 10
 antiquelacework WEB 1
 antisocialyouth TED 1
+antisubmarine AS 20
 anumber ANO 1 ONE 1 SUM 1 TEN 18
 anumberofyear AGE 2
 anunusualsense ESP 1
 any ARY 1
 anything OWT 3
 anythingbut NOT 1
+aorist AOR 20
 apair TWO 1
 apairofanimal ASS 1
 aparliamentarian AMP 1
 apartfrom BAR 2
 aparticle ION 1
 aparticular THE 1
-apartment APT 3 LAT 1
+apartment APT 23 LAT 1
 aparty ADO 5 DO 2
 apass COL 1
 apassfancy FAD 1
@@ -625,11 +706,11 @@ apoem ODE 1
 apolitician AMP 3 MP 1
 apolloforexample GOD 1
 apot CUP 1
-apothecary AP 1
+apothecary AP 21
 apound IL 1 LB 1
 appalling BAD 1
 apparatus RIG 3
-apparent AP 3
+apparent AP 23 APP 20
 apparentasleep BED 1
 apparentfrozen ICE 1
 apparentgood PI 3
@@ -641,14 +722,16 @@ appearance AIR 1 HUE 1
 appearashamed RED 1
 appearin ON 2
 appeartwice CHI 1
+appellationcontrolee AC 20
 appendage ARM 1
-appendix PS 1
+appendix APP 20 PS 1
 appetizer APP 1
 applaud ER 1
 apple COX 1
 appliancebrand GE 1
 appliancecompany GE 1
 application USE 9
+applied APP 20
 apply ASK 1 USE 3
 applyto ON 3
 appoint SET 1
@@ -656,32 +739,37 @@ apppealforhelp SOS 50
 appreciate DIG 2
 appreciated TA 1
 appreciation EAR 1
-apprentice CUB 1 NER 1 LL 2
+apprentice APP 20 CUB 1 NER 1 LL 2
 approach WAY 2 ON 1
 appropriate APT 6 BAG 2 DUE 1 FIT 10 NET 1
-appropriatetechnology AT 1
+appropriatetechnology AT 21
 appropriateto FOR 1
 approval NOD 1 OK 12 OLE 1 YES 1
-approve IOK 1 OK 4 APP 1 OKS 2 FOR 1 PRO 1
+approve APP 21 IOK 1 OK 4 OKS 2 FOR 1 PRO 1
 approvegesture NOD 1
+approximate APP 20
 april APR 50
 apromise IOU 1
 apt FIT 1
 apub INN 2
 aquaticreptileavoidsoft IN 1
+aqueous AQ 20
 aquestion AQU 1
 aquiet AP 2
 arab AR 65
-arabia AR 1
-arabian AR 4
-arabic AR 2
+arabia AR 21
+arabian AR 24
+arabic AR 22
 arabstate IA 1 UAE 3
 arace ATT 1
+aramaic AR 20
 arascal DOG 1
 arbiter REF 1
 arch BOW 1 COY 1 SLY 2
 archaeologicalactivity DIG 1
+archbishop ABP 20
 archdeacon VEN 10
+architecturalassociation AA 20
 ardent HOT 1
 area A 50 ANA 1 ION 1 ITA 1 AA 1
 areaaroundhollywood LA 1
@@ -692,7 +780,7 @@ arecord ACD 1
 arefusal NAY 1 NO 2
 arevolutionary CHE 3 RED 1
 argentina RA 51
-argon AR 51
+argon A 20 AR 51
 argue ROW 2
 arguman ROW 1
 argument FF 1 PAT 1 ROW 35 TO 1
@@ -715,17 +803,19 @@ armycommander GEN 1 COS 1
 armycorp RE 4
 armyoffice COL 1
 armyofficer COL 3 LT 2
-armyregulation AR 2
+armyregulation AR 22
 armyunit RE 2 SAS 1
 armyvolunteer TA 2
 aroad ARD 5
 around AO 1 CA 16 RE 1 RUN 1
 arouse UP 1
-arrange SET 11 ARR 2 PUT 1 RAN 1
+arrange ARR 22 SET 11 PUT 1 RAN 1
+arrangeby ARR 20
 arrangementforhire LET 1
+arranger ARR 20
 arrest COP 1 END 1 NAB 4
-arrival ARR 3
-arrive ARR 8 GOT 1 IN 1
+arrival ARR 23
+arrive ARR 28 GOT 1 IN 1
 arriveat HIT 1
 arse RR 1
 arsenic AS 54
@@ -733,13 +823,14 @@ artdegree BA 1 MA 1
 artful SLY 1
 artgraduate MA 1 MAS 1
 arthur ART 2
-article A 50 AN 150 IT 1 TEH 1 THE 137 ANA 1
+article ART 20 A 50 AN 150 IT 1 TEH 1 THE 137 ANA 1
 artifice CON 1
-artificial ART 1
+artificial ART 21
 artificialcovering WIG 1
 artificialfoster FED 1
-artificialintelligence AI 3
-artillery RA 1
+artificialinsemination AI 20
+artificialintelligence AI 23
+artillery ART 20 RA 1
 artilleryman RA 1
 artist RA 269 AN 1 IST 1 TRA 1 TER 2 RAS 1
 artless ART 1
@@ -795,6 +886,8 @@ asmallstake PEG 1
 asmash HIT 1
 asmemberof IN 1
 asmuchaspossible MAX 1
+asmuchasyouplease QL 20
+asmuchasyouwish QV 20
 asnoringsound ZZ 1
 asocialevent ADO 1
 asocialgroupatschool PTA 1
@@ -826,21 +919,31 @@ assignto FOR 1
 assist AID 2
 assistance AID 9
 assistant PA 5
-associate A 50 LLY 1 MIX 1
+assistantsecretary AS 20
+associate A 50 ASS 20 LLY 1 MIX 1
+associated ASS 20
+associatedpress AP 20
+associatefellow AF 20
+associatemember AM 20
+associateofart AA 20
 associatewith AND 1
 associatewithus OUR 2
+association ASS 20
 assume DON 1
 assumeidentityof BE 1
 assuredofsuccess IN 1
 astatine AT 50
 asteamship ASS 1
+astheneedarise PRN 20
 asticker BUR 1
 asto RE 1
 astraightline LEY 1
 astreet AST 2 ST 1
 astroke PAT 1
+astronomicalunit AU 20
 astudent AL 1
 asuccess HIT 1 UP 1
+asufficientquantity QS 20
 asunhappyascanbe SAD 1
 aswell AND 3 TOO 17
 aswellas AND 5
@@ -856,15 +959,20 @@ ateam AXI 1
 atemper PET 1
 athenianletter PHI 1
 athleteandlifepeer COE 1
-athletic FIT 1
+athletic A 50 FIT 1
 athleticclub AC 1
 athome IN 274
 atime AT 3
 atlanticfish COD 1
+atlantictime AT 20
 atleave AT 1
-atmosphere AIR 17 AT 1
+atmosphere ATM 20 AIR 17 AT 1
+atmospheric ATM 20
 atmosphericvapour DEW 1
+atomic A 50
+atomicnumber Z 50
 atomicnumberofhydrogen ONE 1
+atomicweight A 50
 aton AT 1
 atone ATI 1 ED 1
 atop ON 9 UP 1
@@ -893,8 +1001,11 @@ atthemost MAX 1
 atthepresenttime NOW 1
 atthetimeof ON 1
 atthetopof ON 1
+atthisplace AHL 20
+atthisword AHV 20
 attitude AIR 7
-attorney DA 5
+attorney ATT 20 DA 5
+attorneygeneral AG 20
 attraction SA 1
 attractive FIT 1 HOT 1
 attractivequality IT 1
@@ -912,7 +1023,9 @@ auction LE 1
 audibledisapproveof BOO 1
 audience EAR 2
 audioaid AMP 1
-audiovisual AV 1
+audiofrequency AF 20
+audiovisual AV 21
+audiovisualaid AVA 20
 auditor EAR 4
 august AUG 51
 auniversity AU 1
@@ -924,6 +1037,7 @@ aussieskipper ROO 1
 austeritymeasure CUT 1
 australia A 50 AUS 60 OZ 18
 australian A 50 AUS 4 OZ 9
+australianarmy AA 20
 australianbird EMU 3
 australiannative ROO 4
 australianstate NSW 1
@@ -933,18 +1047,23 @@ author A 50 ME 3 PAN 1 PEN 8 POE 3
 authorisation OK 2
 authorise LET 3
 authority ACE 1 SAY 1
+authorizedversion AV 20
+authorproof AP 20
 auto CAR 5
+autobahn AB 20
 automaticreaction TIC 1
 automaton BOT 1
 automobile CAR 5
 automobileassociation AA 50 RAC 1
+autonomousregion AR 20
+autonomousrepublic AR 20
 autumnmonth OCT 1
 available ON 6 OUT 6 REE 1
 availableforpurchase OUT 1
 avarice ED 1
 avegetable PEA 1
 avenue AV 51 AVE 52
-average AV 1 AVE 1 OK 1 PAR 29
+average AVE 21 AV 1 OK 1 PAR 29
 avery AV 2
 averylongtime EON 2
 averyold AVO 1
@@ -982,7 +1101,7 @@ awordofhesitation ER 1
 aworker ANT 1
 ax CUT 1
 axe CUT 1 HEW 1
-axis X 50 Y 50 Z 50 GYZ 1 XY 8 YX 1
+axis X 20 Y 20 Z 20 GYZ 1 XY 8 YX 1
 ayear AY 2
 ayoung NEW 1
 azerbaijan AZE 50
@@ -995,8 +1114,14 @@ babyfeeder MUM 1 TIT 1
 bacardi RUM 1
 bachelor B 50 AB 1 ABA 1 BA 5
 bachelorofart BA 50 ABA 1
-bachelorofmedicine MB 50
-bachelorofscience BSC 50
+bachelorofdivinity BD 20
+bachelorofeducation BE 20 BED 20 EDB 20
+bachelorofengineering BE 20
+bacheloroflaw BL 20
+bachelorofletters BL 20
+bachelorofmedicine BM 20 MB 20
+bachelorofscience BS 20 SCB 20 BSC 50
+bachelorofsurgery BS 20 CHB 20
 back AFT 2 AGO 4 BET 2 END 1 FRO 3 HID 1 ID 1 TO 1 AVA 1 FOR 2 ME 1
 backbenchermaybe MP 1
 backchat LIP 2
@@ -1029,8 +1154,10 @@ baked DRY 1
 bakeddish PIE 3
 bakedfood PIE 1
 baker VEN 1
-balancesheet BS 2
-ball ORB 5 ED 1
+balance BAL 20
+balancesheet BS 22
+bale BL 20
+ball O 50 ORB 5 ED 1
 ballad LAY 4
 ballotbox URN 1
 balmoral HAT 1
@@ -1043,12 +1170,16 @@ bandbooster AMP 1
 bang HIT 1
 banger CAR 2
 bangladesh BD 50
-bank BAR 2 BK 1 ER 1 ROW 6
+bank BK 21 BAR 2 ER 1 ROW 6
 bankatmouthofriver BAR 1
+bankdraft BD 20
 banker DEE 2 EXE 1 PO 1
+banking BKG 20
 bankon ELY 1
-bankrate BR 2
+bankrate BR 22
 banter RAG 2 WIT 1
+baptist BAP 20
+baptize BAP 20
 bar BAN 23 BUT 4 INN 8 PH 1 PUB 10 ROD 17
 barb DIG 1
 barbados BDS 50
@@ -1056,22 +1187,25 @@ barbarian HUN 6
 bare RAW 1
 barecook RED 1
 bargain GO 1
+baritone BAR 20
 barium BA 50
 bark BAY 1 YAP 1 MAD 2
 barney IN 1
-baron B 50
-baronet BT 4
+baron B 50 BN 20
+baronet BT 24
 barrack BOO 2
-barrel B 100 TUN 17 VAT 1
+barracks BKS 20
+barrel B 50 BL 20 BBL 20 TUN 17 VAT 1
 barricade DAM 1
 barrier DAM 14
 barrieracrossriver DAM 1
-barrister LE 1 QC 2 BAR 1
+barrister BAR 21 LE 1 QC 2
 barrow HOW 1
-base BED 9 HQ 1 LOW 12
+base E 50 BED 9 HQ 1 LOW 12
 baseballclub BAT 1
 baseballofficial UMP 1
 baseballplayer CUB 1
+basepair BP 20
 bash GO 1 HIT 2 RAM 1
 bashful COY 2 SHY 3
 basicelectricalunit AMP 1
@@ -1086,8 +1220,11 @@ bathroom LOO 4
 bathroomaccessory TAP 1
 bathroomfeature TAP 1
 batside ON 1
+battalion BAT 20 BN 20
 batter LAM 1 RAM 1
 battered HIT 3
+battery BAT 20
+batterycommander BC 20
 battle ON 1 VIE 1 WAR 9
 battwice IN 1
 bavariancapital CH 1
@@ -1128,7 +1265,7 @@ becriticalof PAN 1
 becurious PRY 1
 bed COT 80 HAY 1 KIP 1 LAY 1 PIT 1
 bedpan POT 1
-bedroom BR 2
+bedroom BR 22
 bedshowfirst COT 1
 bedtime TEN 1
 bee B 50
@@ -1143,12 +1280,16 @@ beetleperhaps CAR 1
 befalse HIS 1
 befirst LED 1
 befog FOG 1
-before AGO 2 BY 1 ERE 86 LRE 1 OR 2 PRE 35 TO 3
-beforefood AC 1
+before A 50 AN 20 BEF 20 AGO 2 BY 1 ERE 86 LRE 1 OR 2 PRE 35 TO 3
+beforeameal AP 20
+beforechrist AC 20 BC 20
+beforefood AC 21
 beforejudge UP 1
 beforemidday AM 1
 beforenoon AM 65
 beforeonce ERE 1
+beforepresent BP 20
+beforetheday AD 20
 beg ASK 1
 begin ED 1
 beginner LL 1
@@ -1192,12 +1333,13 @@ belongtothewriter MY 1
 belongtous OUR 5
 belongtoyou THY 1
 beloved ING 1 PET 1
+below INF 20
 belowpar OFF 1
 belowthebelt LOW 1
 belt LAM 1
 beltup SH 2
 bench PEW 2
-bend S 50 U 50 Z 50 ARC 2 BOW 5 US 1
+bend S 20 U 20 Z 20 ARC 2 BOW 5 US 1
 bendforward BOW 1
 benedictine DOM 1
 beneficialto FOR 1
@@ -1211,6 +1353,7 @@ beprone LIE 1
 bequiet SH 4
 berelax SIT 1
 beret CAP 1
+berkelium BK 20
 berth BED 1
 berudeto DIS 1
 beryllium BE 50
@@ -1232,6 +1375,7 @@ bet BET 1 LAY 6
 betagainst LAY 1
 bethint TIP 1
 betray RAT 2
+between BET 20
 betweenthesheet BED 1
 beuntruthful LIE 1
 beverage TEA 2
@@ -1240,7 +1384,7 @@ bewellupwithfashion HEP 1
 bewrong ERR 1
 beyond OFF 1
 beyondbound OUT 1
-bible NT 1
+bible BIB 20 NT 1
 bibleclass RE 2
 biblicalboat ARK 1
 biblicalbook OT 1
@@ -1274,7 +1418,13 @@ bigwig NOB 1 VIP 1
 bikerace TT 2
 bill AC 38 ACC 1 ACT 1 AD 28 TAB 22 ADS 1
 billcatch AC 1
-billion B 50
+billdiscount BD 20
+billion B 50 BN 20
+billofexchange BE 20
+billoflade BL 20
+billofsale BS 20
+billpayable BP 20
+billreceivable BR 20
 bin BIN 1
 bind TIE 1
 binge JAG 1
@@ -1286,7 +1436,8 @@ birdofprey OWL 2
 birdofthepoultrykind OWL 1
 birdshoot BAG 1
 birthmark ES 1
-bishop B 50 AB 5 ARR 4 RR 14 SEE 1 BB 5
+birthplace BP 20
+bishop B 50 BP 20 AB 5 ARR 4 RR 14 SEE 1 BB 5
 bishopric ELY 1
 bismuth BI 50
 bit JOT 1 TAD 5
@@ -1339,6 +1490,7 @@ bleat MAA 1
 blemish MAR 1
 blend MIX 1
 blessedfellow ST 1
+blessedvirgin BV 20
 blight ILL 1 MAR 2
 blighter CAD 2
 blimey COR 2 MY 1
@@ -1360,6 +1512,7 @@ bloodsucker BUG 1
 bloodsuckfly KED 1
 bloodtype AB 1
 bloody RAW 1 RED 21
+bloodyfool BF 20
 bloom OUT 6
 blossom MAY 1 OUT 1
 blow HIT 2 RAP 4
@@ -1373,8 +1526,10 @@ bluff CON 1 ON 1
 blunder ERR 9 GLE 1 PS 1
 blush RED 8
 bluth ME 1
-board SS 1
+board BD 20 SS 1
 boardgame GO 3
+boardofcontrol BC 20
+boardofeducation BE 20
 boat ARK 13 CAT 3 HOY 1 SS 2 SUB 3 TUB 2 TUG 3 UNK 1
 boatermaybe HAT 1
 boatman AB 2 ME 2 TAR 1
@@ -1387,25 +1542,30 @@ bodyodour BO 51
 bodyofwater SEA 1
 bodypart TUM 1
 bog LOO 1
+bohrium BH 20
 boiling HOT 2
 boilinghot OTH 1
+boilingpoint BP 20
 boilover NUT 1
+boldface BF 20
 boldness LIP 1
 bolivia BOL 50
 bolognese BOL 1
 bolshevik RED 1
 bolt UN 1 RAN 2
 bomb ARM 1 EGG 1 HIT 1
-bond TIE 6
+bombardier BDR 20
+bond BD 20 TIE 6
 bonddoctor NO 1
 bone OS 2 RIB 9
 bonnetmaybe HAT 1
 bonniewanthalf NIE 1
 bonus JAM 1
 boob ERR 2 TIT 2
-book B 50 NT 81 OT 80 AB 2 EL 4 GET 1 JOB 1 LOG 1 ORB 1 SHE 2 TO 1 BB 13 ENT 2 LIT 7
+book B 50 BK 20 LIB 20 BB 33 BKS 20 NT 81 OT 80 AB 2 EL 4 GET 1 JOB 1 LOG 1 ORB 1 SHE 2 TO 1 ENT 2 LIT 7
 bookcollection OT 1
 bookcontainword ON 1
+booksellerassociation BA 20
 boomer ROO 1
 boomtime UP 1
 boor OIK 1
@@ -1418,15 +1578,17 @@ borderline HEM 1
 boring DRY 11
 boringroutine RUT 1
 boris PM 1
-born B 50 NE 3 NEE 15
+born B 50 NAT 20 NE 3 NEE 15
 borne SAT 1
 borneby IN 1 ON 1
 boron B 50
 bosombuddy ATE 1
 boss CEO 2 ED 1 GUV 1 NOI 1 TER 1
 bosseveryone RAN 1
+botanical BOT 20
 botanicalgarden KEW 1
 botanicgarden KEW 1
+botany BOT 20
 bother ADO 3 DO 1 NAG 1 ATE 1
 bothhand LR 1 RL 1
 bothparent MA 1
@@ -1437,11 +1599,11 @@ bothtap CH 1
 bothtimeaboardship SS 1
 botswana RB 50
 bottl JAP 1
-bottle CAN 1 JAR 1
+bottle BOT 20 CAN 1 JAR 1
 bottom AIL 1 ASS 5 BED 8 BUM 5 END 3
 bottomhalfof TLE 1 NES 1
 bouncer ROO 3
-bound END 1 HEM 1 HOP 7 LIP 1 RIM 1
+bound BD 20 END 1 HEM 1 HOP 7 LIP 1 RIM 1
 boundary END 1 RIM 1
 bounder CAD 7 ROO 2
 bovine COW 5 GNU 1 OX 1 YAK 1
@@ -1456,8 +1618,10 @@ box TV 52 AR 1 ATE 1 BIN 1 EST 1 HIT 2 IN 1 TIN 1
 boxer ALI 18 PUG 1
 boxerperhaps DOG 1
 boxin PEN 1
+boxoffice BO 20
 boxtop LID 1
 boy B 50 AL 5 BEN 5 CUB 1 DAN 1 ED 5 HE 2 IAN 2 KEN 3 KIT 1 LAD 102 LEO 1 LES 1 NED 1 ON 1 RAY 3 REG 3 ROB 2 RON 1 SAM 2 SEB 1 SID 1 SO 1 SON 110 STU 1 TED 3 TIM 6 TOM 5
+boybrigade BB 20
 boycott BAN 4
 boyfriend BF 1 MEN 1
 boygrowup MEN 1
@@ -1466,7 +1630,8 @@ brace TWO 2
 brag COW 1 OW 1 ED 1
 brain WIT 1
 braless BRA 1
-branch ARM 5 LEG 1 LOG 1
+branch BR 20 ARM 5 LEG 1 LOG 1
+branchoffice BO 20
 brassoff KER 1
 brat IMP 1
 brave CE 1
@@ -1506,6 +1671,7 @@ briefholiday HOL 1
 briefrecord EP 1
 briefslow RIT 1
 brieftime MO 2
+brigade BDE 20
 bright LIT 4
 brightcolour RED 3
 brighten LIT 2
@@ -1513,17 +1679,27 @@ brilliant ACE 10 DEF 1 FAB 1
 bring GOT 1 LED 1
 bringabouttrialof SUE 1
 bringacaseagainst SUE 1
+bringforward BF 20
 bringround TO 1
 bringupforgeta CH 1
 brink LIP 1
 britain B 50 BR 55 GB 1 UK 7
 britdownunder POM 1
 british B 50 BR 93 GB 2 POM 1 UK 14
+britishacademy BA 20
 britishairways BA 50
+britishcolumbia BC 20
 britishcompany BP 1
+britishcouncil BC 20
+britishlegion BL 20
+britishleyland BL 20
+britishlibrary BL 20
+britishmuseum BM 20
 britishregiment RA 1
 britishriver DEE 1
+britishstandard BS 20
 britishtelecom BT 50
+britishwaterways BW 20
 broadcast AIR 37 SOW 10 ON 3
 broadcastbigwig BBC 1
 broadcastcompany SKY 1
@@ -1531,11 +1707,11 @@ broadcaster BBC 1 ITV 1 SKY 14 TV 1
 broadsheetnewspaper FT 1
 brokeback PON 1
 bromine BR 50
-bronze TAN 22
+bronze BR 20 TAN 22
 brooch PIN 3
 brood SIT 2 SAT 2
 broorsis SIB 3
-brother BRO 60 BR 18 FR 1 LOR 1
+brother BR 38 BRO 60 FR 1 LOR 1
 brotherorsister SIB 1
 brouhaha DIN 1
 browbeat COW 1
@@ -1564,12 +1740,13 @@ buffoon NIT 1
 buffwipingbrow UDE 1
 bug ANT 5 FLU 1 FLY 1 MIC 1 TAP 1
 build HUT 3 UP 1
+buildingsociety BS 20
 bulgaria BG 50
 bulk FAT 1
 bulky FAT 1
 bull OX 2
 bullock OX 1
-bullshit BS 2
+bullshit BS 22
 bully COW 6
 bum ASS 2
 bump HIT 1
@@ -1598,7 +1775,8 @@ burstintotear CRY 1
 burundi RU 50
 bury HID 1
 busby HAT 2
-business ADO 1 BIZ 4 CO 34 JOB 1
+bushel BU 20
+business BUS 20 ADO 1 BIZ 4 CO 34 JOB 1
 businessconcern FIT 1
 businessenterprise CO 1
 businessgrad MBA 1
@@ -1618,17 +1796,22 @@ butt END 3 RAM 2 TUN 1
 butter PAT 5 RAM 4
 buttock ASS 1
 buy GOT 2 GET 3
+buyeroption BO 20
 buyit DIE 1
 buzz HUM 3 UP 1
 buzzer BEE 4 FLY 1
 by X 50 AT 9 BY 3 IN 2 OF 5 ON 1 PER 5 VIA 4
+bye B 20
 bygone BY 1
 byholdus BY 1
 bymeanof ON 1 PER 1 VIA 1
 bypasscar CAR 1
+byproxy PP 20
 byquit BY 1
 byreasonof FOR 1
-bytheway PS 3
+byreasonofdeath CM 20
+bythegraceofgod DG 20
+bytheway OB 20 PS 3
 bywayof VIA 7
 bywhatmean HOW 1
 c ENT 1 HUE 1 ID 1 IN 1 RED 1 TAN 1
@@ -1644,8 +1827,11 @@ calcium CA 52
 calciumandselenium SE 1
 calculatethetotalof ADD 1
 calculation SUM 3
+calendar CAL 20
+calibre CAL 20
 california CA 66 CAL 66
 californiacity LA 1
+californium CF 20
 caliph ALI 1
 call ASK 1 CRY 14 DUB 7 HO 1 MEW 1 RIN 1 TEL 1
 callattractattention OI 1
@@ -1658,7 +1844,7 @@ callforrescue SOS 1
 callfromabovine MOO 1
 callonatenniscourt LET 1
 calmstate ZEN 1
-calorie CAL 50
+calorie C 50 CAL 50
 cambcity ELY 1
 cambodia K 50
 cambridgecollege MIT 1
@@ -1670,31 +1856,45 @@ camper RV 1
 campus UNI 1
 can BUM 1 JUG 1 LOO 3 MAY 2 TIN 113
 canada CDN 50
-canadian CAN 3
+canadian CDN 20 CAN 3
+canadiannational CN 20
 canal CUT 2
 cancel NIX 1 CUT 1 OFF 9
-canine CUR 1 DOG 1 PUP 1
-canineletter R 20
+candela CD 20
+candlepower CP 20
+canine C 50 CUR 1 DOG 1 PUP 1
+canineletter R 50
 cannabis POT 8
 canoe AK 1
-canon LAW 1
+canon CAN 20 LAW 1
 canonise ST 2
 canreturn TIN 1
+canto CAN 20
+canton CAN 20
 cap HAT 2 LID 9 OP 1 TAM 3 TIP 1 TOP 1
-capacity HAT 1 VOL 1
+capacitance C 50
+capacity CAP 20 HAT 1 VOL 1
 cape C 50 AC 1
+capecolony CC 20
+capita CC 20
 capital CAP 51 AI 2 LO 1 SLO 1
+capitalaccount CA 20
+capitalize CAP 20
+capitalletter CAP 20
 capless CAP 1
 capone AL 8
+captaingeneral CG 20
+captainoftheguard CG 20
 captivate GET 1
 captive POW 1
 capture BAG 1 COP 1 GET 1 NET 3 WON 1
 captureenemy POW 1
+caput C 50 CAP 20
 car INI 1 RR 1 TOP 1
-carat CT 1
+carat C 50 CT 21 K 50
 carbon C 50
 carbonafterone IC 1
-carboncopy CC 100
+carboncopy CC 50
 carbonisematerial ASH 1
 carbonmonoxide CO 2
 carcapital IT 2
@@ -1720,12 +1920,13 @@ carpathian ME 1
 carpenter PPY 1
 carpet MAT 6 RAP 1 RUG 1
 carpeting RUG 1
-carriage CAB 3 CAR 2 GIG 1
+carriage CGE 20 CAB 3 CAR 2 GIG 1
 carriagereturn CR 51
 carrier ASS 1 BAG 1
 carrierofinformationaboutus DNA 1
 carry LUG 4
 carryby IN 1 ON 2
+carrydown CD 20
 carryforward CF 50
 carrymuchweight FAT 1
 carryon PLY 1
@@ -1737,11 +1938,12 @@ cartest MOT 1
 carton BOX 1
 cartoondog REN 1
 carve HEW 1 CUT 1
-case BOX 7 ENT 1 POD 2 CA 3
+case CA 23 BOX 7 ENT 1 POD 2
 caseofcruel CL 1
 caseofsacrilege SE 1
 cash OOF 1 SH 1 TIN 3
 cashcardnumber PIN 1
+cashdiscount CD 20
 cashmachine ATM 53
 cashondelivery COD 1
 cask TUB 1 TUN 6
@@ -1752,6 +1954,7 @@ castlighton LIT 2
 casualshirt TEE 1
 casualwalker ER 1
 cat MOG 4 PET 2 TOM 29
+catalogue CAT 20
 catcall BOO 1
 catch C 50 BAG 2 COP 4 GET 3 NAB 3 NET 22 CT 7 GOT 4 IC 2 ISC 1
 catchby C 50
@@ -1760,6 +1963,7 @@ catchon SAW 1
 catchsightof SEE 1
 catchsound EAR 1
 catchsun TAN 1
+catechism CAT 20
 caterfor FED 1
 cathedral ELY 5
 cathedralcity ELY 9
@@ -1789,45 +1993,56 @@ cellbrief CEL 1
 censor GAG 1
 censorship BAN 2
 censure RAP 1
-cent C 100 CC 1
+cent C 50 CT 20 CC 1
+centigrade C 20
+centigram CG 20
 centilitre CL 51
+centime C 50
 centimetre CM 50
 centralafricanrepublic RCA 50
 centralamerica CA 50
 centraldig IG 1
+centraleuropeantime MEZ 20
 centralheating CH 60
 centralpoint NUB 1
 centralpowereradicateinquickfire ID 1
+centraltime CT 20
 centre HUB 3 NUB 1
+centreforward CF 20
 centrego ICE 1
+centrehalf CH 20
 centreinresort SO 1
 centreof NI 1
+centreofbuoyancy CB 20
+centreofgravity CG 20
 centreofstorm EYE 1
-century C 100 AC 2 TON 8
+century C 50 AC 2 TON 8
 ceramic POT 1
 ceramicvessel POT 1
 cereal LI 1 RYE 1 TEF 1
 cerealnoisy RYE 1
 ceremony DO 1
-cerium CE 1
+cerium CE 21
 certain URE 1 AY 3 AYE 5 OK 1 YES 36
 certainage ERA 1
 certainnot NO 8
 certainpaper ID 1
+certificate U 20
 cessation HO 1
 chad TCH 50
 chafe RUB 1
-chain CH 7 ROW 1
-chairman MAO 5
+chain CH 27 ROW 1
+chairman CHM 20 MAO 5
 chaldeancity UR 2
 challenge VIE 2
 champ EAT 1
 champagne POP 1
-champion ACE 8 CH 2 ERO 2 NOI 1
+champion CH 22 ACE 8 ERO 2 NOI 1
 championboxer ALI 1
 championship TLE 1
 chance BET 6 HAP 1
 chancellor CE 1
+chancelloroftheexchequer CE 20
 chancetotalk SAY 1
 chaney LON 3
 channel RUT 3
@@ -1836,13 +2051,14 @@ chant OM 1
 chantrhyme RAP 1
 chap ALF 1 BEN 2 BOD 2 DAN 2 ED 2 GUY 7 HE 13 LES 1 MAN 86 NED 1 RAY 1 REG 1 RON 1 SAM 1 SID 1 TED 1 TIM 4 EN 1 MEN 54
 chapeau HAT 2
-chaplain CH 1
-chapter C 50 CH 58 ACH 1
+chaplain CH 21
+chaplaintotheforce CF 20
+chapter C 50 CH 58 CAP 20 CC 20 CHS 20 ACH 1
 char TEA 1
 character AIR 4 ELF 1 ESS 1 MAN 1 MU 1 PHI 1 RHO 1
 characterinmoralityplay ICE 1
 characterinsidepub UB 1
-charge CT 1 DUE 1 FEE 24 IC 1 ION 1 RAM 1 RAP 9 SUE 1 TAX 6
+charge CHG 20 CT 1 DUE 1 FEE 24 IC 1 ION 1 RAM 1 RAP 9 SUE 1 TAX 6
 charged RAN 6
 chargedparticle ION 1
 chargeofthegovernment TAX 1
@@ -1853,8 +2069,9 @@ charles CAR 1 RAY 1
 charlie C 50 OAF 1
 charlietwice CC 1
 charming IC 1
-chart CH 1 MAP 5
+chart CH 21 MAP 5
 charteraccountant CA 54
+chartersurveyor CS 20
 chary HY 1
 chase WOO 1
 chasegame TAG 2
@@ -1869,6 +2086,7 @@ cheapstuff TAT 1
 cheaptrinket TAT 1
 cheat COG 1 CON 13 DO 12 DID 5 HAD 2 HAS 1
 check CH 76 CK 1 DAM 4 DIT 1 TAB 1 VET 20 ED 1
+checkmate CHM 20
 checkoncar MOT 1
 checkonvehicle MOT 1
 checkout DIE 1 TRY 1 VET 1
@@ -1882,22 +2100,27 @@ cheerup LIT 1
 cheese OKA 1
 cheeseoff BUG 1
 chemicalcompany ICI 2
-chemicalengineer CE 1
+chemicalengineer CE 21 CHE 20
+chemicalpure CP 20
+chemicalwarfare CW 20
 cherish PET 1
 cherry RED 7
 cherrystone PIT 1
 chesspiece MEN 2
 chest ARK 5 BIN 1 RAX 1
+chestnut CH 20
 chew BIT 1 AWS 1
 chewup ATE 1
 chic IN 5
 chicago CHI 4
 chicagotrain EL 1
 chicken HEN 29
-chief AGA 1 CH 8 TOP 3
-chiefengineer CE 2
+chief CH 28 AGA 1 TOP 3
+chiefaccountant CA 20
+chiefengineer CE 22
+chiefofstaff COS 20
 chiefpoint SUM 2
-child CH 153 ACH 1 BOY 3 IMP 1 KID 24 LAD 1 SON 30 TAD 1 TOT 25
+child CH 103 ACH 1 BOY 3 IMP 1 KID 24 LAD 1 SON 30 TAD 1 TOT 25
 childhoodgame TAG 1
 childless SON 1 SP 1
 childprotection BIB 1
@@ -1905,9 +2128,9 @@ chile RCH 50
 chill ICE 4
 chillyanddamp RAW 1
 chimney ACK 1 LUM 5
-china FT 1 PAL 3
+china CH 20 FT 1 PAL 3
 chinapossible TEA 1
-chinese CH 3 HAN 9
+chinese CH 23 HAN 9
 chineseethnicgroup HAN 1
 chinesegame GO 1
 chineseleader MAO 1
@@ -1920,7 +2143,7 @@ chocolate BAR 1
 choice BET 1
 choiceofwine RED 1
 choiceword OR 2
-choir CH 1
+choir CH 21
 choose OPT 9
 chop AXE 2 CUT 1 HEW 2 LOP 1
 chopper AX 3 AXE 3
@@ -1929,7 +2152,11 @@ choralwork ATA 1
 chosen IN 1
 chow DOG 1
 chowdown ATE 1
-christmas NOW 1
+christ CH 20 CHR 20 XXT 20
+christian CHR 20 XN 20
+christianscience CS 20
+christianunion CU 20
+christmas XM 20 NOW 1
 christmasfilm ET 1
 christmasmonth DEC 1
 christmastree FIR 1
@@ -1938,6 +2165,7 @@ chromium CR 52
 chronicfatigue ME 1
 chronicfatiguecondition ME 1
 chronicfatiguesyndrome ME 1
+chronicle CH 20
 chuck BIN 1
 chuckoutbishop RR 1
 chum PAL 8 ALS 1
@@ -1958,12 +2186,17 @@ circuit LAP 16
 circular AD 1
 circularletter O 50
 circulate AIR 1
-citation CIT 1
-citizen CIT 1
+citation CIT 21
+citizen CIT 21
+citizensband CB 20
 city ANY 1 EC 16 ELY 3 LA 29 NY 12 ON 1 RIO 7 UR 1 WEN 2
 cityarea EC 1
 citypolice MET 1
-civilengineer CE 2
+civil CIV 20
+civildefence CD 20
+civilengineer CE 22
+civilian CIV 20
+civiljustice CJ 20
 civilservice CS 52
 claimtobethemainattraction MIT 1
 clairvoyance ESP 1
@@ -1988,6 +2221,7 @@ cleanitem RAG 1
 cleanser MOP 1
 cleanup MOP 2
 clear NET 9 RID 10
+clearhouse CH 20
 clearofallcharge NET 1
 clearout RID 1
 clearvisible LIT 1
@@ -2011,6 +2245,7 @@ clobber LAM 1
 clock SEE 2
 close CLO 50 BY 3 END 24 HOT 1 ER 1
 closed TO 2
+closedcircuit CC 20
 closein BAR 1
 closeofday END 1
 closerelation KIN 1
@@ -2025,12 +2260,13 @@ clothed SS 1
 clothes RIG 2
 clothesstore GAP 1
 clothstore GAP 1
+cloudy C 50
 clown ASS 1
 club C 50 BAT 34 ER 1
 clubemployee DJ 1
 clubentertainer DJ 1
 clubhost DJ 1
-clubhouse CH 2
+clubhouse CH 22
 clue INT 1 KEY 2 TIP 7
 clumpofgrass SOD 1
 clumsy HAM 1
@@ -2038,7 +2274,6 @@ clumsyactor HAM 1
 clumsyclot APE 1
 clumsyhulk APE 1
 clumsyship TUB 1
-co-ordinate X 50 Y 50 Z 50
 coach BUS 22 CAR 6 NS 2
 coachwithroofoff US 1
 coarseperson APE 1
@@ -2060,6 +2295,7 @@ cockneyembracethewoman ER 1
 cockneyexpletive ECK 1
 cockneysulk UFF 1
 code PIN 2
+coefficientofdrag CD 20
 coffeecontainer POT 1
 coffeeserver URN 1
 coffin BOX 1
@@ -2067,11 +2303,12 @@ coffinbearer IER 1
 coif DO 1
 coin AS 1 BIT 4
 cold C 50 AC 6 ICY 4 RAW 2
+coldstreamguards CG 20
 collar NAB 4
 collection LOT 1 MOB 1 SET 5
 collectionofanimal ARK 1
 collectjunk TAT 1
-college MIT 4 OLY 1 UNI 16
+college C 50 MIT 4 OLY 1 UNI 16
 collegefellow DON 3
 collegelecturer DON 1
 collegeonce LY 1
@@ -2084,23 +2321,27 @@ colonymember ANT 1
 color RED 1
 colorado CO 53 COL 50
 colossal PIC 1
-colour DYE 3 HUE 4 INK 1 RED 16 TAN 2
-coloured RED 3
+colossian COL 20
+colour COL 20 DYE 3 HUE 4 INK 1 RED 16 TAN 2
+coloured C 50 RED 3
 colouredfluid INK 2
 colouredliquid INK 2
 colouredsubstance DYE 1
 colourful RED 4
 colourmaterial DYE 1
 colourofapple RED 1
+colt C 50
+columbium CB 20
 column COL 51 ROW 1
 columnoflight RAY 1
 combat WAR 3
-combinedoperation CO 1
+combinedoperation CO 21
 comeacross MET 8
 comeagain EH 1
 comeby GET 1
 comedian WAG 5 WIT 9
 comedown LIT 1
+comedy COM 20
 comedyroutine BIT 1
 comefirst LED 4 WON 1 WIN 1 IST 1
 comefrom OF 1
@@ -2114,28 +2355,42 @@ comfortableposition LAP 1
 comfortablething BED 1
 comic WAG 3 WIT 7
 command LED 2
-commander AGA 4 CIC 1 CO 8 COM 1 GEN 1 OC 4
+commander CDR 20 COM 21 AGA 4 CIC 1 CO 8 GEN 1 OC 4
+commandinggeneral CG 20
 commandingofficer CO 59
+commandpaper C 50 CD 20
+commandpost CP 20
 commcompany BT 1
 comment PS 1
 commentpiece ED 1
+commerce COM 20
 commercial AD 74 ADS 9
 commercialendorsement AD 1
 commercialgo AD 1
 commercialvehicle VAN 3
 commie RED 2
 commission CUT 1 FEE 1
-commissioner COM 1
+commissioner COM 21
 commitoffence SIN 1
 commitsin ERR 1
-committee COM 3
+committee COM 23
+commodore COM 20
+common COM 20
 commonconnector AND 1
 commoncustom USE 1
+commonentrance CE 20
+commonera CE 20
+commonprayer CP 20
 commonsense WIT 1
+commontime C 50
+commonwealth COM 20
+commonwealthoffice CO 20
 commotion ADO 10 DIN 3 IR 2 ROW 1 USS 1
-commune COM 1
-communist COM 1 RED 51
+commune COM 21
+communist COM 21 RED 51
+communistparty CP 20
 community EU 1
+communityoftheresurrection CR 20
 commutemaybe BUS 1
 compactdisc CD 50
 compactvehicle INI 1
@@ -2145,7 +2400,7 @@ company CO 311 COS 2 ACO 2 COY 1 PLC 1 REW 1 SET 2
 companyboss CEO 1
 companyflotation IPO 1
 companyonce ICI 1
-compare CF 50
+compare CF 50 CP 20
 compareto AS 1
 compartment BAY 1 POD 2
 compassion ITY 1 RUE 1
@@ -2160,10 +2415,12 @@ complete ALL 24 DO 11 END 5 ONE 1 SUM 1 UP 7 DID 2 OUT 1
 completecircuitofstadium LAP 1
 completedry AIR 1
 completion END 3
+compliance C 50
 complimentary REE 1
 compose SET 1
 composition ODE 2
 compost ROT 1
+compound CPD 20
 comprise OF 1
 compute IT 4
 computer PC 50 MAC 11 IT 6
@@ -2172,6 +2429,7 @@ computerdepartment IT 1
 computerequipment IT 3
 computeretc IT 5
 computergame SIM 1
+computerizetomography CT 20
 computerlesson IT 1
 computernetwork LAN 3
 computerprogram APP 2 BOT 1
@@ -2195,18 +2453,22 @@ concertbooster AMP 1
 concession SOP 5
 concessionarygesture NOD 1
 conclude END 4
-conclusion END 12
+conclusion CON 20 END 12
 condemn RAP 1
 condition FLU 1 IF 8 ME 1
 conditional IF 1
 conditionof IF 1
 conduct RUN 1 LED 1 RAN 2
+confer CF 20
 confername DUB 1
 confidante PAL 1
 confidence EGO 1
 confine DAM 1 PEN 4
+confinetobarracks CB 20
+confinetocamp CC 20
 conflict ASH 1 JAR 4 WAR 60
 conflictinganswer YES 1
+conformist CON 20
 conformtolatefashion IN 1
 confuse FOG 1
 confusedstate PIE 1
@@ -2218,10 +2480,12 @@ connecticut CT 50
 connection ING 1 TIE 4
 connectwith ON 1
 connive LY 1
+conscientiousobjector CO 20
 consent NOD 1
 consentto LET 1
 consequence END 3
 consequent AND 1 SO 6
+conservation CON 20
 conservationist NT 2
 conservative C 50 CON 71 AC 3 RY 1
 conserve JAM 1
@@ -2229,15 +2493,20 @@ consider ARD 1 ATE 1 SEE 4
 considerable BIG 1 FAR 1 WAY 1
 considerthat AS 1
 consistof IN 1
-constant AC 1 CON 1 PI 7 ER 1
+constant C 50 AC 1 CON 1 PI 7 ER 1
 constantcritic NAG 1
 constituent TS 1
 construct DO 1
+consul CON 20
+consularagent CA 20
+consulgeneral CG 20
 consult ASK 1 SEE 1 SAW 2
 consume EAT 5 USE 1 ATE 42
 consumefood ATE 1
+consumersassociation CA 20
 consumption TB 2
 contactsport RU 1
+contagiousdisease CD 20
 contain HAD 1 HAS 1
 container BAG 1 BIN 1 CAN 14 CUP 2 JAR 1 PAN 2 POT 10 SAC 1 TIN 24 TUB 3 URN 3 VAT 4
 containerforboil URN 1
@@ -2258,10 +2527,11 @@ continue WAS 1 IS 1
 continuous ON 1
 contraceptive CAP 2
 contract CUT 1 IN 1 SE 1 GOT 1
-contralto AC 1
+contralto C 50 AC 1
 contribution AID 1
 control RUN 3
 controlled IRE 1 RAN 6
+controlleddrug CD 20
 convenience WC 1
 convenient FIT 1 PAT 2
 conveyance CAR 1
@@ -2287,22 +2557,29 @@ copy APE 31
 copycat APE 1
 corbynite RED 1
 cord TIE 1
+corinthian COR 20
 corn EAR 5
-corner HOG 1
+corner COR 20 HOG 1
 cornerofengland SE 1
+cornet COR 20
 cornishbanker FAL 1
 cornishriver FAL 5
 cornwall SW 1
+coroner COR 20
+corp C 50
+corporal CPL 20
 corporation GUT 4 POT 1 TUM 12
 corpse ODY 1
 corpulent FAT 2
 corral PEN 2
+correspondingmember CM 20
 corrode EAT 1
 corroded ATE 2
 corrosion ROT 1
 corrupt MAR 1 ROT 15 UL 1
 corruption ROT 8
 cost CE 1 FEE 1
+costandfreight CF 20
 costarica CR 50
 costmore UP 1
 costume RIG 1
@@ -2314,7 +2591,9 @@ could CAN 1 IS 1 MAY 2
 couldbeenvy SIN 1
 couldbegun ARM 1
 couldeasy CAN 1
-councillor CR 11
+coulomb C 50
+councillor CR 31
+councilofeurope CE 20
 counsel BAR 1
 count ADD 4 TOT 2
 counter BAR 8 OIL 1
@@ -2325,7 +2604,10 @@ countrydance HAY 1
 countryinstitution UNT 1
 countryman IAN 1
 county CO 55
-countycouncil CC 1
+countyalderman CA 20
+countyborough CB 20
+countycouncil CC 21
+countycouncillor CC 20
 couple AIR 1 DUO 7 II 4 PR 1 TIE 3 TWO 13
 coupleofbee BB 1
 coupleofbishop ABB 1
@@ -2343,10 +2625,14 @@ coupleoftime ATT 1 TT 1
 courier UPS 2
 course ATH 1 LAP 1 RUN 1 WAY 5
 courseofaction WAY 2
+courseoflife CV 20
 court CT 182 SEE 1 SUE 1 WOO 36 CTS 1
 courtgo CT 1
+courthouse CH 20
+courtofsession CS 20
 cousin KIN 2
 coutury IOR 1
+covariance COV 20
 cove BAY 1
 cover CAP 9 FUR 1 LID 35 RUG 1 TOP 2 HAT 1 MAT 1 ON 10
 covered HID 1
@@ -2388,8 +2674,9 @@ creaturethatfly BAT 1
 creaturewithvenom ASP 1
 credential ID 4
 credit BUY 1 CR 58
+creditaccount CA 20
 creditnote CN 50 CR 1
-creditor CR 1
+creditor CR 21
 credt CR 50
 creek BAY 1
 creep RAT 1
@@ -2422,14 +2709,18 @@ crone CH 1 HAG 3
 crook ARC 1 BOW 1 CON 2 ILL 2 WRY 1
 crooner AL 1
 crop CUT 1 LOP 1 MAW 1
+croquetclub CC 20
 cross X 50 AX 2 CUT 2 MAD 1 MIX 2 TAU 1 TOX 1 ZO 1 US 1
+crossofvalour CV 20
 crossover DIE 1
+crossovervalue COV 20
 crosswordcompiler ME 1 US 1
 crossworder WE 1
 crosswordsetter ME 2 US 1
 crowd ESS 1 JAM 6 LOT 5 MOB 12 SET 1
 crowdofperson MOB 1
-crown CAP 2 CR 1 HAT 1 TAJ 1 TIP 3 TOP 2
+crown CR 21 CAP 2 HAT 1 TAJ 1 TIP 3 TOP 2
+crownoffice CO 20
 crucial KEY 9
 cruciverbalist WE 1
 crude OIL 2 RAW 6
@@ -2454,6 +2745,7 @@ cryofsurprise GEE 1
 crystalmeth ICE 1
 cuba C 50
 cube DIE 5 OXO 1
+cubic C 50 CU 20 CUB 20
 cubiccentimetre CC 50
 cubicle BOX 1
 cuckoo MAD 2
@@ -2462,6 +2754,7 @@ cuddlytoy TED 2
 cue Q 50
 cuff BOX 1 RAP 1
 cult ECT 1
+cultivar CV 20
 cultivate WOO 1
 culture ART 1
 cunning ART 8 FLY 2 OXY 1 SLY 9
@@ -2473,10 +2766,12 @@ cuppa CHA 1 TEA 2
 cur DOG 1
 cure FIX 1
 curedpork HAM 1
+curie CI 20
 curious ODD 2 RUM 6
 curium CM 50
 currency YEN 2
-current AC 57 DC 50 I 50 AIR 2 DEE 2 FAL 1 IN 11 JET 1 NEW 3 TAY 1 NOW 24
+current AC 57 DC 50 I 50 CUR 20 AIR 2 DEE 2 FAL 1 IN 11 JET 1 NEW 3 TAY 1 NOW 24
+currentaccount CA 20
 currentfashion FAD 1
 currentmeasure AMP 3
 currentperiod AD 1
@@ -2487,6 +2782,7 @@ curve J 20 ESS 1
 curvybit HIP 1
 curvyregion BUM 1
 custom USE 3 WAY 2
+customhouse CH 20
 cut AXE 13 HEW 24 LOP 22 MOW 8 RIP 3 SAW 4
 cutand AN 1
 cutdown LOG 1
@@ -2527,10 +2823,10 @@ dampandchilly RAW 1
 dance BOP 6 HOP 15 JIG 3 PAS 1 TAP 1
 danceagain JIG 1
 dandy ACE 1 FOP 2
-daniel DAN 2
-danish DAN 1
+daniel DAN 22
+danish DAN 21
 danson TED 1
-dark DIM 6 DUN 1
+dark DK 20 DIM 6 DUN 1
 darken TAN 1
 darkforce YIN 1
 darkhorse DUN 2
@@ -2539,19 +2835,24 @@ darling PET 8
 dash BIT 3 EN 1 NIP 1 RUN 2 ZIP 1 RAN 7
 dashboardalertcolour RED 1
 data GEN 4
+dataprocessing DP 20
+datatransmission DT 20
 date D 50 AD 2 AGE 4 ERA 1 SEE 7
 dated OUT 3 SAW 1
+dative DAT 20
 daughter D 50 AD 4 ORD 1 DD 2
 daughteris DIS 2
 daughterleaveold OLD 1
 dawn EOS 1
 day D 50 AD 10 FRI 7 ID 1 MON 25 SAT 10 SUN 2 TUE 3 WED 3 AGE 1
 daybefore EVE 5
+daydate DD 20
 daylightsavetime DST 1
 de AN 1
 dead D 50 EX 1
 deadheadrose OSE 1
 deal BUY 1
+dealer DLR 20
 dealwith AT 1 ON 2 RE 7 MET 1
 dealwithdampness DRY 1
 dear HEN 1 PET 2
@@ -2562,24 +2863,28 @@ debate RAP 1 ED 1
 debitside RED 1
 debt IOU 1
 debtcollector DUN 1
-debtor DR 1
+debtor DR 21
 decade TEN 4
 decapitation NED 1
 decay ROT 7 OLD 1
 decayedmatter ROT 1
 decease DIE 1
+deceased JAN 20
 deceit ART 1 LIE 4
 deceive CON 2 LIE 1 HAD 2
 december DEC 53
 deception CON 2 LIE 5
 deceptiveact CON 1
-decibel DB 100
+decibel DB 50
 decided FAR 2
 decisiveblow KO 1
 decisivepunch KOS 1
+deck DK 20
 declaim TS 1
+declaration FEB 20
 declarationinchurch IDO 1
 declare SAY 1
+declension MAR 20
 decline AG 1 AGE 2 DIE 2 DIP 3 EBB 1 IDE 1 ROT 2 SAG 10
 decliningyear AGE 1
 decommission EX 1
@@ -2597,19 +2902,24 @@ deer DOE 2 ELK 4 ROE 3
 deface MAR 1
 defamatoryaccusation MUD 1
 defence ON 1
+defenceintelligence DI 20
 defencestrategy MAD 1
+defendant DEF 20 DFT 20
+defenderofthefaith DF 20 FD 20
 deficit GAP 1
 definite THE 1 ELY 1 LY 1 YES 1
 definitehappen ON 1
+definition DEF 20
 defraud CON 2
 degenerate AGE 1 ROT 1
-degree BA 13 BSC 1 MA 11 MAS 1
+degree D 50 BA 13 BSC 1 MA 11 MAS 1
 degreecourse PPE 1
 deity GOD 7 PAN 1
 deject SAD 1
 delaware DE 57 DEL 51
 delay ADO 1 LAG 9
-delegate DEL 1 REP 2
+delegate DEL 21 REP 2
+delete D 50
 delibe LEO 1
 deliberatemislead LIE 1
 delicacy ACT 1
@@ -2621,11 +2931,13 @@ deliveryman ER 1
 delta D 50
 deluge RET 1 SOG 1
 demand ASK 4 TAX 2 USE 1
+demandloan DL 20
 demandtosettle DUN 1
 demeanour AIR 1
 demise END 2
-democrat D 50 AD 2
-democratic D 50 DEM 1
+democrat D 50 DEM 20 AD 2
+democratic D 50 DEM 21
+democraticrepublicofcongo ZRE 20
 demolish EAT 1
 demon IMP 4
 den EST 1 PIT 1
@@ -2639,31 +2951,44 @@ denunciation BAN 1
 denylot TON 1
 denyport RIO 1
 denywork OP 1
-depart DIE 2 GO 3 NG 1 OFF 1
-department AED 1 ARM 1 PED 1
+depart DEP 20 D 50 DIE 2 GO 3 NG 1 OFF 1
+department D 50 DEP 20 DPT 20 AED 1 ARM 1 PED 1
+departmentofemployment DE 20
+departmentofhealth DH 20
 departmentofmedicine ENT 1
+departure DEP 20
+depleteuranium DU 20
 deplorable SAD 1
 deploy USE 1
-deposit LAY 1 PUT 2 SAT 1
+depose DEP 20
+deposit DEP 20 LAY 1 PUT 2 SAT 1
 deprecate NS 1
 depress SAD 1
 depressed LOW 6 SAD 3
 depression COL 7 DIP 2 LOW 2 PIT 8 RUT 1 SAG 1
+depth D 50
 deputise IN 1
-deputy DEP 2 IN 1 SUB 1
+deputy DEP 22 IN 1 SUB 1
+deputylieutenant DL 20
+deputytothedail TD 20
 deranged MAD 2
 derby HAT 1
 derbymaybe HAT 1
 derbyperhaps HAT 1
 derek DEL 2
 derisivecall BOO 1
+derivation DER 20
+derivative DER 20
+derive DER 20
 descendant SON 1
 descriptionofstolengood HOT 1
-desert DRY 3 RAT 10
+desert D 50 DRY 3 RAT 10
 deserter RAT 6
 deserve DUE 2
 deserving FIT 1
 design AIM 1 ART 1 END 1 NT 1
+designatedriver DD 20
+designit INV 20
 designtohold FOR 1
 desirable DES 1
 desirablequality IT 1
@@ -2688,7 +3013,7 @@ destroyidentification ID 1
 detach IX 1 CUT 1
 detain PEN 1
 detainee POW 1
-detective CID 82 DET 3 DI 18 DS 3 EYE 1 PI 2 TEC 4 DIS 3
+detective DET 23 CID 82 DI 18 DS 3 EYE 1 PI 2 TEC 4 DIS 3
 detectiveforce CID 1
 detectiveinspector DI 51 DIS 1
 detectivesergeant DS 2
@@ -2697,6 +3022,8 @@ determine SET 1
 determined OUT 4 SET 11
 detonator CAP 1
 detrimental ILL 1
+deuterium D 50
+deutschmark DM 20
 deviation YAW 1
 deviceforcleaner MOP 1
 deviceforcook AGA 1
@@ -2724,8 +3051,9 @@ dicky ILL 4 OFF 4
 dictator KIM 1
 dictionary OED 57
 didlie LAY 1
-die D 50 END 3 GO 3 OB 6
+die D 50 OB 26 END 3 GO 3
 diet CAL 1
+diewithoutissue OSP 20
 differentanimaltogether ZOO 1
 differentbirdsound CAW 1
 difficult ILL 3
@@ -2740,11 +3068,15 @@ digit TOE 1
 digitalimage GIF 1
 dignitary VIP 2
 diligentperson BEE 1
+dilute DIL 20
 dim WAN 1
+dimension D 50 DIM 20
 diminished CUT 2
-diminutive WEE 1
+diminuendo DIM 20
+diminutive DIM 20 WEE 1
 diminutiveman REG 1
 dimwit ASS 1
+dinar D 50 DA 20
 dincurtail DI 1
 dine EAT 7 SUP 2 ATE 15
 diner ER 1
@@ -2754,6 +3086,8 @@ dinnerjacket DJ 50
 dinosaur REX 1
 diocese SEE 9
 dip SAG 4 UNK 1 ED 1
+diplomainanaesthetics DA 20
+diplomaofart DA 20
 diplomat CD 1
 diplomaticbehaviour ACT 1
 dipso SOT 1
@@ -2765,8 +3099,9 @@ directdebit DD 51
 directed LED 2 RAN 2
 directfrom EX 3
 direction N 50 S 50 E 50 W 50 L 50 R 50 EST 1 NE 1 UP 1 WAY 1 ES 1 EN 1 SE 1
+directionfinder DF 20
 directive LAW 1
-director DIR 2 DD 1
+director D 50 DIR 22 DD 1
 directorgeneral DG 52
 directthesteering CON 1
 dirt MUD 3
@@ -2792,7 +3127,7 @@ discharge ARC 1 DO 1 PUS 3
 disciple SON 4
 discjockey DJ 50
 disclose AIR 1
-discontinue OFF 1
+discontinue DIS 20 OFF 1
 discontinueyour THY 1
 discover SEE 2 UND 1
 discreditname MUD 1
@@ -2812,6 +3147,7 @@ disinclineto OFF 1
 dismiss AXE 1 OUT 15
 disneyfilm AUP 1
 disorder MAD 1
+displaceperson DP 20
 display AIR 8 HOW 1
 disposeof BIN 1 ATE 1
 dispute IFF 1 ROW 16
@@ -2829,25 +3165,35 @@ distress IRK 1 WOE 1
 distresscall SOS 1
 distribute LOT 1 SOW 1
 districtattorney DA 51 ADA 1
+districtcommissioner DC 20
+districtofcolumbia DC 20
 disturbance OT 1 ROW 1
 ditch AHA 1 EA 1 HA 2
+divide DIV 20
 divideup CUT 1
-divine ADD 1 DD 1
+divine DIV 20 ADD 1 DD 1
 divinity GOD 1 RE 1
-division ARM 2 CUT 1 DIV 1
+division DIV 21 ARM 2 CUT 1
+divorce DIV 20
 divorcee EX 9
 divorcespouse EX 1
 do ACT 2 CON 7 DO 2 AT 1
 doarithmetic ADD 1
 doc DR 1
-dock CUT 2 LOP 2
+dock DK 20 CUT 2 LOP 2
 doctor DR 193 GP 72 ADR 1 AGP 1 AMB 6 AMD 1 AMO 1 DOC 3 MB 94 MD 11 MO 53 RIG 10 VET 4 DRS 1 MBS 3 MOS 5
 doctorinfilm NO 1
+doctorofbothlaw JUD 20
 doctorofdivinity DD 51
+doctorofeducation DED 20 EDD 20
 doctorofmedicine MD 50
-doctorofphilosophy PHD 50
+doctorofphilosophy DPH 20 PHD 50
+doctorofscience DSC 20 SCD 20
+doctorofsurgery DCH 20 DS 20
+doctoroftheology DTH 20 THD 20
 document ID 2
 documentation ID 1
+documentsign DS 20
 dodge CUT 1
 dodgy RUM 2
 dodgydoctor CK 1
@@ -2862,6 +3208,7 @@ dogwhichisscruffy CUR 1
 doll KEN 1
 dolledup LAM 1
 domainname COM 1
+domestic DOM 20
 domesticanimal PET 3
 domesticate PET 1
 domesticateanimal PET 1
@@ -2884,7 +3231,7 @@ dosomething ACT 5
 dosomethingbad SIN 1
 dot PIP 1
 dotheoppositeoflaugh CRY 1
-double TWO 1 ENT 1 IS 1
+double DBL 20 TWO 1 ENT 1 IS 1
 doublemisfortune ILL 1
 doublenitrogen NN 1
 doublequantityofdrink TEA 1
@@ -2902,13 +3249,17 @@ downycovering NAP 1
 dowrong ERR 1 SIN 2
 doyouwishme AMI 1
 doze NAP 2
+dozen DOZ 20 DZ 20
 dozeoff NOD 1
+drachma DR 20
+draft DFT 20
 drag LUG 2 TOW 5 TUG 1
 drain SAP 3
-dram TOT 6
+dram DR 20 TOT 6
 drama NO 2 NOH 4
 draughtanimal YAK 1
 draw TIE 11 TOW 1 ART 1
+drawer DR 20
 dread AWE 3
 dreadful IRE 1
 dreary DRY 1
@@ -2931,11 +3282,11 @@ drinkvenue BAR 1
 drinkvessel CUP 1 MUG 3
 drinkwithlieutenant LT 1
 drip IV 3
-drive DR 57 D 50 ADV 1 ER 1 GO 2 RAM 6 RAN 3
+drive D 50 DR 57 DV 20 ADV 1 ER 1 GO 2 RAM 6 RAN 3
 drivehome RAM 1
 driveinto RAM 2
 drivel ROT 3
-driver DR 1 RAC 5
+driver DR 21 RAC 5
 drone BEE 1 HUM 5
 droop SAG 7
 drop AXE 1 DIE 1 DIP 2 SAG 7 POO 1
@@ -2944,9 +3295,9 @@ dropin IN 2
 dropoff DIE 1
 dropping POO 1
 droptheball ERR 1
-drug ER 1 LSD 1 POT 9 EE 6 ES 9
+drug E 50 ER 1 LSD 1 POT 9 EE 6 ES 9
 drugdose HIT 1
-drummer MO 1
+drummer DR 20 MO 1
 drumset KIT 1
 drumstick LEG 1
 drunk CUT 1 LIT 19 NOT 1 SOT 21
@@ -2954,8 +3305,11 @@ drunkard SOT 11
 drunke LIT 1
 dry TT 68 ATT 3 AIR 5 RID 1 SEC 21 TED 1 WRY 1
 drygrass HAY 4
+dryriser DR 20
 dryup SH 1
+dubnium DB 20
 duck O 50 ID 1 NIL 2 ORO 1 OO 7
+duckarse DA 20
 duckoutoftheway AD 1
 dud BUM 2
 dude BUD 1 CAT 3 MAN 3
@@ -2969,17 +3323,21 @@ dump BIN 2 LE 1 POO 1 STY 1 TIP 5 ED 1
 duo EX 1 TWO 1
 duoloseheart DO 1
 dupe CON 1
-durham DUR 1
+duplicate DUP 20
+durham DUR 21
 durhamarea NE 1
 durhampossible SEE 1
 during AS 1 AT 1 FOR 1 IN 43 ON 1
 dust ASH 2
-dutch DU 1
+dutch D 50 DU 21
+dutchcompany BV 20
 duty TAX 3 VAT 3
 dwell PAD 1
 dye HUE 1
+dynamo DYN 20
+dysprosium DY 20
 e BE 1 MIN 1 PUR 1 TRE 1
-each ALL 1 EA 67 PER 15
+each EA 87 ALL 1 PER 15
 eachandevery ALL 1
 eachhalf EA 1
 eachone PER 1
@@ -2991,6 +3349,7 @@ earlier AGO 4 ERE 1 OLD 1
 earliertime BC 1
 early OLD 3
 earlycharacter ABC 1
+earlyenglish EE 20
 earlygrowth BUD 1
 earlyintheday AM 1
 earlymoisture DEW 1
@@ -2998,18 +3357,23 @@ earlystageofdevelopment BUD 1
 earlysummer MAY 1
 earn WIN 3 WON 1
 earnings PAY 2
-earth DEN 2 MUD 2 SOD 1
+earth E 50 DEN 2 MUD 2 SOD 1
 earthenwarearticle POT 1
 earthenwarepiece MUG 1
 east E 50 ONE 1 TOE 1
 eastanglianriver CAM 1
 eastbound TOE 1
+eastcaribbean EC 20
+eastcentral EC 20
 eastern E 50
 easternreligion ZEN 1
+easterntime ET 20
+eastindian EI 20
+eastindies EI 20
 eat FED 1 HAD 3 SUP 2 AS 1 HAS 2
 ebony JET 1
 eccentric CAM 3 FEY 1 NUT 3 ODD 3 OON 1 RUM 2
-eccentricity TIC 1
+eccentricity E 50 TIC 1
 ecclesiasticalsite SEE 1
 echo E 50
 economy CUT 1
@@ -3019,20 +3383,21 @@ ecstasytab ES 1
 ecuador EC 51
 edge HEM 13 LIP 15 RIM 22 TIP 1
 edict LAW 1
-edit SUB 2 ED 1
+edit ED 21 SUB 2
 edition ED 58
 editor ED 171 SUB 2 EDS 1
 edmund NED 1
-educated ED 1
-education ED 14
+educated ED 21
+education ED 34
 edward ED 11 NED 4 TED 15
+edwardkingandemperor ERI 20
 edwardshort ED 1
 edwin ED 1
 effect FX 50 DO 3 DID 1
 effectofsun TAN 1
 effort TRY 7
 eg SAY 2
-egg NIT 10 ROE 16 OVA 12
+egg O 50 NIT 10 ROE 16 OVA 12
 eggsupplier HEN 1
 eghummu DIP 1
 ego I 50 ME 3
@@ -3041,6 +3406,7 @@ egyptianboyking TUT 1
 egyptiangod RA 3
 egyptianking TUT 3
 egyptianmonarch TUT 1
+einsteinium ES 20
 eisenhower IKE 3
 elanstripoff LA 1
 elated UP 1
@@ -3052,8 +3418,13 @@ electindividual MP 1
 electionwinner IN 1
 electoralsystem PR 2
 electpolitician MP 1
+electrical LX 20
+electriccharge Q 50
+electromotiveforce E 50
+electron E 50
 electronic E 50
 electronicdevice LED 1
+electroplate EP 20
 element TIN 6
 elevate UP 3 AN 1
 elevaterailway EL 1
@@ -3081,13 +3452,15 @@ emergencyrelief AID 1
 emergencyroom ER 53
 eminence TOR 1
 eminent BIG 1
-emma M 20
 emmet ANT 1
 emolument PAY 1
-emperor EMP 2
+emperor IMP 20 EMP 2
 employ USE 10
 employee MAN 1 MEN 4
 employment OB 1 USE 14
+employmenttrainee ET 20
+employmenttraining ET 20
+empress IMP 20
 empty DRY 1 TIP 1
 emptylocal LL 1
 emptytalk GAS 1
@@ -3116,7 +3489,7 @@ energysource FAT 1
 engagein AT 5
 engagement GIG 1
 engine JET 1
-engineer ENG 5 RE 34
+engineer ENG 25 RE 34
 enginepart CAM 1
 england ENG 56
 englandopener EN 1
@@ -3130,16 +3503,21 @@ englishreference OED 1
 englishrepeated EE 1
 englishriver ER 1 FAL 1
 englishtreble EEE 1
+englishversion EV 20
+engrave ENG 20
+engraver ENG 20
 enjoy DIG 4 DUG 1 HAD 2 HAS 3
 enjoyable FUN 2
 enjoylife BE 1
 enjoyment FUN 4
 enlargegland RE 1
 enough DUE 1
-enpassant EP 1
+enpassant EP 21
 enquire ASK 2 PRY 1
 enquiretoointrusive PRY 2
 enrage HOT 1 RED 1
+enrollnurse EN 20
+ensign ENS 20
 enter LOG 1 IN 2
 enterprise ACT 1
 entertain FUN 1
@@ -3150,29 +3528,37 @@ enthusiastic HOT 1 MAD 1
 enthusiasticeater PIG 1
 entire ALL 9 ETE 1
 entirealphabet AZ 1
+entomology ENT 20
 entrance TE 1
+entropy S 50
 entryonwebsite OG 1
+environmentagency EA 20
 environmental ECO 2
 envisage SEE 2
 epic BIG 2
+episcopal EP 20
 epistle EP 50
 epitaph RIP 2
 epithet TAG 2
-equal PAR 2 AS 4 IS 1
+equal EQ 20 PAR 2 AS 4 IS 1
 equality PAR 1
+equation EQ 20
 equine ASS 2 BAY 1 NAG 1
 equip RIG 1
 equipment KIT 12 RIG 12
 equipmentforcatch NET 1
+equivalent EQ 20
+equivalentgrade EG 20
 er UM 2
 era AGE 5
+erbium ER 20
 ere ERE 1
 erect UP 4
 erican AM 1
 erode ATE 1
 erratic OFF 1
 error BUG 4 SIN 10 IPS 1
-errorexcept EE 1
+errorexcept EE 21
 erstwhile EX 1
 erstwhilepartner EX 1
 es EE 2
@@ -3180,37 +3566,45 @@ escape ESC 51 LAM 1
 escaped CON 1
 escapekey ESC 50
 escort ER 1 TE 1 LED 3
+escudo ESC 20
 especially ESP 3
 espy SEE 1
+esquire ESQ 20
 essal DAR 1
 essay TRY 12
 essence NUB 2
 essential EY 1 KEY 6
 establish SET 1
 established EST 60 SET 2
-establishedchurch CE 1
+establishedchurch EC 20 CE 1
 establishment INN 1
-estate EST 1
+estate EST 21
 estateperhaps CAR 1
-estimate EST 3
+estimate EST 23
 estonia EST 50
-estuary EST 1
+estuary EST 21
 etc ETC 1 KIT 1
 etcetera ETC 1
 ethiopia ETH 50
+ethyl ET 20
+euro EUR 20
 europe EUR 52 EU 3
 european E 50 EUR 55 AE 2 EEK 1 EU 2 INE 1 ISE 1 ITE 1 EE 3
 europeancity CE 1
+europeancommission EC 20
 europeancommunity EC 50
 europeancountry UK 1
 europeancountryabandonit AIN 1
 europeangroup EU 1
 europeanoutfit EU 1
 europeanoutofdanger RIL 1
+europeanparliament EP 20
 europeanpolitician EMP 1
 europeanrepeated EEE 1
 europeantwice EE 1
 europeanunion EU 51
+europium EU 20
+evangelicalunion EU 20
 evasive COY 3
 even EN 2 ENE 1 PAR 2 YET 2
 evenforapoet EN 1
@@ -3234,6 +3628,7 @@ everymanwill LL 1
 everyone ALL 164 CH 1
 everyoneaboard ALL 1
 everyonefollow ALL 1
+everyotherday EOD 20
 everypartof ALL 1
 everysingle ALL 1
 everything ALL 83
@@ -3250,8 +3645,9 @@ exactright PAT 1
 exactso SIC 1
 exactwhatisneeded IT 1
 exam SAT 1 SE 1
-examine CON 1 EYE 2 VET 2
-example EG 3 EX 1
+examination EX 20
+examine EX 20 CON 1 EYE 2 VET 2
+example EX 21 EG 3
 examsubject RE 1
 exasperation IRE 1
 excavation DIG 7
@@ -3259,10 +3655,12 @@ excel OUT 1
 excellent ACE 15 AI 18 DEF 2 FAB 3 RAD 2 TOP 1
 excellentfruit NUT 1
 excellentservice ACE 2
-except BAR 5 BUT 1
+except EX 20 BAR 5 BUT 1
 exceptfor BUT 1
+exception EX 20
 excess OTT 1
 excessive OTT 13 TOO 11
+exchange EX 20
 excite HOT 3
 excited HOT 3 ON 1 UP 13
 excitement ON 1
@@ -3271,7 +3669,12 @@ exclamationofsurprise COR 2
 exclude BAN 4 BAR 11 OUT 1
 exclusive OWN 1
 excrement POO 1
-executivecommittee EC 1
+excursion EX 20
+excursus EX 20
+exdividend XD 20
+execute EX 20
+executive EX 20
+executivecommittee EC 21
 executiveofficer EXO 1
 exercise ELD 1 PE 85 PLY 1 PT 10 RUN 1 USE 12 NS 2
 exercisebyjog RAN 1
@@ -3281,6 +3684,7 @@ exile OUT 1
 exist ARE 1 BE 9 IS 9
 existing IS 1
 exit DIE 1
+exodu EX 20
 exoticbird ANI 1
 expect BET 1
 expected AL 1 DUE 26
@@ -3290,19 +3694,24 @@ expensivecar RR 1
 experience SEE 1 HAS 3
 experienced HAD 7 LED 1 MET 1 OLD 1
 experiencelife BE 1
-experiment TRY 1
+experiment EXP 20 TRY 1
+experimental EXP 20
 experimentalprogramme LOT 1
 expert ACE 74 DAB 5 GUN 1 PRO 41
 expertairman ACE 1
-expire DIE 2
+expire EXP 20 DIE 2
+expiry EXP 20
 explanation KEY 1
 exploit ACT 2 USE 7
 explosive HE 57 TNT 62
 explosivestuff TNT 2
+exponential EXP 20
 exponentofmartialart DAN 1
+export EX 20 EXP 20
+exporter EXP 20
 expose AIR 1 OUT 2
 exposed OUT 3 RAW 1
-express AIR 2 SAY 4
+express EX 20 EXP 20 AIR 2 SAY 4
 expresscontempt BOO 1
 expressdisapproval BOO 2 TUT 4
 expressdisapprovalof BOO 2
@@ -3337,13 +3746,16 @@ expresssorrow CRY 1
 expresssurprise GEE 1 MY 1
 extendedperiod EON 1 ERA 1
 extendedplay EP 1
-extension ARM 1 EXT 2
+extension EXT 22 ARM 1
 extensive BIG 1
-external EXT 1
+exterior EXT 20
+external EXT 21
+extinct EXT 20
 extinctbird MOA 2
 extinguish OUT 1
-extra ED 1 EXT 2
+extra EX 20 EXT 22 ED 1
 extracomment PS 1
+extract EXT 20
 extralarge XL 52 OS 1
 extramoney TIP 2
 extraordinary ACE 1
@@ -3353,6 +3765,7 @@ extrasession OT 50
 extraterrestrial ET 56
 extratime ET 2
 extravagant OTT 3
+extravehicularactivity EVA 20
 extreme FAR 1 OTT 1 TIP 1 SO 4 TOO 6
 extremecharacter AZ 3
 extremehandy HY 1
@@ -3361,7 +3774,7 @@ extremeloud LD 1
 extremelow LW 1
 extremelucrative LE 1
 extremeofserious SS 1
-extremepressure EP 1
+extremepressure EP 21
 extremesavage ST 1
 extremescrawny SY 1
 extremespeedy SY 1
@@ -3369,6 +3782,7 @@ extremist NUT 1 RAD 1 ZI 1
 extremity END 2 TOE 1
 extremityoftower TR 1
 eye ORB 1
+ezra EZ 20
 f AND 1 AT 1 EPT 1 NE 1
 fable LIE 1
 fabrication LIE 2
@@ -3378,9 +3792,10 @@ face IAL 2 MOW 1 MUG 8 PAN 3
 facility LOO 3 ART 1 WC 1
 facilityonsmartphone APP 1
 fact GEN 2 TA 1
-factor X 50
+factor X 20
 factory LL 1
 faculty EAR 1
+facultyofactuaries FA 20
 facultytohear EAR 1
 fade DIE 2
 fadefrommemory DIE 1
@@ -3411,8 +3826,8 @@ falseinformation LIE 1
 falsereport LIE 1
 falsestatement LIE 6
 falsify RIG 3
-familiar OLD 5
-family KIN 114
+familiar FAM 20 OLD 5
+family FAM 20 KIN 114
 familymember BRO 1 KIN 3 NAN 1 SIS 2 SON 2
 familyvehicle CAR 2
 famousgarden KEW 1
@@ -3426,10 +3841,11 @@ fancy DUG 1 AMY 1 COO 1 DIG 3 MY 1
 fancythat COR 1
 fantastic ACE 1
 fantasticcreature ELF 1
+faraday F 50
 farah MO 1
 farcical MIC 1
 fare DO 4
-farewell AVE 1 BYE 2 RA 1 TA 1
+farewell BV 20 AVE 1 BYE 2 RA 1 TA 1
 farewellmessage TA 1
 farfrom NOT 2
 farm ILL 1
@@ -3444,6 +3860,7 @@ faroeislands FO 50
 farout RAD 1
 farrow MIA 1
 farsideofstreet ET 1
+farth F 50
 farther YON 1
 fartoomuch OTT 1
 fascistgroup SS 1
@@ -3465,6 +3882,7 @@ father FR 87 DA 4 DAD 12 DY 1 GOD 2 PA 99 POP 16 SIR 1 PAS 1
 fatherandmother MA 1
 fatherdiscard PA 1
 fatherinsitcom TED 1
+fathom F 50 FM 20 FTH 20
 fatleavetogooff UMP 1
 fault SIN 1
 favour ESS 1 IN 11 PET 5 FOR 9 PRO 7
@@ -3529,6 +3947,7 @@ feminineprinciple YIN 1
 fenlandcity ELY 1
 fermentbeer ALE 1
 fermentliquid ALE 1
+fermium FM 20
 ferret PRY 1
 ferry RO 1
 fertilitygod BEL 1
@@ -3546,11 +3965,12 @@ fictionaltale LIE 1
 fiddle CON 5 ER 1 RIG 4 TOY 1
 fido DOG 1
 field LEA 17 LEY 2 REA 1
-fieldofficer FO 2
+fieldmarshal FM 20
+fieldofficer FO 22
 fiend NUT 1
 fiery HOT 2
-fifth V 50
-fifty L 100 LL 3
+fifth V 20
+fifty L 50 LL 3
 fiftyfive LV 1
 fiftyone LI 1
 fiftyrocker TED 1
@@ -3558,7 +3978,8 @@ fiftystate US 1
 fight BOX 12 OUT 1 ROW 6 TO 4 VIE 3 WAR 39 ON 1
 fighter ALI 3 ER 1 MIG 2
 fighterpilot ACE 3
-figurative FIG 1
+fighterplane F 50
+figurative FIG 21
 figure FIG 50 ONE 12 SIX 2 TEN 34 SUM 1
 figureinespionage SPY 1
 fiji FJI 50
@@ -3612,14 +4033,15 @@ fiona FI 1
 fire AXE 1 CAN 1 LIT 8
 firearm GUN 1
 firebegintobeputout IRE 1
+fireplug FP 20
 fireremain ASH 1
 fireup LIT 1
 firm ACO 2 CO 104 PRU 1 SET 7
 firmdelivering UPS 1
-first I 50 IST 49 ONE 1 ST 7 TOP 10
+first I 20 IST 49 ONE 1 ST 7 TOP 10
 firstandlastofsoldier SS 1
 firstcell OVA 1
-firstclass A 100 AI 6
+firstclass A 50 AI 6
 firstdaybackatwork DAY 1
 firsteight ORE 1
 firstfemale EVE 2
@@ -3634,7 +4056,7 @@ firstpart RUN 1
 firstpeople EWE 1
 firstperson I 50 ME 8
 firstplace TOP 1
-firstrate AI 1
+firstrate A 50 AI 1
 firsttogo LED 1
 firsttwoletter AB 1
 firstwife EX 1
@@ -3650,7 +4072,7 @@ fitnesscentre GYM 1
 fitoftemper ET 1
 fitsailetc RIG 1
 fitting APT 9 DUE 2
-five V 100
+five V 50
 fivecouple TEN 1
 fivehundred D 50
 fix DO 3 GUM 1 IL 1 JAM 1 PIN 8 PUT 1 RIG 10 SET 4 TIE 1
@@ -3688,14 +4110,15 @@ flock LOT 1
 flog TAN 2
 floodprevention DAM 1
 floodsurvivor HAM 1
-floor BED 2 FL 2 KO 3
+floor FL 22 BED 2 KO 3
 floorcovering MAT 5 RUG 2
 flop SAG 1 SIT 1
 floppyhair MOP 1
 floppyhat TAM 1
 florid RED 2
 florida FA 51 FL 56 FLA 52
-flourish FL 1
+florin FL 20
+flourish FL 21
 flow RAN 2
 flowback EBB 1
 flower CAM 1 EXE 1 MUM 1 PO 2 UP 1 URE 3
@@ -3703,26 +4126,29 @@ flowerforafallarrangement MUM 1
 flowering OUT 3
 floweryneckwear LEI 1
 flowing ON 1
-fluid FL 1 INK 2
+fluid FL 21 INK 2
 fluorine F 50
 flush RED 5
 flutter BET 2
 fly RAN 1 ERS 1 JET 1 KED 2 RUN 1
 flyer TIT 1 RAF 2
 flygroup RAF 1
+flyingofficer FO 20
 flymammal BAT 1
 flyperhaps GO 1
 fob TAB 1
 fodder HAY 2
 fold PEN 2 PLY 2
-folio FF 2
+folio FO 20 FOL 20 FF 22 F 50
 folk MEN 3
 folkdance JIG 1
 folkloricspirit IMP 1
-follow F 50 DOG 15 TAG 1 FF 5 ON 1
+follow FOL 20 F 50 SQ 20 DOG 15 TAG 1 FF 5 ON 1
 followcourse PLY 1
 follower MAN 1
+followline FF 20
 follownameless EXT 1
+followpage FF 20
 followstyleof ALA 1
 food BUN 1 EAL 1 EGG 2 ET 1 HOW 1 KAI 1 PAP 1 PIE 7 RUB 1
 foodcontainer CAN 1
@@ -3732,7 +4158,7 @@ foodtoeatlate OUT 1
 fool ASS 72 CON 2 DIV 1 FOX 1 GIT 3 MUG 6 NIT 27 NUT 3 SAP 6 TIT 6 HAD 2 HAS 1
 foolish MAD 1
 foolishperson NIT 1 TIT 1
-foot FT 107 PAW 2 PAY 2
+foot FT 57 F 50 PAW 2 PAY 2
 footballassociation FA 50
 footballauthority FA 1
 footballboss FA 1
@@ -3749,6 +4175,7 @@ for AT 2 FOR 5 OF 1 ON 1 PER 6 PRO 145 TO 10
 fora PER 5
 forage HAY 1
 forallthat BUT 1
+forandonbehalfof PP 20
 forattention ENT 1
 forbid BAN 5
 forbidden OUT 2
@@ -3772,17 +4199,20 @@ foreigngentleman DON 1
 foreignletter RHO 1
 foreignmoney YEN 2
 foreignoffice FO 1
+foreignofficer FO 20
 foreignport RIO 1
 foreignriver PO 1
 foreignsea MER 2
 foremost TOP 1
+forestrycommission FC 20
 forever AY 2
 forevery PER 16
-forexample EG 164 AS 2 SAY 21
+forexample EG 164 ZB 20 AS 2 SAY 21
 forexamplejet GEM 1
 forge RIG 1
 forgoodmeasure AND 1
 forinstance AS 1 EG 12 SAY 3
+fork Y 20
 forkout PAY 2
 formalgreeting BOW 1
 formality ICE 1
@@ -3796,11 +4226,13 @@ formerlover EX 18
 formermate EX 1
 formerpartner EX 63
 formerprimeminister MAY 1
+formerpupil FP 20
 formerrecordlabel PYE 1
 formerreservist TA 1
 formersocietygirl DEB 1
 formerspouse EX 3
 formerwife EX 5
+formfeed FF 20
 formofaddress SIR 1
 formofcover HAT 1
 formofidentification PIN 1
@@ -3812,7 +4244,7 @@ formofwit PUN 1
 formunion WED 1
 forone EG 24 PER 3 SAY 6
 forsure YES 1
-fort FT 2
+fort FT 22
 forte F 50
 forthatreason SO 1
 fortheaudience SAY 1
@@ -3843,20 +4275,25 @@ foxorrabbit FUR 1
 foxtrot F 50
 foxy LY 1
 fraca ROW 1
-fragment BIT 3 END 1 ORT 1
+fragment FR 20 BIT 3 END 1 ORT 1
 frame SET 1
-franc F 100
+franc F 50 FR 20
 france F 50 FR 51
+francium FR 20
 frantic MAD 3
 fraud CON 8
 fraudster CON 1
 freak FAN 2 NUT 1
 free FOC 50 RID 38
+freechurch FC 20
 freedomfighter PLO 1
+freeofcharge FOC 50
 freeoftax NET 2
+freepresbyterian FP 20
 freeze ICE 4
 freezing RAW 1
 freezingcold ICY 1
+freezingpoint FP 20
 french FR 74 AF 1 LE 1 NON 1
 frenchabandon FR 1
 frenchand ET 2
@@ -3865,13 +4302,18 @@ frencharticle LE 4 LES 1 UN 4 UNE 1
 frenchchildfemaleabandon ANT 1
 frenchcity PAU 1
 frenchcomedy LIE 1
+frenchcompany SA 20
+frenchdecoration CG 20
 frenchdenial NON 1
+frenchdiplomaticcorp CD 20
 frenchduke DUC 2
+frenchfranc FF 20
 frenchfriend AMI 2
 frenchhorn COR 3
 frenchis EST 1
 frenchisland ILE 2
 frenchking ROI 5
+frenchlawyer AV 20
 frenchmarshal NEY 1
 frenchname NOM 2
 frenchnoble DUC 1
@@ -3880,6 +4322,7 @@ frenchof DE 1
 frenchpal AMI 1
 frenchpriest URE 1
 frenchrebuff NON 1
+frenchrepublic RF 20
 frenchsea MER 2
 frenchstreet RUE 6
 frenchtown LLE 1
@@ -3890,6 +4333,7 @@ frenchwoman MME 2
 frenchwriter ST 1
 frenzied MAD 1
 frequency F 50
+frequencymodulation FM 20
 frequent FR 50 OFT 19
 frequenttoapoet OFT 1
 fresh NEW 15 RAW 1
@@ -3897,7 +4341,8 @@ freshmint NEW 1
 freshonthescene NEW 1
 freshwaterfish IDE 1
 freudianconcept ID 1
-friday FRI 53 FR 2
+friar FR 20
+friday FR 22 FRI 53
 friend AMI 1 ATE 1 BUD 8 PAL 117 ALS 1
 friendacrossthepond BUD 1
 friendly ER 1
@@ -3934,6 +4379,7 @@ fuelforheating GAS 1
 fuelsupply GAS 1
 fulfil MET 2
 full ALL 4 ED 1 UP 1
+fullorgan FO 20
 fullstop DOT 1
 fulltime FT 50
 fume GAS 1
@@ -3946,7 +4392,7 @@ fungus EN 1
 funky HIP 1
 funny ILL 1 ODD 2 RUM 5
 furious HOT 2 MAD 6
-furlong F 100
+furlong F 50 FUR 20
 furnish FIT 1
 furniture BED 3
 furniturestore EA 1
@@ -3954,16 +4400,18 @@ furrow RUT 3
 furrycompanion PET 1
 furscarf BOA 1
 further NEW 1 ON 2 TOO 1
-furthereducation FE 1
+furthereducation FE 21
 furtherinto AT 1
 furthermore AND 2 TOO 1
 furthernote PS 1
 fury IRE 4
 fuss ADO 26 DO 4 ROW 1
 futon BED 1
+future FUT 20
 fuzzycovering NAP 1
 g HAS 1 THE 1
 gabon G 50 ING 3
+gadolinium GD 20
 gaff ME 1
 gaffhave VE 1
 gag VE 1 ES 1
@@ -3974,8 +4422,9 @@ gallerydisplay ART 1
 galleryoffering ART 1
 gallium GA 51
 gallivant GAD 1
-gallon ING 1
+gallon G 50 ING 1
 galloped RAN 2
+galluppoll GP 20
 gamble BET 17 LAY 1 TER 1
 gamblegame CE 1
 gambleon BET 1
@@ -4004,6 +4453,7 @@ gasbypassheart EN 1
 gaspofdisappointment AH 1
 gather NET 1 IN 1 MET 2 DO 2
 gatherup MET 1
+gauss G 50 GS 20
 gaydeceiver BRA 1
 gazetteer AZ 1
 gear KIT 5 RIG 11
@@ -4013,14 +4463,19 @@ gee G 50 AG 1
 gel SET 2
 gemma BUD 1
 gene DNA 2
-general GEN 1 LEE 5
+general GEN 21 LEE 5
+generalassembly GA 20
+generalaverage GA 20
 generalelectric GE 50
-generalmanager GM 3
+generalmanager GM 23
+generalmotors GM 20
 generalpractitioner GP 53
 generalpublic US 1
-generalstaff GS 1
+generalsecretary GS 20
+generalstaff GS 21
 generation AGE 4
 generous BIG 1
+genesis GEN 20
 geneticmaterial DNA 2
 geneticmodify GM 50
 genitalarea LAP 1
@@ -4028,7 +4483,7 @@ genius ACE 1
 gent MAN 3 SIR 4 LOO 2 MEN 2
 gentile GOY 3
 gentledelivery LOB 1
-gentleman SIR 19 RS 1
+gentleman MM 20 SIR 19 RS 1
 gentlestroke PAT 1 PET 1
 gentletouch PAT 2
 gentmaybe LOO 1
@@ -4040,6 +4495,8 @@ geordie NE 4
 geordiehome NE 1
 geordieland NE 1
 george GEO 51
+georgecross GC 20
+georgemedal GM 20
 georgia GA 74 GE 53
 germ RIA 1
 german G 50 GER 64 AG 2 ING 1 OS 1 GG 1
@@ -4048,6 +4505,8 @@ germanand UND 1
 germanarticle DER 7 DIE 1
 germanbomb VI 1
 germancity CH 3 ULM 1
+germancompany AG 20
+germanic GMC 20
 germanium GE 50
 germanone EIN 2
 germanthe DER 1
@@ -4055,6 +4514,8 @@ germanwith MIT 1
 germany D 50 GER 55 ER 1
 germanybrief GER 1
 gershwin IRA 2
+gerund GER 20
+gerundive GER 20
 gesture NOD 1
 get COP 1 DIG 1 GO 2 SEE 4 WIN 3 HAS 4 HAD 1
 getaloadof EYE 1
@@ -4093,10 +4554,11 @@ ghana GH 50
 giant BIG 3 GOG 1
 giantbird ROC 1
 gibe DIG 1
+gibraltar GBZ 20
 gibsonmaybe MEL 1
 gift ART 1 SOP 3
 gigabyte GB 50
-gilbert WS 1
+gilbert GB 20 WS 1
 gine AGO 5 OFF 2
 ginger PEP 2 RED 4
 girl ADA 8 AMY 2 ANN 31 ASS 3 AVA 3 BET 1 DEE 2 DI 32 DOT 1 ELE 1 ELL 1 ENA 6 EVA 3 EVE 10 FAY 1 GAL 50 HEN 1 HER 3 IDA 3 IVY 2 JO 4 JOY 2 KAY 2 MAE 1 MAY 1 MS 1 NAN 2 NY 1 PAM 4 PAT 2 SAL 9 SHE 2 SUE 7 TIT 1 UNA 9 VAL 3 VI 2 VIV 1
@@ -4141,6 +4603,7 @@ globalgroup UN 1
 globe ORB 4
 gloom FOG 2
 gloomy DIM 3 LOW 1 SAD 3 SE 1
+glorytothefather GP 20
 glossy EEK 1 MAG 4
 glow LIT 1 RED 3
 glowlight LED 1
@@ -4161,20 +4624,21 @@ goblin ELF 1 ORC 1
 gobothway BI 1
 gobrown TAN 1
 goby ON 1
-god JAH 1 PAN 12 RA 6 US 1
+god D 50 JAH 1 PAN 12 RA 6 US 1
 goddess ATE 1
 goddessappear ATE 1
 godown DIE 1 DIP 2 ES 1
 godownhill SKI 1
 godperson ST 1
 godtype ST 1
+godwilling DV 20
 gofirst LED 7 LET 1
 gofor TRY 1
 gogglebox SET 1
 goin BAT 1
 goinfront LED 1
 gojog RAN 1
-gold AU 80 HOR 1 OR 160 SOR 1
+gold AU 100 HOR 1 OR 160 SOR 1
 golden AU 6 OR 13 TAN 1
 goldplatepound LB 1
 golf G 50
@@ -4220,31 +4684,36 @@ gotmarry WED 5
 gotobedwith LAY 1
 gotocity UP 1
 gounder DIP 1
+gourde G 50 GDE 20
 gourmand PIG 1
 govern LED 1 RUN 1
-government ING 4
-governor HE 1
+government G 50 GOV 20 ING 4
+governor GOV 20 HE 1
 gowest DIE 1
 gowrong ERR 6 SIN 1
 gp DR 1
 grab BAG 1
 gracious COR 1 MY 2
 graduate BA 116 BSC 50 MA 29 MB 1 BAS 8
+graduatepension GP 20
 graduateteacher BED 1
-grain GR 2 ICE 1
-gram G 100 GM 100
-grammarschool GS 2
+grain GR 22 ICE 1
+gram G 50 GM 50 GR 20
+grammarschool GS 22
 gramme GR 1
 gran NAN 2
 grand G 50 BIG 2
 grandma NA 1 NAN 12
+grandmaster GM 20
 grandmother NAN 2
 grandparent NAN 1
 grandprix GP 50
 grannie NAN 1
 granny NAN 15
 grant LET 5 YES 1
+grantmaintain GM 20
 granttotenant LET 1
+granturismo GT 20
 grasp SAW 1
 grass HAY 13 OAT 3 POT 5 RAT 5 SOD 2
 grassland LEA 1 LEY 2
@@ -4255,6 +4724,7 @@ gratuity TIP 2
 graveletter RIP 1
 gravity G 50
 gravy JUS 7
+gray GY 20
 grease OIL 4
 greasystuff OIL 1
 great GT 53 ACE 9 BIG 13 FAB 9 GR 3 MIC 1 ALI 1 FAR 1
@@ -4291,7 +4761,7 @@ grey GR 54 ASH 2 DIM 1
 griphard BIT 1
 groove RUT 4
 groovy FAB 1 HOT 1
-gross FAT 2 GR 5 ICK 1 UGH 1
+gross GR 25 FAT 2 ICK 1 UGH 1
 grot TAT 1
 grotty BAD 1 ILL 1
 ground BOG 1 OIL 1 REC 1 SOD 1
@@ -4308,18 +4778,22 @@ groupofpoliceman CID 1
 groupofspy CIA 1
 groupofwhale GAM 1
 groupofworker TU 1
+grove GRO 20
 growgraduallarge WAX 1
 growold AGE 1
 growth YST 1
+growthhormone GH 20
 growup AGE 2
 guacamole DIP 1
+guarantee GTD 20
 guardian US 2
+guernsey GBG 20
 guerrilla CHE 1
 guess BET 2
 guest OR 1
 guevara CHE 2
 guided LED 15
-guinea RG 50
+guinea RG 50 GS 20
 gulp SUP 1
 gun ARM 5 GAT 6 REV 1 ROD 1
 gunk GOO 1
@@ -4344,8 +4818,11 @@ hack CAB 2 CUT 2 NAG 2
 hackney CAB 2
 hadeffect BIT 2
 hadtoleave RAN 1
+hafnium HF 20
 haggardheroine SHE 1
+hahnium HA 20
 hail AVE 3 ICE 1
+hailmary AM 20
 hair FUR 6 MOP 1
 haircareproduct GEL 1
 haircut DO 1
@@ -4355,7 +4832,7 @@ hairpiece RUG 2 WIG 3
 hairstyle BUN 3 DO 4 UNS 1
 hairycoat FUR 1
 haiti RH 50
-half ME 1
+half HF 20 ME 1
 halfadozen VI 4
 halfapair ONE 1
 halfapill LET 1
@@ -4375,13 +4852,15 @@ halfofstatus STA 1
 halfofteam TE 1
 halfofthat TH 1
 halfofthem EM 1
+halfpay HP 20
 halftime HT 1
 halfused END 1
 halfwaythrough MID 1
 haltfilm CUT 1
 halved DIT 1
 hammer RAM 1
-hand FIN 2 MAN 2 PAW 7 MEN 2 RL 1
+hand HH 20 FIN 2 MAN 2 PAW 7 MEN 2 RL 1
+handicap HCP 20
 handle LUG 1 USE 1
 handovermoney PAY 1
 handsome FAT 1
@@ -4393,6 +4872,7 @@ happy LY 1 GAY 1 UP 24
 hard H 50 AH 1 ISH 8 SH 1 SET 5 NOT 2
 hardan NO 1
 hardback HB 1
+hardblack HB 20
 hardcopy PER 1
 harden SET 4
 hardtosee DIM 1
@@ -4409,6 +4889,7 @@ harshreview PAN 3
 harvest MOW 1
 harvestgrass HAY 1
 hasgine OFF 1
+hassium HS 20
 haste HIE 1
 hasten RUN 1 RAN 2
 hat CAP 9 ER 1 FEZ 1 LID 11
@@ -4470,6 +4951,7 @@ havinggainpower IN 1
 havingreach AT 1
 hawaii HI 52
 hawaiiangarland LEI 1
+hawaiianislands HI 20
 hawking ING 1
 hawser TIE 1
 hayatedge HY 1
@@ -4530,6 +5012,7 @@ heavenlybody SUN 1
 heavenward UP 1
 heavycriticise PAN 1
 heavydrinker SOT 1
+heavyduty HD 20
 heavyknife DA 1
 heavymetal TIN 1
 heavyornament QUE 1
@@ -4537,15 +5020,16 @@ heavyweight TON 16
 heckle BOO 1
 hectare HA 2
 hedie OB 1
+hedrewit DEL 20
 heed EAR 1
 heel CAD 3
 hefty FAT 1
 hehave HED 3
 hehold HE 1
-height HT 56 H 50 SUM 1
+height H 50 HT 56 SUM 1
 heighten UP 2
 heinousact SIN 1
-heir SON 1
+heir HER 20 SON 1
 heisexclude HE 1
 heleave HE 1
 helium HE 56
@@ -4563,19 +5047,26 @@ helpfulword CUE 1
 helponeselftofood ATE 1
 helpus SOS 4
 hem RIM 1
+hemakethis FEC 20
 hence SO 2
 henry H 50 HAL 7 OH 1
 henryis HIS 1
 hepasson OB 1
 her DIS 1 HER 2
 heraldicgold OR 2
+heraldry HER 20
+heraldscollege HC 20
 herbrother SON 2
 here IN 1 UK 3
 herfavourite PET 1
+hergrace HG 20
+herhighness HH 20
 hermajesty HM 50 ER 2
 heroin H 50 ISH 1
 herosandwich SUB 1
 herruin GIN 1
+hertz HZ 20
+hesculpt SC 20
 heshoot HE 1
 hesitancyinspeech UM 1
 hesitantexpression ER 1
@@ -4600,7 +5091,8 @@ highcard ACE 1
 higheducation UNI 1
 highexplosive HE 53
 highfavour PET 1
-highfrequency HF 1
+highfrequency HF 21
+highgerman HG 20
 highgrade AB 1
 highground TOR 1
 highhill TOR 2
@@ -4610,13 +5102,15 @@ highpoint TOP 2 TOR 2
 highpointofrock TOR 1
 highposition UP 1
 highpost PM 1
-highpriest ELI 2
+highpressure HP 20
+highpriest HP 20 ELI 2
 highrailway EL 1
 highresolution RES 4
-highschool HS 1
-highspeedtrain HST 50
+highschool HS 21
+highspeedtrain HST 50 TGV 20
 highstandard AI 1
-hightension HT 1
+hightension HT 21
+highvoltage HV 20
 hill TOR 30
 himself ONE 1
 hindrance BAR 1 DAM 1 LET 2
@@ -4632,8 +5126,11 @@ hireout LET 3
 hirepurchase HP 50
 hirevehicle CAB 1
 his HIS 1
-hiseminence HE 1
+hiseminence HE 21
 hisexcellency HE 50
+hisgrace HG 20
+hishighness HH 20
+hisholiness HH 20
 hismajesty HM 50
 hisopposite HER 1
 hiss BOO 1
@@ -4651,6 +5148,7 @@ hoax BAM 2 COD 4 CON 5 KID 2
 hobo BUM 1
 hock HAM 1
 hockjoint HAM 1
+hohnium HO 20
 hoist UP 1
 hold HAD 5 OWN 1 PIN 2 VON 1 HAS 1
 holdall BAG 1
@@ -4676,25 +5174,30 @@ hollywoodlocation LA 1
 hollywoodmaybe UL 1
 holy PI 9
 holybook NT 1 OT 1
+holycommunion HC 20
 holycow COR 1
 holyfestival TER 1
 holyman ST 2
 holyperson ST 4
+holyvirgin SV 20
 home AIN 2 ATH 1 DEN 1 HO 1 IN 248 PAD 6
 homecounty SE 14
 homeforthetrotter STY 1
 homeimprovement DIY 1
 homeincountry COT 1
 homeofaslob STY 1
+homerule HR 20
+homesecretary HS 20
 homewithoutlimit OM 1
 homosapien MAN 1
 homosexual GAY 1
 honduras HN 50
 honey MEL 5
 hongkong HK 50
+honorary HON 20
 honorific DAN 1
-honour CBE 50 MBE 54 OBE 57 J 20 Q 20 K 20 A 20 CH 1 OM 2
-honourable HON 1
+honour CBE 50 MBE 54 OBE 57 A 20 J 20 K 20 Q 20 CH 1 OM 2
+honourable HON 21
 honourofficer OBE 1
 honsh IN 1
 hook BY 1
@@ -4708,8 +5211,9 @@ horribleperson SOD 1
 horriblesmell BO 1
 horrific ORY 1
 horse AGG 1 BAY 4 COB 6 EH 1 GG 6 NAG 33
-horsepower HP 50
+horsepower HP 50 PS 20
 horsereported GG 1
+horseshoe U 20
 horticulturalist NER 1
 horton TIM 1
 hoskin ME 2
@@ -4722,6 +5226,7 @@ hostelry BAR 1 INN 3
 hostile FOE 1 ILL 4
 hostileto CON 1
 hostility WAR 9 ICE 2
+hostilityonly HO 20
 hot H 50 AH 2 HIP 2 IN 19 ISH 2
 hotbath SPA 1
 hotbeverage CHA 1
@@ -4734,10 +5239,14 @@ hotwater EAM 1
 hotweather AT 1 SUN 1
 hound DOG 3 NAG 2
 hour H 50 HR 61
-house HO 160 AHO 2 INN 1 RA 1 IS 1
+house HO 160 HSE 20 AHO 2 INN 1 RA 1 IS 1
 householdanimal PET 1
 housemember MP 1
-houseofparliament HP 50
+houseofcommons HC 20
+houseofkeys HK 20
+houseoflords HL 20
+houseofparliament HP 100
+houseofrepresentatives HR 20
 hovel STY 2
 howamazing COR 1
 however BUT 9 THO 4 YET 1
@@ -4782,10 +5291,11 @@ hurry RAN 13 AR 1 HIE 4 NIP 1 RUN 6
 hurryoff RUN 1
 hurt AIL 3 CUT 1 ILL 1 MAR 12
 hurtful BAD 1 ILL 1
-husband AH 1 ISH 3 MAN 2 MYH 1 HH 1 MEN 1
+husband H 50 AH 1 ISH 3 MAN 2 MYH 1 HH 1 MEN 1
 husbandonce EX 2
 hush SH 2
 hybridyak ZO 1
+hydrant H 50
 hydrogen H 50
 hymn AIR 1
 hype PR 1
@@ -4851,7 +5361,9 @@ immortal GOD 1
 imp ELF 2
 impassion HET 1
 impeccableservice ACE 1
+impedance Z 50
 impediment OG 1
+imperial IMP 20
 impersonate DO 1
 impertinence LIP 2
 impishcharacter ELF 1
@@ -4881,7 +5393,7 @@ inanexcitedstate UP 2
 inanswerto RE 1
 inaroundaboutway ISH 1
 incase IF 1
-inch IN 102 INS 51
+inch IN 52 INS 51
 incharge IC 188
 inchargeof IC 4
 incheerfulmood UP 1
@@ -4893,8 +5405,8 @@ inclinetoscoff WRY 1
 include INC 54 IN 1 HAS 1
 inclusive INC 50
 income PAY 2
-incomesupport IS 1
-incommand IC 7
+incomesupport IS 21
+incommand IC 27
 incompetent AD 1
 inconnectionwith RE 1
 incontactwith ON 3 TO 1
@@ -4909,13 +5421,16 @@ increase UP 7 WAX 2 UPS 1
 increased UP 5
 incur RAN 1
 indebt RED 2
-indeed I 20 AY 8 LA 1 NAY 3 YEA 3 YES 6
+indeed I 50 AY 8 LA 1 NAY 3 YEA 3 YES 6
 indeednot NO 1
 indefinablequality IT 1
+indefinitenumber N 50
+independence I 50
 independent I 50 IND 53 ANI 1
 independentright IRT 1
+independentsuspension IS 20
 india IND 51 I 50 IN 1 INI 1 OFI 1
-indian IND 2
+indian IND 22
 indiana IN 51 IND 50
 indiandish DAL 1
 indianlocation GOA 1
@@ -4935,14 +5450,18 @@ indistinct DIM 1
 indium IN 51
 individual MAN 1 NE 1 ONE 66 OWN 4 DO 1
 individualcreature ZOA 1
+indoeuropean IE 20
+indogermanic IG 20
 indonesia RI 51
 indonesianisland RA 1
 induceattack FIT 1
 inducement SOP 3
+inductance L 50
 induecourse SO 2
 indulge PET 2
 industriousinsect ANT 1
 ineffectivething DUD 1
+inenglish ANG 20
 ineone LI 1
 inerectstate UP 1
 inerror OUT 4
@@ -4950,13 +5469,15 @@ inevery PER 1
 inexperience RAW 9
 infamoussecurityforce SS 1
 infant KID 1 TOT 8
+infantry INF 20
 infashion TON 1
 infavour FOR 2 PRO 4
 infavourof FOR 37 PRO 41
 infectedarea STY 1
 infection BUG 1
+infectiousdisease ID 20
 infer UCE 1
-inferior INF 1 SUB 1
+inferior INF 21 SUB 1
 inferiorarticle TAT 1
 infinitive INF 50
 inflame HOT 2 RED 3
@@ -4965,7 +5486,7 @@ inflexible SET 1
 influence SAY 2 LED 1
 info GEN 24
 infollow IN 1
-informal INF 1
+informal INF 21
 informalagreement YUP 3
 informalbusiness BIZ 1
 informalgreet YO 1
@@ -4973,8 +5494,10 @@ informalparty LIG 1
 informalphoto PIC 1
 informant RAT 5
 informantoriginal ANI 1
-information GEN 73
+information INF 20 GEN 73
+informationdepartment ID 20
 informationfromcomputer OUT 1
+informationscience IS 20
 informationsystem IS 50
 informationtechnology IT 55
 informer RAT 7
@@ -4984,6 +5507,7 @@ infuriate DEN 1
 infuriated MAD 1
 infusion TEA 1
 ingenuity WIT 1
+ingermanythatis DH 20
 ingetengaged IN 1
 ingoodcondition FIT 1
 ingoodhealth FIT 3
@@ -5000,12 +5524,14 @@ injured CUT 1
 injury ARS 1 ILL 2
 injurycausebyknife CUT 1
 ink INK 1 TAT 1
+inlandrevenue IR 20
 inlet BAY 1
 inmate LAG 1
 inmotion OFF 1
 inmyopinion IMO 1
 inn BAR 1 PUB 1
 inneedofadrink DRY 1
+innerdiameter ID 20
 inning BAT 1
 innocent AMB 1
 innovative NEW 1
@@ -5064,6 +5590,8 @@ instantmessaging IM 1
 instinct ID 2
 instinctive GUT 1
 instinctiveurge ID 1
+institute I 50
+instituteofmanagement IM 20
 instructiontokeepread PTO 1
 instructiontoreader PTO 1
 instructiontoturnover PTO 1
@@ -5071,9 +5599,11 @@ instrument SAW 1 SAX 1
 instrumentforchop SAX 1
 insult DIG 1 DIS 6
 insupportof PRO 1
-integratedcircuit IC 1
+insurance INS 20
+integratedcircuit IC 21
 intelgatherer CIA 1
 intelligence CIA 1 IQ 6 WIT 13
+intelligencedepartment ID 20
 intelligencequotient IQ 50
 intelligentprimate MAN 1
 intend AIM 3
@@ -5085,22 +5615,30 @@ intention AIM 3 END 3
 interceptcommunication TAP 1
 intercourse EX 1 SEX 1
 interdiction BAN 1
-interior INT 3
+interest INT 20
+interior INT 23
 interlude GAP 1
+intermediatefrequency IF 20
 intermittent OFF 2
-internalcombustion IC 1
-internalsecurity IS 1
-international I 50 INT 7
+internal INT 20
+internalcombustion IC 21
+internalsecurity IS 21
+international I 50 INT 27
 internationalagency UN 1
+internationalautomobilefederation FIA 20
 internationalaward CAP 2
 internationalbody EU 1 TO 1 UN 4
 internationalcommunity EU 1
+internationalcyclingunion UCI 20
+internationalequestrianfederation FEI 20
 internationalorganisation UN 2
 internationalplayer CAP 1
 internationalpolitician MEP 1
+internationalskifederation FIS 20
 internationalspacestation ISS 1
 internationalsportsman CAP 1
-internetprotocol IP 1
+internationalunit IU 20
+internetprotocol IP 21
 internetservice AOL 1
 interrupt CUT 1
 interval GAP 1
@@ -5123,17 +5661,22 @@ inthelead UP 3
 inthemannerof ALA 9 AS 1
 inthemodernera AD 1
 inthemorning AM 131
+inthenameofgod IDN 20 IND 20
 intheopen OUT 5
 intheopenair OUT 2
 inthepast AGO 26
+intheplacecite LC 20
 inthepositionof AT 1
 inthepresent NOW 1
 intheroleof AS 4
 inthesack BED 1
-inthesameplace IB 1
+inthesameplace IB 21
 inthestyleof ALA 3 LA 2
 inthevicinityof AT 1
+intheyear A 50 AN 20
+intheyearofthelord AD 20
 inthismanner SO 2
+inthissernse HS 20
 inthisway SO 4
 intimate PAL 1 TIC 1
 intime ERA 1
@@ -5141,18 +5684,20 @@ intimidate COW 6
 into IN 3 RE 1
 intobothmanandwoman BI 1
 intoreduced INT 1
-intravenous IV 1
+intradermal ID 20
+intramuscular IM 20
+intravenous IV 21
 intrim FIT 1
 intuitiveapproach ZEN 1
 invalid ILL 1
-invent LIE 1
+invent INV 20 LIE 1
 invention LIE 2 ES 1
 invest PUT 1
 investigate SUS 1
 investigation CH 1
 investigator DI 3 PI 1 TEC 2
 investmentproduct ISA 1
-invoice INV 1
+invoice INV 21
 involuntaryspasm TIC 1
 involved IN 1
 involvein IS 1
@@ -5179,7 +5724,7 @@ irishtea TAY 1
 irishtv RTE 1
 iron FE 96 PIG 1
 ironic DRY 1
-irrational PI 5
+irrational E 50 PI 5
 irrationalnumber PI 2
 irritate IRK 1 RUB 1
 irritation FAG 1 RUB 1
@@ -5188,7 +5733,7 @@ isable CAN 11
 isableto CAN 18 LD 1
 isadequate DID 1
 isahead LED 2
-isaiah IS 1
+isaiah IS 21 ISA 20
 isallowto MAY 1
 isatthehelm LED 1
 isay MY 1
@@ -5224,7 +5769,8 @@ islacking IS 1
 islamicruler MIR 1
 island I 50 AIT 7 ANI 1 CAY 2 COS 4 INI 1 IS 41 ISL 1 KEY 5 MAN 17 ONI 1
 islandnation UK 1
-isle IOW 1 MAN 2 IS 4
+isle I 50 IOW 1 MAN 2 IS 4
+isleofwight IW 20
 isliableto MAY 1
 islost IS 1
 ismarry WED 1
@@ -5256,9 +5802,10 @@ isvictorious WON 3
 iswithin AM 1
 isyou ART 1
 it SA 54 IT 31 SEX 5 ZA 1
-italian IT 108 I 50 AST 1
+italian I 50 IT 108 AST 1
 italianarticle IL 1
 italiancapital OME 1
+italiancompany CIA 20
 italianplaymaker FO 1
 italianpoet STO 1
 italianriver PO 5
@@ -5281,6 +5828,8 @@ ithurt OW 2
 itis TIS 2
 itisbyartist IT 1
 itismeantobe SIC 1
+itisnotclear NL 20
+itisnotpermit NL 20
 itravel IGO 1
 itscounterpart UN 1
 itturn TI 1 IT 1
@@ -5309,6 +5858,7 @@ jammaker WI 50
 jan JAN 1
 january JAN 51 AN 1
 japan J 50
+japanese JAP 20
 japanesedrama NO 1 NOH 2
 japanesefund YEN 1
 japanesegame GO 1
@@ -5334,9 +5884,11 @@ jelly GEL 3 KY 3
 jenny ASS 2
 jerk BOB 1 JIG 1 JOG 1 TIC 38 TUG 1 PE 1
 jerry PO 2
+jersey GBJ 20
 jerseyperhaps COW 1
 jest COD 1
 jester WIT 3
+jesuschrist JC 20
 jetfighter MIG 1
 jewel GEM 2
 jewellery GEM 1
@@ -5353,7 +5905,7 @@ join SEW 1 TIE 2
 joined AND 1 MET 1 ONE 1 WED 2
 joinedtogether WED 1
 joiner AND 6
-joint AJ 1 CO 2 CUT 1 HAM 2 HIP 28 JAY 1
+joint J 50 AJ 1 CO 2 CUT 1 HAM 2 HIP 28 JAY 1
 jointsuitableforreplacement HIP 1
 joke ACK 1 GAG 22 KID 3 ONE 2 PUN 21 WIT 1
 joker WAG 5 WIT 4
@@ -5366,7 +5918,8 @@ jones TOM 1
 joplinpiece RAG 1
 joseph JO 3 JOE 1
 josh KID 1 RAG 1 RIB 1
-journal ARY 1 LOG 3 MAG 2
+joule J 50
+journal J 50 ARY 1 LOG 3 MAG 2
 journalist ED 88 SUB 1
 journalistwill LL 1
 journey GO 14 HOP 1
@@ -5378,15 +5931,17 @@ joy FUN 2
 joyful FUN 1
 joyfulcry RAH 1
 judas RAT 1
-judge J 50 IJ 1 REF 32 TRY 5
+judge J 50 JJ 20 JUD 20 IJ 1 REF 32 TRY 5
+judith JUD 20
 juice PEP 1 SAP 5
 juliet J 50
 julius ME 7
-july JUL 50 JY 1
+juliuscaesar JC 20
+july JUL 50 JY 21
 jumble MIX 1
 jump HOP 3
 jumper ROO 9 TOP 3
-junction T 50
+junction T 20
 june JUN 50
 junealmost JUN 1
 junior JR 52 JUN 50 SON 1 SUB 1
@@ -5402,7 +5957,9 @@ justasingle ONE 1
 justbeat PIP 3
 justborn NEW 1
 justdefeat NIP 1 PIP 1
+justice J 50 JJ 20
 justiceofthepeace JP 50
+justintime JIT 20
 justintodoublefigure TEN 1
 justlikethat SIC 1 SO 2
 justonthescene NEW 1
@@ -5417,7 +5974,6 @@ juvenile KID 2 LAD 1
 k TAL 1
 kansas KS 54
 karaokeprop MIC 1
-kay K 50
 keen CRY 8 HOT 2 SOB 1
 keep HOG 1 OWN 2 HAS 1 HAD 5
 keepclose HUG 1
@@ -5431,7 +5987,10 @@ keepquiet SH 5 SHH 1
 keepsecret ID 1
 keeptoyourself HOG 1
 keepunder COW 1
+keg KG 20
 kelly NED 1
+kelvin K 50
+kennelclub KC 20
 kenneth KEN 2
 kent SE 2
 kentarea SE 2
@@ -5443,6 +6002,7 @@ key ALT 13 DEL 2 ESC 15 TAB 1
 keycode PIN 1
 keyperhaps TON 1
 kick TOE 1 FUN 1
+kickoff KO 20
 kickout BAN 1
 kid COD 1 CON 1 LAD 4 RAG 7 RIB 4 SON 5 TAD 1 TOT 4
 kill DO 1 END 1 ICE 3 TOP 2
@@ -5450,10 +6010,14 @@ killer YER 1
 killinaction KIA 1
 killwithrevolver HOT 1
 kilo K 50
-kilobyte K 100 KB 100 AK 1
-kilogram KG 100
-kilometre K 100 KM 1
+kilobyte K 50 KB 50 AK 1
+kilocalorie C 50 CAL 20
+kilocycle KC 20
+kilogram KG 50
+kilometre K 50 KM 1
+kilowatt KW 20
 kind ILK 3 SET 1
+kindandemperor RI 20
 kindle LIT 2
 kindofadult MAN 1
 kindofcontract NT 1
@@ -5462,15 +6026,22 @@ kindofdance TAP 1
 kindofdoctor VET 1
 kindofshirt TEE 1
 kindoftimber ASH 1
-king K 50 R 50 AK 7 AR 7 LOO 1 REX 15 TR 1 TOK 1 KK 1 RR 2
+kineticenergy KE 20
+king K 50 R 50 CR 50 AK 7 AR 7 LOO 1 REX 15 TR 1 TOK 1 KK 1 RR 2
+kingcharles CR 50
+kingedward ER 20
+kinggeorge GR 20
 kingorqueen AR 1
 kingoutofcapitalcity IEV 1
 kingperhaps ER 1
+kingsisbench KB 20
+kingsiscounsel KC 20
 kingsley BEN 1
 kiplenovel KIM 1
-kiss X 100 AX 2 LIP 1 PET 1
+kiss X 50 AX 2 LIP 1 PET 1
 kisser GOB 1
 kit TOG 1
+kitchenpolice KP 20
 kitchenvessel POT 1
 kitchenware POT 1
 kitty CAT 7 MOG 1 POT 4
@@ -5478,16 +6049,18 @@ knack ART 1
 knave CAD 2 RAT 2
 knife ER 1
 knight K 50 KT 55 N 50 AK 1 AN 2 SIR 9
+knightbachelor KB 20
 knightofthegarter KG 50
+knighttemplar KT 20
 knitsection RIB 1
 knock HIT 2 PAN 1 RAP 5 TAP 3
 knockbacksailor TAR 1
-knockdown KO 1
+knockdown KD 20 KO 1
 knockmumout MA 1
 knockoffstreet ST 1
 knockon OLD 1
-knockout KO 107
-knot BUR 1
+knockout KO 57
+knot KT 20 BUR 1
 knottedpieceofcloth TIE 1
 knotwithloop BOW 1
 know KEN 4
@@ -5497,15 +6070,22 @@ knowing FLY 4 SLY 2
 knowledge GEN 4 KEN 11
 known OUT 4
 koreanleader KIM 1
+krona K 50 KR 20
+krone K 50 KR 20
 kroner KR 1
 krypton KR 50
 kualalumpur KL 50
+kurchatovium KU 20
 kurosawafilm RAN 2
+kuwaitidinar KD 20
+kwacha K 50
 l EST 1 HE 1
 labanimal RAT 1
 label DUB 1 TAB 5 TAG 16
 laboratory LAB 3
 labour LAB 56
+labourparty LP 20
+labrador LAB 20
 lace NET 1 TAT 3
 lackey MAN 1
 lacking NO 1
@@ -5522,12 +6102,16 @@ lacynapkin LY 1
 lad AL 1 BOY 14 NED 1 RON 1 SON 20 TED 1
 ladder RUN 2
 lady L 50 LAV 1 LOO 2 ANN 1 DI 2 EVE 1 HER 2 KAY 1 KO 1 MAN 1 SHE 2
+ladyday LD 20
 ladyperhaps LOO 1
+ladyprovost LP 20
 lair DEN 10
 lake L 50 AL 7 LAR 1 LL 4
 lakeisle LI 1
 lambast RAP 1
+lambert L 50
 lament CRY 2
+lamentation LAM 20
 land GET 1 WIN 1 LIT 4 WON 1
 landlord ER 1 RD 1 ERS 1
 landnotbeingwork LEY 1
@@ -5538,10 +6122,11 @@ lane LA 51 WAY 1
 language GO 1 GUE 1
 languagecomputerunderstand ADA 1
 languish ROT 1
+lanthanum LA 20
 lao LAO 50
 lapse ERR 1 GO 1 SIN 3
 lard FAT 2
-large L 50 AL 17 BIG 15 FAT 5 LG 1
+large LG 21 LGE 20 L 50 AL 17 BIG 15 FAT 5
 largeamount LOT 2 TON 1
 largeamountofwater SEA 1
 largebird EMU 1
@@ -5576,11 +6161,14 @@ lastpart END 1
 lastpartofplay IVE 1
 lastpoint END 2
 late EX 5 ON 2 HOT 1 IN 3 NEW 6
+latelatin LL 20
 latenote PS 1
 lateprincess DI 1
+lateral LAT 20
 lateyear AGE 1
-latin L 50 AL 2 LA 1
+latin L 50 LAT 20 AL 2 LA 1
 latinwho QUI 1
+latitude L 50 LAT 20
 latterhalfof AR 1
 latvia LV 51
 laugh HA 5 HO 1 HOS 1
@@ -5595,6 +6183,7 @@ lawlord LUD 1
 lawman DA 1 FED 1
 lawofficer COP 1
 lawrence TE 1
+lawrencium LR 20
 lawyer ADA 2 DA 23 BAR 12 DAS 1
 lawyergroup BAR 1
 lay SET 1 BED 1 BET 2 PUT 1
@@ -5606,7 +6195,8 @@ leader PM 3 VAN 2
 leaderleaf ITE 1
 leaderlessgang ANG 1
 leaderonpaper ED 1
-leading IST 1 TOP 9 UP 15
+leading LDG 20 IST 1 TOP 9 UP 15
+leadingaircraftsman LAC 20
 leadingfemalehere ER 1
 leadinggroup VAN 4
 leadingjournalist ED 2
@@ -5615,7 +6205,7 @@ leadingposition VAN 3
 leadtodebility DE 1
 leaf BAY 1
 leafforadrink TEA 1
-league AL 2
+league L 50 AL 2
 leak EEP 1 PEE 4 AN 1
 lean IST 1 LIE 1 TIP 3
 leap HOP 1
@@ -5637,19 +6227,30 @@ leaveout OAF 1
 leavetwice LL 1
 leavewithoutrecord ART 1
 lebanon RL 50
-lecturer AL 1 DON 6
+lecturer L 50 AL 1 DON 6
 left L 50 AL 1 IL 8 ISL 1 LL 1 RED 3
+leftcentre LC 20
 leftfield LF 1
+lefthand LH 20
+lefthanddrive LHD 20
 leftie RED 2
 leftist RED 3
 leftwinger RED 1
 lefty RED 1
 leg GAM 1 ON 11 PIN 24
+legal LEG 20
+legate LEG 20
+legato LEG 20
+legbefore LB 20
+legbye LB 20
 legend KEY 1
 legendarybird ROC 2
 legendarycreature ELF 1
-legislation ACT 1 LAW 7
+legislation LEG 20 ACT 1 LAW 7
+legislative LEG 20
+legislativeassembly LA 20
 legislator MP 4
+legislature LEG 20
 legless LIT 1
 leisure FUN 1
 leisurecentre REC 1
@@ -5665,17 +6266,22 @@ lesspopular IN 1
 lessthandependablecharacter RAT 1
 lessthanwholehearted RE 1
 letgo AXE 1
+lethaldosage LD 20
+lethertake CAP 20
+lethimtake CAP 20
 letmesee ER 1 UM 3
 letmethink ER 1 UM 1
 letmethinkaboutthat UM 2
 letter EP 50 DEE 1 EN 1 ETA 1 MU 3 RHO 1 TAU 2 TEE 2
+letterofcredit LC 20
 lettuce COS 9
 letwaterout RAN 1
 level PAR 5
 levelofbrightness IQ 1
 levelofresistance OHM 1
 lever BAR 1
-leviticus LEV 1
+leveragebuyout LBO 20
+leviticus LEV 21
 levy TAX 5
 lewis CS 1
 liable APT 1
@@ -5683,15 +6289,20 @@ liabletobe APT 1
 liberal L 50 LIB 59 AL 11 LAX 1 LL 5
 liberaljudge LJ 1
 liberia LB 50
-librarian LIB 2
+libra L 50 LB 20
+librarian LIB 22
+library LIB 20
+libraryofcongress LC 20
 libya LAR 50 LY 1
 licence LET 1
+licentiate L 50
+licentiateinsurgery LCH 20
 lick LAP 1
 lid CAP 4 TOP 3
 lie FIB 8 SIT 3 IS 1
 liechtenstein FL 50
 lieout LIE 1
-lieutenant LT 14
+lieutenant LT 34
 life BIO 2 GO 1 VIM 1
 lifeforce CHI 1
 lifesaver ARK 1
@@ -5701,7 +6312,7 @@ lightbrown TAN 6
 lighter SUN 2
 lighterbrand BIC 1
 lightinabeam RAY 1
-lightinfantry LI 2
+lightinfantry LI 22
 lightmeal TEA 1
 lightshade TAN 1
 lighttouch DAB 2 PAT 3 TAP 1
@@ -5739,15 +6350,20 @@ limitputon CAP 1
 limo CAR 2
 lincoln ABE 22
 line L 50 LL 80 AL 7 ARY 1 ARC 5 IL 1 LEY 6 ROW 17 RY 18 BR 1 ODE 2
+lineal LIN 20
+linear LIN 20
+linefeed LF 20
 lingerie BRA 1 IES 1
 lingerieitem BRA 1
 link TIE 3
 lion LEO 5 RO 1 VIP 2
 lionperhaps CAT 1
 lip RIM 7
-liquid L 50 INK 1
+liquid L 50 AQ 20 LIQ 20 INK 1
 liquiduseforwashing LYE 1
-liquor GIN 4 RUM 7
+liquor LIQ 20 GIN 4 RUM 7
+lira L 50 LR 20
+lire L 50
 lisp TH 1
 list TIP 1
 listendevice BUG 1
@@ -5755,7 +6371,7 @@ listener EAR 24
 listenin TAP 1
 listeninillegal TAP 1
 listeninon BUG 2
-literal LIT 1
+literal LIT 21
 literary LIT 51
 literarycollection ANA 1
 literarygossip ANA 1
@@ -5763,7 +6379,7 @@ literarywork ODE 2
 literature LIT 58
 lithium LI 56
 lithuania LT 51
-litre AL 4
+litre L 50 AL 4
 little L 50 BIT 4 LET 1 LOW 1 TAD 13 WEE 51
 littlebeing ELF 1
 littlebird TIT 5
@@ -5843,11 +6459,14 @@ localareanetwork LAN 1
 localstar SUN 1
 locate SIT 1 SAT 1 SET 1
 locateby ON 1
+loch L 50
 lock BAR 3
 locker KEY 1
 loco MAD 1
 lodge INN 1
 loft LOB 2 SKY 1
+logarithm LN 20
+logbase E 50
 lol ICE 1
 london EC 1
 londonarea SE 8
@@ -5856,6 +6475,9 @@ londongardens KEW 1
 londonlandmark EYE 1
 londonpolice MET 1
 long L 50 AL 1 BIG 1 DIE 2 YEN 3 OPE 1
+longisland LI 20
+longitude LON 20
+longmetre LM 20
 longperiod AGE 1 ERA 2
 longperiodoftime AGE 1
 longsince AGO 1
@@ -5878,7 +6500,12 @@ looksoembarrassed RED 1
 loony MAD 1
 loose LAX 2
 loosepad WAD 1
-lord EER 1 GOD 1 LD 4 LUD 1
+lord D 50 LD 24 EER 1 GOD 1 LUD 1
+lordjustice LJ 20
+lordlieutenant LL 20
+lordmayor LM 20
+lordprovost LP 20
+lordship LDP 20 LP 20
 losangeles LA 51
 losefreshness AGE 1
 loseheart OR 1
@@ -5900,12 +6527,12 @@ lotofweight TON 1
 lotofwhale POD 1
 lottery BET 1
 lou LOU 1
-loud F 100 AF 1
+loud F 50 AF 1
 loudcall CRY 1
 loudcomment CRY 1
 loudnoise DIN 6 OAR 1
 loudspeakersystem PA 1
-lough AL 1
+lough L 50 AL 1
 louisiana LA 55 ALA 1
 lounge LIE 1 SAT 1
 lousy BAD 2 BUM 1
@@ -5931,28 +6558,40 @@ lowbill ONE 1
 lowcloud FOG 1
 lowcountryreclaim ER 1
 lowdown GEN 1
+lowdutch LD 20
 lower COW 1 DIP 4 MOO 1
 lowercase LC 50
 lowerhead BOW 1
+lowfrequency LF 20
+lowgerman LG 20
 lowland FEN 1
+lowlatin LL 20
+lowlevelwaste LLW 20
 lownewspaper RAG 1
+lowpressure LP 20
 lowquality BAD 1
+lowtension LT 20
 lubricant OIL 2
 lubricate OIL 1
 luck LOT 2
 lug EAR 3 TOW 1
 luggage BAG 1
 lughole EAR 1
+luman LM 20 LU 20
+luminance L 50
 luminary SUN 1
 luminousdischarge ARC 3
 lump BIT 1
+lunarmodule LM 20
 lunatic MAD 1 NUT 1
 lunch EAT 2
 luncheonvoucher LV 51
 lunchtime ONE 1
 luridincolour WAN 1
 lustalmost LUS 1
+lutetium LU 20
 luvvie HAM 1
+lux LX 20
 luxembourg L 50 ORL 1
 luxurycar GT 1
 lyric ODE 1
@@ -5961,6 +6600,8 @@ m AC 1 AW 1 HA 1
 mac BUD 1
 macedonia MK 50
 machine CAR 1
+machinefinish MF 20
+machinegun MG 20
 machinepart COG 1
 machinery RIG 1
 machinewithbattery CAR 1
@@ -5969,8 +6610,9 @@ machobloke MEN 1
 machoguy MEN 1
 machotype MAN 1 MEN 3
 madagascar RM 50
-madame MME 3
+madame MME 23
 madcap ANY 1
+madcowdisease BSE 20
 madtotossawayshilling ANE 1
 maestro ACE 2
 mafia MOB 1
@@ -5984,15 +6626,20 @@ magic THE 1
 magicalbeing ELF 1
 magician CH 1
 magistrate JP 1
-magnesium MG 50
+magnesium MAG 20 MG 50
+magnetic MAG 20
 magneticattraction IT 1
+magnetism MAG 20
+magnetooptical MO 20
+magnitude MAG 20
 maid DEY 1
 maiden M 50 ISM 1
 maidenname NEE 1
 main SEA 25
 maine ME 66
 mainoffice HQ 1
-major BIG 3
+maitre ME 20
+major MAJ 20 BIG 3
 majorconflict WAR 1
 majority AGE 1
 majorroad MI 2
@@ -6063,11 +6710,13 @@ malleableelement TIN 1
 malodorousplace STY 1
 malta M 50
 mammal ASS 1 BAT 1 CAT 1
-man IOM 50 OR 106 AL 2 ALE 1 BEN 2 BOB 1 DAN 1 ED 1 GUY 2 HE 78 IAN 9 KEN 1 LE 1 LEN 1 LES 2 MR 1 NED 3 RAY 2 REG 2 RON 6 SAM 2 SIR 1 TED 4 TH 1 TIM 2 TOM 2
+man GBM 20 IOM 50 OR 106 AL 2 ALE 1 BEN 2 BOB 1 DAN 1 ED 1 GUY 2 HE 78 IAN 9 KEN 1 LE 1 LEN 1 LES 2 MR 1 NED 3 RAY 2 REG 2 RON 6 SAM 2 SIR 1 TED 4 TH 1 TIM 2 TOM 2
 manage DO 1 GET 1 RAN 1 RUN 15 USE 1 ES 1
 manageby RAN 1
 managed DID 4 LED 2 RAN 110 RUN 3
-manager MGR 1
+managementbuyin MBI 20
+managementbuyout MBO 20
+manager MGR 21
 manageto DID 1
 managetosecure WIN 1
 managingdirector MD 50
@@ -6091,6 +6740,7 @@ manorwoman JAY 1 PAT 2
 mansion ILE 1
 mantra OM 4 OMS 1
 mantrasyllable OM 1
+manufactured MFD 20
 manure POO 1
 manuscript MS 65 MSS 51
 many LOT 2
@@ -6107,10 +6757,11 @@ marijuana EED 1 POT 3
 marine SEA 6 RM 5
 marinebase ED 1
 mariner AB 2 TAR 3
-mark AR 1 DOM 1 DOT 4 MK 2 TAG 4
+mark M 50 MK 22 AR 1 DOM 1 DOT 4 TAG 4
 marker PEN 1
-market ELL 1 AD 1 PR 2
+market MKT 20 ELL 1 AD 1 PR 2
 marketslump ASH 2
+markofthebeast MB 20
 markworking MON 1
 marmalademaybe JAM 1
 marriage ON 1
@@ -6134,17 +6785,21 @@ marvin LEE 1
 marxist CHE 1 RED 2
 maryland MD 50
 mascot PET 1
-masculine M 50
+masculine M 50 MAS 20
 mash PAP 1
 mass M 50 LOT 1 SEA 1 WAD 1
 massachusetts MA 54
 massage RUB 17 TZU 1
 massinstructiontodepart ITE 1
 massive BIG 1
-master AMA 1 ACE 5 MA 4 PRO 2 MAS 1 MM 1
+master M 50 AMA 1 ACE 5 MA 4 PRO 2 MAS 1 MM 1
 masterofart MA 50
 masterofceremony MC 50
+masterofeducation MED 20
+masteroffoxhounds MFH 20
 masterofscience MSC 50
+masterofsurgery CHM 20 CM 20 MS 20
+masteroftheroll MR 20
 masterpiece GEM 1
 mat RUG 1 TAT 1
 match AL 1 FIT 5 GO 3 IN 1 TIE 10 TIN 1 MET 1
@@ -6155,12 +6810,17 @@ matefrenzy RUT 1
 matelot ABS 1
 material RAG 1 REP 10
 mathproblem SUM 1
+matinee MAT 20
+matrix MAT 20
 matter PUS 12
 mature AGE 30 OLD 8 UP 2
 maturity AGE 8
 maureen MO 4
 mauritania RIM 50
+mauritianrupee MR 20
 mauritius MS 50
+maximum MAX 20
+maxwell MX 20
 may CAN 14 PM 1
 mayallpossible RIK 1
 maybe EG 2
@@ -6184,6 +6844,7 @@ mean LOW 6 PAR 6 WAY 6
 meandninemore TEN 1
 meandyou US 1
 meanofsupportformostwoman BRA 1
+meantime MT 20
 meantogaingoodwill PR 1
 meantogetin KEY 1
 measure CC 1 ELL 3 EM 1 EN 5
@@ -6197,10 +6858,13 @@ measureofweight OZ 1
 measureofwork ERG 1
 meat AME 1 CUT 1 HAM 25
 meatessential EA 1
+mechanicalengineer ME 20
+mechanicaltransport MT 20
 mechanics RAC 1
 medal DSM 2 MBE 4 OBE 1 VC 1
 medallion PIN 1
 medic ADR 1 DOC 8 DR 18 GP 2 MB 5 MD 1 MO 2 OS 1
+medical MED 20
 medicaldepartment ENT 2
 medicaldrama ER 1
 medicalfacility SAN 1
@@ -6211,8 +6875,9 @@ medicalprocedure OP 1
 medicalprofessional DR 1
 medicalspeciality ENT 1
 medicinalplant RUE 1
-medicine ILL 1 MED 2
+medicine MED 22 ILL 1
 medicineman DR 1
+medieval MED 20
 mediocre OK 1
 mediocrity PAP 1
 meditation ZEN 1
@@ -6223,17 +6888,26 @@ mediumboss ED 3
 mediumchief BBC 1
 mediumexecutive ED 1
 mediumforpainting OIL 1
+mediumfrequency MF 20
 mediummanipulation PR 1
+mediumwave MW 20
 meet FIT 1 SEE 3 AGM 5 AT 1 MET 1 SAT 2
 meetingofshareholder AGM 1
 meetrequirement OK 1
 meetwith SAT 1
 megabyte MB 51
+megahertz MHZ 20
+megavolt MV 20
+megawatt MW 20
+meitnerium MT 20
 melancholy SAD 1
 melody AIR 3 ONG 1
-member ARM 31 LEG 43 MP 14 PIN 1 RIB 1 RM 1 TOE 1
+meltingpoint MP 20
+member M 50 MEM 20 ARM 31 LEG 43 MP 14 PIN 1 RIB 1 RM 1 TOE 1
 memberofclergy REV 1
 memberofcolony ANT 1
+memberofcongress MC 20
+memberofcouncil MC 20
 memberoffamily SIS 1
 memberofflock EWE 1 RAM 1
 memberofparliament MP 52
@@ -6245,12 +6919,17 @@ memberofthehouse MP 1
 memberoftheopposition NO 1
 memberoftheroyalfamily ER 1
 memberofuniversitystaff DON 1
+memorandum MEM 20
+memorial MEM 20
 memorisation TE 1
 memorise CON 1
 memory RAM 2 ROM 2
 menagerie ZOO 1
 mend SEW 1
+mendelevium MD 20
 mentalconfuse US 1
+merchantnavy MN 20
+merchantvessel MV 20
 mercury HG 51
 merriment FUN 1
 merseysidearea NW 1
@@ -6258,6 +6937,7 @@ mesh NET 6 WEB 1
 mess STY 1
 message FAX 3 SMS 1
 messenger ALD 1
+messieur MM 20
 metal ORE 2 TIN 44
 metalblock IL 1
 metalbox TIN 1
@@ -6265,21 +6945,37 @@ metalcontainer CAN 1 TIN 2
 metallic TIN 1
 metallicrock ORE 2
 metaluseforfoil TIN 1
+metaphor MET 20
+metaphorical MET 20
+metaphysic MET 20
+meteorological MET 20
 methamphetamine ICE 2
 method ART 1 HOW 1 WAY 17
+methodistepiscopal ME 20
 methodofchoice LOT 1
 methodofwork MO 1
 methuselahhave VE 1
-metre M 100
+metre M 50
 metrepersecond MPS 1
+metriccarat CM 20
+metropolitan MET 20
+metropolitanpolice MP 20
+mexican MEX 20
 mexico MEX 50
+mezzoforte MF 20
+mezzopiano MP 20
+mica MIC 20
 michigan MI 53
 microphone MIC 5
 microsoftoperatingsystem DOS 1
-middle TUM 1
+middle MED 20 TUM 1
 middleeast ME 54
+middleenglish ME 20
+middlefrench MF 20
 middleofbook OO 1
 middleoftheroad MOR 50
+middlesex MX 20
+midheaven MC 20
 midstofstorm EYE 1
 midweek WED 2
 might CAN 1 MAY 7
@@ -6287,13 +6983,15 @@ mightygrowth OAK 1
 mike M 50 MIC 4
 mildew ROT 1
 mildrebuke TUT 1
-mile M 100
+mile M 50 MI 20 ML 20
+military MIL 20
 militarycompany COY 1
 militarycross MC 50
 militarygroup RE 1
-militaryintelligence MI 1
+militaryintelligence MI 21
 militaryleader OC 1 VAN 1
 militaryman OR 1
+militarymedal MM 20
 militaryofficer COL 1 NCO 1
 militaryofficial AGA 1
 militarypolice MP 52
@@ -6301,14 +6999,16 @@ militarypoliceman MP 1
 militaryunit ENT 1 SAS 1
 milk USE 3
 milliband ED 2
-millilitre ML 1
-millimetre MM 100
+millibar MB 20
+millilitre ML 21
+millimetre MM 50
 million M 50
 millions M 50 MM 1
 millisecond MS 50
 milnecharacter ROO 1
 mimic APE 4 DO 1
 mine DIG 3 MY 1 PIT 53 TAP 1
+mineengineer ME 20
 miner NUM 2
 mineral ERY 1 ORE 9
 mineralaggregate ORE 1
@@ -6328,7 +7028,7 @@ minorcarpeting RUG 1
 minorroad WAY 1
 minorstrike TAP 1
 mint NEW 1
-minute M 100 AM 3 MIN 3 MO 4 WEE 4 MM 1
+minute M 50 AM 3 MIN 3 MO 4 WEE 4 MM 1
 minutetoosoon RLY 1
 mire MUD 1
 mirror APE 1
@@ -6353,6 +7053,7 @@ misinformation LIE 1
 misjudgment OR 1
 misrepresent LIE 1
 miss DY 1 GAL 5
+missileexperimental MX 20
 missing ED 1
 missingnote TE 1
 mississippi MS 50
@@ -6375,8 +7076,10 @@ mob LE 1
 mock APE 1 COD 1 RAG 1 WRY 2
 model SIT 18 TOY 5
 modelled SAT 1
+moderate MOD 20
 moderation HO 1
-modern AD 1 IN 3 NEW 15
+moderato MOD 20
+modern MOD 20 AD 1 IN 3 NEW 15
 modernday AD 1
 modernmiss MS 1
 modernmusic RAP 1
@@ -6393,7 +7096,7 @@ moisten DEW 1
 moisture DEW 3
 moistureearlyinthemorning DEW 1
 moldova MD 50
-mole SPY 8
+mole MOL 20 SPY 8
 molybdenum MO 50
 mom MA 27
 moment MO 6 SEC 1
@@ -6401,8 +7104,9 @@ momma MA 1
 monaco MC 50
 monarch AER 1 ER 35
 monday MON 51
-money ASH 2 ASS 1 BIT 1 FAT 1 FEE 1 OOF 2 PAY 1 SUM 1 TIC 1 TIN 39 YEN 7
+money M 50 ASH 2 ASS 1 BIT 1 FAT 1 FEE 1 OOF 2 PAY 1 SUM 1 TIC 1 TIN 39 YEN 7
 moneybag NOB 1
+moneyorder MO 20
 moneypay FEE 1
 moneysupply UND 1
 mongolia MGL 50
@@ -6411,10 +7115,14 @@ mongreldog CUR 1
 monk DOM 3
 monkey APE 11 IMP 3
 monkeyaround ER 1
+monmouthshire MON 20
 monotonoustone HUM 1
+monseigneur MGR 20
+monsieur M 50
+monsignor MGR 20
 monster BIG 2 GRE 1 ORC 6
 montana MT 50
-month M 100 AM 1 AMO 1 APR 2 AUG 12 DEC 7 ER 1 FEB 2 JAN 4 MAR 2 MAY 9 MO 3 NOV 3 OCT 8 MM 1 MOS 1
+month M 50 MO 23 MTH 20 MOS 21 MS 20 AM 1 AMO 1 APR 2 AUG 12 DEC 7 ER 1 FEB 2 JAN 4 MAR 2 MAY 9 NOV 3 OCT 8 MM 1
 monthwithoutroof UNE 1
 moo LOW 3
 mood AIR 2
@@ -6423,6 +7131,7 @@ moonshine ROT 1
 moose ELK 1
 morale EGO 1
 moraloffence SIN 1
+moralrearmament MRA 20
 moralshortcome SIN 1
 morass FEN 1
 more ETC 1
@@ -6435,10 +7144,11 @@ moreprudent ER 1
 morerelax SER 1
 morning AM 66 AMS 1
 morningmoisture DEW 1
-morocco MA 50
+morocco MA 50 MOR 20
 morsel BIT 3
 mortgageprovider NER 1
-mostexcellent TOP 1
+mostexcellent ME 20 TOP 1
+mostholylord SSD 20
 mostimportant KEY 1 TOP 2
 mostlygreen NEW 1
 mostlyhave HA 1
@@ -6456,6 +7166,7 @@ motherleaf MA 1
 motherless MA 1
 motheronafarm DAM 1
 motion ING 1 POO 2
+motivationalresearch MR 20
 motive SON 1
 motor CAR 11
 motorcycleevent TT 1
@@ -6463,17 +7174,19 @@ motorgroup AA 1
 motorist ER 1 RAC 3
 motororganisation AA 1
 motorrescuecompany AA 1
+motorvessel MV 20
 motorway M 50 AM 2 MI 15 YM 1
-motoryacht MY 1
+motoryacht MY 21
 mould DIE 1 ROT 1
-mount ALP 1 SET 1 ME 1
-mountain ALP 27 BEN 11 MT 2 TOR 1
+mount MT 20 ALP 1 SET 1 ME 1
+mountain MTS 20 ALP 27 BEN 11 MT 2 TOR 1
 mountainarea ALP 1
 mountainpass COL 3
 mountainpasture ALP 2
 mountainpeak BEN 3
+mountaintime MT 20
 mounted UP 1
-mountedpolice MP 1
+mountedpolice MP 21
 mouseinnard OUS 1
 mouselike SHY 1
 mouth GOB 1 MAW 1
@@ -6494,6 +7207,7 @@ moving ARE 1
 movingcamerashoot PAN 1
 movingvehicle VAN 1
 mozambique MOC 50
+mrs MME 20
 much BIG 1 FAR 1 LOT 1 WAY 1
 muchappreciated TA 1
 muchenjoyment FUN 1
@@ -6510,12 +7224,16 @@ muddhave ID 1
 muddis IM 3
 mug ASS 4 CUP 2 ROB 6
 mullet ISH 1
+multi-frequency MF 20
 multinationalorganisation UN 1
+multiplyby X 50
+multipurposevehicle MPV 20
 multitude LOT 1
 mum MA 46 MUM 1 SH 13 MAS 1
 mummy TUT 1
 mumswallow MA 1
 munch EAT 1 ATE 2
+municipalpolice MP 20
 murder HIT 2 OFF 1
 murdochorgan SUN 1
 murmur COO 2 HUM 1
@@ -6524,10 +7242,10 @@ murmuringsound COO 1
 murrayperhaps AL 1
 muscle AB 4 ABS 10 LAT 1 PEC 11 RAL 2
 muscularmovement TIC 1
-museum VA 2
+museum MUS 20 VA 2
 mushroom CEP 11
-music AIR 2 POP 3 RAG 1 RAP 3 SKA 3
-musical MUS 1
+music MUS 20 AIR 2 POP 3 RAG 1 RAP 3 SKA 3
+musical MUS 21
 musicalbum CD 1
 musicalgenre SKA 1
 musicality EAR 1
@@ -6539,6 +7257,7 @@ musicgenre RAP 1
 musicperhaps ART 1
 musicplayer DJ 1
 musicpublication NME 1
+musictelevision MTV 20
 muslim ALI 3
 muslimchief AGA 1
 muslimcommander MIR 1
@@ -6547,7 +7266,9 @@ muslimleader AGA 2 MAM 1
 muslimruler MIR 1
 mustnotsayaword SH 1
 mutt CUR 5 DOG 1
+muzzlevelocity MV 20
 my COR 23 MY 3
+myalgicencephalomyelitis ME 20
 myanmar MYA 50
 mygroup US 4 WE 3
 myrna LOY 1
@@ -6560,6 +7281,7 @@ mythicalgiant GOG 1
 n CA 1 EN 1
 nab COP 1
 nabokovnovel ADA 1
+naira N 50
 naked ON 1 RAW 2
 nakedfemaleingarden EVE 1
 name N 50 AN 9 DUB 10 ID 2 IPA 1 NON 1 TAG 3 TED 1 TLE 1 NN 6
@@ -6567,8 +7289,10 @@ namebadge TAG 1
 nameless LY 1
 namely SC 52 VIZ 53 IE 5
 nameofgirl VAL 1
-nameunknown NU 1
+nameunknown NU 21
 namibia NAM 50
+nanometre NM 20
+nanosecond NS 20
 napoleonicmarshal NEY 1
 narrativepoem LAY 1
 narrowbeamoflight RAY 1
@@ -6583,24 +7307,33 @@ nastyodour HUM 1
 nastyperson RAT 1
 nastything SIN 1
 nation AN 1 UK 1 USA 1
-national AN 1 ATN 1 SN 1
+national N 50 NAT 20 AN 1 ATN 1 SN 1
+nationalcurriculum NC 20
 nationalfront NF 50
+nationalguard NG 20
 nationalinsurance NI 50
-nationalist AN 1 NAT 2
+nationalist N 50 NAT 22 AN 1
 nationalistgroup ETA 1
 nationalservice RAF 1
 nationaltheatre NT 50
 nationaltrust NT 50
 nationassociate EU 1
-native SON 4
+native NAT 20 SON 4
+natural NAT 20
+naturalkiller NK 20
+naturalorder NO 20
 naturegod PAN 1
 naughty BAD 6
 naughtychild IMP 5
 naughtykid IMP 2
 naughtyspirit ELF 1
+nauticalmile NM 20
+naval NAV 20
 navalgroup ARN 1
 navalvessel SUB 1
-navigator LOT 1
+navigable NAV 20
+navigation NAV 20
+navigator NAV 20 LOT 1
 navy N 50 RN 9
 nazi SS 1
 nazigroup SS 1
@@ -6625,15 +7358,18 @@ needingdoctor ILL 1
 needle BUG 1 IRK 1
 needlefish GAR 2
 needtobepay DUE 1
-negative NEG 1 NO 5 NOT 3
+negative NEG 21 NO 5 NOT 3
 negativeconclusion NO 1
 negativeresponse NAY 1 NO 3
 negativevoter NO 1
+negotiable NEG 20
 neither NOR 4
 nelliewhoreport BLY 1
 neo ME 1
+neodymium ND 20
 neon NE 53
 nepal NEP 50
+neptunium NP 20
 nerve LIP 1
 nervous SHY 3
 nervousaffliction TIC 2
@@ -6646,6 +7382,9 @@ netherlands NL 52
 netherlandsantilles NA 50
 netreturn WEB 1
 network LAN 6 NET 1 RY 1 WEB 2
+networkcomputer NC 20
+neuter N 50
+neutron N 50
 nevada NEV 50 NV 50
 never ER 3 NO 8 NOT 4
 nevertheless BUT 1 THO 1 YET 2
@@ -6654,18 +7393,22 @@ new N 50 AN 49 HOT 1 INN 1 RAW 2 THE 1
 newattorney NDA 1
 newbook NT 1
 newbrunswick NB 50
+newengland NE 20
 newfoundland NF 50
 newhampshire NH 50
 newjersey NJ 50
 newmexico NM 50
+neworleans NO 20
+newparagraph NP 20
+newprovidence NP 20
 newreporter CUB 1
 news GEN 1 NN 2
 newsboss ED 3
 newschannel CNN 50
 newschief ED 1
-newseries NS 1
+newseries NS 21
 newsman ED 2
-newspaper FT 20 RAG 30 SUN 7
+newspaper I 50 FT 20 RAG 30 SUN 7
 newspaperarticle ED 1
 newspaperboss ED 3
 newspaperchief ED 3
@@ -6673,9 +7416,11 @@ newspaperman ED 51
 newspaperwoman ED 50
 newsreport IN 1
 newssupremo NED 1
+newstyle NS 20
 newtechnology IT 2
 newtestament NT 51 ANT 1
 newton N 50
+newversion NV 20
 newvisitorinitial NV 1
 newyork NY 50
 newzealand NZ 50
@@ -6689,6 +7434,7 @@ niche BAY 1
 nicholasshort NIC 1
 nick CAN 1 CUT 2 NAB 2 ROB 2
 nickel NI 52
+nielsbohrium NS 20
 niger RN 50
 nigeria NGR 50
 nightclub BAR 1
@@ -6700,22 +7446,25 @@ ninety XC 2
 niobium NB 50
 nip BIT 2
 nitrogen N 50
+nitrogenoxide NOX 20
 nitwit TIT 1
 no N 50 NAY 15 NIX 2 NO 9
 noamateur PRO 3
 noanswer ANS 1
 nobackslide ON 1
 noball NB 50
+nobelium NO 20
 nobody ONE 1
 nobodyinlargeorganisation COG 1
-nocharge NC 1
+nocharge NC 21
 nocredit CR 1
 nocturnalflyer BAT 1
 nocturnalhunter OWL 1
 nocturnalinsectivore BAT 1
 nocturnalmammal BAT 1
-nodate ND 1
+nodate ND 21
 nodoff NAP 1
+nofund NF 20
 nogo GO 1
 nogoback ON 1
 nogood NG 105 BG 1 BUM 1
@@ -6741,33 +7490,45 @@ nolongertake OFF 1
 nolongerwith OLD 1
 nolongeryoung OLD 1
 nomatterwhat ANY 1
+nominal NOM 20
+nominative N 50 NOM 20
 nomore EX 2
 none O 50
 nonetheless BUT 1 YET 1
 nonsense BS 2 COD 1 ROT 17
+nonsmoker NS 20
 noon M 50 N 50 ATN 1
 nooneinparticular ANY 1
 noparticular ANY 1
 nope NO 1
-noplace NP 1
+noplace NP 21
 nopositive PP 1
 noquestion QU 1
 norm PAR 11
 normal PAR 11
+normanfrench NF 20 NOR 20
 normanyou TU 1
-north N 50 AN 1 INN 1 UP 1
+norse N 50
+north N 50 NOR 20 NTH 20 AN 1 INN 1 UP 1
 northamerica NA 51
+northbritain NB 20
+northbritish NB 20
 northcarolina NC 50
 northdakota ND 51
 northeast NE 60
 northeastern NE 53
 northern N 50 AN 5
 northerncity ER 1
+northernfrench NF 20
 northernisland NI 50
 northernriver URE 1
+northernterritory NT 20
+northisland NI 20
 northwest NW 51
 northwestern NW 50
-norway N 50 ORN 1
+northwestterritories NT 20 NW 20
+norway N 50 NOR 20 ORN 1
+norwegian NOR 20
 norwegianband AHA 1
 norwegiangroup AHA 2
 nosaint ST 1
@@ -6782,6 +7543,7 @@ notagoodthing SIN 1
 notallow OUT 3
 notallowto TO 1
 notapplicable NA 54
+notarypublic NP 20
 notasingle NO 3
 notatall NO 3
 notatfirstnotice EEN 1
@@ -6794,11 +7556,12 @@ notbad OK 1
 notbat OUT 1
 notbeserious TOY 1
 notbig WEE 1
-notch V 50
+notch V 20
 notclear DIM 1
 notconsidered OUT 1
 notcool HOT 1
 notcut CUT 1
+notdated ND 20
 notdrink TT 3
 notdry WET 1
 note N 50 NB 53 ADO 1 AN 1 DMI 1 DO 5 DOH 1 ER 1 FA 5 IN 2 INB 1 LA 15 LAH 1 ME 6 MI 29 PEN 1 PS 5 RE 25 SO 6 TE 33 TI 21 TON 1 UT 1 CC 1 DE 1 EC 1 FAE 1 MIS 1 NN 4 NS 1
@@ -6810,9 +7573,11 @@ noteofindebtedness IOU 1
 noteven ODD 6
 noteveryoneofthem ALL 1
 notfancy OFF 2
+notfar NL 20
 notfeelwell ILL 2
 notfor CON 1
 notforget AND 1
+notforsale NFS 20
 notfrom TO 2
 notfunny DRY 1
 notgeld RE 1
@@ -6828,7 +7593,7 @@ nothead OR 1
 nothighup LOW 1
 nothing O 50 AO 1 ANO 1 ATO 1 FA 8 ISO 1 NIL 34 NIX 5 ZIP 2
 nothingamiss OUP 1
-nothingatall FA 51 NIX 1
+nothingatall FA 51 SFA 20 NIX 1
 nothingback LIN 1
 nothingbut ALL 3
 nothingforwoman NOW 1
@@ -6876,6 +7641,7 @@ notservealcohol DRY 1
 notso NO 1 SO 2
 notspeak UMB 1
 notspecial SP 1
+notspecified NS 20
 notstart AGA 1 VER 1
 notstraight GAY 1
 notstunned WED 1
@@ -6895,8 +7661,11 @@ notwell ILL 2
 notwithit IT 1
 notwork OFF 5
 notyetinbed UP 1
+nought O 50
 noun N 50
+nounphrase NP 20
 nourished FED 1
+novascotia NS 20
 novel KIM 1 NEW 25 SHE 3
 november NOV 50 N 50
 now AD 2
@@ -6907,11 +7676,12 @@ nowherenear FAR 1
 nowheretobese TS 1
 nowin HIP 1
 nowshow ON 1
-nuclear N 1
+nuclear N 51 NUC 20
 nuclearfusionsite SUN 1
+nuclearship NS 20
 nudge JOG 1
 nuisance IMP 1
-number N 50 NO 126 NOS 59 AN 2 GAS 1 ONE 5 REG 1 SIX 4 TEN 34 TWO 3
+number N 50 NO 126 NUM 20 NOS 59 AN 2 GAS 1 ONE 5 REG 1 SIX 4 TEN 34 TWO 3
 numberof NO 1
 numberofanimalshoot BAG 1
 numberoffinger TEN 1
@@ -6920,6 +7690,8 @@ numberone AME 1 ME 1 NOI 4 PEE 2 TOP 1 WEE 1
 numbersix VI 1
 numberten IO 1
 numbertwo POO 1
+numeral NUM 20
+numericalcontrol NC 20
 nurse AIA 1 EN 11 RGN 1 SEN 1 ENS 1
 nurseonce SEN 2
 nut AN 1
@@ -6929,20 +7701,25 @@ o AN 1 IG 1
 oaklandplayer AS 1
 obama ACK 1
 obese FAT 5
-object AIM 6 END 12 ING 1 IT 2 NG 1 OBJ 1
+object OBJ 21 AIM 6 END 12 ING 1 IT 2 NG 1
 objection BUT 9 OB 1 OBS 1
-objective END 11
+objective OBJ 20 END 11
 objectofspin TOP 1
 obligation IOU 1 TIE 4
+oblique OBL 20
+oblong OBL 20
 obnoxiousperson SOD 1
-obscure DIM 2 FOG 2 HID 1
+obscure OBS 20 DIM 2 FOG 2 HID 1
 observation OBS 50
+observationpoint OP 20
+observationpost OP 20
 observe SEE 5
 observed EEN 1 SAW 11
 observer EYE 1
 obsession BUG 1
 obsessive NUT 1
 obsessivecompulsion OC 1
+obsolete OBS 20
 obsoleteletter ETH 1
 obstacle BAR 5 LET 5
 obstruct BAR 1
@@ -6951,15 +7728,17 @@ obtain BAG 1 GET 7 WIN 1 GOT 6 HAD 1
 occasion DO 1
 occasional ODD 4
 occupantofrank CAB 1
-occupationaltherapist OT 1
+occupationaltherapist OT 21
 occupationaltherapy OT 51
 occupy IN 14
 occupypositionof AT 1
 occur IS 1
 ocean SEA 6
+octavo OCT 20
 october OCT 52
 odd SP 50 RUM 33
 oddandend TAT 1
+oddfellow OF 20
 odour BO 1 HUM 1
 of OF 3
 ofaman HIS 1
@@ -6973,20 +7752,24 @@ offense SIN 1
 offensive TET 5 WAR 1
 offensivetype GIT 1
 offer BID 14
+offerover OO 20
 office DEN 12 LOO 1
 officeassistant PA 2
-officer CO 6 COL 16 COM 1 COP 6 DI 2 DS 1 GEN 1 LT 14 NCO 5 OC 2 OFF 1 OR 1
-officercommanding OC 1
-officerincharge OC 3
+officer OFF 21 CO 6 COL 16 COM 1 COP 6 DI 2 DS 1 GEN 1 LT 14 NCO 5 OC 2 OR 1
+officercommanding OC 21
+officerincharge OC 23
 officerincommand OC 1
-official REF 12 UMP 1
+officeroftheday OD 20
+official OFF 20 REF 12 UMP 1
 officialdecision ING 1
 officialformatch REF 1
 officialinfootball REF 1
 offspring SON 3
 ofgirl ERS 1
 ofgreatstature ALL 1
+ofherage AE 20 AET 20
 ofhighquality ACE 1
+ofhisage AE 20 AET 20
 ofit ITS 1
 oflongago OLD 1
 ofme MY 1
@@ -7026,8 +7809,10 @@ oldcollege OC 1
 oldcommander AGA 1
 oldcottage COT 1
 oldcrone HAG 2
+oldenglish OE 20
 oldflame EX 19
 oldfolk MEN 1
+oldfrench OF 20
 oldfriend EX 1
 oldgirl MA 1
 oldgirlfriend EX 2
@@ -7041,10 +7826,14 @@ oldlover EX 24
 oldmaiden OM 1
 oldman DA 1 DAD 15 PA 54 POP 5
 oldmate EX 1
+oldmeasurement OM 20
 oldnomad HUN 1
+oldnorse ON 20
 oldnurse VAD 1
 oldpair OO 1
 oldpartner EX 11
+oldpence D 50
+oldpenny D 50
 oldpiano OP 1
 oldpriest ELI 2
 oldrailoperator BR 50
@@ -7061,6 +7850,7 @@ oldsolver YE 1
 oldsovereign ER 1
 oldspacestation MIR 1
 oldsportcar GTO 1
+oldstyle OS 20
 oldtaxoffice IR 1
 oldtestament OT 50
 oldtradeunion NUR 1
@@ -7073,7 +7863,7 @@ olympicvenue RIO 2
 omit SET 1
 on AT 3 LEG 3 LIT 2 OF 1 ON 28 RE 194 UP 1
 onaccount OA 1
-onaccountof FOR 3 OA 1 ONA 1
+onaccountof OA 21 FOR 3 ONA 1
 onahigh UP 2
 onbehalfof FOR 8 PRO 3
 onboard SS 7
@@ -7085,9 +7875,9 @@ oncethe YE 1
 onceyou YE 1
 onchair SAT 1
 onconditionthat IF 1
-ondemand OD 1
+ondemand OD 21
 ondisplay AIR 1
-one I 105 A 50 AI 1 ACE 66 AN 75 ANY 1 ASI 3 ATI 2 EG 1 HEA 1 IAN 1 IFI 1 INI 4 ISA 1 IT 1 ITI 1 ME 3 NOI 2 ONI 4 ONE 5 ORI 2 TI 1 UN 7 UNE 1 YOU 1 IS 1 II 2 UNS 1
+one I 55 A 50 AI 1 ACE 66 AN 75 ANY 1 ASI 3 ATI 2 EG 1 HEA 1 IAN 1 IFI 1 INI 4 ISA 1 IT 1 ITI 1 ME 3 NOI 2 ONI 4 ONE 5 ORI 2 TI 1 UN 7 UNE 1 YOU 1 IS 1 II 2 UNS 1
 oneactingpoor HAM 1
 onearticle AN 1
 oneattendroyalty IER 1
@@ -7125,6 +7915,7 @@ onegoupthewall IVY 1
 onehave VE 4
 onehavean DAN 1
 onehundred C 50
+onehundreddollar C 50
 oneinfavourof PRO 1
 oneinsect BEE 1
 oneintraffic CAR 1
@@ -7206,6 +7997,7 @@ onlinephoto PIC 1
 onlinetalk TED 2
 onloan OUT 1
 only ALL 1 BUT 9 ONE 2
+onlychild OC 20
 onlyhalf AR 1
 onlyonegender MEN 1
 onlyoneortwo FEW 1
@@ -7214,6 +8006,7 @@ onparoleperhaps OUT 1
 onpublicview OUT 1
 onsale OUT 2
 onstrike OUT 2
+ontario ON 20
 onthecontrary NOT 1
 ontheincrease UP 1
 ontheirfoot UP 1
@@ -7241,33 +8034,46 @@ openwater SEA 1
 operate DO 1 GO 1 MAN 1 RAN 4 ON 9
 operatingroom OR 1
 operatingsystem OS 51
-operation ACT 3 OP 12 SE 1 USE 1 OPS 9
-operationalresearch OR 1
+operation OPS 29 ACT 3 OP 12 SE 1 USE 1
+operationalresearch OR 21
+operationofficer OPS 20
+operationresearch OR 20
+operationroom OPS 20
 operative SPY 1
-operator OP 2
+operator OP 22
 opinion BET 3 EYE 1 SAY 1
 opinionmillionsexpress ENT 1
 opponent FOE 1
 opportunist ERS 1
 opportunity OPS 1
+oppose OPP 20
 opposeto CON 6
 opposing CON 6
 opposingside RL 1
+opposite OP 20 OPP 20
 oppositedirection NS 1
+oppositeprompt OP 20
 oppositesex MEN 1
 oppositeside RL 1
-optic EYE 1
+optic OPT 20 EYE 1
+optical OPT 20
 optimistic UP 1
+optimum OPT 20
+optional OPT 20
 opus OP 51
 or OR 12
 orange O 50
 orangejuice OJ 2
 orbison ROY 1
 orchestraarea PIT 2
-order BID 2 LAW 4 OBE 5 OM 9
+ordain ORD 20
+order ORD 20 BID 2 LAW 4 OBE 5 OM 9
 orderly LY 1
-ordinary O 50
-ordinaryseaman AB 1 OS 1
+orderofcanada OC 20
+orderofmerit OM 20
+ordinary O 50 ORD 20
+ordinaryseaman OS 21 AB 1
+ordnance ORD 20
 ordnancesurvey OS 50
 oregon OR 58
 organ EAR 26 ERA 1 EYE 2 FIN 1 FT 1
@@ -7275,8 +8081,10 @@ organisation UN 1
 organise RUN 3 RAN 17
 organisecrime MOB 1
 organized RAN 1
+organophosphate OP 20
 original NEW 3 UR 1
 originalcall NEE 1
+originalcover OC 20
 originaltemptingwoman EVE 1
 ornamentalitem PIN 1
 orphan IE 1
@@ -7285,7 +8093,7 @@ oscar O 50
 osmium OS 50
 otherhalf OH 1
 otherinsect BUG 1
-otherrank OR 12
+otherrank OR 32
 others ETC 1
 otherthan BUT 1 NOT 1
 otherwise OR 17
@@ -7319,6 +8127,7 @@ outof EX 5
 outofbed UP 19
 outofbound OB 50
 outofdate OLD 1
+outofprint OP 20
 outofreach FAR 1
 outofsight HID 1
 outofsort ILL 1
@@ -7337,10 +8146,11 @@ outskirtof LE 1
 outstanding ACE 4 DUE 9 EF 1 OS 3
 outtolunch MAD 1
 oven AGA 4 ILN 1
-over ISO 1 ON 10 UP 5
+over O 50 ISO 1 ON 10 UP 5
 overact HAM 1
 overall NET 2
 overawe COW 1
+overcharge OC 20
 overdine OTT 1
 overdose OD 57
 overdraft OD 53
@@ -7379,6 +8189,7 @@ oxte BIG 1
 oxygen O 50 AIR 2
 oz IA 1
 p AN 1 ENU 1 IN 1
+pacifictime PT 20
 pacifictree TI 3
 pack BOX 1 RAM 1 HAS 1
 package BOX 1
@@ -7394,12 +8205,13 @@ paincry OWS 1
 painexpression OW 3
 painfulexpression OW 1
 paint ART 28 OIL 13
+painted PXT 20
 painter IST 1 RA 13
 painting ART 19 RT 1
 paintingetc ART 3
 paintorsculpture ART 1
 paintperhaps ART 1
-pair DUO 3 OO 1 PR 29 TWO 4
+pair PR 49 DUO 3 OO 1 TWO 4
 pairof TWO 1
 pairofcup BRA 1
 pairofdaughter DD 1
@@ -7412,7 +8224,8 @@ pairofliberal LL 1
 pairofspectacle OO 1
 pairofstudent ALL 1
 pairofuprightcharacter II 1
-pakistan PK 50
+pakistan PAK 20 PK 50
+pakistani PAK 20
 pal BUD 2
 palaceduo ERR 1
 pale WAN 15
@@ -7424,6 +8237,7 @@ pallid WAN 1
 palm ITA 1
 palmtree ITA 1
 pamper FED 1
+pamphlet PAM 20
 pan POT 1 RAP 1 WOK 4
 panama PA 51
 pandemonium DIN 1
@@ -7433,12 +8247,14 @@ panout GO 1
 panthermaybe CAT 1
 pants BAD 1
 papa P 50
-paper AFT 1 FT 15 RAG 9 SUN 5 ID 54
+paper I 50 AFT 1 FT 15 RAG 9 SUN 5 ID 54
 paperback PB 1
 paperboss ED 1
 paperoflowquality RAG 1
 papuanewguinea PNG 50
+paragraph PAR 20
 paraguay PY 50
+parallel PAR 20
 paramilitary IRA 1 SA 1
 paramilitaryforce SS 1
 paramour VE 1
@@ -7450,12 +8266,13 @@ parch DRY 1
 pardon EH 2
 parent DAD 4 HER 1 MA 17 MUM 5 PA 2 POP 2
 parentalguidance PG 50
-parishpriest PP 3
+parish PAR 20
+parishpriest PP 23
 parisianarticle UN 1
 parisianis EST 3
 parisianstreet RUE 3
 parisianwho QUI 2
-park P 50 REC 1
+park PK 20 P 50 REC 1
 parkarea LOT 2
 parked PUT 1
 parkland REC 1
@@ -7464,6 +8281,7 @@ parliamentarian AMP 1 MO 1 MP 5
 parrot APE 2
 part PT 64 BIT 15 GO 1
 partgift EST 1
+participle P 50
 particle ION 3
 particular OWN 3
 particularinterest BAG 1
@@ -7515,6 +8333,7 @@ partydrink CUP 1
 partyman MP 1
 partymember LIB 1
 partymemberinoffice IN 1
+pascal PA 20
 pasquale DON 1
 pass COL 27 DIE 9 GO 11 ID 1 RAN 1
 passable OK 4
@@ -7526,44 +8345,54 @@ passionate HOT 3 MAD 1
 passon DIE 11
 passport ID 6
 passportpossible ID 1
+passstaffcollege PSC 20
 passthrough VIA 1
-past AGO 20 BY 7 EX 2 OLD 1 PA 2
+past PA 22 PT 20 AGO 20 BY 7 EX 2 OLD 1
 pastit OLD 1
 pastitsbest OLD 1
+pastmaster PM 20
+pastor P 50
+pastparticiple PAP 20 PP 20
+pastpresident PP 20
 pastrecord EP 1
 pastry BUN 1 PIE 11
 pastrydish PIE 5
 paststudent OB 1
+pasttense PAT 20 PT 20
 pasture LEY 1
 pastureland LEA 1
 pasty PIE 2 WAN 2
 patchofground LOT 1
-patent PAT 1
+patent PAT 21
 paternalgrandmother SMA 1
 path WAY 2
 pathetic SAD 2
 patienc HOP 1
 patientone JOB 1
 patrick PAT 1
+patrioticfront PF 20
 patsy SAP 1
 paul ME 1
 pause GAP 1 ER 1
 pawn P 50 MAN 1
-pay MET 6 PD 1 PRO 1 FEE 2
+pay PD 21 MET 6 PRO 1 FEE 2
 paycourtto WOO 1
 payfor MET 2
+payingguest PG 20
+paymaster PMR 20
 payment FEE 11 SUB 2
 paymentforservice FEE 1
 paymentpledge IOU 1
 paymentprotectioninsurance PPI 1
 payminusa PY 1
 peacekeeper UN 72
-peak ALP 1 BEN 1 CAP 2 PIN 1 TOP 2 TOR 6
+peak PK 20 ALP 1 BEN 1 CAP 2 PIN 1 TOP 2 TOR 6
 peccadillo SIN 1
-peck BIT 1
+peck PK 20 BIT 1
 pecker HEN 1
 peculiar ODD 2 OWN 1 RUM 2
 peculiarfeature TIC 1
+pedal P 50
 peddledrug LT 1
 pee P 50
 peeler COP 1
@@ -7574,13 +8403,15 @@ pelvi HIP 1
 pen J 20 BIC 1 INK 1 STY 11
 pence D 50 P 50
 penfriend COB 1
+peninsula PEN 20
 penitentiary CAN 1
 pennsylvania PA 61
 penny D 50 P 50 PP 1
+pennyweight PWT 20
 pensioner OAP 52
-per A 50
+per PR 20 A 50
 perannum PA 51
-percent PC 50
+percent PC 50 PCT 20
 perception KEN 1
 perch SIT 2 SAT 3
 perfect ACE 1 AI 6
@@ -7599,7 +8430,7 @@ perhapsskate RAY 1
 perhapsstill PIC 1
 perhapssucktheoxygenout GAS 1
 perhapstom CAT 1
-period AGE 9 DOT 1 EON 2 ERA 17 EVE 1 PER 1 YS 1
+period PER 21 AGE 9 DOT 1 EON 2 ERA 17 EVE 1 YS 1
 periodic ODD 1
 periodical MAG 8
 periodofsuccess DAY 1
@@ -7611,8 +8442,9 @@ permissible OK 2
 permission LET 1 OK 1
 permit LET 28 OK 2 OKS 1
 persevere TRY 1
-person CAR 1 KIN 2 MEN 116 OLK 1 BOD 10 ING 1 MAN 14 ONE 10 PER 3
+person PER 23 CAR 1 KIN 2 MEN 116 OLK 1 BOD 10 ING 1 MAN 14 ONE 10
 personal OWN 12
+personalappearance PA 20
 personalassistant PA 55
 personalcharm IT 1
 personalcode PIN 1
@@ -7626,7 +8458,8 @@ personalpaper ID 1
 personalpride EGO 1
 personalproblem BO 2
 personalsecurityguard PIN 1
-personaltrainer PT 1
+personaltrainer PT 21
+personaltraining PT 20
 personcarrier CAR 1
 persondisobeyrule AT 1
 persongeneral WE 1
@@ -7649,21 +8482,26 @@ personwithouta CE 1
 peru PE 52
 peruke WIG 1
 perweek PW 50
+peseta P 50 PES 20 PTA 20
+peso P 50
 pest BUG 1 FLY 1
 pet CAT 22 DOG 8 PUP 1
-peter DIE 1 ST 1
+peter PET 20 DIE 1 ST 1
 peterout DIE 1
 petition ASK 2 BE 1 BEG 4 SUE 6 ING 1
 petrol GAS 1 OIL 1
 petshopinitial PS 1
 petty LY 1
-pettyofficer APO 1 PO 5
+pettyofficer PO 25 APO 1
+pfen PF 20
 pharaoh TUT 1
+pharmaceuticalsociety PS 20
 phenomenal FAB 1
 phib ME 2
 philby KIM 1
 philippine RP 50
 philistine ME 1
+philologicalsociety PS 20
 philosopher TO 1
 philosophicalsystem TAO 1
 philosophy ZEN 1
@@ -7672,24 +8510,28 @@ phonecompany BT 1 EE 3
 phonefeature APP 1
 phosphorus P 50
 photo PIC 15 URE 1 PIX 1
+photoelectriccell PEC 20
 photograph PIC 1 HOT 1
 photographer PAP 1
 photoperhaps ART 1
 physicaleducation PE 51
+physicaltherapy PT 20
 physicaltraining PT 55 GYM 1
 physician DOC 4 DR 3
 physicist ON 1
 pi SP 1
 pianissimo PP 50
 piano P 50
+pianoforte PF 20
 picard LUC 1
 picaroon ME 1
 pickon NAG 1
-pickup GOT 2 ID 1 WON 1
+pickup PU 20 GOT 2 ID 1 WON 1
 picture PIC 4 SEE 1 ART 15 PIX 1
 pictureetc ART 2
+picturepostcard PPC 20
 pie PIE 1
-piece BIT 14 GUN 5 MAN 5 TAD 1 MEN 5
+piece PCE 20 BIT 14 GUN 5 MAN 5 TAD 1 MEN 5
 pieceofadvice TIP 3
 pieceofchocolate BAR 1
 pieceofcloth RAG 2
@@ -7721,9 +8563,10 @@ pileofrock TOR 1
 pilfer HOT 1
 pill TAB 1 EE 1
 pilot ACE 2 FLY 3 PO 1 RAF 1
+pilotofficer PO 20
 pin LEG 4
 pinch NIP 2 ROB 1
-pint PT 111 APT 2
+pint PT 61 APT 2
 pious PI 2
 pioustype ST 1
 pipe FLU 1 HOT 4
@@ -7738,7 +8581,7 @@ pitcher EWR 1 JUG 1
 pitchup LOB 1
 pity SIN 1
 pixie ELF 5
-place LAY 10 ON 1 PL 41 PUT 47 SET 15 SIT 1 SAT 4
+place PL 61 LAY 10 ON 1 PUT 47 SET 15 SIT 1 SAT 4
 placebefore SET 1
 placebottom SAT 1
 placebrief PL 1
@@ -7814,14 +8657,17 @@ plot BED 22 MAP 1 WEB 1
 plug AD 13 TAP 1 ADS 3
 plump FAT 2
 plunder AGE 1 ROB 2
+plural PL 20
 plus AND 5
 plutonium PU 50
+plymouthbrethren PB 20
 pocket BAG 1 NET 1
 poem IF 7 ODE 36 ONG 1
 poet DEN 1 RD 1
+poetlaureate PL 20
 poetry ODE 3
 poin ME 1
-point PT 62 N 50 E 50 S 50 W 50 AIM 3 DOT 8 END 3 NIB 1 NUB 3 PIN 2 RAS 1 TIP 1 EN 1 ES 1 SE 1 SW 1
+point PT 62 E 20 N 20 S 20 W 20 AIM 3 DOT 8 END 3 NIB 1 NUB 3 PIN 2 RAS 1 TIP 1 EN 1 ES 1 SE 1 SW 1
 pointedtool AWL 1
 pointer TIP 1
 pointless ES 1
@@ -7836,17 +8682,18 @@ pokefunat RIB 1
 pokerprize POT 1
 poland PL 55 PO 1
 polarregion TIC 1
-pole N 50 S 50 BAR 4 CUE 1 ROD 10 NS 15 NN 2 SN 2
+pole PO 20 N 50 S 50 BAR 4 CUE 1 ROD 10 NS 15 NN 2 SN 2
 police CID 21 MET 6
 policeconstable PC 50
 policecordon LE 1
-policedepartment CID 10 PD 1
+policedepartment PD 21 CID 10
 policeforce MET 5
 policeman DI 55 PC 54 COP 20 DS 1 DIS 1 MET 1
 policemanbacking COP 1
 policeofficer COP 3 DC 1 DI 1
+policesergeant PS 20
 policeunit CID 1
-policewoman DI 50 PC 50 WPC 50 DS 1
+policewoman DI 50 PC 50 WPC 50 PW 20 DS 1
 polish RUB 27
 polishedoff ATE 2
 polishoff EAT 1
@@ -7856,7 +8703,7 @@ politicalcorrectness PC 50
 politicalparty ANC 1 CON 1 DUP 2 LAB 2
 politician AMP 9 CON 6 LIB 5 MP 151 POL 1 RY 1 MPS 7
 poll CUT 1
-polonium PO 1
+polonium PO 21
 polyamorous BI 1
 pompousfool ASS 1
 pong HUM 1
@@ -7875,13 +8722,14 @@ pop DAD 4 NIP 1 PA 5
 popband REM 1
 pope LEO 3
 popoff DIE 1
-popular BIG 1 HOT 9 IN 375 POP 1
+popular POP 21 BIG 1 HOT 9 IN 375
 popularfilm PIC 1
 populargroup REM 1
 popularline INL 1
 popularmusic POP 1
 popularsong HIT 2
 popularsuccess HIT 1
+population POP 20
 popup PA 1
 porcinehabitat STY 1
 porcino CEP 1
@@ -7890,7 +8738,7 @@ pork HAM 1 PIG 1
 porker HOG 1 PIG 1
 porkpie LIE 3
 porky FAT 3 LIE 3
-port PT 1 RIO 21 USB 1
+port PT 21 RIO 21 USB 1
 portcity RIO 1
 porter ALE 4
 portermaybe ALE 2
@@ -7898,7 +8746,8 @@ portion BIT 2 CUT 1
 portionofcorn EAR 1
 portionofland CRE 1
 portrait URE 1
-portugal P 50
+portugal P 50 PG 20
+portuguese PG 20
 portuguesegreeting OLA 1
 pose SIT 8 SAT 16
 poseagain SAT 1
@@ -7906,13 +8755,13 @@ posh U 50 AU 1
 poshcar GT 1
 poshgirl GEL 2
 poshlass GEL 1
-position FIT 1 JOB 1 LAY 2 LIE 6 PUT 4 SET 1 SIT 3 SAT 4
+position POS 20 FIT 1 JOB 1 LAY 2 LIE 6 PUT 4 SET 1 SIT 3 SAT 4
 positionat IN 1
 positionofball LIE 1
 positionofbishop SEE 1
 positionofpersonabove ON 1
 positionvertical UP 1
-positive YES 1
+positive P 50 POS 20 YES 1
 positiveresponse YES 2
 positivevote YES 1
 possess OWN 1 HAD 3 HAS 7
@@ -7928,6 +8777,7 @@ possibleproviderofmilk ASS 1
 possiblesandwichfilling HAM 1
 post AIL 1 END 1 JOB 3 ND 1
 postalorder PO 51
+postaltelegraph PT 20
 postcard PC 51
 poster AD 12 ADS 1
 posterior BUM 1
@@ -7935,13 +8785,16 @@ postfordriver TEE 1
 postgraduate MA 1
 posthumousinscription RIP 1
 postman PAT 2
+postmaster PM 20
 postmortem PM 50
 postoffice PO 64 POS 2
 postponement ICE 1
 postscript PS 50
+posttown PT 20
 pot JAR 3 PAN 6 PO 1 SH 1 URN 4
 potassium K 50
 potato ALU 1 PUD 1
+potentialenergy PE 20
 potentialsourceofirritation NIT 1
 potty ANE 1 MAD 2 PO 4
 pouch BAG 1 SAC 2
@@ -7960,6 +8813,7 @@ practicaljoke APE 1
 practice USE 7
 practise DO 3 PLY 1
 prankster IMP 1 WAG 1
+praseodymium PR 20
 prat GIT 1
 prayer AVE 2
 preceding ERE 1
@@ -7970,7 +8824,7 @@ predicament JAM 4
 preferred PET 4
 premier TOP 1
 premierleague PL 1
-premium TOP 1
+premium PM 20 TOP 1
 prepare ARM 3 DO 3 SET 1
 prepared DID 1 DY 1 SET 9 UP 2
 preparedandready SET 1
@@ -7979,22 +8833,24 @@ prepareforconflict ARM 1
 preparetofire AIM 1
 preparetosail RIG 1
 prescribe SET 1
-present AD 2 AT 2 IN 5 NOW 15 OW 1 PR 1
+present PR 21 AD 2 AT 2 IN 5 NOW 15 OW 1
 presentation ING 1
 presentfor AT 1
 presentinggirl DEB 1
+presentpupil PP 20
 presenttime NOW 2
 preserve ATE 1 CAN 20 JAM 9 TIN 1
 preservefood TIN 1
 president ABE 3 CEO 1 IKE 3 ON 1
 press BEG 1 HUG 1 JAM 1 SIT 2
+pressassociation PA 20
 presschief ED 4
 pressed SAT 1
 pressemployee SUB 1
 pressformoney DUN 1
 pressing ING 1
 pressman ED 3
-pressrelease PR 2
+pressrelease PR 22
 pressure P 50
 presumption LIP 1
 pretence ACT 4
@@ -8005,11 +8861,11 @@ prevent BAN 1 BAR 3
 previous EX 8 OLD 2 AGO 2 ERE 1
 previouslover EX 1
 previouspartner EX 2
-price FEE 3 GE 1 PR 2
+price PR 22 FEE 3 GE 1
 pricelabel TAG 1
 pricepay FEE 1
 pride EGO 1
-priest P 50 DD 1 ELI 36 FR 1 PR 8 REV 8
+priest P 50 PR 28 DD 1 ELI 36 FR 1 REV 8
 priestess IO 1
 primary IC 1
 primarytackleearly TE 1
@@ -8021,6 +8877,7 @@ primitiveform UR 1
 primitiveinstinct ID 1
 primitiveurge ID 1
 prince P 50 PR 56 HAL 7 RAS 2 DI 1
+princeedwardisland PE 20
 princess BEA 1 DI 11 IDA 1
 princewhoproducedanddirect HAL 1
 principal TOP 3
@@ -8034,7 +8891,7 @@ prisoner CON 68 LAG 7 POW 8
 prisonerofwar POW 1
 prisonguard KEY 1
 prisonvisitor IN 1
-private GI 5 OWN 19 PT 1 PTE 4 GIS 1
+private PTE 24 PVT 20 GI 5 OWN 19 PT 1 GIS 1
 privatecode PIN 1
 privatedetective EYE 1
 privatedocument ID 1
@@ -8042,10 +8899,12 @@ privateeye PI 1
 privateinvestigator PI 55
 privateoffice DEN 3
 privateroom DEN 2 LOO 1
+privatesecretary PS 20
 privatespace DEN 1
 privy LOO 1
+privycouncillor PC 20
 prize CUP 6 POT 12
-prizering PR 2
+prizering PR 22
 pro ACE 2 FOR 17
 probeimpertinent PRY 1
 problem HIT 1 ILL 2 NAG 2 RUB 3 SUM 48 UMS 1
@@ -8055,6 +8914,7 @@ procedure OP 1
 proceed GO 4 ON 1
 process WAY 1
 procession ROW 1
+procuratorfiscal PF 20
 procure BAG 1
 produce DO 2 LAY 1 TE 1
 produced DID 2
@@ -8064,10 +8924,11 @@ productpitch ADS 1
 prof DON 2
 professional PRO 29
 professor DON 3
+professoroftheology STP 20
 profit NET 3 WIN 1
 profundity TH 1
 program APP 10
-programlanguage C 50 PL 1
+programlanguage PL 21 C 50
 programme APP 4 OW 1
 progress GO 5 RAN 1
 progressbyonemember HOP 1
@@ -8077,39 +8938,50 @@ prohibition BAN 20 BAR 1
 project JUT 9
 projectforacivilengineer DAM 1
 projectpiece LIP 1
+promethium PM 20
 prominence TOR 2
 promise IOU 1
 promisetosettlescore IOU 1
+promissorynote PN 20
 promote UP 2
 promotion AD 16 PR 1 ADS 2
 promotionalmaterial AD 1
 prompt CUE 7
+promptside PS 20
 prone APT 1
 pronounce SAY 1
 proper APT 1 DUE 2 FIT 1
 prophet ELI 1
 proportionalrepresentation PR 52
 proposal BID 1
+proprietary PTY 20
 prosecute SUE 1
 prosecutor DA 2
+protactinium PA 20
 protection BIB 1 MAC 1
 protectiveequipment PPE 1
 protectivegear PPE 2
 protein EGG 1
 protest IN 1
 protrude JUT 1
+provencal PR 20
 provide DO 2 IF 137 SO 3
 providedthat IF 1
 providestaff MAN 1
 providewithbag FED 1
 province NI 1
+provinceofquebec PQ 20
+provisionaldriver P 50
 provoke IRK 1
+provostmarshal PM 20
 prowler CAT 1
 prowlerperhaps CAT 1
 prune LOP 1
+psalm PS 20
 pseudonym AS 1
 psychicawareness ESP 1
 psychicpower ESP 1
+psychokinesis PK 20
 pub AR 1 BAR 72 INN 66 PH 9
 pubdrink ALE 1
 public OUT 11
@@ -8120,12 +8992,13 @@ publichouse BAR 1 PH 7
 publicise AIR 5
 publicist PR 1
 publicity AD 35 ADS 2 AIR 3 PR 12
+publicityagent PA 20
 publicityitem ADS 1
 publicitymaterial PR 1
 publicitynotice AD 2
 publicityperson PR 1
 publicize AIR 1
-publiclibrary PL 1
+publiclibrary PL 21
 publicnotice AD 1
 publicrelation PR 56
 publicschool TON 1
@@ -8135,27 +9008,33 @@ publictransporter BUS 1
 publicvehicle BUS 1
 publish AIR 1 OUT 14 RAN 5
 publisher ED 1
+publisherassociation PA 20
 publisherofonlinetalk TED 1
 pubturnup BAR 1
 pubworker ER 1
 pucciniopus CA 1
 puce RED 1
-puertorico PR 50
+puertorico PR 20
 puff AD 3
+pula P 50
 pull AXE 1 LUG 2 TOW 7 TUG 6
 pullback LUG 1
+pullup PU 20
 punch AWL 1 BOX 1 HIT 5 LAM 1
 punchconclusive KO 1
 punishment RAP 1 ROD 1
 punt BET 5
 pup DOG 1
 pupil AL 1
+pupilteacher PT 20
 puppet EMU 1
 pur HUM 1
 purchase BUY 12 GET 1
 purchaseorder POS 1
+purchasetax PT 20
 puree PAP 1
 purge RID 3
+purl P 50
 purpose AIM 1 END 8 USE 3
 purr HUM 1
 pursue DOG 1 WOO 1
@@ -8191,9 +9070,11 @@ qatar Q 50
 qualification CSE 1 PHD 1
 qualified FIT 3
 qualifier IF 1
-quality AIR 1 ING 1
+quality Q 50 AIR 1 ING 1
 qualityassurance QA 50
-quantity ICS 1 SUM 4
+qualitycircle QC 20
+qualitycontrol QC 20
+quantity QT 20 QTY 20 ICS 1 SUM 4
 quantityofenergy PEP 1
 quantityofmoney SUM 1
 quantityofwine BIN 1 TUN 1
@@ -8201,23 +9082,33 @@ quantityofwork ERG 2
 quarrel ROW 11
 quarrelling ROW 1
 quarry PIT 1
-quart QU 1
-quarter EN 1 EE 1 NE 1 NN 1
+quart Q 50 QT 20 QU 21
+quarter Q 50 QR 20 QU 20 EN 1 EE 1 NE 1 NN 1
+quarterly QU 20
+quartermaster QM 20
 quartet IV 2 OUR 1
+quarto Q 50
 quashserve LET 1
 queasy ILL 1
-quebec Q 50 AQ 1 QUE 1
+quebec Q 50 QUE 21 AQ 1
 queen Q 50 QU 81 R 50 AR 3 CAT 3 ER 158 HM 1
+queenandempress RI 20
+queencollege QC 20
 queenelizabeth ER 50
 queengoout ER 1
 queenperhaps CAT 2
 queenpossible CAT 1
+queensisbench QB 20
+queensiscounsel QC 20
+queensland Q 50 QLD 20
 queenvictoria VR 50
-query ASK 1
-question Q 50 ASK 11 HOW 4 QU 44 WHO 2 WHY 4
+query Q 50 QY 20 ASK 1
+querylanguage QL 20
+question Q 50 QU 64 ASK 11 HOW 4 WHO 2 WHY 4
 questionaboutstyle HOW 1
 questionandanswer QA 1
 questionofidentity WHO 1
+quetzal Q 50
 queue CUE 1 INE 1 ROW 2
 quiche ART 1
 quick ER 1
@@ -8225,6 +9116,7 @@ quickassessment CAN 1
 quickkip NAP 1
 quickmove BOB 1
 quiet P 50 AP 5 ASH 6 ALM 1 MUM 3 SH 137 USP 1 USH 1
+quintal Q 50 QL 20
 quirk TIC 3
 quit DIE 1 END 1
 quite ALL 6 SO 5
@@ -8242,20 +9134,25 @@ racetrackcontestant CAR 1
 racket CON 1 DIN 15
 radiantdischarge ARC 1
 radiation UV 2
+radiator RAD 20
 radical R 50 RED 7
 radioactive HOT 1
 radioband AM 1
 radioformat AM 1
+radiofrequency RF 20
 radiopresent DJ 2
+radiotelegraphy RT 20
+radiotelephony RT 20
 radium RA 51
-radius AR 1
+radius R 50 RAD 20 AR 1
+radix RAD 20
 radon RN 50
 rag TAT 1
 rage FAD 1 IRE 14
 raging HOT 1
 rail BAR 2
 railroad RR 3
-railway ARY 2 RY 53
+railway RLY 20 RWY 20 RY 73 ARY 2
 railwayline RY 1
 rain TER 1 WET 3
 raincoat MAC 4
@@ -8268,6 +9165,7 @@ rallyround AID 1
 ram TUP 5
 ramble GAD 1
 rancid OFF 1
+rand R 50
 randperhaps AYN 1
 range AGA 4 KEN 2 RUN 2
 rangeofknowledge KEN 2
@@ -8303,7 +9201,9 @@ realangry MAD 1
 realfoolish MAD 1
 realise SEE 1
 realistic RAW 1
+ream RM 20
 rear ASS 1 END 1
+rearadmiral RA 20
 rearofvessel AFT 1
 reason END 1 WHY 2 WIT 1
 reasonable NE 1
@@ -8316,8 +9216,10 @@ rebelliousyoungsteronce TED 1
 rebelofthefifty TED 1
 rebuke RAP 5
 recall IF 1
+receipt REC 20
 receive GET 2
 received GOT 6 HAD 1 RE 1
+receivedpronunciation RP 20
 recent NEW 2
 recentnick HOT 1
 recentpinch HOT 1
@@ -8333,14 +9235,18 @@ recognise SEE 1 SAW 1
 recogniseartist RA 1
 recogniseplayer CAP 1
 recommend TIP 1
-record EP 117 LP 71 ACD 3 ALP 4 ACT 1 CD 10 DIS 1 ISC 1 LOG 55 EPS 7 LPS 3
+record EP 117 LP 71 REC 20 ACD 3 ALP 4 ACT 1 CD 10 DIS 1 ISC 1 LOG 55 EPS 7 LPS 3
 recordcompany EMI 3
 recorddevice MIC 1
 recordplayer ADJ 1 DJ 1
 recover ER 1
 recreational FUN 1
+recreationalvehicle RV 20
 recruit GI 1
+recto RO 20
+rector R 50
 red CHE 1 RED 1 RY 1
+redcross RC 20
 reddishbrown BAY 1
 redresin LAC 1
 reduce CUT 3
@@ -8349,21 +9255,26 @@ reducedamount TY 1
 reduction CUT 2
 reef CAY 1 KEY 1
 referee REF 1
-reference SEE 1
+reference REF 20 SEE 1
+referencelibrary RL 20
 referencework OED 1
 referto ON 2 RE 18
+refertodrawer RD 20
 refined ICE 1
 refinement SH 1
 reform NEW 2
+reformepiscopal RE 20
+reformpresbyterian RP 20
 refreshmentarea BAR 1
 refusal NAY 3 NO 29
 refusetoallow BAN 1
 refusetoforgoright OSS 1
 regard EYE 1 OF 1 ON 9 RE 30
 regenerate NEW 1
-regiment RA 1 RE 1
+regiment RGT 20 RA 1 RE 1
 register LOG 6
-registerednurse RN 1
+registerednurse RN 21
+regiusprofessor RP 20
 regress IS 1
 regret RUE 55 TY 1
 regular R 50 SET 1 OFT 7
@@ -8375,10 +9286,12 @@ reject BIN 1
 rejectas SA 1
 rejected OUT 2
 rejection NO 1
+relate REL 20
+related REL 20
 relateto OF 3 ON 2 RE 5
-relation SIS 2 SON 1 IT 4 KIN 8 SEX 2
+relation REL 20 SIS 2 SON 1 IT 4 KIN 8 SEX 2
 relationship IO 1 TIE 7
-relative BRO 5 DAD 1 KIN 14 MA 1 NAN 9 ON 1 PA 2 RAN 1 REL 2 SIB 1 SIS 20 SON 15
+relative REL 22 BRO 5 DAD 1 KIN 14 MA 1 NAN 9 ON 1 PA 2 RAN 1 SIB 1 SIS 20 SON 15
 relativeinformal SIS 1
 relativeoftortoise IN 1
 relax LIE 1 SIT 2 SAT 4
@@ -8406,6 +9319,7 @@ remain BE 4 LIE 4 ASH 30 IS 1
 remainder END 1
 remaininside IN 1
 remainofcigarette ASH 2
+remember MEM 20
 reminder CUE 1 JOG 1
 reminderofdebt IOU 1
 remote FAR 7 OUT 4
@@ -8426,7 +9340,7 @@ rentout LET 2
 rentproperty LET 3
 repair FIX 2
 repairwork DIY 1
-repeat DO 1
+repeat RPT 20 DO 1
 repeated BIS 2 CHE 1
 repeatedattempt GO 1
 repeatedlight ON 1
@@ -8434,16 +9348,17 @@ repeatednote CC 1
 repetitivestraininjury RSI 1
 replace SUB 1
 replacement SUB 2
-report CRY 1 POP 1 SAY 1
+report RPT 20 CRY 1 POP 1 SAY 1
 reporter ED 1
 repose SAT 1
 reprehensible ILL 1
 represent BE 1 IS 2
-representative MP 9 REP 5
+representative REP 25 MP 9
 reprimand RAP 1 WIG 1
 reptile ASP 2
 reptilianbrain ID 1
-republican R 50 AR 10 REP 2
+republic REP 20
+republican REP 22 GOP 20 R 50 AR 10
 repugnantsound UGH 1
 reputation TE 1
 request ASK 20 BEG 1
@@ -8452,25 +9367,26 @@ requestforhelp SOS 2
 requesttoturn PTO 1
 rescueboat ARK 3
 rescuevessel ARK 4
-research DIG 1 RES 5
+research RES 25 DIG 1
 researchcentre LAB 1
 researchestablishment LAB 1
 researchfacility LAB 2
 researchsite LAB 3
 resemble AS 1
 reservation BUT 1
-reserve ICE 18 RES 5 SUB 3 TA 2
+reserve RES 25 ICE 18 SUB 3 TA 2
 reserved COY 3 HY 1 SHY 4
+reservedecoration RD 20
 reserveplayer SUB 1
 reservist TA 1
-residence EST 1 RES 3
+residence RES 23 EST 1
 residentialcarefacility ES 1
-residentmagistrate RM 1
+residentmagistrate RM 21
 resin LAC 3
 resinousmaterial LAC 1
 resistance R 50
 resistanceunit OHM 1
-resolution RES 1
+resolution RES 21
 resolve END 1
 resort SPA 19
 resortcity RIO 1
@@ -8493,19 +9409,24 @@ restwith AT 1
 result END 2
 resultofsunbathe TAN 1
 resume CV 50
-retire BED 1 EX 3 RET 2 COY 1 SHY 4
+retain RET 20
+retire RET 22 RTD 20 BED 1 EX 3 COY 1 SHY 4
 retiree OAP 1
 retirementplace COT 1
 retreat DEN 20
-return PAY 1 AT 1 VE 1 BUS 1
+return RET 20 PAY 1 AT 1 VE 1 BUS 1
 returnto OT 1
+returntothebeginning DC 20
 rev AX 1 HUP 1 LAY 1 ME 1 MOB 1 OTT 1 SLY 1 TO 1 UNI 1 VAN 1 VO 1 YES 1
 reveal AIR 1 OUT 12
+revelation REV 20
 revenue TAX 1
 reverence AWE 1
 reverend REV 50
 reviewharsh PAN 1
-revise REV 1
+revise REV 21
+reviseversion RV 20
+revision REV 20
 revolt UP 2
 revolution REV 1
 revolutionary CHE 45 MAO 1 RED 25
@@ -8513,7 +9434,9 @@ revolutionarytype RED 1
 revolver GAT 1
 reward FEE 1 PAY 1
 rewardforworking PAY 1
+rex R 50
 rhenium RE 50
+rhesus RH 20
 rhodeisland RI 50
 rhodium RH 50
 rhubarb ROT 4
@@ -8532,8 +9455,10 @@ rift GAP 1
 right R 50 RT 100 AR 7 FIT 1 ITR 2 OK 17 PER 1 TOR 1 YES 4 RR 6 RTS 1
 rightcontext APT 1
 righthand RH 54
-rightreverend RR 2
+rightreverend RR 22
 rightsay OK 1
+rightworshipful RW 20
+rightworthy RW 20
 rigid SET 2
 rim LIP 3
 ring O 50 AO 2 AL 1 PEN 1 OO 9 OS 2
@@ -8579,6 +9504,7 @@ roguecomputer HAL 1
 roll BUN 8 SUB 2 WAD 1
 roller RR 50 DIE 1
 rollroyce RR 50
+roman ROM 20
 romancatholic RC 50
 romance ION 1 LIE 2 WOO 1
 romanemperor ERO 1
@@ -8593,6 +9519,7 @@ rookie CUB 2
 room RM 64 ARM 1 ALL 1 DEN 1 LAB 1
 roomrenter INN 1
 roomupstairs TIC 1
+root RAD 20
 rootvegetable ROT 1
 rope GUY 2 LE 1
 rose AXL 1 DUP 1 RED 2
@@ -8604,7 +9531,7 @@ roughfight AWL 1
 roughhandle PAW 1
 roughhardstone RAG 1
 roughsound DIN 1
-round AO 1 LAP 2 OO 1
+round O 50 AO 1 LAP 2 OO 1
 roundhalfofpack CK 1
 roundloaf COB 1
 roundthebend MAD 2
@@ -8619,10 +9546,13 @@ royalacademy RA 50
 royalartillery RA 50
 royalcouple KER 1
 royalengineers RE 50
+royalhighness RH 20
+royalmail RM 20
 royalmarine RM 51
 royalnavy RN 51
 royalpair KER 1
 royalrecognition MBE 1
+royalsociety RS 20
 royalty ER 2
 rubber ULE 2
 rubbish AGE 1 BS 1 ROT 49 TAT 42 TOR 1 UNK 1
@@ -8630,6 +9560,7 @@ rubbishcontainer BIN 1
 rubbishdump TIP 2
 rubbishheap TIP 1
 rubidium RB 50
+ruble R 50
 ruby RED 7
 ruddy RED 9
 rude RAW 1
@@ -8642,23 +9573,24 @@ rugbyplayer OFF 1
 rugbyscore TRY 1
 rugbyunion RU 51
 ruin MAR 4 ROT 1
-rule IM 1 LAW 13 RAJ 1 LED 1 RR 2 IN 1
+rule R 50 IM 1 LAW 13 RAJ 1 LED 1 RR 2 IN 1
 rulebook PIE 1
 ruleover RAN 1
 ruler AGA 1 ER 9
 rum ODD 13 TOT 1
-run R 100 LED 1 AR 3 FLY 3 GO 10 IGO 1 IR 2 ISR 1 OP 1 TOR 1 NG 1 ON 31
+run R 50 LED 1 AR 3 FLY 3 GO 10 IGO 1 IR 2 ISR 1 OP 1 TOR 1 NG 1 ON 31
 runaway FLY 2
 runawayfromcrowd ONG 1
 rundown ILL 1
 runforit FLY 1
 runinto MET 1 HIT 1 RAM 1
 runner DEE 1 MAT 1 SKI 14
-runout RO 10
+runout RO 30
 runright RR 1
 runtwice RR 1
 runup NUR 1
-rupee RS 1
+rupee R 50 RE 20 RS 21
+ruraldean RD 20
 rush FLY 1 RIP 1 RAN 5
 russia RUS 50
 russianaircraft MIG 1
@@ -8670,13 +9602,16 @@ russianriver OB 1
 rust ROT 1
 rusty RED 1
 ruthenium RU 50
+rutherfordium RF 20
 s AND 1 ESS 1 IN 1 MY 1 ON 1
+sabbath S 50
 sack AXE 3 BAG 8 BED 10 ROB 1 OUT 1
 sackoldone OI 1
 sackoutside BED 1
 sacred OLY 1
 sacredmantra OM 1
-sail JIB 2 ED 1
+sadomasochism SM 20
+sail SLD 20 JIB 2 ED 1
 sailetc RIG 1
 sailor AB 155 ABS 8 LE 1 OS 3 PO 1 TAR 90 MEN 1 RM 1 RN 16 VY 2
 sailorleavearea MAN 1
@@ -8697,21 +9632,26 @@ salt AB 2 TAR 3 WIT 1
 saltwater SEA 3
 saltwork PAN 1
 salty INE 1
+salvationarmy SA 20
+samarium SM 20
 same DO 1
 sample SIP 1 TRY 8 ATE 1
-samuel SAM 1
+samuel SAM 21
 sanatorium SAN 1
 sanctimonious API 1 PI 11
 sanction LET 1 OK 7 OKS 1
 sanctuary DEN 3
 sandbank BAR 2
 sandwich BLT 51 SUB 3 ES 1
+sanmarino RSM 20
 santahelper ELF 1
-sapper RE 52
+saotomeandprincipe ST 20
+sapper SPR 20 RE 52
 sarah SAL 8
 sarahbrief SAL 1
 sarcasticremark CUT 1
 sash OBI 1
+saskatchewan SK 20
 satellite IO 1 OON 1
 satire UP 1
 satiricalauthor IFT 1
@@ -8728,7 +9668,7 @@ savagecriticise PAN 1
 save BAR 10 BUT 7
 savescheme ISA 1
 saveus SOS 1
-say AS 1 EG 200 SAW 4 UM 1
+say EG 220 AS 1 SAW 4 UM 1
 saynomore SAY 1
 saynothing MUM 2 SH 7
 saytoeliminatenoise SH 1
@@ -8751,8 +9691,10 @@ scene ACT 1
 scenery SET 2
 schedule SET 2 ON 1
 schem ART 1
+schill S 50 SCH 20
 scholar AMA 1 BA 3 DON 1 MA 3 BAS 1
 school SCH 115 ED 2 GAM 3 POD 9 NS 2
+schoolcertificate SC 20
 schoolexam SE 1
 schoolground US 1
 schoolofmeditation ZEN 1
@@ -8765,6 +9707,7 @@ schutzstaffel SS 1
 science SCI 53 SC 2
 sciencecentre LAB 1
 sciencefiction SF 51
+scientific SCI 20
 scientificestablishment LAB 1
 scoff EAT 1 ATE 6
 scold NAG 2
@@ -8800,12 +9743,14 @@ scratch NIL 1
 scratchhead ET 1
 screen VET 2
 screw LAY 1 ROB 1
+screwsteamer SS 20
 scribble ING 1
 script MS 1
 scripture OT 1
 scriptureclass RE 1
 scripturelesson RE 3
 scrounge BUM 1
+scruple SCR 20
 scrutinise VET 1
 scud RUN 1
 sculpturemaybe ART 1
@@ -8815,6 +9760,7 @@ scuttle HOD 1
 sea MED 32 RED 1
 seaabroad MER 1
 seabird MEW 1
+seaborgium SG 20
 seabream TAI 1
 seafood COD 1 LAM 1
 seainlet BAY 2
@@ -8843,7 +9789,7 @@ secondstringer SUB 1
 secondwriter PEN 1
 secret SLY 2
 secretagent SPY 5 CIA 1
-secretary SEC 52 PA 71
+secretary PA 71 SEC 52
 secretarygo PA 1
 secretcode PIN 1
 secrethideaway DEN 1
@@ -8852,7 +9798,7 @@ secretlistento BUG 1
 secretplace DEN 1
 secretservice CIA 2
 sectarian OT 1
-section ARM 1 BIT 2
+section S 50 ARM 1 BIT 2
 secure BAG 1 BAR 1 GET 2 PIN 6 TIE 5 WIN 8
 securecode PIN 1
 secured GOT 1
@@ -8884,8 +9830,14 @@ self I 50 EGO 1
 selfcatering SC 50
 selfcontain SC 50
 selfesteem EGO 1
+selleropinion SO 20
+semester SEM 20
 semi DE 1
-senator SEN 5
+semicolon SEM 20
+seminary SEM 20
+semitic SEM 20
+senate SEN 20
+senator SEN 25
 send IT 1
 sendback SIR 1
 sendbackparty DO 1
@@ -8901,6 +9853,7 @@ seniorpoliceman DI 1
 seniorservice RN 50
 seniorsoldier NCO 1
 seniorwoman NAN 1
+senor SR 20
 sensation WOW 2
 sensationalsuccess WOW 1
 senseless OUT 1
@@ -8913,13 +9866,14 @@ sentiment GOO 4
 sentimentality GOO 3
 sentimentallover TIC 1
 sentimentalstuff GOO 2
-separate RED 1
+separate SEP 20 RED 1
 september SEP 51
 sequenceofsong SET 1
-sergeant NCO 1
-sergeantmajor SM 2
-serial SER 1
-series RUN 9 SER 7 SR 1
+sergeant SGT 20 NCO 1
+sergeantatlaw SL 20
+sergeantmajor SM 22
+serial SER 21
+series SER 27 RUN 9 SR 1
 seriesofanecdote ANA 1
 seriesofbook NT 2
 seriesofrace TT 1
@@ -8927,7 +9881,7 @@ serious BAD 1 BIG 1 SAD 1
 seriousconflict WAR 1
 seriouserror SIN 1
 seriouspest RAT 1
-sermon SER 1
+sermon SER 21
 serpent BOA 1
 servant AN 1 MAN 10 MEN 1
 serve ACE 1 ON 1
@@ -8957,7 +9911,7 @@ setonfire LIT 1
 setout LID 1
 setsail GO 1
 settee FA 1
-setter DOG 3 FED 1 GEL 4 IO 1 JAM 1 ME 36 MY 1 RED 1 SUN 2 US 2 WE 1
+setter I 50 DOG 3 FED 1 GEL 4 IO 1 JAM 1 ME 36 MY 1 RED 1 SUN 2 US 2 WE 1
 setterandsolver US 1
 setteris IAM 1
 settermaybe DOG 1
@@ -9000,8 +9954,8 @@ sham COD 1
 shame SIN 1
 shanty HUT 1
 shape HEW 1
-shapeofconsole S 20
-share CUT 2 END 1
+shapeofconsole S 50
+share SHR 20 CUT 2 END 1
 shareindecision SAY 1
 shareofprofit CUT 1
 sharpblow RAP 1
@@ -9012,6 +9966,7 @@ she THI 1 MA 1 SHE 1
 shed BIN 1 HUT 6
 shedfeather MEW 1
 shedifleavehotel ED 1
+shedrewit DEL 20
 shedtear CRY 1 SOB 1
 sheep EWE 6 NAG 1 RAM 37 TEG 3 TUP 9 WE 1
 sheepish SHY 1
@@ -9022,8 +9977,10 @@ shell POD 1 SUB 1
 shelter DEN 1 HUT 2 LEE 45 HID 1
 shelterzone LEE 1
 shelved OFF 1
+shemakethis FEC 20
 shepherd LED 1
 sherrin NED 1
+shesculpt SC 20
 shewill LL 1
 shifttotheright ENT 1
 shilling S 50
@@ -9031,6 +9988,7 @@ shindig DO 1
 shining ON 1
 ship SS 138 ASS 1 ARK 11 ER 1 SUB 1
 shipfullofanimal ARK 1
+shiporder SO 20
 shirt TEE 3 TOP 1
 shock AL 1 JAR 3
 shocker BOO 2
@@ -9053,6 +10011,7 @@ shortdistance MM 1
 shortfilm VID 1
 shortflight HOP 1
 shorthaircut BOB 1
+shorthand SH 20
 shortholiday HOL 1
 shortjourney HOP 1
 shortman DES 1
@@ -9123,21 +10082,26 @@ sideofpersonality ID 1
 sideofrhomb RB 1
 sidesepal ALA 1
 sidney SID 1
+siemens S 50
 sierra S 50
 sierraleone WAL 50
 siesta NAP 1
 sigh AH 1
 sight SEE 1 SPY 2
-sign CUE 2 INK 1 LEO 6
+sign SGD 20 CUE 2 INK 1 LEO 6
 signal CUE 4 NOD 3
 signalagreement NOD 1
+signalcorps SC 20
+signalfrequency SF 20
 signalnottogo RED 1
 signalofapproval NOD 1
+signalofficer SO 20
 signaltoact CUE 1
 signaltobegin CUE 1
 signaltoplayer CUE 1
 signaltosaystop RED 1
 signaltostop RED 3
+signature SIG 20
 significant BIG 1
 significantfigure TON 1
 significantother SO 1
@@ -9156,6 +10120,8 @@ signofsun TAN 1
 signoftiredness NOD 1
 signofuncertainty UM 1
 signofwelcome HI 1
+signor SIG 20
+signore SIG 20
 signstopprogress RED 1
 signtoproceed GO 1
 silence ET 1 GAG 7 MUM 1 SH 7
@@ -9182,10 +10148,12 @@ singapore SGP 50
 singer RAT 2 TIT 3
 singermissinginitialnote ASS 1
 single ITI 1 NE 1 ONE 42 RUN 1 II 1
-singular AS 1 ODD 1 ONE 1
+singular S 50 AS 1 ODD 1 ONE 1
 sink DIP 4 EBB 1 POT 2 SAG 4
+sinnfein SF 20
+sir SR 20 MM 20
 siren TER 1
-sister NUN 29 SIS 6 SR 8 UNS 1
+sister SR 28 NUN 29 SIS 6 UNS 1
 sit LIE 1 SIT 1
 sitback TIS 1
 siteassociatewithvice DEN 1
@@ -9258,7 +10226,7 @@ smallbite NIP 2
 smallboy ALF 1 RON 1
 smallbuilding HUT 1
 smallbusiness BUS 1
-smallcapital SC 2
+smallcapital SC 22
 smallchild CH 1 TOT 4
 smallcoin BIT 1
 smallcompany CO 2
@@ -9297,6 +10265,7 @@ smallthing TAD 1
 smalluniversity UNI 1
 smallvessel TUG 1
 smallvolume CC 53 CL 50 ML 50
+smallwoman SW 20
 smallwork OP 1
 smart APT 1 FLY 3 RAF 1 URN 1
 smartphonedownload APP 1
@@ -9343,7 +10312,7 @@ sober TT 2
 sobstart SO 1
 socialcreature ANT 1
 socialgathering BEE 1
-socialist FTY 1 RED 28
+socialist SOC 20 FTY 1 RED 28
 socialite DEB 2
 socialmediumplatform ER 1
 socialsciencedegree PPE 1
@@ -9351,6 +10320,10 @@ socialtype ANT 1
 socialworker ANT 20 BEE 2
 society S 50 SOC 51 AS 1
 societygirl DEB 8
+societyofantiquaries SA 20
+societyofart SA 20
+societyofengineers SE 20
+societyofjesus SJ 20
 sock HIT 1
 socko POW 1
 sod OT 1
@@ -9384,12 +10357,14 @@ sole ONE 2
 solemnperson OWL 1
 solemnpromise VOW 2
 solemntype OWL 1
-solicitorgeneral SG 1
+solicitor SOL 20
+solicitoratlaw SL 20
+solicitorgeneral SG 21
 solidify SET 1
 solidtraffic JAM 1
 solitary ONE 1
 solost SO 1
-solution ANS 1 SOL 1
+solution AQ 20 SOL 21 ANS 1
 solve DO 2
 solver YE 2 YOU 12
 solverandsetter OUR 1
@@ -9430,6 +10405,7 @@ somepolice MET 1
 somepublicity AD 1
 somequarter ENE 1
 someradio AM 1
+somerset SOM 20
 somesalmon LOX 1
 someshuteye NAP 1
 somesleep NAP 2
@@ -9517,7 +10493,7 @@ somewoman HER 1
 somewood LOG 2
 somework ERG 5
 somme WAR 1
-son S 100 AS 1 BOY 2 LAD 3 SS 6
+son S 50 AS 1 BOY 2 LAD 3 SS 6
 song AIR 30 IR 1 LAY 14 ODE 1
 songanddance ADO 4 DO 1
 songbird TIT 7
@@ -9526,7 +10502,7 @@ songtobeplay SET 1
 sonofabitch SOB 1
 soon MO 1
 soppy WET 1
-soprano SS 1
+soprano S 50 SOP 20 SS 1
 sorbet ICE 1
 sore RAW 1 RED 2
 sorrowful AL 1
@@ -9578,15 +10554,18 @@ sourceofreadycash ATM 1
 sourceoftimber FIR 1
 sourceofwater SPA 1
 souse SOT 1
-south S 50 AS 2 ISS 1 ORS 1 STH 3
+south S 50 SO 20 STH 23 AS 2 ISS 1 ORS 1
 southafrica SA 51 ZA 50
-southamerica SA 1
+southamerica SA 21
+southaustralia SA 20
 southcarolina SC 50
 southdakota SD 50
 southeast SE 66
 southeastern SE 52
 southern S 50 AS 1 ISS 1
+southernregion SR 20
 southernsoldier LEE 1
+southisland SI 20
 southwest SW 51
 southwestern SW 50
 sovereign ER 8 HM 1 XES 1
@@ -9606,6 +10585,7 @@ spanish SP 3
 spanishapproval OLE 1
 spanisharticle EL 6
 spanishcheer OLE 1
+spanishcompany CIA 20
 spanishgent DON 1
 spanishgentleman DON 2
 spanishguy DON 1
@@ -9617,7 +10597,7 @@ spar BOX 2
 sparetyre GUT 1
 spark ARC 1 LIT 1
 spasm TIC 2
-speak SAY 5 ING 1
+speak LOQ 20 SAY 5 ING 1
 speakbadof DIS 1
 speakfond COO 1
 speakhesitant HAW 1
@@ -9626,22 +10606,25 @@ speaksoft COO 1
 spearhead LED 1
 special S 50 SP 73 AS 1 OWN 1 PET 1
 specialability ESP 1
-specialconstable SC 3
+specialconstable SC 23
 specialforce SS 1 SAS 1
 specialist ERT 1 PRO 1
 specialistdoctor VET 1
 speciality BAG 1
+specialorder SO 20
 specialpower ESP 1
 specialregiment SAS 1
 specialsoldier SAS 1
-species SP 1
+species SP 21 SPP 20
 speciesabrupt SP 1
+specificgravity SG 20
 spectacle OO 3
 speculate BET 2 USE 1
 speculation BET 5
 sped RAN 1
 speed ACE 1 ATE 1 MPH 16 REV 1
 speedcompetition ATT 1
+speedoflight C 50
 speedunit MPH 1
 spell SP 53 HEX 1
 spellcontest BEE 1
@@ -9694,7 +10677,9 @@ spruce FIR 1
 spy CIA 83 LES 1 BUG 1 SEE 3
 spyagency IA 1
 spygroup CIA 1
+spymaster M 50
 spyoverseas CIA 1
+squadron SQN 20
 square S 50 SQ 50 AS 1
 squash JAM 3
 squat LOW 1 SAT 1
@@ -9710,6 +10695,7 @@ st ST 2
 stableman LAD 1
 staff BAR 4 MAN 35 MEN 15 MON 1 ROD 38
 staffleavestation FF 1
+staffofficer SO 20
 staffordshiretown EEK 1
 stage LAG 1 LEG 30 SET 2
 stageofrelay LEG 1
@@ -9727,7 +10713,7 @@ standard STD 52 IC 1 PAR 56 SET 1
 standardexpected PAR 1
 standardforgolfer PAR 1
 standardministrytest MOT 1
-standorder SO 2
+standorder SO 22
 stanza SE 1
 staple PIN 1
 star ACE 4 SUN 26 TOP 1 GO 1 LEO 2
@@ -9763,7 +10749,7 @@ staunch DAM 2
 stay BE 2
 steal ROB 6 BOA 5
 stealfrom ROB 3
-steamer SS 2 STR 2
+steamer STR 22 SS 2
 steamship SS 58
 steamy HOT 2
 steeldrum PAN 1
@@ -9773,6 +10759,7 @@ steer CON 4 OX 12
 steermechanism FIN 2
 steerperhaps YAK 1
 step PAS 3
+sterling STG 20
 stern AFT 1
 stew DO 1
 stewalmost STE 1
@@ -9800,11 +10787,13 @@ stinker CAD 1
 stir ADO 3
 stitch SEW 5
 stitchtogether SEW 1
+stkittsandnevis SCN 20
 stlucia WL 50
 stock OLD 1 SET 1
 stocking BAS 1
 stockingfabric NET 1
 stockingfiller LEG 1
+stoke S 50
 stoked FED 1
 stolen HOT 12
 stomach GUT 2 TUM 11
@@ -9824,14 +10813,17 @@ stopsignal RED 3
 stopwork DIE 10 ED 1
 store OP 1 SE 1
 storey OOR 1
+stormsection SA 20
 story ANA 3 ES 1 BIO 1 FIB 3 GEN 1 LE 1 LIE 54 TLE 1
 storygenre SOB 1
 stout ALE 1 FAT 2
 stove AGA 3
-straight STR 1
+straight STR 21
 straightpunch JAB 1
 strain AIR 1 TRY 1
+strait ST 20
 strange NEW 3 ODD 9 RUM 30 LY 1
+strangeness S 50
 strap TAB 1 FIT 1
 stray ERR 17
 streak RUN 1
@@ -9853,7 +10845,7 @@ strip ROB 1
 stripleadfromwood IR 1
 strive VIE 1
 stroke AT 1 HIT 1 PAT 1 PET 2 TIC 1
-strong FIT 1 HOT 1
+strong STR 20 FIT 1 HOT 1
 strongbeast OX 1
 strongcriticise PAN 1
 strongdesire YEN 1
@@ -9863,7 +10855,7 @@ strongsmell HUM 1
 strontium SR 50
 struggle VIE 31 WAR 3
 stud ING 1
-student AL 3 ED 1 PIL 1 UNI 1 LL 5 NUS 6
+student L 20 AL 3 ED 1 PIL 1 UNI 1 LL 5 NUS 6
 studentevent RAG 4
 studentfestivity RAG 1
 studentgroup NUS 1
@@ -9890,18 +10882,19 @@ stylish FLY 1 HIP 1 IN 11
 sub BUN 1 END 1
 subdue COW 2
 subdued LOW 1
-subject PIC 1
+subject SUB 20 PIC 1
 subjectto ON 2 RE 1
 subjecttocontrol LE 1
 submit BOW 1
 subscription FEE 1
 subsequent ER 1 SO 2
+subspecy SSP 20
 substantial FAT 1 UGE 1
-substantive SB 1
+substantive SB 21
 substitute IN 2
 subtfunny DRY 1
 subtle DRY 1
-succeed WIN 6 WON 1
+succeed S 50 WIN 6 WON 1
 succeedat WON 1
 succeedin WIN 1
 success AGO 1 GO 4 HIT 22 UP 1 WIN 16
@@ -9920,6 +10913,7 @@ suffer AIL 3 DIE 1 LET 1 ILL 6 HAS 1
 sufferdiscomfort ED 1
 sufferwith HAS 1
 suffice DO 3
+suffix SFX 20
 suggestion DEA 1 INT 1 TIP 8
 suit FIT 9
 suitable APT 13 FIT 12 OK 2
@@ -9949,11 +10943,14 @@ sup ATE 1
 super ACE 1 BIG 1 FAB 1
 superb ACE 3
 superbservice ACE 1
+superfine SUP 20
 superhero AN 1
-superior AU 3 TOP 2
+superior SUP 20 AU 3 TOP 2
+superlative SUP 20
 superpower US 3
 supervise RAN 1
-supplement ADD 4 MAG 1
+supine SUP 20
+supplement SUP 20 ADD 4 MAG 1
 supplementtobill COO 1
 supply FED 3 KIT 1
 supplyequipmentto ARM 1
@@ -9978,9 +10975,10 @@ supportofgolfer TEE 1
 supportofwoman BRA 1
 supportoncourse TEE 1
 suppress BAN 3
-supreme TOP 1
+supreme SUP 20 TOP 1
 sure YES 1
 surf SEA 1
+surfacetension T 50
 surgeon BS 1 CHB 1 VET 4
 surgery OP 18
 surgicalprocedure OP 2
@@ -10033,7 +11031,13 @@ switchposition ON 1
 switchsetting OFF 1
 switzerland CH 59
 sword EE 1
+symbol SYM 20
+symmetrical SYM 20
 sympathy ITY 1
+symphony SYM 20
+symptom SYM 20
+synonym SYN 20
+synthetic SYN 20
 syntheticheadgear WIG 1
 syria SYR 50
 syrup WIG 1
@@ -10123,11 +11127,13 @@ tap HC 1 RAP 1
 taproom BAR 1
 tar AB 51
 tardy ATE 1
+tare T 50
 target AIM 4 END 3
 targetat FOR 1
 tart PIE 3
 tartsometimes PIE 1
 task JOB 1 UTY 1
+tasmania TAS 20
 taste BIT 1 INT 1 OUR 1 TRY 4
 tasteless ISH 1
 tastelessarticle TAT 2
@@ -10145,6 +11151,7 @@ tax VAT 81 TRY 1
 taxcollector IR 1
 taxi CAB 46
 taxmanonce IR 1
+taxofficer TO 20
 tea CHA 100
 teabrew CHA 1
 teach CON 1
@@ -10162,6 +11169,9 @@ tease EN 1 KID 2 RAG 4 RIB 7
 teaspoon TSP 2
 tech IT 1
 techgadget PAD 1
+technetium TC 20
+technicaldrawing TD 20
+technicalknockout TKO 20
 technique ART 3 WAY 1
 technologicalsubject IT 1
 technology IT 4
@@ -10179,9 +11189,11 @@ teetotaller TT 59 ATT 1
 tel BOX 1
 telecomcompany BT 51 SKY 1
 telecommunicationprovider BT 1
-telegraphoffice TO 1
+telegraphoffice TO 21
 telepathy ESP 1
 telephone TEL 4
+telephonenumber TEL 20
+teleprinter TPR 20
 teletubby PO 1
 televise AIR 1 ON 1
 television SET 2
@@ -10202,16 +11214,19 @@ temple WAT 4
 temporaryunattractby OFF 1
 temptress EVE 3
 temptwoman EVE 2
-ten X 100 IO 9 TEN 2
+ten X 50 IO 9 TEN 2
 tend RED 1
 tender BID 6
 tenderafter BID 1
 tenderlovingcare TLC 1
 tendto RSE 1
 tennessee TN 52
-tense AT 3
+tenor T 50
+tense T 50 AT 3
 tent TOP 1
-tenth X 50
+tenth X 20
+terabyte TB 20
+terbium TB 20
 term END 1
 terminalsituation END 1
 termination END 2
@@ -10221,10 +11236,12 @@ terrace TER 53 ROW 2
 terrible BAD 3 BUM 1 TOO 1
 terrific ACE 2 RAD 1
 territorialarmy TA 50
-territory TER 2
+territorialdecoration TD 20
+territory TER 22
 terror AWE 1 IMP 1
 terrorist ETA 1 IS 1
 terroristpartoverlook TER 1
+tesla T 50
 test AL 1 MOT 7 OUT 1 RAL 1 TRY 26
 testament NT 2 OT 1
 testforcar MOT 1
@@ -10342,6 +11359,7 @@ theguy HE 13
 theheartless THE 1
 theinexperience RAW 1
 theitem IT 2
+theking CR 50
 thelady HER 5 SHE 3
 theladyvanish SHE 1
 thelastthing END 2
@@ -10374,6 +11392,7 @@ theodore TED 1
 theold YE 6
 theoldlady MA 3
 theoldman PA 10
+theoldqueen ER 50
 theoldwoman MUM 1
 theologian ADD 2 DD 9
 theologicalstudy RE 1
@@ -10399,7 +11418,8 @@ therink ICE 1
 theriver DON 1
 theroad MI 1
 thesack BED 7 ED 3
-thesame DO 3 ONE 1
+thesame ID 20 DO 3 ONE 1
+thesameas IQ 20
 thesea MED 1
 theseday AD 4 CE 2 NOW 4
 thesetter ME 3
@@ -10437,7 +11457,9 @@ thewriter IM 1 ME 18
 thewriterhave ID 1
 thewriteris IAM 1
 thewriterwill LL 1
+theydoit FF 20
 theyheartless TEY 1
+theymakeit FF 20
 theyoung FRY 1
 theyrunfootball FA 1
 thick DIM 2 FAT 3
@@ -10476,11 +11498,12 @@ thissmallone RAT 1
 thisway SIC 2
 thiswoman SHE 1
 thiswrite ME 1
-thiswriter IM 1 ME 31
+thiswriter I 50 IM 1 ME 31
 thiswriterhave VE 1
 thiswriterwould ID 1
 thomas TOM 2
 thor GOD 1
+thorium TH 20
 thornytree BEL 1
 thorough ALL 1 UP 1
 thoroughfare RD 1 ST 3
@@ -10490,7 +11513,7 @@ thoseneartome KIN 1
 thosenearus KIN 1
 thosepersonis RE 2
 though BUT 5 IF 4 THO 2
-thousand M 50 AK 1 IM 1
+thousand K 50 M 50 AK 1 IM 1
 thousandpound AG 1
 thrash TAN 2
 thread RE 1
@@ -10504,6 +11527,7 @@ threesister SSS 1
 threesome RIO 1
 threetenor TTT 1
 threetime TER 1 TTT 1
+threetimeaday TID 20
 throb HUM 2
 throne LAV 1
 through BY 5 IN 1 PER 13 VIA 17
@@ -10511,8 +11535,9 @@ throw BIN 1 LOB 7 SHY 4
 throwpossible RUG 1
 throwup LOB 4
 thug YOB 1
+thulium TM 20
 thunderousnoise DIN 1
-thursday THU 50 TH 8
+thursday TH 28 THU 50
 thus SIC 16 SO 93
 tibetanbovine YAK 1
 tibetanpriest AMA 1
@@ -10547,7 +11572,7 @@ timerepeated TT 1
 timesegment ERA 1
 timid COY 5 SHY 4
 timidperson HEN 1
-timothy TIM 2
+timothy TIM 22
 tin SN 57 CAN 30
 tinker TOY 1
 tint HUE 1
@@ -10567,6 +11592,7 @@ tired ARY 1 OLD 2
 titanium TI 51
 titian RED 1
 title MR 1 MRS 1 MS 1 SIR 4
+titus TIT 20
 to APT 1 AT 1 TO 32
 toachieve GET 1
 toacquire GET 1
@@ -10748,12 +11774,14 @@ tomatch GO 1
 tomatosauce TA 1
 tomature AGE 1
 tomcat GIB 1
+tome TOM 20
 tomfoolery FUN 1
 tomimic APE 1
 tomove GO 1
 tomovequick HIE 1
 tomperhaps CAT 1
-ton T 100 C 50 AT 1
+ton T 50 C 20 AT 1
+tonne T 50
 too AND 2
 toobad SAD 1
 tooblige TIE 1
@@ -10803,6 +11831,7 @@ toproducestory LIE 1
 toprogress GO 1
 toprohibit BAN 1
 toprovide DO 1
+topspeed C 50
 topull LUG 1 TOW 1 TUG 1
 topuniversity MIT 1
 topurchase BUY 1
@@ -10823,7 +11852,7 @@ torestrain PIN 1
 torig SET 1
 toriver TOR 1
 torment BUG 1 RAG 1
-torpedoboat TB 2
+torpedoboat TB 22
 torrid HOT 1
 torso ODY 1
 torture GYP 1
@@ -10863,6 +11892,7 @@ totakeactionagainst SUE 1
 totakeadvantageof USE 2
 totakeaseat SIT 1
 totakein EAT 1
+totakeleave PPC 20
 totakelegalaction SUE 1
 totakeoff APE 2
 totakeplace BE 2
@@ -10899,6 +11929,7 @@ towashgravelthrough PAN 1
 towatch EYE 1
 towear DON 1
 towit IE 1 SC 3
+township TP 20
 towork GO 2
 toworkat DO 2
 toworkwithmilitaryunit ED 1
@@ -10910,9 +11941,9 @@ track DOG 6 RUN 1 RUT 8 RY 5
 trackmanybuy HIT 1
 trade PLY 1
 trademark TM 2
-tradename TN 1
+tradename TN 21
 traderegular PLY 1
-tradeunion TU 18
+tradeunion TU 38
 tradevehicle VAN 1
 traditional OLD 2
 traffic JAM 1
@@ -10929,12 +11960,16 @@ trainoverhead EL 1
 traitor AT 1 RAI 1 RAT 10
 trajectory ARC 1
 tramp ANT 1 BUM 5 ME 2 UM 1
-transcendentalmeditation TM 1
+transaction TR 20
+transcendentalmeditation TM 21
 transgression SIN 9
+transitive T 50 TR 20
 translate TR 1
-translator TR 1
+translator TR 21
 transmit AIR 1
 transport BUS 7 CAR 4 ISS 1 JOY 2 RUN 1 VAN 1
+transportofficer TO 20
+transpose TR 20
 transvestite TV 50
 trap ESH 1 GIN 7 NET 17 PIN 1
 trapbyguy MAN 1
@@ -10969,12 +12004,16 @@ trifle JOT 1 TOY 1
 trim CUT 1 LOP 1 MOW 1 HEM 1
 trimmed CUT 1
 trinidadandtobago TT 50
+trinitrotoluene TNT 20
 triomissingsecond REE 1
 tripincar IVE 1
 tripletime TTT 1
+tritium T 50
 triumph WIN 8
 trivialchat YAK 1
 trivialentertainment PAP 1
+troop TP 20
+trooper TPR 20
 troops MEN 6 OR 3 RA 2 RE 3
 trophy CUP 28 POT 8
 tropicalplant PIA 1
@@ -10982,11 +12021,12 @@ trouble ADO 32 AIL 77 DOG 2 EAT 1 GYP 3 ILL 3 IRK 1 JAM 1 NAG 3
 troublemaker ATE 1 ELF 1 IMP 13
 troublesomefellow NED 1
 troublesomefemale ATE 1
+troy T 50
 truck RIG 2 UP 1 VAN 7
 true T 50 SO 1 YEA 1
 trump CAP 2
 trunk LOG 1
-trustee TR 3
+trustee TR 23
 try BID 1 DIB 1 GO 40 SHY 1
 trytocatchit BID 1
 trytoescape RUN 1
@@ -10995,11 +12035,12 @@ trytoputagoodlighton IN 1
 trytowin WOO 1
 tubby FAT 3
 tuber YAM 1
+tuberculosis TB 20
 tuberousplant OCA 1
 tuckaway ATE 1
 tuckin ATE 6
 tuckinto ATE 1
-tuesday TUE 52
+tuesday TU 20 TUE 52
 tug TOW 2
 tummyexercise UP 1
 tune AIR 17
@@ -11010,14 +12051,15 @@ turf SOD 7
 turkey TR 68 ASS 1 DUD 1 NIT 1 TOM 1
 turkishcommander AGA 1
 turkishofficial AGA 1
-turn U 50 ACT 1 GO 37 IGO 1 TRY 1 GOS 1
+turkmenistan TM 20
+turn U 20 ACT 1 GO 37 IGO 1 TRY 1 GOS 1
 turncoat RAT 2
 turndown DIM 1
 turned IT 1 OFF 1
 turnedsour OFF 1
 turnon LIT 4
 turnout GO 1 PEN 1
-turnover TO 1
+turnover TO 21
 turnup ID 1 PU 1
 turtle IN 1
 tutor DON 1
@@ -11138,10 +12180,13 @@ typeofpoem ODE 1
 typeofskirt RA 1
 typeofslip IOU 1
 typical EU 1
+typographer TYP 20
+typography TYP 20
 tyrant POT 1
 uglywoman HAG 1
 ukraine UA 50
 ulster NI 3
+ulsterunionist UU 20
 ultimate END 2 NET 1
 ultraviolet UV 51
 umpire REF 5
@@ -11169,10 +12214,13 @@ undercontrol LED 1
 underescort LED 1
 undergarment BRA 4
 undergo IN 1
+undersecretary US 20
 undersized WEE 1
 understand DIG 3 GET 3 SEE 14 KEN 4
 understood GOT 9 SAW 6
 undertake DO 2 JOB 1
+underthathead SV 20
+undertheword SV 20
 underwatervessel SUB 1
 underwear BAR 1 BRA 8
 underwearwornincorrect ARM 1
@@ -11206,6 +12254,7 @@ uninspiring DRY 1
 unintelligent DIM 2
 uninteresting DRY 4
 union NUM 1 NUS 1 TU 1
+unionist U 50
 unionvow IDO 1
 unique ONE 1
 uniquesellingpoint USP 1
@@ -11213,18 +12262,24 @@ unit AMP 1 ONE 17
 unite TIE 1
 united U 50 ONE 6 UTD 3 WED 2
 unitedarabemirates UAE 50
+unitedfreechurch UF 20
 unitedkingdom UK 50
 unitednations UN 52
+unitedpresbyterian UP 20
+unitedpress UP 20
+unitedservice US 20
 unitedstates US 50
 unitofelectricalcurrent AMP 1
 unittrust UT 1
 unity ONE 1
 universal U 50 AU 2 ALL 1
+universaltime UT 20
 university U 50 AU 3 INU 2 MIT 5 UNI 18 UP 5
+universitycollege UC 20
 universityfellow DON 1
 universitylecturer DON 2
 universityteacher DON 1
-unknown X 50 Y 50 Z 50 AY 1 SY 1 XY 1
+unknown IGN 20 X 50 Y 50 Z 50 AY 1 SY 1 XY 1
 unknownquantity ZY 1
 unknowntwin ZZ 1
 unlikeclergy LAY 1
@@ -11236,6 +12291,7 @@ unopenalcohol EER 1
 unopenbill EAK 1
 unopenpickle IRE 1
 unpaid DUE 1
+unplace O 20
 unpleasantguy CUR 1
 unpleasantnoise DIN 1
 unpleasantodour BO 1 HUM 2
@@ -11269,6 +12325,7 @@ unworldfigure ET 1
 up UP 3
 upendbronze TAN 1
 uponreturn CND 1
+uppercase UC 20
 upperclass U 50 AB 1 TE 1
 upperlimb ARM 1
 upperlimit MAX 1
@@ -11333,8 +12390,11 @@ vanadium V 50
 vanity EGO 1
 vapidtalk GAS 1
 vapour GAS 1
-variable X 100 Y 100 Z 100 AZ 1
+variable VAR 20 X 50 Y 50 Z 50 AZ 1
 variablequantity YY 1
+variant VAR 20
+variantreading VL 20
+variety VAR 20
 vase URN 15
 vasecontainash URN 1
 vaseforash URN 1
@@ -11352,32 +12412,39 @@ vehicletest MOT 1
 vehiclewithroofshearoff AR 1
 veillady NUN 1
 velocity V 50 ORV 1
+velocityconstant K 50
+venerable VEN 20
 venezuela YV 50
 venisonsupplier ELK 1
 venomoustype ASP 1
 venture BET 2
 veracious FUL 1
+verb V 50 VB 20
 verbalhumour PUN 1
 verballink AND 1
 verbalwit PUN 1
+verbtransitive VT 20
 verge RIM 1
 vermin RAT 6
 vermont VT 50
 vermouth IT 5
-verse INV 1 ODE 2 VV 1
+verse V 50 VV 21 INV 1 ODE 2
 versewriter ET 1
 versifier POE 1
+verso V 50
 versus V 50 VS 50
 very V 50 AV 12 SV 1 SO 87 TOO 2
 veryangry MAD 1
 veryattractive HOT 2
 verybig OS 3
+veryblack BB 20
 verybusy MAD 1
 veryfashionable HOT 1
 veryfavour IN 1
 verygood ACE 1 AI 2 DEF 1 FAB 1 PI 17 SO 9 TOP 1 VG 3
 verygoodindeed PI 1
 verygoodperson ST 1
+veryhard HH 20
 veryhot RED 1
 veryimportant BIG 1 KEY 2
 verykeen HOT 1
@@ -11405,11 +12472,14 @@ verysoft PP 3
 verystrong AFF 2 FF 3
 verywarm HOT 3
 verywell OK 1 YES 1
+verywellindeed OPT 20
 verywide SOW 1
+veryworshipful VW 20
 vessel ARK 10 CAN 19 CUP 3 EIN 1 JAR 2 JUG 2 PAN 8 POT 15 SS 4 SUB 2 TIN 1 TUN 1 URN 28 VAT 6
 vesselabout URN 1
 vestment ALB 1
 veteran OAP 1 OLD 4
+veterinarysurgeon VS 20
 veto BAN 2 BAR 1 NIX 1
 vi SIX 1
 via BY 5
@@ -11417,20 +12487,26 @@ vibration HUM 1
 vicar REV 14 VIC 2
 vicarupset VER 1
 vice SIN 5
+viceadmiral VA 20
+vicechancellor VC 20
+vicepresident VP 20
+viceversa VV 20
 viciousdog CUR 1
 viciousmongrel CUR 1
 viciousmutt CUR 1
 victor V 50 TOV 1 WIN 1
 victoria VIC 2
+victoriaandalbert VA 20
 victoriacross VC 50
 victory AV 2 WIN 36
 videoassistantreferee VAR 1
+videojockey VJ 20
 videosystem VHS 1
 vietnam VN 50
 vietnambrief NAM 1
 vietnamesedish PHO 1
 vietnamesefestival TET 1
-view EYE 1 SEE 9
+view VW 20 EYE 1 SEE 9
 viewer EYE 2
 vigil EVE 1
 vigorous FIT 1
@@ -11438,6 +12514,7 @@ vigour GO 1 PEP 2
 vil NO 1
 vilecreature RAT 1
 vilification MUD 1
+village VIL 20
 villain CAD 1 DOG 1 GUE 1
 villainy SIN 1
 vince AMI 1
@@ -11455,6 +12532,7 @@ virtuoso ERT 1
 virtuoustype ST 1
 virualreality VR 50
 virus BUG 3 FLU 2 HIV 2
+viscount VIS 20
 viscousstuff GOO 1
 visible YON 1
 visibleembarrass RED 8
@@ -11481,11 +12559,11 @@ volcanicfallout ASH 1
 volcano TNA 1
 volkswagen VW 50
 volt V 50
-volume V 50 VOL 1
+volume TOM 20 V 50 VV 20 VOL 1
 volunteer TA 72
 volunteerarmy TA 1
 volunteeronce TA 1
-vote X 100
+vote X 50
 voteagainst CON 2 NAY 3 NO 1
 votefor AYE 2 YEA 2
 voteinfavour AY 1
@@ -11507,6 +12585,7 @@ wail CRY 3
 walk PAD 1
 walkover WO 50
 wall DAM 2
+walloon WAL 20
 wallop TAN 1
 wally ASS 2
 wander AY 1 ERR 1 GAD 2 OVE 1
@@ -11517,8 +12596,10 @@ war NAM 1
 warm HOT 1 SUN 4
 warmcoat FUR 1
 warnlight RED 1
-warrantofficer WO 1
+warrantofficer WO 21
+warsawpact WP 20
 warship SUB 1
+warwickshire WAR 20
 wary SHY 1
 waryreluctant SHY 1
 washer MOP 1
@@ -11531,22 +12612,24 @@ wastefluid PEE 1
 watanabe KEN 1
 watch EYE 10 LO 2 SEE 5 SPY 2 AT 1
 watched SAW 1
-water EAU 3 PEE 8 SEA 12 WEE 3 WET 2 MED 1
+water AQ 20 EAU 3 PEE 8 SEA 12 WEE 3 WET 2 MED 1
+watergauge WG 20
 waterglass ER 1
 waterhole BAR 1 INN 2 PUB 1
 waterproof MAC 2
 watersource SPA 1 TAP 1
 watersportactivity SUP 1
 watersupply TAP 1
+watt W 50
 wave WAG 1
-way AVE 2 HOW 1 RD 6 ST 43 STS 1
+way WY 20 AVE 2 HOW 1 RD 6 ST 43 STS 1
 wayinwhich HOW 2
 wayof VIA 1
 waytoaddressqueen AM 1
 waytohitatennisball LOB 1
 waytovocalise HUM 1
 we UK 1 WE 6
-weak AW 1 WAN 3
+weak W 50 AW 1 WAN 3
 weaktype WET 1
 wealthy CH 1
 weapon ARM 34 AXE 2 BOW 2 GAT 1 GUN 5
@@ -11554,6 +12637,7 @@ wear AGE 1 DON 1 IN 28 ON 1
 wearandtear USE 1
 wearspectacle OO 1
 weather SKY 1
+weatherpermit WP 20
 web NET 9
 webaddress URL 1
 wedge GIB 1 JAM 1
@@ -11563,19 +12647,23 @@ week W 50 WK 56
 weep CRY 11 SOB 1
 wehave WED 1 VE 2
 weigh SAT 1
-weight W 50 FAT 1 KG 1 ON 1 OZ 1 TON 15 WT 3
+weight W 50 WT 23 FAT 1 KG 1 ON 1 OZ 1 TON 15
 weird ODD 2 RUM 7
 weis RE 1
 welcome AVE 5 ET 1 HI 13
 welfare AID 1
 well ER 1 FIT 2 OH 1 OK 1 SO 8 SPA 2
+welsh W 50
 welshman DAI 6
 welshriver USK 2
 wentdown ED 1
 west W 50 MAE 9 TOW 1
+westafrica WA 20
+westcentral WC 20
 westcountry SW 1
 western W 50
 westernaustralia WA 50
+westernregion WR 20
 westernsamoa WS 50
 westindies WI 50
 westvirginia WV 50 WVA 50
@@ -11624,6 +12712,7 @@ whatyouexpect PAR 1
 whatyouislookfor IT 1
 whatyoumightfindoncollar TIE 1
 wheel O 50 OO 50 COG 2 CAR 10
+wheeldrive WD 20
 wheelvehicle TER 1
 whelp CUB 1
 when AS 246 IF 1
@@ -11654,6 +12743,7 @@ whichcattlego MOO 1
 whichever ANY 1
 whichone WHO 1
 whichperson WHO 5
+whichsee QV 20
 while AS 52
 whilst AS 1
 whimsical FEY 3
@@ -11687,7 +12777,7 @@ widdecombe ANN 1
 wide W 50 AW 1
 width W 50
 widthforprint EN 1
-wife W 50 AW 4 RIB 2 US 1 UX 4
+wife UX 24 W 50 AW 4 RIB 2 US 1
 wifeonce EX 1
 wifethatis EX 1
 wifetoleaveafter HEN 1
@@ -11706,7 +12796,7 @@ willtogetinvolved ON 1
 willtoparticipate ON 1
 wilt SAG 1
 wily SLY 1
-win NET 1 WIN 1 TOP 1 UP 33
+win W 50 NET 1 WIN 1 TOP 1 UP 33
 wind AIR 2 GAS 3 URN 1
 windup BUG 1 DIE 1 RAG 1
 wine AVA 1 RED 52 VIN 2 CRU 1
@@ -11722,6 +12812,7 @@ wintersportgear SKI 1
 winterweather ICE 1
 wiper MOP 1
 wire BUG 1
+wiregauge WG 20
 wisconsin WI 51 WIS 50
 wisecracker WIT 1
 wiseguy OWL 1
@@ -11739,12 +12830,16 @@ withillumination LIT 2
 within IN 2
 withit HEP 2 HIP 15 IN 5
 withmarbleintact MAD 1
-without EX 7 IT 1 NO 3 WO 5
+without SEN 20 WO 25 X 20 EX 7 IT 1 NO 3
+withoutaday SD 20
 withoutblemish NEW 1
 withoutchange IS 1
 withoutcharge REE 1
+withoutdate SA 20
+withoutfixeddate SD 20
 withoutfunction GO 1
 withouthesitation ER 3
+withoutissue SP 20
 withoutit IT 1
 withoutlove ES 1
 withoutpublicity PR 1
@@ -11803,9 +12898,11 @@ wordofretraction NOT 1
 wordofthank TA 1
 wordofunderstanding OH 1
 wordplay PUN 4
+wordprocessing WP 20
 wordprocessor WP 50
-work OP 306 ACT 6 DIG 1 DO 3 ERG 1 GO 24 JOB 4 OFF 1 ON 300 PLY 16 RUN 7 TOW 1 USE 1 WK 4 RAN 3 ART 1 OPS 3
+work OP 306 WK 24 ACT 6 DIG 1 DO 3 ERG 1 GO 24 JOB 4 OFF 1 ON 300 PLY 16 RUN 7 TOW 1 USE 1 RAN 3 ART 1 OPS 3
 workat DO 3 PLY 1
+workdepartment WD 20
 worker ANT 139 ANY 1 BEE 11 MAN 5 MEN 33 TU 1
 workerincolony ANT 1
 workermaybe ANT 1
@@ -11836,6 +12933,8 @@ wornby ON 1
 wornout OLD 1
 worried ATE 49
 worry NAG 2 AIL 2 DOG 1 EAT 10 IRK 1 RET 1
+worship WP 20
+worshipful WP 20
 worth EM 1
 worthless BUM 3
 worthlessdog CUR 2
@@ -11866,11 +12965,11 @@ writetip NIB 1
 writingstuff INK 1
 writtenmatter MS 1
 wrong AL 1 BAD 1 BUM 2 DOX 1 OFF 1 OUT 6 SIN 50 UP 1 ILL 1
-wronganswer X 50
 wrongdo SIN 3
 wrongmark X 50
 wyoming WY 50
 x TEN 1
+x-ray X 50
 xenon XE 50
 y ART 1 UL 1
 yak GAB 1
@@ -11881,31 +12980,33 @@ yankee Y 50 US 10
 yankees YY 1
 yard Y 50 YD 54 YDS 50 YY 1
 yarn ABB 1 FIB 1
-year Y 50 YR 63 YRS 50 AY 4 AGE 4 YY 1
+year A 50 Y 50 YR 63 YRS 50 AY 4 AGE 4 YY 1
 yearl HOG 1
 yell OAR 1
 yellow Y 50 OR 12
 yemen YAR 50
-yen AY 1
-yes Y 50 I 20 AY 5 OK 3
+yen Y 50 YN 20 AY 1
+yes Y 50 I 50 AY 5 OK 3
 yesterday FRI 1
 yestoitalian SI 1
 yet BUT 5 THO 1
 yiddishlament OY 1
 yikes EEK 5
+ymca Y 50
 yogicpose ANA 1
 yorkshireriver URE 2
-you TU 2 YA 1 YE 30
+you U 20 TU 2 YA 1 YE 30
 youadd SUM 1
 youandi WE 1
 youandme US 19 WE 1
 youbrief YO 1
 youis UR 2
-young NEW 3 PUP 1 YR 2
+young YR 22 NEW 3 PUP 1
 younganimal CUB 4 PUP 2
 youngbear CUB 2 UB 1
 youngchap LAD 2
 youngchild TOT 4
+youngconservatives YC 20
 youngcreature CUB 1
 youngdog PUP 2
 youngeel VER 1
@@ -11934,6 +13035,7 @@ youonce YE 2
 your YR 64 YRS 50 THY 11
 yourandmy OUR 2
 yourcompiler ME 1
+yourholiness SV 20
 yourman HIM 1
 yourold THY 3
 yourpresentmission NG 1
@@ -11947,12 +13049,17 @@ youth BOY 3 ING 1 KID 1 LAD 35 SON 1 UP 1
 youthfulcanine PUP 1
 youthsubculture MOD 1
 youthwithascooter MOD 1
+ytterbium YB 20
+yttrium Y 50
 yuck ICK 1 UGH 1
 yugoslavia YU 50
+yukonterritory YT 20
 yuledrink NOG 1
+ywca Y 50
 zambia Z 50
 zealot NUT 2
-zero O 50 NIL 2 NO 2
+zenith Z 50
+zero Z 50 O 50 NIL 2 NO 2
 zerocredit OCR 1
 zest PEP 1
 zigguratsite UR 1
@@ -11961,5 +13068,5 @@ zinc ZN 50
 zip O 50 NIL 1
 zirconium ZR 50
 zodiacconstellation LEO 1
-zone ZZ 1
+zone Z 20 ZZ 1
 zulu Z 50

@@ -1,19 +1,21 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { IndicatorMatcher, IndicatorType } from "../src/indicators.js";
+import { IndicatorMatcher, IndicatorType as Ind } from "../src/indicators.js";
 import { lemmatize } from "../src/nlp.js";
-import {
-  dataDir,
-  distOutputDir,
-  parseCSV,
-  parseTSV,
-  srcOutputDir,
-} from "./util.js";
+import { dataDir, distOutputDir, parseCSV, srcOutputDir } from "./util.js";
 
 type IndicatorData = {
   lemmas: string[];
-  type: IndicatorType;
+  type: Ind;
   score: number;
+};
+
+type ClueClinicRow = {
+  phrase: string;
+  standard: string;
+  variety?: string;
+  effect?: string;
+  selection?: string;
 };
 
 const collator = Intl.Collator("en", { sensitivity: "base" });
@@ -21,153 +23,77 @@ const collator = Intl.Collator("en", { sensitivity: "base" });
 async function main() {
   const indicatorData: IndicatorData[] = [];
 
-  // manual
-  for await (const record of parseTSV<{ text: string; type: string }>(
-    path.join("manual", "anagram.tsv"),
-  )) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type = IndicatorType.Anagram;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-  }
-  for await (const record of parseTSV<{
-    text: string;
-    other: string;
-    variety: string;
-    type: string;
-  }>(path.join("manual", "container.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type =
-      record.variety === "Insertion"
-        ? IndicatorType.Insertion
-        : record.variety === "Containment"
-          ? IndicatorType.Container
-          : IndicatorType.Containment;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-    for (const other of record.other.split("/")) {
-      if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.every((l, i) => l === lemmas[i])) {
-        continue;
+  // clueclinic
+  const clueClinic = new Map<string, IndicatorData>();
+  const addClueClinic = async (
+    file: string,
+    typeOf: (record: ClueClinicRow) => Ind,
+  ) => {
+    for await (const record of parseCSV<ClueClinicRow>(
+      path.join("clueclinic", file),
+    )) {
+      const lemmas = lemmatize(record.phrase).map((l) => l.lemma);
+      const type = typeOf(record);
+      // TODO: calibrate weights
+      const score = record.standard === "true" ? 50 : 20;
+      const key = `${lemmas.join(" ")}\t${type}`;
+      const existing = clueClinic.get(key);
+      if (existing === undefined || existing.score < score) {
+        clueClinic.set(key, { lemmas, type, score });
       }
-      indicatorData.push({ lemmas: otherLemmas, type, score });
     }
-  }
-  for await (const record of parseTSV<{
-    text: string;
-    other: string;
-    variety: string;
-    type: string;
-  }>(path.join("manual", "deletion.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type =
-      record.variety === "Expulsion"
-        ? IndicatorType.Expulsion
-        : record.variety === "Departure"
-          ? IndicatorType.Departure
-          : record.variety.includes("Reduction - last letter")
-            ? IndicatorType.Curtailing
-            : record.variety.includes("Reduction - first letter")
-              ? IndicatorType.Beheading
-              : record.variety.includes("Reduction - middle letter")
-                ? IndicatorType.Emptying
-                : record.variety.includes("Reduction - both end")
-                  ? IndicatorType.Trimming
-                  : IndicatorType.Deletion;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-    for (const other of record.other.split("/")) {
-      if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.every((l, i) => l === lemmas[i])) {
-        continue;
-      }
-      indicatorData.push({ lemmas: otherLemmas, type, score });
-    }
-  }
-  for await (const record of parseTSV<{
-    text: string;
-    other: string;
-    type: string;
-  }>(path.join("manual", "hidden.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type = IndicatorType.Hidden;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-    for (const other of record.other.split("/")) {
-      if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.every((l, i) => l === lemmas[i])) {
-        continue;
-      }
-      indicatorData.push({ lemmas: otherLemmas, type, score });
-    }
-  }
-  for await (const record of parseTSV<{
-    text: string;
-    other: string;
-    type: string;
-  }>(path.join("manual", "homophone.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type = IndicatorType.Homophone;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-    for (const other of record.other.split("/")) {
-      if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.every((l, i) => l === lemmas[i])) {
-        continue;
-      }
-      indicatorData.push({ lemmas: otherLemmas, type, score });
-    }
-  }
-  for await (const record of parseTSV<{
-    text: string;
-    other: string;
-    direction: string;
-    type: string;
-  }>(path.join("manual", "reversal.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type = IndicatorType.Reversal;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-    for (const other of record.other.split("/")) {
-      if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.every((l, i) => l === lemmas[i])) {
-        continue;
-      }
-      indicatorData.push({ lemmas: otherLemmas, type, score });
-    }
-  }
-  for await (const record of parseTSV<{
-    text: string;
-    selection: string;
-    example: string;
-    type: string;
-  }>(path.join("manual", "selection.tsv"))) {
-    const lemmas = lemmatize(record.text).map((l) => l.lemma);
-    const type = record.selection.includes("First letter")
-      ? IndicatorType.Prefix
-      : record.selection.includes("Last letter")
-        ? IndicatorType.Suffix
-        : record.selection.includes("Middle letter")
-          ? IndicatorType.Centers
-          : record.selection.includes("First and last")
-            ? IndicatorType.Ends
-            : IndicatorType.Selection;
-    const score = record.type === "Standard" ? 50 : 20;
-    indicatorData.push({ lemmas, type, score });
-    for (const other of record.selection.split("/")) {
-      if (!other) continue;
-      const otherLemmas = lemmatize(other).map((l) => l.lemma);
-      if (otherLemmas.every((l, i) => l === lemmas[i])) {
-        continue;
-      }
-      indicatorData.push({ lemmas: otherLemmas, type, score });
-    }
-  }
+  };
+
+  await addClueClinic("anagram.csv", () => Ind.Anagram);
+  await addClueClinic("container.csv", ({ variety = "" }) =>
+    variety === "Insertion"
+      ? Ind.Insertion
+      : variety === "Containment"
+        ? Ind.Container
+        : Ind.Containment,
+  );
+  await addClueClinic("deletion.csv", ({ variety = "" }) =>
+    variety === "Expulsion"
+      ? Ind.Expulsion
+      : variety === "Departure"
+        ? Ind.Departure
+        : variety.includes("last letter")
+          ? Ind.Curtailing
+          : variety.includes("first letter")
+            ? Ind.Beheading
+            : variety.includes("middle") || variety.includes("central")
+              ? Ind.Emptying
+              : variety.includes("both ends")
+                ? Ind.Trimming
+                : Ind.Deletion,
+  );
+  await addClueClinic("drag-and-drop.csv", ({ effect = "" }) =>
+    /exchanged|swapped/.test(effect) ? Ind.Exchange : Ind.Rotation,
+  );
+  await addClueClinic("hidden.csv", () => Ind.Hidden);
+  await addClueClinic("homophone.csv", () => Ind.Homophone);
+  await addClueClinic("intermittent.csv", ({ selection = "" }) =>
+    selection.includes("odd")
+      ? Ind.Oddly
+      : selection.includes("even")
+        ? Ind.Evenly
+        : Ind.Alternation,
+  );
+  await addClueClinic("letter-selection.csv", ({ selection = "" }) =>
+    selection === "First and last letters"
+      ? Ind.Ends
+      : selection.startsWith("First letter") ||
+          selection === "First two letters"
+        ? Ind.Prefix
+        : selection === "Last letter"
+          ? Ind.Suffix
+          : selection.startsWith("Middle letter")
+            ? Ind.Centers
+            : Ind.Selection,
+  );
+  await addClueClinic("replacement.csv", () => Ind.Substitution);
+  await addClueClinic("reversal.csv", () => Ind.Reversal);
+  indicatorData.push(...clueClinic.values());
 
   // georgeho
   for await (const { wordplay, indicator, clue_rowids } of parseCSV<{
@@ -193,9 +119,9 @@ async function main() {
 
   // rdeits
   for (const [file, type] of [
-    ["ana_", IndicatorType.Anagram],
-    ["ins_", IndicatorType.Containment],
-    ["rev_", IndicatorType.Reversal],
+    ["ana_", Ind.Anagram],
+    ["ins_", Ind.Containment],
+    ["rev_", Ind.Reversal],
   ] as const) {
     const filePath = path.join(dataDir, "rdeits", file);
     const lines = (await fs.readFile(filePath, "utf-8")).split("\n");

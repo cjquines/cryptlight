@@ -39,6 +39,7 @@
     "build:tsc": "tsc --build tsconfig.build.json",
     "format": "prettier --write .",
     "lint": "eslint",
+    "scrape:clueclinic": "tsx scripts/scrape-clueclinic.ts",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "typecheck": "tsc --build tsconfig.json"

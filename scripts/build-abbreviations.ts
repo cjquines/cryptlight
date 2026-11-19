@@ -15,6 +15,7 @@ const collator = Intl.Collator("en", { sensitivity: "base" });
 async function main() {
   let abbreviationData: AbbreviationData[] = [];
 
+  // manual
   for await (const record of parseTSV<{
     text: string;
     abbr1: string;
@@ -32,31 +33,30 @@ async function main() {
       });
     }
   }
-  for await (const record of parseTSV<{
-    text: string;
-    other: string;
-    letter: string;
-    type: string;
-  }>(path.join("manual", "abbreviation2.tsv"))) {
-    const lemma = abbreviationKey(record.text);
-    if (lemma === undefined) continue;
-    abbreviationData.push({
-      lemma,
-      abbreviation: record.letter,
-      score: record.type === "Standard" ? 50 : 20,
-    });
-    for (const other of record.other.split("/")) {
-      if (!other) continue;
-      const otherLemma = abbreviationKey(other);
-      if (otherLemma === undefined || otherLemma === lemma) continue;
-      abbreviationData.push({
-        lemma: otherLemma,
-        abbreviation: slugify(record.letter).toUpperCase(),
-        score: record.type === "Standard" ? 50 : 20,
-      });
+
+  // clueclinic
+  const clueClinic = new Map<string, AbbreviationData>();
+  for (const file of ["abbreviations.csv", "single-letter-markers.csv"]) {
+    for await (const record of parseCSV<{
+      phrase: string;
+      standard: string;
+      abbreviation: string;
+    }>(path.join("clueclinic", file))) {
+      const lemma = abbreviationKey(record.phrase);
+      if (lemma === undefined) continue;
+      const abbreviation = slugify(record.abbreviation).toUpperCase();
+      // TODO: calibrate weights
+      const score = record.standard === "true" ? 50 : 20;
+      const key = `${lemma}\t${abbreviation}`;
+      const existing = clueClinic.get(key);
+      if (existing === undefined || existing.score < score) {
+        clueClinic.set(key, { lemma, abbreviation, score });
+      }
     }
   }
+  abbreviationData.push(...clueClinic.values());
 
+  // georgeho
   for await (const { charade, answer, clue_rowids } of parseCSV<{
     rowid: string;
     charade: string;
